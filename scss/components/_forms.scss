@@ -22,10 +22,10 @@ form {
     border: 2px solid $gray-01;
     border-radius: 1rem;
     @include font(1.6rem, 300, 1em);
-    color: $primary-01;
+    color: $primary;
     &:focus {
       outline: none;
-      border: 2px solid $primary-01;
+      border: 2px solid $primary;
     }
     &:disabled {
       background-color: $gray-01;
@@ -35,7 +35,7 @@ form {
     width: 100%;
     text-align: left;
     @include font(1.6rem, 700, 1em);
-    color: $primary-01;
+    color: $primary;
     text-transform: lowercase;
     padding-left: .5rem;
     &:disabled {
@@ -43,8 +43,8 @@ form {
     }
   }
   .input-validate {
-    border: 2px solid $secondary-02;
-    color: $secondary-02;
+    border: 2px solid $secondary-dark;
+    color: $secondary-dark;
   }
   span.input-validate {
     @include font(1.2rem, 700, 1em);

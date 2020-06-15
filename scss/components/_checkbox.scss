@@ -22,7 +22,7 @@
       border-radius: 3px;
       transform: scale(1);
       vertical-align: middle;
-      border: 1px solid $primary-01;
+      border: 1px solid $primary;
       transition: all 0.2s ease;
       svg {
         position: absolute;
@@ -43,7 +43,7 @@
         content: "";
         width: 100%;
         height: 100%;
-        background: $primary-02;
+        background: $primary-dark;
         display: block;
         transform: scale(0);
         opacity: 1;
@@ -57,8 +57,8 @@
 }
 
 .inp-cbx:checked+.cbx span:first-child {
-  background: $primary-02;
-  border-color: $primary-02;
+  background: $primary-dark;
+  border-color: $primary-dark;
   animation: wave 0.4s ease;
   svg {
     stroke-dashoffset: 0;
@@ -104,10 +104,10 @@
       margin-left: 1.5rem;
       margin-bottom: 0;
       a {
-        color: $secondary-01;
+        color: $secondary;
         &:hover,
         &:focus {
-          color: $secondary-01;
+          color: $secondary;
           text-decoration: none;
         }
       }

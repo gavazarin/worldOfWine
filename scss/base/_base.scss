@@ -6,9 +6,6 @@ html {
   box-sizing: border-box;
   min-height: 100%;
   height: auto;
-  // @include mq (0, 768px){
-  //   font-size: 40%;
-  // }
 }
 
 body {
@@ -41,10 +38,16 @@ a span:active,
 a span:focus {
   color: white;
   text-decoration: none;
-  // @include on-event {
-  //   color: $text-color;
-  //   text-decoration: underline;
-  // }
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 16rem;
+  /* Footer height */
 }
 
 .load-screen {

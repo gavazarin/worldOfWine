@@ -3,7 +3,7 @@ table {
   margin: 1.5rem 0;
   padding: 0;
   thead {
-    border-bottom: 2px solid $secondary-01;
+    border-bottom: 2px solid $secondary;
   }
   tr {
     border-radius: 1rem;
@@ -15,7 +15,7 @@ table {
     text-align: center;
     @include font(1.4rem, 700, 1.2em);
     text-transform: uppercase;
-    color: $black-01;
+    color: $black;
     b,
     strong {
       font-weight: 900;
@@ -31,18 +31,18 @@ table {
       }
     }
     tr.totalpayment {
-      background: $black-01;
+      background: $black;
       td {
-        color: $white-01;
+        color: $white;
       }
     }
   }
   .status__atrasado {
     padding: .5rem;
     border-radius: .5rem;
-    border: 2px solid $secondary-01;
+    border: 2px solid $secondary;
     font-size: 1.2rem;
-    color: $secondary-01;
+    color: $secondary;
   }
   .btn {
     @include font(1.2rem, 900, 1.2em);
@@ -87,7 +87,7 @@ table {
 }
 
 .table__border {
-  border-bottom: 2px solid $black-01;
+  border-bottom: 2px solid $black;
 }
 
 .tab {
@@ -104,9 +104,9 @@ table {
       }
     }
     tr.totalpayment {
-      background: $black-01;
+      background: $black;
       td {
-        color: $white-01;
+        color: $white;
       }
     }
   }
