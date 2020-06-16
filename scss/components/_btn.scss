@@ -1,0 +1,47 @@
+.btn {
+  @include flex(row, center, center, center);
+  i {
+    height: 4rem;
+    width: auto;
+    display: inline-block;
+    margin: 0 8px;
+    img {
+      height: 100%;
+    }
+  }
+  span {
+    @include font(1.8rem, 900, 1.2em);
+    margin: 0 8px;
+  }
+  &-primary {
+    background-color: $primary;
+    border-color: $primary;
+    transition: all .3s ease-in;
+    &:hover {
+      background-color: $primary-dark;
+      border-color: $primary-dark;
+      transition: all .3s ease-out;
+    }
+  }
+  &-outline-secondary {
+    border-color: $secondary;
+  }
+  &-select-date {
+    @include flex(row, space-between, center, center);
+    .select-date {
+      @include flex(row, flex-start, center, center);
+      i {
+        height: 3rem;
+        margin-left: 0;
+      }
+      span {
+        @include font(1.6rem, 900, 1.2em);
+        color: $secondary;
+        margin: 0;
+      }
+    }
+    .dropdown-icon {
+      height: 1.5rem;
+    }
+  }
+}

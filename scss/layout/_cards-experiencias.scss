@@ -1,0 +1,183 @@
+.cards-experiencias {
+  .row {
+    @include flex(column, center, center, center);
+  }
+}
+
+.cards-list {
+  width: 100%;
+  position: relative;
+  @include flex(row, flex-start, flex-start, flex-start);
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+  margin-bottom: 6rem;
+  //   padding-top: 1.6rem;
+  border-top: 2px solid $primary;
+  &__item {
+    width: 100%;
+    background-color: $white;
+    margin-top: 3rem;
+    &--content {
+      height: 50rem;
+      position: relative;
+      @include flex(column, space-between, center, center);
+      padding-bottom: 1.5rem;
+      box-shadow: 5px 5px 10px 0px rgba(29, 29, 27, 0.55);
+    }
+    .img-experiencia {
+      width: 100%;
+      height: 40%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .info-experience {
+      height: 42%;
+    }
+    .title-experience {
+      width: 100%;
+      @include flex(row, space-between, center, center);
+      margin: 1.6rem 0;
+      h1 {
+        margin: 0;
+      }
+      i {
+        width: 3rem;
+        display: inline-block;
+        cursor: pointer;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    p {
+      @include font(1.8rem, 300, 1.4em);
+      height: 10rem;
+      overflow-y: hidden;
+      margin-bottom: 0;
+    }
+  }
+  .btn-experience {
+    width: 100%;
+    padding: 1.5rem 0 0;
+    position: relative;
+    &:before {
+      content: '';
+      width: 90%;
+      height: 1px;
+      background-color: #cccccc85;
+      @include absolute(0, 5%, auto, auto);
+    }
+  }
+}
+
+.cards-list__item--bilhetes {
+  width: 100%;
+  height: 100%;
+  background-color: $white-secondary;
+  @include absolute(0, auto, auto, 0);
+  @include flex(column, space-between, center, center);
+  padding: 1.5rem;
+  .title-experience {
+    margin: 0;
+    margin-bottom: .4rem;
+    .close-bilhetes {
+      height: auto;
+      @include font(1.6rem, 900, 1.2em);
+      color: $primary;
+      @include flex(row, flex-end, center, center);
+      cursor: pointer;
+      i {
+        margin-left: 4px;
+      }
+    }
+  }
+  .bilhetes-list {
+    li {
+      margin-bottom: 1.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__type {
+      width: 65%;
+      p {
+        height: auto;
+      }
+      &-title {
+        text-transform: uppercase;
+        @include font(2rem, 300, 1.2em);
+        strong {
+          font-weight: 900;
+        }
+      }
+      &-description {
+        @include font(1.4rem, 300, 1.2em);
+      }
+      &-gratuito {
+        @include font(1.6rem, 700, 1.2em);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.experience-2 {
+  .img-experiencia {
+    border-bottom: 8px solid $experience-2;
+  }
+  .cards-list__item--bilhetes {
+    border-top: 8px solid $experience-2;
+  }
+}
+
+.experience-3 {
+  .img-experiencia {
+    border-bottom: 8px solid $experience-3;
+  }
+}
+
+.experience-6 {
+  .img-experiencia {
+    border-bottom: 8px solid $experience-6;
+  }
+}
+
+.experience-prata {
+  .img-experiencia {
+    border-bottom: 8px solid $experience-prata;
+  }
+}
+
+.experience-wine {
+  .img-experiencia {
+    border-bottom: 8px solid $experience-wine;
+  }
+}
+
+.experience-cork {
+  .img-experiencia {
+    border-bottom: 8px solid $experience-cork;
+  }
+}
+
+.experience-fashion {
+  .img-experiencia {
+    border-bottom: 8px solid $experience-fashion;
+  }
+}
+
+.experience-vessels {
+  .img-experiencia {
+    border-bottom: 8px solid $experience-vessels;
+  }
+}
+
+.experience-chocolate {
+  .img-experiencia {
+    border-bottom: 8px solid $experience-chocolate;
+  }
+}

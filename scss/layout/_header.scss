@@ -29,6 +29,9 @@ header {
           width: auto;
         }
       }
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
   .navMenu {
@@ -79,6 +82,7 @@ header {
           @include flex(column, center, flex-start, flex-start);
           @include font(1.6rem, 300, 1.2em);
           text-transform: uppercase;
+          cursor: pointer;
           span {
             margin: 2px 0;
           }
@@ -90,7 +94,6 @@ header {
             height: auto;
             display: inline-block;
             @include absolute(auto, 0, 6px, auto);
-            cursor: pointer;
             img {
               width: 100%;
               height: auto;

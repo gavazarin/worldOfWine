@@ -4,22 +4,30 @@ body {
 }
 
 h1 {
-  @include font(2.2rem, 900, 1.2em);
+  @include font(3.2rem, 300, 1.2em);
   color: $black;
   text-transform: uppercase;
   text-align: center;
+  strong {
+    font-weight: 900;
+  }
 }
 
 h2 {
-  @include font(1.4rem, 900, 1.4em);
+  @include font(2.4rem, 300, 1.4em);
   color: $black;
   text-align: center;
   text-transform: uppercase;
+  strong {
+    font-weight: 900;
+  }
 }
 
 h3 {
-  @include font(1.2rem, 900, 1.4em);
-  color: $gray-02;
+  @include font(1.6rem, 300, 1.4em);
+  color: $black;
   text-align: center;
-  text-transform: uppercase;
+  strong {
+    font-weight: 900;
+  }
 }
