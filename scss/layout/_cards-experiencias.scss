@@ -23,6 +23,7 @@
       @include flex(column, space-between, center, center);
       padding-bottom: 1.5rem;
       box-shadow: 5px 5px 10px 0px rgba(29, 29, 27, 0.55);
+      overflow-y: hidden;
     }
     .img-experiencia {
       width: 100%;
@@ -81,6 +82,8 @@
   @include absolute(0, auto, auto, 0);
   @include flex(column, space-between, center, center);
   padding: 1.5rem;
+  transform: translateY(100%);
+  transition: all .3s ease-in;
   .title-experience {
     margin: 0;
     margin-bottom: .4rem;
@@ -123,6 +126,20 @@
       }
     }
   }
+  .btn-experience {
+    .btn {
+      span {
+        font-size: 1.6rem;
+        margin: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.cards-list__item--bilhetes.mostrar {
+  transform: translateY(0);
+  transition: all .3s ease-in;
 }
 
 .experience-2 {
@@ -138,11 +155,17 @@
   .img-experiencia {
     border-bottom: 8px solid $experience-3;
   }
+  .cards-list__item--bilhetes {
+    border-top: 8px solid $experience-3;
+  }
 }
 
 .experience-6 {
   .img-experiencia {
     border-bottom: 8px solid $experience-6;
+  }
+  .cards-list__item--bilhetes {
+    border-top: 8px solid $experience-6;
   }
 }
 
@@ -150,11 +173,17 @@
   .img-experiencia {
     border-bottom: 8px solid $experience-prata;
   }
+  .cards-list__item--bilhetes {
+    border-top: 8px solid $experience-prata;
+  }
 }
 
 .experience-wine {
   .img-experiencia {
     border-bottom: 8px solid $experience-wine;
+  }
+  .cards-list__item--bilhetes {
+    border-top: 8px solid $experience-wine;
   }
 }
 
@@ -162,11 +191,17 @@
   .img-experiencia {
     border-bottom: 8px solid $experience-cork;
   }
+  .cards-list__item--bilhetes {
+    border-top: 8px solid $experience-cork;
+  }
 }
 
 .experience-fashion {
   .img-experiencia {
     border-bottom: 8px solid $experience-fashion;
+  }
+  .cards-list__item--bilhetes {
+    border-top: 8px solid $experience-fashion;
   }
 }
 
@@ -174,10 +209,16 @@
   .img-experiencia {
     border-bottom: 8px solid $experience-vessels;
   }
+  .cards-list__item--bilhetes {
+    border-top: 8px solid $experience-vessels;
+  }
 }
 
 .experience-chocolate {
   .img-experiencia {
     border-bottom: 8px solid $experience-chocolate;
+  }
+  .cards-list__item--bilhetes {
+    border-top: 8px solid $experience-chocolate;
   }
 }

@@ -17,7 +17,17 @@
     background-color: $primary;
     border-color: $primary;
     transition: all .3s ease-in;
-    &:hover {
+    &:active,
+    &.active {
+      &:focus,
+      &.focus {
+        background-color: $primary-dark;
+        border-color: $primary-dark;
+        transition: all .3s ease-out;
+      }
+    }
+    &:hover,
+    &:focus {
       background-color: $primary-dark;
       border-color: $primary-dark;
       transition: all .3s ease-out;
@@ -43,5 +53,10 @@
     .dropdown-icon {
       height: 1.5rem;
     }
+  }
+  &[disabled] {
+    background: $gray-01;
+    border-color: $gray-02;
+    pointer-events: none;
   }
 }

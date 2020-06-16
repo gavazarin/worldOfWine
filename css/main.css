@@ -1475,6 +1475,7 @@ output {
 
 .btn:focus, .btn:hover {
   text-decoration: none;
+  background-color: wheat;
 }
 
 .btn.focus {
@@ -2528,7 +2529,13 @@ h3 strong {
   transition: all .3s ease-in;
 }
 
-.btn-primary:hover {
+.btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:focus, .btn-primary.active.focus {
+  background-color: #5E1216;
+  border-color: #5E1216;
+  transition: all .3s ease-out;
+}
+
+.btn-primary:hover, .btn-primary:focus {
   background-color: #5E1216;
   border-color: #5E1216;
   transition: all .3s ease-out;
@@ -2569,6 +2576,12 @@ h3 strong {
 
 .btn-select-date .dropdown-icon {
   height: 1.5rem;
+}
+
+.btn[disabled] {
+  background: #CCCCCC;
+  border-color: #707070;
+  pointer-events: none;
 }
 
 .cbx,
@@ -2743,7 +2756,7 @@ form select {
   width: 100%;
   height: 3.7rem;
   padding: .75rem 1.5rem;
-  border: 2px solid #AFAFAF;
+  border: 2px solid #CCCCCC;
   border-radius: 1rem;
   font-size: 1.6rem;
   font-weight: 300;
@@ -2759,7 +2772,7 @@ form select:focus {
 
 form input:disabled,
 form select:disabled {
-  background-color: #AFAFAF;
+  background-color: #CCCCCC;
 }
 
 form label {
@@ -2774,7 +2787,7 @@ form label {
 }
 
 form label:disabled {
-  color: #AFAFAF;
+  color: #CCCCCC;
 }
 
 form .input-validate {
@@ -3438,7 +3451,7 @@ header .marca img {
 }
 
 .navMenu-mobile .menuMobile ul li a:hover {
-  color: #AFAFAF;
+  color: #CCCCCC;
   text-decoration: none;
   transition: all .3s ease-out;
 }
@@ -3542,6 +3555,7 @@ header .marca img {
   align-content: center;
   padding-bottom: 1.5rem;
   box-shadow: 5px 5px 10px 0px rgba(29, 29, 27, 0.55);
+  overflow-y: hidden;
 }
 
 .cards-list__item .img-experiencia {
@@ -3626,6 +3640,8 @@ header .marca img {
   align-items: center;
   align-content: center;
   padding: 1.5rem;
+  transform: translateY(100%);
+  transition: all .3s ease-in;
 }
 
 .cards-list__item--bilhetes .title-experience {
@@ -3691,6 +3707,17 @@ header .marca img {
   text-transform: uppercase;
 }
 
+.cards-list__item--bilhetes .btn-experience .btn span {
+  font-size: 1.6rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.cards-list__item--bilhetes.mostrar {
+  transform: translateY(0);
+  transition: all .3s ease-in;
+}
+
 .experience-2 .img-experiencia {
   border-bottom: 8px solid #FFB4AB;
 }
@@ -3703,30 +3730,62 @@ header .marca img {
   border-bottom: 8px solid #8F6D4F;
 }
 
+.experience-3 .cards-list__item--bilhetes {
+  border-top: 8px solid #8F6D4F;
+}
+
 .experience-6 .img-experiencia {
   border-bottom: 8px solid #939598;
+}
+
+.experience-6 .cards-list__item--bilhetes {
+  border-top: 8px solid #939598;
 }
 
 .experience-prata .img-experiencia {
   border-bottom: 8px solid #3D7CC9;
 }
 
+.experience-prata .cards-list__item--bilhetes {
+  border-top: 8px solid #3D7CC9;
+}
+
 .experience-wine .img-experiencia {
   border-bottom: 8px solid #AB0033;
+}
+
+.experience-wine .cards-list__item--bilhetes {
+  border-top: 8px solid #AB0033;
 }
 
 .experience-cork .img-experiencia {
   border-bottom: 8px solid #DD8A03;
 }
 
+.experience-cork .cards-list__item--bilhetes {
+  border-top: 8px solid #DD8A03;
+}
+
 .experience-fashion .img-experiencia {
   border-bottom: 8px solid #FF5100;
+}
+
+.experience-fashion .cards-list__item--bilhetes {
+  border-top: 8px solid #FF5100;
 }
 
 .experience-vessels .img-experiencia {
   border-bottom: 8px solid #00C4B3;
 }
 
+.experience-vessels .cards-list__item--bilhetes {
+  border-top: 8px solid #00C4B3;
+}
+
 .experience-chocolate .img-experiencia {
   border-bottom: 8px solid #F6E948;
+}
+
+.experience-chocolate .cards-list__item--bilhetes {
+  border-top: 8px solid #F6E948;
 }
