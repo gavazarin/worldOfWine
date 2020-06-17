@@ -16,7 +16,17 @@
     <div class="top-header">
       <div class="container">
         <div class="row">
-          <a href="#">Português <i><img src="images/svg/dropdown-icon.svg" alt="ícone de dropdown"></i></a>
+          <input id="language-dropdown" type="checkbox">
+          <label for="language-dropdown" class="language-dropdown">
+            <span>Português</span> <i><img src="images/svg/dropdown-icon.svg" alt="ícone de dropdown"></i>
+          </label>
+          <ul class="language-dropdown-list">
+            <li><a href="#">Deutsch</a></li>
+            <li><a href="#">English</a></li>
+            <li><a href="#">Español</a></li>
+            <li><a href="#">Français</a></li>
+            <li><a href="#">Português</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -36,10 +46,92 @@
 
             <li class="header-carrinho col-lg-4">
               <i class="shopping-cart-icon"><img src="images/svg/shopping-cart.svg" alt="ícone carrinho de compras"></i>
-              <div class="header-carrinho__infos">
+              <input id="carrinho-dropdown" type="checkbox">
+              <label for="carrinho-dropdown" class="header-carrinho__infos">
                 <span>Carrinho de Compras</span>
                 <span class="carrinho-valor">0,00€</span>
                 <i class="dropdown-icon"><img src="images/svg/dropdown-icon.svg" alt="ícone de dropdown"></i>
+              </label>
+
+              <!-- CARRINHO DE COMPRAS VAZIO! -->
+              <!-- <div class="carrinho-compras carrinho-compras-empty">
+                <i><img src="images/svg/shopping-cart-secondary.svg" alt=""></i>
+                <h3>O seu carrinho está vazio</h3>
+                <p>Escolha já as suas experiências!</p>
+              </div> -->
+
+              <div class="carrinho-compras carrinho-compras-itens">
+                <p class="info-data">
+                  <i><img src="images/svg/calendar-secondary.svg" alt=""></i> <span>10/06/2020</span>
+                </p>
+
+                <ul class="info-compra">
+                  <li class="info-compra-item">
+                    <ul class="info-compra-detalhes">
+                      <li class="info-compra-detalhes-bilhete"><span>3 Experiences</span> <span>Adulto</span></li>
+                      <li class="info-compra-detalhes-quantidade">
+                        <select>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </li>
+                      <li class="info-compra-detalhes-valor">
+                        <span>102,00</span>€
+                      </li>
+                      <li class="info-compra-detalhes-delete">
+                        <i><img src="images/svg/trash.svg" alt=""></i>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="info-compra-item">
+                    <ul class="info-compra-detalhes">
+                      <li class="info-compra-detalhes-bilhete"><span>1 Experiences</span> <span>Criança</span></li>
+                      <li class="info-compra-detalhes-quantidade">
+                        <select>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </li>
+                      <li class="info-compra-detalhes-valor">
+                        <span>21,00</span>€
+                      </li>
+                      <li class="info-compra-detalhes-delete">
+                        <i><img src="images/svg/trash.svg" alt=""></i>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <ul class="info-total">
+                  <li class="info-total-subtotal">
+                    <span>Subtotal:</span> <span><strong>123,00€</strong></span>
+                  </li>
+                  <li class="info-total-total">
+                    <span>Total:</span> <span>123,00€</span>
+                  </li>
+                </ul>
+
+                <div class="container-btn">
+                  <button type="button" class="btn btn-outline-secondary"><span>Continuar a comprar</span></button>
+                  <button type="button" class="btn btn-secondary"><span>Proceder ao pagamento</span></button>
+                </div>
               </div>
             </li>
           </ul>
@@ -147,12 +239,24 @@
                           <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 34,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 21,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
                         </div>
                       </li>
 
@@ -161,6 +265,12 @@
                           <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un. 100,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
@@ -168,17 +278,29 @@
                           <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 28,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão consigo</span></p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
                     </ul>
 
                     <div class="btn-experience">
-                      <button type="button" class="btn btn-primary btn-block" disabled>
+                      <button type="button" class="btn btn-secondary btn-block">
                         <i><img src="images/svg/shopping-cart.svg" alt="ícone bilhetes"></i>
                         <span>adicionar ao carrinho  <span>(00,00€)</span></span>
                       </button>
@@ -236,12 +358,24 @@
                           <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 50,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 21,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
                         </div>
                       </li>
 
@@ -250,6 +384,12 @@
                           <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un. 125,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
@@ -257,17 +397,29 @@
                           <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 40,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão consigo</span></p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
                     </ul>
 
                     <div class="btn-experience">
-                      <button type="button" class="btn btn-primary btn-block" disabled>
+                      <button type="button" class="btn btn-secondary btn-block" disabled>
                         <i><img src="images/svg/shopping-cart.svg" alt="ícone bilhetes"></i>
                         <span>adicionar ao carrinho  <span>(00,00€)</span></span>
                       </button>
@@ -325,12 +477,24 @@
                           <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 60,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 50,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
                         </div>
                       </li>
 
@@ -339,6 +503,12 @@
                           <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un. 200,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
@@ -346,17 +516,29 @@
                           <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 48,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão consigo</span></p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
                     </ul>
 
                     <div class="btn-experience">
-                      <button type="button" class="btn btn-primary btn-block" disabled>
+                      <button type="button" class="btn btn-secondary btn-block" disabled>
                         <i><img src="images/svg/shopping-cart.svg" alt="ícone bilhetes"></i>
                         <span>adicionar ao carrinho  <span>(00,00€)</span></span>
                       </button>
@@ -420,12 +602,24 @@
                           <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 20,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 10,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
                         </div>
                       </li>
 
@@ -434,6 +628,12 @@
                           <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un. 55,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
@@ -441,17 +641,29 @@
                           <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 16,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão consigo</span></p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
                     </ul>
 
                     <div class="btn-experience">
-                      <button type="button" class="btn btn-primary btn-block" disabled>
+                      <button type="button" class="btn btn-secondary btn-block" disabled>
                         <i><img src="images/svg/shopping-cart.svg" alt="ícone bilhetes"></i>
                         <span>adicionar ao carrinho  <span>(00,00€)</span></span>
                       </button>
@@ -509,12 +721,24 @@
                           <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 20,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 10,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
                         </div>
                       </li>
 
@@ -523,6 +747,12 @@
                           <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un. 55,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
@@ -530,17 +760,29 @@
                           <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 16,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão consigo</span></p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
                     </ul>
 
                     <div class="btn-experience">
-                      <button type="button" class="btn btn-primary btn-block" disabled>
+                      <button type="button" class="btn btn-secondary btn-block" disabled>
                         <i><img src="images/svg/shopping-cart.svg" alt="ícone bilhetes"></i>
                         <span>adicionar ao carrinho  <span>(00,00€)</span></span>
                       </button>
@@ -598,12 +840,24 @@
                           <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 20,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 10,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
                         </div>
                       </li>
 
@@ -612,6 +866,12 @@
                           <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un. 55,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
@@ -619,17 +879,29 @@
                           <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 16,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão consigo</span></p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
                     </ul>
 
                     <div class="btn-experience">
-                      <button type="button" class="btn btn-primary btn-block" disabled>
+                      <button type="button" class="btn btn-secondary btn-block" disabled>
                         <i><img src="images/svg/shopping-cart.svg" alt="ícone bilhetes"></i>
                         <span>adicionar ao carrinho  <span>(00,00€)</span></span>
                       </button>
@@ -687,12 +959,24 @@
                           <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 20,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 10,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
                         </div>
                       </li>
 
@@ -701,6 +985,12 @@
                           <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un. 55,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
@@ -708,17 +998,29 @@
                           <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 16,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão consigo</span></p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
                     </ul>
 
                     <div class="btn-experience">
-                      <button type="button" class="btn btn-primary btn-block" disabled>
+                      <button type="button" class="btn btn-secondary btn-block" disabled>
                         <i><img src="images/svg/shopping-cart.svg" alt="ícone bilhetes"></i>
                         <span>adicionar ao carrinho  <span>(00,00€)</span></span>
                       </button>
@@ -776,12 +1078,24 @@
                           <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 12,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 6,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
                         </div>
                       </li>
 
@@ -790,6 +1104,12 @@
                           <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un. 30,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
@@ -797,17 +1117,29 @@
                           <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 10,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão consigo</span></p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
                     </ul>
 
                     <div class="btn-experience">
-                      <button type="button" class="btn btn-primary btn-block" disabled>
+                      <button type="button" class="btn btn-secondary btn-block" disabled>
                         <i><img src="images/svg/shopping-cart.svg" alt="ícone bilhetes"></i>
                         <span>adicionar ao carrinho  <span>(00,00€)</span></span>
                       </button>
@@ -865,12 +1197,24 @@
                           <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 20,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 16,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
                         </div>
                       </li>
 
@@ -879,6 +1223,12 @@
                           <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un. 65,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
@@ -886,17 +1236,29 @@
                           <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span></p>
                           <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 16,00€)</p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão consigo</span></p>
                         </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
                       </li>
                     </ul>
 
                     <div class="btn-experience">
-                      <button type="button" class="btn btn-primary btn-block" disabled>
+                      <button type="button" class="btn btn-secondary btn-block" disabled>
                         <i><img src="images/svg/shopping-cart.svg" alt="ícone bilhetes"></i>
                         <span>adicionar ao carrinho  <span>(00,00€)</span></span>
                       </button>

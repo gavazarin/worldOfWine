@@ -100,6 +100,7 @@
   }
   .bilhetes-list {
     li {
+      @include flex(row, space-between, center, center);
       margin-bottom: 1.5rem;
       &:last-child {
         margin-bottom: 0;
@@ -123,6 +124,23 @@
       &-gratuito {
         @include font(1.6rem, 700, 1.2em);
         text-transform: uppercase;
+      }
+    }
+    &__quantidade {
+      width: 35%;
+      @include flex(row, flex-end, center, center);
+      i {
+        width: 2.4rem;
+        height: 2.4rem;
+        display: inline-block;
+        cursor: pointer;
+      }
+      span {
+        width: 35%;
+        @include font(2.2rem, 900, 1em);
+        letter-spacing: 1px;
+        text-align: center;
+        margin: 0 4px;
       }
     }
   }

@@ -15,10 +15,23 @@ header {
     .row {
       @include flex(row, flex-end, center, center);
     }
-    a {
+    input {
+      display: none;
+    }
+    input:checked~.language-dropdown-list {
+      display: block;
+    }
+    input:checked~label i {
+      transform: rotate(-180deg);
+      transition: all .3s ease-out;
+    }
+    .language-dropdown {
       color: $white;
       @include font(1.2rem, 300, 1.2em);
       text-transform: uppercase;
+      cursor: pointer;
+      margin-bottom: 0;
+      position: relative;
       i {
         height: 1rem;
         width: auto;
@@ -31,6 +44,33 @@ header {
       }
       &:hover {
         text-decoration: none;
+      }
+    }
+    .language-dropdown-list {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(70%);
+      z-index: 15;
+      display: none;
+      li {
+        text-align: right;
+        background-color: $black;
+        padding: 1.6rem 1.6rem;
+        @include font(1.2rem, 300, 1.2em);
+        text-transform: uppercase;
+        border-bottom: .5px solid $primary;
+        transition: all .3s ease-in-out;
+        a {
+          display: block;
+        }
+        &:hover {
+          background-color: #2e2e2d;
+          transition: all .3s ease-in-out;
+          a {
+            color: $white;
+            text-decoration: none;
+          }
+        }
       }
     }
   }
@@ -66,6 +106,7 @@ header {
       .header-carrinho {
         @include flex(row, flex-end, center, center);
         color: $white;
+        position: relative;
         .shopping-cart-icon {
           display: inline-block;
           height: 3rem;
@@ -76,6 +117,16 @@ header {
             height: 100%;
             width: auto;
           }
+        }
+        input {
+          display: none;
+        }
+        input:checked~.carrinho-compras {
+          display: block;
+        }
+        input:checked~label i {
+          transform: rotate(-180deg);
+          transition: all .3s ease-out;
         }
         &__infos {
           position: relative;
@@ -98,6 +149,145 @@ header {
               width: 100%;
               height: auto;
             }
+          }
+        }
+      }
+    }
+  }
+  .carrinho-compras {
+    width: 42.5rem;
+    min-height: 20rem;
+    padding: 1.5rem;
+    display: none;
+    animation: open-carrinho .3s ease-out;
+    background-color: #f9f9f9;
+    @include absolute(auto, 0, 0, auto);
+    transform: translateY(100%);
+    box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    &-empty {
+      @include flex(column, flex-start, center, center);
+      padding: 1.5rem 3rem;
+      i {
+        height: 10rem;
+        width: auto;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+        img {
+          height: 100%;
+        }
+      }
+      h3 {
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $gray-01;
+      }
+      p {
+        @include font(1.8rem, 300, 1.2em);
+        color: $gray-01;
+      }
+    }
+    &-itens {
+      width: 50rem;
+      background-color: $white;
+      .info-data {
+        color: $primary;
+        @include font(1.6rem, 900, 1.2em);
+        @include flex(row, flex-start, center, center);
+        i {
+          width: 2rem;
+          height: 2rem;
+          display: inline-block;
+          margin-right: .8rem;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .info-compra {
+        width: 100%;
+        &-item {
+          margin-top: 1.6rem;
+        }
+        &-detalhes {
+          @include flex(row, flex-start, center, center);
+          color: $black;
+          &-bilhete {
+            width: 50%;
+            @include font(1.8rem, 300, 1.4em);
+          }
+          &-quantidade {
+            width: 15%;
+            text-align: center;
+            select {
+              background-color: #f3f3f3;
+              @include font(1.4rem, 300, 1em);
+              border-radius: 3px;
+            }
+          }
+          &-valor {
+            width: 25%;
+            @include font(1.8rem, 900, 1.2em);
+            text-align: right;
+          }
+          &-delete {
+            width: 10%;
+            text-align: right;
+            cursor: pointer;
+            i {
+              height: 2rem;
+              width: 2rem;
+              display: inline-block;
+              img {
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+      .info-total {
+        width: 100%;
+        padding: .8rem 1.6rem;
+        background: #f2f2f2;
+        color: $black;
+        margin: 1.5rem 0;
+        @include flex(column, center, flex-end, flex-end);
+        li {
+          width: 100%;
+          padding: .8rem 0;
+          position: relative;
+          @include flex(row, flex-end, center, center);
+          span {
+            margin: 0 1.5rem;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+        &-subtotal {
+          @include font(1.6rem, 300, 1.2em);
+          strong {
+            font-weight: 900;
+          }
+        }
+        &-total {
+          @include font(1.8rem, 900, 1.2em);
+          &:before {
+            content: '';
+            width: 50%;
+            height: 1px;
+            @include absolute(0, 0, auto, auto);
+            background-color: $gray-02;
+          }
+        }
+      }
+      .container-btn {
+        @include flex(row, space-between, center, center);
+        .btn {
+          padding: 2.4rem .8rem;
+          span {
+            @include font(1.2rem, 900, 1em);
+            text-transform: uppercase;
           }
         }
       }
@@ -188,7 +378,7 @@ header {
   }
 }
 
-@keyframes open-user-dropdown {
+@keyframes open-carrinho {
   0% {
     opacity: 0;
     transform: translateY(60%);

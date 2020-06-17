@@ -3,6 +3,10 @@ body {
   // font: normal 125% / 1.4 $text-font-stack;
 }
 
+p {
+  color: $black;
+}
+
 h1 {
   @include font(3.2rem, 300, 1.2em);
   color: $black;
@@ -14,7 +18,7 @@ h1 {
 }
 
 h2 {
-  @include font(2.4rem, 300, 1.4em);
+  @include font(2.6rem, 300, 1.4em);
   color: $black;
   text-align: center;
   text-transform: uppercase;

@@ -12,6 +12,7 @@
   span {
     @include font(1.8rem, 900, 1.2em);
     margin: 0 8px;
+    color: $white;
   }
   &-primary {
     background-color: $primary;
@@ -33,8 +34,31 @@
       transition: all .3s ease-out;
     }
   }
+  &-secondary {
+    background-color: $secondary;
+    border-color: $secondary;
+    transition: all .3s ease-in;
+    &:active,
+    &.active {
+      &:focus,
+      &.focus {
+        background-color: $secondary-dark;
+        border-color: $secondary-dark;
+        transition: all .3s ease-out;
+      }
+    }
+    &:hover,
+    &:focus {
+      background-color: $secondary-dark;
+      border-color: $secondary-dark;
+      transition: all .3s ease-out;
+    }
+  }
   &-outline-secondary {
     border-color: $secondary;
+    span {
+      color: $secondary;
+    }
   }
   &-select-date {
     @include flex(row, space-between, center, center);
