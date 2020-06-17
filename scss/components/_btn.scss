@@ -60,24 +60,6 @@
       color: $secondary;
     }
   }
-  &-select-date {
-    @include flex(row, space-between, center, center);
-    .select-date {
-      @include flex(row, flex-start, center, center);
-      i {
-        height: 3rem;
-        margin-left: 0;
-      }
-      span {
-        @include font(1.6rem, 900, 1.2em);
-        color: $secondary;
-        margin: 0;
-      }
-    }
-    .dropdown-icon {
-      height: 1.5rem;
-    }
-  }
   &[disabled] {
     background: $gray-01;
     border-color: $gray-02;

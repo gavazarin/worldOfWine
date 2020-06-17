@@ -8,6 +8,9 @@
 
   <link rel="stylesheet" href="css/main.css">
 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
   <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 </head>
 
@@ -225,13 +228,25 @@
                       <p class="close-bilhetes close-2exp">fechar <i><img src="images/svg/close-icon.svg" alt="Icone Informação sobre a experiência"></i></p>
                     </div>
 
-                    <button type="button" class="btn btn-outline-secondary btn-block btn-select-date">
+                    <!-- <button type="button" class="btn btn-outline-secondary btn-block btn-select-date">
                       <div class="select-date">
                         <i><img src="images/svg/calendar-primary.svg" alt="ícone calendário"></i>
                         <span>Selecione a data</span>
                       </div>
                       <i class="dropdown-icon"><img src="images/svg/dropdown-icon-secondary.svg" alt=""></i>
-                    </button>
+                      <input type="text" id="datepicker"></p>
+                    </button> -->
+
+                    <div class="btn-datapicker">
+                      <input type="text" id="datepicker" class="btn btn-outline-secondary btn-block btn-select-date">
+                      <label for="datepicker">
+                        <div class="select-date">
+                          <i><img src="images/svg/calendar-primary.svg" alt="ícone calendário"></i>
+                          <span>Selecione a data</span>
+                        </div>
+                        <i class="dropdown-icon"><img src="images/svg/dropdown-icon-secondary.svg" alt=""></i>
+                      </label>
+                    </div>
 
                     <ul class="bilhetes-list">
                       <li>
@@ -1305,6 +1320,13 @@
   </div>
 
   <script src="js/bilhetes.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function() {
+      $("#datepicker").datepicker();
+    });
+  </script>
 </body>
 
 </html>
