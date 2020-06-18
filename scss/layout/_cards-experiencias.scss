@@ -13,6 +13,9 @@
   margin-bottom: 6rem;
   //   padding-top: 1.6rem;
   border-top: 2px solid $primary;
+  h2 {
+    @include font(2.4rem, 900, 1.2em);
+  }
   &__item {
     width: 100%;
     background-color: $white;
@@ -122,7 +125,7 @@
         @include font(1.4rem, 300, 1.2em);
       }
       &-gratuito {
-        @include font(1.6rem, 700, 1.2em);
+        @include font(1.4rem, 700, 1.2em);
         text-transform: uppercase;
       }
     }

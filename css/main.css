@@ -2477,7 +2477,7 @@ h1 strong {
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   font-weight: 300;
   line-height: 1.4em;
   color: #1D1D1B;
@@ -2490,7 +2490,7 @@ h2 strong {
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.4em;
   color: #1D1D1B;
@@ -2521,11 +2521,13 @@ h3 strong {
 }
 
 .btn span {
-  font-size: 1.8rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
   font-weight: 900;
   line-height: 1.2em;
   margin: 0 8px;
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 
 .btn-primary {
@@ -2570,6 +2572,18 @@ h3 strong {
 
 .btn-outline-secondary span {
   color: #1C8D87;
+}
+
+.btn-outline-secondary:active:focus, .btn-outline-secondary:active.focus, .btn-outline-secondary.active:focus, .btn-outline-secondary.active.focus {
+  background-color: #FFFFFF;
+  border: 2px solid #38706D;
+  transition: all .3s ease-out;
+}
+
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
+  background-color: #FFFFFF;
+  border: 2px solid #38706D;
+  transition: all .3s ease-out;
 }
 
 .btn[disabled] {
@@ -2717,34 +2731,49 @@ h3 strong {
   }
 }
 
-.btn-datapicker {
+.container-datapicker {
   width: 100%;
   height: 4rem;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-.btn-datapicker .btn-select-date {
+.container-datapicker .btn-select-date {
   height: 100%;
+  color: #1C8D87;
+  border: none;
+  background-color: transparent;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1em;
+  text-align: right;
 }
 
-.btn-datapicker label {
+.container-datapicker input {
+  cursor: pointer;
+}
+
+.container-datapicker input:focus {
+  outline: none;
+}
+
+.container-datapicker label {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  position: absolute;
-  top: auto;
-  right: auto;
-  bottom: 0;
-  left: 0;
   margin-bottom: 0;
-  padding: .4rem 1.6rem;
+  border-right: 1px solid #1C8D87;
   cursor: pointer;
 }
 
-.btn-datapicker label .select-date {
+.container-datapicker label .select-date {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -2752,18 +2781,18 @@ h3 strong {
   align-content: center;
 }
 
-.btn-datapicker label .select-date i {
+.container-datapicker label .select-date i {
   height: 3rem;
   margin-left: 0;
   margin-right: .8rem;
   display: inline-block;
 }
 
-.btn-datapicker label .select-date i img {
+.container-datapicker label .select-date i img {
   height: 100%;
 }
 
-.btn-datapicker label .select-date span {
+.container-datapicker label .select-date span {
   font-size: 1.6rem;
   font-weight: 900;
   line-height: 1.2em;
@@ -2771,17 +2800,119 @@ h3 strong {
   margin: 0;
 }
 
-.btn-datapicker label .dropdown-icon {
+.container-datapicker label .dropdown-icon {
   height: 1.5rem;
   display: inline-block;
 }
 
-.btn-datapicker label .dropdown-icon img {
+.container-datapicker label .dropdown-icon img {
   height: 100%;
 }
 
 #ui-datepicker-div {
   width: 32rem;
+  padding: 0;
+}
+
+#ui-datepicker-div .ui-widget-header {
+  padding: .8rem 0;
+  background-color: #8D1C22;
+}
+
+#ui-datepicker-div .ui-widget-header .ui-datepicker-prev,
+#ui-datepicker-div .ui-widget-header .ui-datepicker-next {
+  top: 7px;
+  cursor: pointer;
+}
+
+#ui-datepicker-div .ui-widget-header .ui-icon-circle-triangle-e {
+  background-image: url(../../images/svg/icon-right.svg);
+  background-position: 0;
+}
+
+#ui-datepicker-div .ui-widget-header .ui-icon-circle-triangle-w {
+  background-image: url(../../images/svg/icon-left.svg);
+  background-position: 0;
+}
+
+#ui-datepicker-div .ui-widget-header .ui-state-hover,
+#ui-datepicker-div .ui-widget-header .ui-state-focus,
+#ui-datepicker-div .ui-widget-header .ui-widget-content .ui-state-focus,
+#ui-datepicker-div .ui-widget-header .ui-widget-header .ui-state-focus,
+#ui-datepicker-div .ui-widget-header .ui-button:hover,
+#ui-datepicker-div .ui-widget-header .ui-button:focus {
+  background-color: transparent;
+  border: none;
+}
+
+#ui-datepicker-div .ui-datepicker {
+  padding: 0;
+}
+
+#ui-datepicker-div .ui-datepicker-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1em;
+  color: #FFFFFF;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar {
+  margin: 0;
+  background-color: #eeeeee;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar thead {
+  border-bottom: 2px solid #8D1C22;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  border-radius: 0;
+  background-color: #eeeeee;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar td {
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1.6em;
+  border: 2px solid #FFFFFF;
+  background-color: #FFFFFF;
+  padding: 2px;
+  transition: all .2s ease-in;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar td a {
+  text-align: center;
+  color: #1D1D1B;
+  border: none;
+  background-color: #FFFFFF;
+  padding: 0;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar td:hover {
+  border: 2px solid #1C8D87;
+  transition: all .2s ease-out;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar .ui-state-default {
+  background: none;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar .ui-datepicker-unselectable {
+  border: none;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar .ui-state-active {
+  background-color: #1C8D87;
+  color: #FFFFFF;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar .ui-state-disabled {
+  background-color: #CCCCCC;
 }
 
 form {
@@ -3883,6 +4014,12 @@ header .marca img {
   border-top: 2px solid #8D1C22;
 }
 
+.cards-list h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1.2em;
+}
+
 .cards-list__item {
   width: 100%;
   background-color: #FFFFFF;
@@ -4050,7 +4187,7 @@ header .marca img {
 }
 
 .cards-list__item--bilhetes .bilhetes-list__type-gratuito {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.2em;
   text-transform: uppercase;

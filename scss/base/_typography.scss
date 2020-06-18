@@ -18,7 +18,7 @@ h1 {
 }
 
 h2 {
-  @include font(2.6rem, 300, 1.4em);
+  @include font(2.8rem, 300, 1.4em);
   color: $black;
   text-align: center;
   text-transform: uppercase;
@@ -28,7 +28,7 @@ h2 {
 }
 
 h3 {
-  @include font(1.6rem, 300, 1.4em);
+  @include font(1.8rem, 300, 1.4em);
   color: $black;
   text-align: center;
   strong {

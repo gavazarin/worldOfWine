@@ -10,9 +10,11 @@
     }
   }
   span {
-    @include font(1.8rem, 900, 1.2em);
+    font-family: $font-01;
+    @include font(1.6rem, 900, 1.2em);
     margin: 0 8px;
     color: $white;
+    text-transform: uppercase;
   }
   &-primary {
     background-color: $primary;
@@ -58,6 +60,21 @@
     border-color: $secondary;
     span {
       color: $secondary;
+    }
+    &:active,
+    &.active {
+      &:focus,
+      &.focus {
+        background-color: $white;
+        border: 2px solid $secondary-dark;
+        transition: all .3s ease-out;
+      }
+    }
+    &:hover,
+    &:focus {
+      background-color: $white;
+      border: 2px solid $secondary-dark;
+      transition: all .3s ease-out;
     }
   }
   &[disabled] {
