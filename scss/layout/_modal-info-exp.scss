@@ -1,0 +1,62 @@
+.modal-info-exp {
+  height: 100%;
+  width: 100%;
+  @include absolute(0, auto, auto, 0);
+  //   @include flex(column, flex-start, center, center);
+  display: none;
+  background: rgba(0, 0, 0, .5);
+  padding: 8rem;
+  &-content {
+    width: 60%;
+    background-color: $white;
+    padding: 3rem;
+    @include flex(column, flex-start, center, center);
+    position: relative;
+    animation: open-modal .3s ease-out;
+    h1 {
+      color: $primary;
+      margin-top: 0;
+    }
+    .banner-exp {
+      width: 100%;
+      height: 20rem;
+      margin-bottom: 3rem;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    article {
+      width: 70%;
+      @include font(1.8rem, 300, 1.5em);
+      color: $black;
+    }
+  }
+}
+
+.mostrar-info-exp {
+  @include flex(column, flex-start, center, center);
+}
+
+.close-infos {
+  cursor: pointer;
+  display: inline-block;
+  height: 3rem;
+  @include absolute(0, 0, auto, auto);
+  transform: translateY(-130%);
+  img {
+    height: 100%;
+  }
+}
+
+@keyframes open-modal {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

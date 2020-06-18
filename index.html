@@ -8,8 +8,8 @@
 
   <link rel="stylesheet" href="css/main.css">
 
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="includes/jquery-ui.css">
+  <link rel="stylesheet" href="https://resources/demos/style.css">
 
   <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
 </head>
@@ -203,7 +203,7 @@
                     <div class="container">
                       <div class="title-experience">
                         <h2><strong>2 Experiences</strong></h2>
-                        <i><img src="images/svg/information.svg" alt="Icone Informação sobre a experiência"></i>
+                        <i class="infos-2exp"><img src="images/svg/information.svg" alt="Icone Informação sobre a experiência"></i>
                       </div>
 
                       <p>
@@ -1290,10 +1290,7 @@
             </ul>
           </div>
         </div>
-
-
       </section>
-
     </div>
 
     <footer class="footer">
@@ -1325,9 +1322,34 @@
     </footer>
   </div>
 
+  <div id="modal-info-2exp" class="modal-info-exp">
+    <div class="modal-info-exp-content">
+      <i class="close-infos"><img src="images/svg/close-icon-secondary.svg" alt=""></i>
+      <h1>2 Experiences</h1>
+      <div class="banner-exp">
+        <img src="images/prata.jpg" alt="Experiência Prata">
+      </div>
+      <article>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio
+          tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio
+          tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio
+          tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+        </p>
+      </article>
+    </div>
+  </div>
+
   <script src="js/bilhetes.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/modal-infos.js"></script>
+  <script src="includes/jquery-1.12.4.js"></script>
+  <script src="includes/jquery-ui.js"></script>
   <script>
     $(function() {
       $("#datepicker-2exp").datepicker({

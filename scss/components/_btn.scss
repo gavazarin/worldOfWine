@@ -66,14 +66,14 @@
       &:focus,
       &.focus {
         background-color: $white;
-        border: 2px solid $secondary-dark;
+        border: 1px solid $secondary-dark;
         transition: all .3s ease-out;
       }
     }
     &:hover,
     &:focus {
       background-color: $white;
-      border: 2px solid $secondary-dark;
+      border: 1px solid $secondary-dark;
       transition: all .3s ease-out;
     }
   }
