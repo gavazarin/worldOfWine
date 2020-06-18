@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Of Wine</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="includes/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="https://resources/demos/style.css"> -->
+
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+</head>
+
+<body>
+  <header class="header-checkout">
+    <div class="container">
+      <div class="row">
+        <a href="index.html" class="col-lg-1"><img src="images/svg/wow_min.svg" alt=""></a>
+
+        <nav class="col-lg-10">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item active">
+              <a href="#">
+                <i><span>1</span></i> Carrinho de compras
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">
+                <i><span>2</span></i> Dados para pagamento
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">
+                <i><span>3</span></i> Confirmação
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-container checkout-content">
+    <div class="content-wrap">
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-marca col-lg-6 col-md-6 col-sm-12">
+            <a href="index.html">
+              <img src="images/svg/wow-negative.svg" alt="World of Wine">
+            </a>
+          </div>
+          <ul class="footer-links col-lg-6 col-md-6 col-sm-12">
+            <li>
+              <ul class="metodos-pagamento">
+                <li class="logo-meowallet"><img src="images/svg/meowallet-blue.svg" alt="MEO Wallet"></li>
+                <li class="logo-visa"><img src="images/payment-visa.png" alt="Visa"></li>
+                <li class="logo-mastercard"><img src="images/payment-mastercard.png" alt="Mastercard"></li>
+                <li class="logo-multibanco"><img src="images/svg/multibanco-white.svg" alt="Multibanco"></li>
+                <!-- <li class="logo-visa"><img src="images/svg/mbway.svg" alt="Multibanco"></li> -->
+              </ul>
+            </li>
+            <li>
+              <div class="logoSmartmove">
+                <a href="http://www.smartmove.pt/pt/" target="_blank"><img src="images/svg/smartmove_rodape.svg" alt="Smartmove"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- jQuery, Bootstrap JS -->
+  <script src="includes/jquery.min.js"></script>
+  <script src="includes/bootstrap.min.js"></script>
+
+  <!-- Abrir bilhetes -->
+  <script src="js/bilhetes.js"></script>
+
+  <!-- jQuery - datapicker -->
+  <script src="includes/jquery-ui.js"></script>
+  <script>
+    $(function() {
+      $("#datepicker-2exp").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-3exp").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-6exp").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-prata").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-wine").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-cork").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-fashion").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-vessels").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-chocolate").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+    });
+  </script>
+</body>
+
+</html>

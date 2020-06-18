@@ -32,10 +32,11 @@ header {
       cursor: pointer;
       margin-bottom: 0;
       position: relative;
+      @include flex(row, flex-end, center, center);
       i {
         height: 1rem;
         width: auto;
-        display: inline-block;
+        display: flex;
         margin-left: 4px;
         img {
           height: 100%;
@@ -144,7 +145,7 @@ header {
           .dropdown-icon {
             width: 1.2rem;
             height: auto;
-            display: inline-block;
+            display: flex;
             @include absolute(auto, 0, 6px, auto);
             img {
               width: 100%;
@@ -300,6 +301,54 @@ header {
     }
     @include md {
       @include flex(row, center, center, center);
+    }
+  }
+}
+
+// HEADER CHECKOUT
+.header-checkout {
+  @include flex(column, center, center, center);
+  background-color: $white;
+  nav {
+    @include flex(row, flex-end, center, center);
+  }
+  .breadcrumb {
+    @include flex(row, flex-end, center, center);
+    &-item {
+      margin: 0 3rem;
+      opacity: .5;
+    }
+    a {
+      @include font(1.8rem, 900, 1.2em);
+      color: $black;
+      @include flex(row, flex-end, center, center);
+      i {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: $gray-01;
+        border: 2px solid $black;
+        border-radius: 50%;
+        font-style: normal;
+        @include flex(row, center, center, center);
+        margin-right: .8rem;
+        font-size: 1.4rem;
+      }
+      &:hover {
+        text-decoration: none;
+        i {
+          span {
+            color: $black;
+          }
+        }
+      }
+    }
+    .active {
+      opacity: 1;
+      a {
+        i {
+          background-color: $white;
+        }
+      }
     }
   }
 }

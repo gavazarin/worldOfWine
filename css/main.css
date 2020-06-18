@@ -3583,12 +3583,17 @@ header .top-header .language-dropdown {
   cursor: pointer;
   margin-bottom: 0;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
 }
 
 header .top-header .language-dropdown i {
   height: 1rem;
   width: auto;
-  display: inline-block;
+  display: flex;
   margin-left: 4px;
 }
 
@@ -3751,7 +3756,7 @@ header .navMenu__list .header-carrinho__infos .carrinho-valor {
 header .navMenu__list .header-carrinho__infos .dropdown-icon {
   width: 1.2rem;
   height: auto;
-  display: inline-block;
+  display: flex;
   position: absolute;
   top: auto;
   right: 0;
@@ -3994,6 +3999,80 @@ header .marca img {
     align-items: center;
     align-content: center;
   }
+}
+
+.header-checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #FFFFFF;
+}
+
+.header-checkout nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+.header-checkout .breadcrumb {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+.header-checkout .breadcrumb-item {
+  margin: 0 3rem;
+  opacity: .5;
+}
+
+.header-checkout .breadcrumb a {
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.2em;
+  color: #1D1D1B;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+.header-checkout .breadcrumb a i {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #CCCCCC;
+  border: 2px solid #1D1D1B;
+  border-radius: 50%;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-right: .8rem;
+  font-size: 1.4rem;
+}
+
+.header-checkout .breadcrumb a:hover {
+  text-decoration: none;
+}
+
+.header-checkout .breadcrumb a:hover i span {
+  color: #1D1D1B;
+}
+
+.header-checkout .breadcrumb .active {
+  opacity: 1;
+}
+
+.header-checkout .breadcrumb .active a i {
+  background-color: #FFFFFF;
 }
 
 .navMenu-mobile {
@@ -4511,4 +4590,8 @@ header .marca img {
 
 .close-infos img {
   height: 100%;
+}
+
+.checkout-content {
+  background-color: #F7F7F7;
 }
