@@ -315,8 +315,26 @@ header {
   .breadcrumb {
     @include flex(row, flex-end, center, center);
     &-item {
-      margin: 0 3rem;
+      margin: 0 6rem;
       opacity: .5;
+      position: relative;
+      &:before {
+        content: '';
+        width: 6rem;
+        height: 3px;
+        background-color: $black;
+        @include absolute(50%, 0, auto, auto);
+        transform: translateX(calc(100% + 3rem));
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+        &:before {
+          display: none;
+        }
+      }
     }
     a {
       @include font(1.8rem, 900, 1.2em);
@@ -347,6 +365,54 @@ header {
       a {
         i {
           background-color: $white;
+        }
+      }
+    }
+    .completed {
+      opacity: 1;
+      a {
+        i {
+          background-color: $secondary;
+          border-color: $secondary;
+          img {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+  @include md {
+    height: auto;
+    padding: 1.5rem 0;
+    .row {
+      @include flex(column, center, center, center);
+    }
+    .marca {
+      margin-bottom: 3rem;
+    }
+    nav {
+      @include flex(row, center, center, center);
+    }
+    .breadcrumb {
+      &-item {
+        margin: 0 2rem;
+        &:before {
+          width: 1.5rem;
+          height: 3px;
+          transform: translateX(calc(100% + 1rem));
+        }
+        a {
+          font-size: 1.6rem;
+        }
+        &-text {
+          display: none;
+        }
+      }
+      .active {
+        .breadcrumb-item-text {
+          width: auto;
+          display: block;
+          text-align: center;
         }
       }
     }

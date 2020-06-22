@@ -85,6 +85,7 @@
   @include absolute(0, auto, auto, 0);
   @include flex(column, space-between, center, center);
   padding: 1.5rem;
+  overflow-y: scroll;
   transform: translateY(100%);
   transition: all .3s ease-in;
   .title-experience {

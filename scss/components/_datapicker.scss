@@ -52,8 +52,8 @@
   }
 }
 
-#ui-datepicker-div {
-  width: 32rem;
+.ui-datepicker {
+  width: 32rem !important;
   padding: 0;
   .ui-widget-header {
     padding: .8rem 0;

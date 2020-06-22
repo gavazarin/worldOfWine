@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Of Wine</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="includes/jquery-ui.css">
+
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+</head>
+
+<body>
+  <header class="header-checkout">
+    <div class="container">
+      <div class="row">
+        <a href="index.html" class="marca col-lg-1 col-md-2 col-sm-2"><img src="images/svg/wow_min.svg" alt=""></a>
+
+        <nav class="col-lg-11 col-md-12 col-sm-12">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item completed">
+              <a href="#">
+                <i><img src="images/svg/check-icon.svg" alt=""></i>
+                <span class="breadcrumb-item-text">Carrinho de compras</span>
+              </a>
+            </li>
+            <li class="breadcrumb-item active">
+              <a href="#">
+                <i><span>2</span></i>
+                <span class="breadcrumb-item-text">Dados para pagamento</span>
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">
+                <i><span>3</span></i>
+                <span class="breadcrumb-item-text">Confirmação</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-container checkout-content">
+    <div class="content-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="dados-pagamento col-lg-9">
+            <div class="dados-pagamento-box dados-pagamento-metodo">
+              <div class="dados-pagamento-title">
+                <h2>Método de Pagamento</h2>
+                <i><img src="images/svg/locked.svg" alt=""></i>
+              </div>
+
+              <div class="form-check">
+                <input class="inp-cbx" name="metodo-pagamento" id="cartao-credito" type="radio" style="display: none;" />
+                <label class="cbx" for="cartao-credito">
+                    <span class="icone-check">
+                        <svg width="12px" height="10px" viewbox="0 0 12 10">
+                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                    </span>
+                    <div class="forma-pagamento">
+                      <span>Cartão de Crédito</span>
+                      <ul class="logos-pagamento">
+                        <li>
+                          <img src="images/svg/mastercard.svg" alt="Mastercard">
+                        </li>
+                        <li class="logos-pagamento-visa">
+                          <img src="images/svg/visa.svg" alt="Visa">
+                        </li>
+                      </ul>
+                    </div>
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="inp-cbx" name="metodo-pagamento" id="multibanco" type="radio" style="display: none;" />
+                <label class="cbx" for="multibanco">
+                    <span class="icone-check">
+                        <svg width="12px" height="10px" viewbox="0 0 12 10">
+                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                    </span>
+                    <div class="forma-pagamento">
+                      <span>Multibanco</span>
+                      <ul class="logos-pagamento">
+                        <li>
+                          <img src="images/svg/multibanco.svg" alt="Multibanco">
+                        </li>
+                      </ul>
+                    </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="dados-pagamento-box">
+              <div class="dados-pagamento-title">
+                <h2>Dados de Contacto</h2>
+              </div>
+
+              <form>
+                <div class="container-input col-md-6">
+                  <label for="inputName">Nome</label>
+                  <input type="text" class="input-validate" id="inputName">
+                  <span class="input-validate">Obrigatório!</span>
+                </div>
+                <div class="container-input col-md-6">
+                  <label for="selectCountry">País</label>
+                  <select id="selectCountry">
+                    <option value="" selected>Informe o seu país</option>
+                  </select>
+                </div>
+                <div class="container-input col-md-6">
+                  <label for="selectEmail">E-mail</label>
+                  <input type="email" id="selectEmail">
+                </div>
+                <div class="container-input col-md-6">
+                  <label for="selectConfirmEmail">Repetir e-mail</label>
+                  <input type="email" id="selectConfirmEmail" disabled>
+                </div>
+              </form>
+
+              <p class="dados-aviso">*Os bilhetes das suas experiências serão enviados para o e-mail indicado</p>
+            </div>
+
+            <div class="dados-pagamento-box">
+              <div class="dados-pagamento-title">
+                <h2>Dados de Faturação</h2>
+                <a class="btn-dados-faturacao" data-toggle="collapse" href="#dadosFaturacao" role="button" aria-expanded="false" aria-controls="dadosFaturacao"></a>
+              </div>
+
+              <div class="collapse" id="dadosFaturacao">
+                <form>
+                  <div class="container-input col-md-3">
+                    <label for="inputContribuinte">Nº de Contribuinte</label>
+                    <input type="text" id="inputContribuinte">
+                  </div>
+                  <div class="container-input col-md-9">
+                    <label for="inputNomeEmpresa">Nome/Empresa</label>
+                    <input type="text" id="inputNomeEmpresa">
+                  </div>
+                  <div class="container-input col-md-6">
+                    <label for="inputMorada">Morada de faturação</label>
+                    <input type="text" id="inputMorada">
+                  </div>
+                  <div class="container-input col-md-3">
+                    <label for="inputCodigoPostal">Código Postal</label>
+                    <input type="text" id="inputCodigoPostal" disabled>
+                  </div>
+                  <div class="container-input col-md-3">
+                    <label for="inputLocalidade">Localidade</label>
+                    <input type="text" id="inputLocalidade" disabled>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <ul class="politicas-dados">
+              <li>
+                <input class="inp-cbx-rgpd" name="politica-privacidade" id="politica-privacidade" type="checkbox" style="display: none;" />
+                <label class="cbx-rgpd" for="politica-privacidade">
+                  <p>
+                    Li e Concordo com a <a href="#">Política de Privacidade</a>
+                  </p>
+                  <span class="icone-check">
+                      <svg width="10px" height="10px" viewbox="0 0 12 10">
+                      <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                      </svg>
+                  </span>
+                </label>
+              </li>
+
+              <li>
+                <input class="inp-cbx-rgpd" name="partilhar-dados" id="partilhar-dados" type="checkbox" style="display: none;" />
+                <label class="cbx-rgpd" for="partilhar-dados">
+                  <p>
+                    Autorizo a partilha dos meus dados
+                  </p>
+                  <span class="icone-check">
+                      <svg width="10px" height="10px" viewbox="0 0 12 10">
+                      <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                      </svg>
+                  </span>
+                </label>
+              </li>
+            </ul>
+
+            <div class="container-btn">
+              <a href="#" class="btn btn-outline-secondary">
+                <span>Recuar</span>
+              </a>
+              <a href="#" class="btn btn-secondary">
+                <span>Avançar</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="resumo-compra col-lg-3">
+            <h2>Resumo da Compra</h2>
+
+            <table class="table table-borderless">
+              <thead>
+                <tr>
+                  <th scope="col">Qtde.</th>
+                  <th scope="col">Bilhete</th>
+                  <th scope="col">Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row"><span>3</span></td>
+                  <td><span>2 Experiences</span> <span>Adulto</span></td>
+                  <td><span>102,00€</span></td>
+                </tr>
+                <tr>
+                  <td scope="row"><span>1</span></td>
+                  <td><span>2 Experiences</span> <span>Criança</span></td>
+                  <td><span>21,00€</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <a href="#" class="btn-link">Alterar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-marca col-lg-6 col-md-6 col-sm-12">
+            <a href="index.html">
+              <img src="images/svg/wow-negative.svg" alt="World of Wine">
+            </a>
+          </div>
+          <ul class="footer-links col-lg-6 col-md-6 col-sm-12">
+            <li>
+              <ul class="metodos-pagamento">
+                <li class="logo-meowallet"><img src="images/svg/meowallet-blue.svg" alt="MEO Wallet"></li>
+                <li class="logo-visa"><img src="images/payment-visa.png" alt="Visa"></li>
+                <li class="logo-mastercard"><img src="images/payment-mastercard.png" alt="Mastercard"></li>
+                <li class="logo-multibanco"><img src="images/svg/multibanco-white.svg" alt="Multibanco"></li>
+                <!-- <li class="logo-visa"><img src="images/svg/mbway.svg" alt="Multibanco"></li> -->
+              </ul>
+            </li>
+            <li>
+              <div class="logoSmartmove">
+                <a href="http://www.smartmove.pt/pt/" target="_blank"><img src="images/svg/smartmove_rodape.svg" alt="Smartmove"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- jQuery, Bootstrap JS -->
+  <script src="includes/jquery.min.js"></script>
+  <script src="includes/bootstrap.min.js"></script>
+</body>
+
+</html>

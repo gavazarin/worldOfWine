@@ -1,92 +1,60 @@
 form {
   width: 100%;
-  margin-top: 1.5rem;
-  @include flex(column, flex-start, center, flex-start);
-  fieldset {
-    border: none;
-  }
+  margin-top: 3rem;
+  @include flex(row, flex-start, center, flex-start);
+  flex-wrap: wrap;
   .container-input {
     width: 100%;
     position: relative;
-    margin-bottom: .5rem;
-    padding-bottom: 1rem;
-    @include flex(row, flex-start, center, center);
-    flex-wrap: wrap;
-    text-align: left;
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
   }
   input,
   select {
     width: 100%;
-    height: 3.7rem;
-    padding: .75rem 1.5rem;
-    border: 2px solid $gray-01;
-    border-radius: 1rem;
+    height: 4rem;
+    padding: .5rem 1.5rem;
+    border: 1px solid $gray-02;
+    border-radius: 3px;
     @include font(1.6rem, 300, 1em);
-    color: $primary;
+    color: $black;
     &:focus {
-      outline: none;
-      border: 2px solid $primary;
+      // outline: none;
+      border-color: $black;
     }
     &:disabled {
-      background-color: $gray-01;
+      background-color: #f0f0f0;
+      border-color: $gray-01;
     }
+  }
+  option {
+    padding: .75rem 0;
   }
   label {
     width: 100%;
     text-align: left;
     @include font(1.6rem, 700, 1em);
-    color: $primary;
-    text-transform: lowercase;
-    padding-left: .5rem;
+    color: $black;
     &:disabled {
       color: $gray-01;
     }
   }
   .input-validate {
-    border: 2px solid $secondary-dark;
-    color: $secondary-dark;
+    border: 2px solid $primary;
+    color: $primary;
   }
   span.input-validate {
+    color: $primary;
     @include font(1.2rem, 700, 1em);
+    @include absolute(auto, auto, .4rem, 1.5rem);
     border: none;
   }
-  // .btn {
-  //   margin-top: .5rem;
-  // }
 }
 
-// cartão de sócio!
-.container-input {
-  .info-cartao {
-    @include absolute(0, .5rem, auto, auto);
-    display: inline-block;
-    cursor: pointer;
-    img {
-      width: 1.8rem;
-    }
-    .member-card {
-      width: 35rem;
-      height: auto;
-      z-index: 22;
-      @include absolute(0, 0, auto, auto);
-      transform: translate(100%, 0);
-      display: none;
-      transition: all .3s ease-in-out;
-      animation-name: animation-card;
-      animation-duration: .4s;
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: 1rem;
-      }
-    }
-    &:hover {
-      .member-card {
-        display: inline-block;
-        transition: all .3s ease-in-out;
-      }
-    }
-  }
+.dados-aviso {
+  @include font(1.4rem, 300, 1em);
+  font-style: italic;
+  margin-bottom: 0;
 }
 
 @keyframes animation-card {

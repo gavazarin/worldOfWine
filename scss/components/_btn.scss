@@ -77,9 +77,53 @@
       transition: all .3s ease-out;
     }
   }
+  &-link {
+    color: $primary;
+    @include font(1.2rem, 900, 1.2em);
+    &:active,
+    &.active {
+      &:focus,
+      &.focus {
+        color: $primary-dark;
+        transition: all .3s ease-out;
+      }
+    }
+    &:hover,
+    &:focus {
+      color: $primary-dark;
+      transition: all .3s ease-out;
+    }
+  }
   &[disabled] {
     background: $gray-01;
     border-color: $gray-02;
     pointer-events: none;
+  }
+  &-dados-faturacao {
+    width: 4.5rem;
+    height: 1.5rem;
+    position: relative;
+    background-color: $gray-01;
+    border-radius: 5px;
+    transition: none;
+    &:before {
+      content: '';
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background-color: $white;
+      border: 1px solid $gray-01;
+      @include absolute(0, auto, auto, -5px);
+      transform: translateY(-5px);
+    }
+    &[aria-expanded="true"] {
+      background-color: #1c8d8769;
+      transition: none;
+      &:before {
+        background-color: $secondary;
+        border: 1px solid $secondary-dark;
+        @include absolute(0, -5px, auto, auto);
+      }
+    }
   }
 }

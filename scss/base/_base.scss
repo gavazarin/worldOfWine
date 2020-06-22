@@ -32,12 +32,10 @@ ul {
 
 a,
 a:active,
-a:focus,
-a span:hover,
-a span:active,
-a span:focus {
-  color: white;
+a:focus {
+  color: $secondary;
   text-decoration: none;
+  transition: all .3s ease-out;
 }
 
 .page-container {
