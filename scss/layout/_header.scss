@@ -4,8 +4,8 @@ header {
   background-color: $black;
   position: relative;
   @include sm {
-    background-color: $primary;
-    overflow: hidden;
+    // background-color: $primary;
+    // overflow: hidden;
   }
   .top-header {
     background-color: $primary;
@@ -85,7 +85,10 @@ header {
       position: relative;
       @include flex(row, center, center, center);
       .header-morada {
-        @include flex(row, flex-start, center, center);
+        a {
+          text-decoration: none;
+          @include flex(row, flex-start, center, center);
+        }
         i {
           display: inline-block;
           height: 3rem;
@@ -100,6 +103,9 @@ header {
           color: $white;
           @include font(1.4rem, 300, 1.4em);
           margin-bottom: 0;
+          @include sm {
+            display: none;
+          }
         }
       }
       .header-marca {
@@ -150,6 +156,20 @@ header {
             img {
               width: 100%;
               height: auto;
+            }
+          }
+          @include sm {
+            @include flex(row, center, center, center);
+            span {
+              display: none;
+            }
+            .carrinho-valor {
+              display: block;
+            }
+            .dropdown-icon {
+              position: relative;
+              margin-left: 5px;
+              bottom: auto;
             }
           }
         }
@@ -414,81 +434,6 @@ header {
           display: block;
           text-align: center;
         }
-      }
-    }
-  }
-}
-
-//MENU MOBILE
-.navMenu-mobile {
-  width: 100%;
-  display: none;
-  overflow-x: hidden;
-  @include sm {
-    @include flex(row, space-between, center, center);
-    margin-bottom: 1.5rem;
-  }
-  .menuMobile {
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
-    background-color: $primary-dark;
-    color: $white;
-    position: fixed;
-    // @include flex(column, flex-start, center, center);
-    top: 0;
-    left: 0;
-    padding: 3rem 2rem 2rem;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    transform: translateX(100%);
-    transition: all .3s ease-out;
-    z-index: 10;
-    ul {
-      width: 100%;
-      padding: 1.5rem 0;
-      @include font(2rem, 700, 1em);
-      position: relative;
-      text-align: center;
-      li {
-        margin: 3rem 0;
-        a {
-          transition: all .3s ease-out;
-          color: $white;
-          &:hover {
-            color: $gray-01;
-            text-decoration: none;
-            transition: all .3s ease-out;
-          }
-        }
-      }
-    }
-  }
-  .menu_open {
-    transform: translateX(0);
-    transition: all .3s ease-out;
-  }
-  .container-btn {
-    width: 100%;
-    text-align: right;
-  }
-  .btnMenu {
-    display: inline-block;
-    padding: .5rem;
-    z-index: 2;
-    transition: all .3s ease-out;
-    img {
-      width: 2rem;
-    }
-    &:hover {
-      transform: scale(.9);
-      transition: all .3s ease-out;
-    }
-    &__close {
-      margin-bottom: 1.5rem;
-      @include absolute(4.5rem, 1.5rem, auto, auto);
-      img {
-        width: 1.5rem;
       }
     }
   }

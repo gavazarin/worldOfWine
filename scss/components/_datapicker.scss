@@ -18,9 +18,10 @@
     }
   }
   label {
-    width: 100%;
+    width: auto;
     @include flex(row, space-between, center, center);
-    // @include absolute(auto, auto, 0, 0);
+    position: absolute;
+    left: 5px;
     margin-bottom: 0;
     border-right: 1px solid $secondary;
     // padding: .4rem 1.6rem;
