@@ -4688,7 +4688,19 @@ header .marca img {
 }
 
 .container-seu-carrinho .valor-compra li p {
-  margin-bottom: 0;
+  margin: 0 1.5rem 0;
+}
+
+@media (max-width: 992px) {
+  .container-seu-carrinho .valor-compra li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-seu-carrinho .valor-compra li {
+    width: 80%;
+  }
 }
 
 .container-seu-carrinho .valor-compra-subtotal {
