@@ -22,6 +22,9 @@
     padding: 0 8rem;
     margin: 1.5rem 0;
     @include flex(column, flex-end, flex-end, flex-end);
+    @include xs {
+      padding: 0 1.5rem;
+    }
     li {
       width: 20%;
       @include flex(row, space-between, center, center);
@@ -33,7 +36,8 @@
         width: 50%;
       }
       @include sm {
-        width: 80%;
+        width: 100%;
+        @include flex(row, flex-end, center, center);
       }
     }
     &-subtotal {
@@ -88,6 +92,7 @@
   &-title {
     width: 100%;
     @include flex(row, space-between, center, center);
+    flex-wrap: wrap;
     i {
       display: inline-block;
       height: 3rem;
@@ -164,5 +169,42 @@
   @include md {
     min-height: auto;
     margin-bottom: 3rem;
+  }
+}
+
+.checkout-confirm {
+  .table-seu-carrinho {
+    thead {
+      background-color: $secondary;
+      th {
+        color: $white;
+      }
+    }
+  }
+  .pagamentos-confirm {
+    @include flex(row, space-between, center, center);
+    flex-wrap: wrap;
+    .dados-pagamento-title {
+      @include flex(row, space-between, flex-end, flex-end);
+    }
+    &-metodo {
+      @include flex(row, flex-start, center, center);
+      margin-top: 3rem;
+      ul {
+        @include flex(row, flex-start, center, center);
+        i {
+          width: 6rem;
+          display: inline-block;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      p {
+        margin-bottom: 0;
+        margin-left: 3rem;
+        @include font(1.4rem, 900, 1em);
+      }
+    }
   }
 }

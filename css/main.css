@@ -3135,6 +3135,7 @@ h3 strong {
 }
 
 .ui-datepicker .ui-datepicker-calendar td {
+  width: 100%;
   font-size: 1.6rem;
   font-weight: 900;
   line-height: 1.6em;
@@ -4677,6 +4678,12 @@ header .marca img {
   align-content: flex-end;
 }
 
+@media (max-width: 575px) {
+  .container-seu-carrinho .valor-compra {
+    padding: 0 1.5rem;
+  }
+}
+
 .container-seu-carrinho .valor-compra li {
   width: 20%;
   display: flex;
@@ -4699,7 +4706,12 @@ header .marca img {
 
 @media (max-width: 767px) {
   .container-seu-carrinho .valor-compra li {
-    width: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
   }
 }
 
@@ -4780,6 +4792,7 @@ header .marca img {
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  flex-wrap: wrap;
 }
 
 .dados-pagamento-title i {
@@ -4878,4 +4891,63 @@ header .marca img {
     min-height: auto;
     margin-bottom: 3rem;
   }
+}
+
+.checkout-confirm .table-seu-carrinho thead {
+  background-color: #1C8D87;
+}
+
+.checkout-confirm .table-seu-carrinho thead th {
+  color: #FFFFFF;
+}
+
+.checkout-confirm .pagamentos-confirm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.checkout-confirm .pagamentos-confirm .dados-pagamento-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+.checkout-confirm .pagamentos-confirm-metodo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin-top: 3rem;
+}
+
+.checkout-confirm .pagamentos-confirm-metodo ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.checkout-confirm .pagamentos-confirm-metodo ul i {
+  width: 6rem;
+  display: inline-block;
+}
+
+.checkout-confirm .pagamentos-confirm-metodo ul i img {
+  width: 100%;
+}
+
+.checkout-confirm .pagamentos-confirm-metodo p {
+  margin-bottom: 0;
+  margin-left: 3rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 1em;
 }
