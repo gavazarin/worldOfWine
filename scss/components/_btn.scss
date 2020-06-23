@@ -1,5 +1,6 @@
 .btn {
   @include flex(row, center, center, center);
+  flex-wrap: wrap;
   i {
     height: 4rem;
     width: auto;

@@ -1,100 +1,162 @@
 .checkout-content {
   background-color: $white-secondary;
   padding-top: 3rem;
-  .resumo-compra,
-  .dados-pagamento-box {
-    width: 100%;
-    background-color: $white;
-    padding: 3rem;
-    border: 2px solid $gray-01;
-    h2 {
-      @include font(2rem, 900, 1em);
-      margin: 0;
-    }
-    @include sm {
-      padding: 3rem 1.5rem;
-    }
+  .row {
+    @include flex(row, center, flex-start, flex-start);
   }
-  .dados-pagamento {
-    &-box {
-      margin-bottom: 3rem;
-    }
-    &-title {
-      width: 100%;
+}
+
+.checkout-carrinho {
+  h2 {
+    @include font(2.5rem, 900, 1em);
+  }
+}
+
+.container-seu-carrinho {
+  background-color: $white;
+  border: 1px solid $gray-01;
+  margin: 1.5rem 0;
+  @include flex(column, flex-start, center, center);
+  .valor-compra {
+    width: 100%;
+    padding: 0 8rem;
+    margin: 1.5rem 0;
+    @include flex(column, flex-end, flex-end, flex-end);
+    li {
+      width: 20%;
       @include flex(row, space-between, center, center);
+      margin: .5rem 0;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    &-subtotal {
+      @include font(1.6rem, 900, 1.2em);
+    }
+    &-taxas {
+      @include font(1.4rem, 300, 1.2em);
+      padding-bottom: .5rem;
       i {
+        height: 1.5rem;
         display: inline-block;
-        height: 3rem;
-        width: auto;
         img {
           height: 100%;
         }
       }
-      @include xs {
-        h2 {
-          text-align: left;
-        }
-      }
     }
-    &-metodo {
-      .form-check {
-        margin: 1.6rem 0;
-        &:last-child {
-          margin-bottom: 0;
-        }
+    &-total {
+      @include font(2rem, 900, 1.2em);
+      text-transform: uppercase;
+      padding-top: 1.5rem;
+      position: relative;
+      &:before {
+        content: '';
+        width: 120%;
+        height: 1px;
+        background-color: $gray-01;
+        @include absolute(0, 0, auto, auto);
       }
     }
   }
-  .politicas-dados {
-    margin-bottom: 3rem;
-    li {
-      margin-bottom: .8rem;
-    }
+}
+
+.resumo-compra,
+.dados-pagamento-box {
+  width: 100%;
+  background-color: $white;
+  padding: 3rem;
+  border: 2px solid $gray-01;
+  h2 {
+    @include font(2rem, 900, 1em);
+    margin: 0;
   }
-  .container-btn {
-    background-color: #eeeeee;
-    padding: 1.5rem;
+  @include sm {
+    padding: 3rem 1.5rem;
+  }
+}
+
+.dados-pagamento {
+  &-box {
     margin-bottom: 3rem;
+  }
+  &-title {
+    width: 100%;
     @include flex(row, space-between, center, center);
-    .btn {
-      padding: 1.6rem 3.2rem;
+    i {
+      display: inline-block;
+      height: 3rem;
+      width: auto;
+      img {
+        height: 100%;
+      }
     }
     @include xs {
-      @include flex(column, center, center, center);
-      .btn {
-        width: 80%;
-        margin: 1.5rem;
-      }
-      .btn-secondary {
-        order: 1;
-      }
-      .btn-outline-secondary {
-        order: 2;
+      h2 {
+        text-align: left;
       }
     }
   }
-  .resumo-compra {
-    min-height: 35rem;
-    height: 100%;
-    text-align: right;
-    table {
-      thead {
-        margin-bottom: 1.5rem;
-      }
-      th,
-      td {
-        text-align: left;
-        &:last-child {
-          text-align: right;
-        }
-      }
-      th {
-        font-size: 1.2rem;
+  &-metodo {
+    .form-check {
+      margin: 1.6rem 0;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
-    @include md {
-      min-height: auto;
-      margin-bottom: 3rem;
+  }
+}
+
+.politicas-dados {
+  margin-bottom: 3rem;
+  li {
+    margin-bottom: .8rem;
+  }
+}
+
+.container-btn {
+  background-color: #eeeeee;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  @include flex(row, space-between, center, center);
+  .btn {
+    padding: 1.6rem 3.2rem;
+  }
+  @include xs {
+    @include flex(column, center, center, center);
+    .btn {
+      width: 80%;
+      margin: 1.5rem;
     }
+    .btn-secondary {
+      order: 1;
+    }
+    .btn-outline-secondary {
+      order: 2;
+    }
+  }
+}
+
+.resumo-compra {
+  min-height: 35rem;
+  height: 100%;
+  text-align: right;
+  table {
+    thead {
+      margin-bottom: 1.5rem;
+    }
+    th,
+    td {
+      text-align: left;
+      &:last-child {
+        text-align: right;
+      }
+    }
+    th {
+      font-size: 1.2rem;
+    }
+  }
+  @include md {
+    min-height: auto;
+    margin-bottom: 3rem;
   }
 }

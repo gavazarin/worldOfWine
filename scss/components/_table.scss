@@ -52,3 +52,56 @@ table {
     }
   }
 }
+
+.table-seu-carrinho {
+  margin: 0;
+  margin-bottom: 3rem;
+  thead {
+    background-color: $gray-02;
+    th {
+      color: $gray-01;
+    }
+  }
+  td,
+  th {
+    &:first-child {
+      text-align: left;
+      padding-left: 1.5rem;
+    }
+  }
+  td {
+    select {
+      background-color: #f3f3f3;
+      @include font(1.4rem, 300, 1em);
+      border-radius: 3px;
+    }
+  }
+  .row-calendar {
+    td {
+      padding-top: 1.5rem;
+      @include flex(row, flex-start, center, center);
+    }
+    i {
+      display: inline-block;
+      height: 2rem;
+      img {
+        height: 100%;
+      }
+    }
+    span {
+      color: $primary;
+      font-weight: 900;
+      margin-left: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+  .item-delete {
+    a {
+      width: 2rem;
+      display: inline-block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
