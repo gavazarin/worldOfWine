@@ -22,7 +22,7 @@
     padding: 0 8rem;
     margin: 1.5rem 0;
     @include flex(column, flex-end, flex-end, flex-end);
-    @include xs {
+    @include sm {
       padding: 0 1.5rem;
     }
     li {
@@ -65,6 +65,11 @@
         height: 1px;
         background-color: $gray-01;
         @include absolute(0, 0, auto, auto);
+      }
+      @include sm {
+        &:before {
+          width: 75%;
+        }
       }
     }
   }
@@ -180,18 +185,30 @@
         color: $white;
       }
     }
+    td {
+      font-size: 1.6rem;
+    }
   }
   .pagamentos-confirm {
-    @include flex(row, space-between, center, center);
+    @include flex(row, space-between, flex-start, flex-start);
     flex-wrap: wrap;
+    .dados-pagamento-box {
+      min-height: 22rem;
+      @include md {
+        min-height: auto;
+      }
+    }
     .dados-pagamento-title {
       @include flex(row, space-between, flex-end, flex-end);
+      margin-bottom: 3rem;
     }
     &-metodo {
       @include flex(row, flex-start, center, center);
-      margin-top: 3rem;
       ul {
         @include flex(row, flex-start, center, center);
+        li {
+          margin-right: 1.5rem;
+        }
         i {
           width: 6rem;
           display: inline-block;
@@ -199,11 +216,37 @@
             width: 100%;
           }
         }
+        .pagamentos-confirm-metodo-visa {
+          i {
+            width: 8rem;
+          }
+        }
       }
       p {
         margin-bottom: 0;
-        margin-left: 3rem;
+        margin-left: 1.5rem;
         @include font(1.4rem, 900, 1em);
+      }
+    }
+  }
+  .confirm-dados-contacto,
+  .confirm-dados-faturacao {
+    margin-bottom: 1.5rem;
+    @include font(1.6rem, 300, 1.2em);
+    strong {
+      font-weight: 900;
+    }
+    li {
+      margin-bottom: .8rem;
+    }
+  }
+  .confirm-dados-faturacao {
+    p {
+      &:first-child {
+        margin-bottom: 3rem;
+      }
+      &:last-child {
+        margin-top: 3rem;
       }
     }
   }

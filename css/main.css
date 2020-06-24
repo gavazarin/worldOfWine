@@ -3153,6 +3153,10 @@ h3 strong {
   padding: 0;
 }
 
+.ui-datepicker .ui-datepicker-calendar td span {
+  text-align: center;
+}
+
 .ui-datepicker .ui-datepicker-calendar td:hover {
   border: 2px solid #1C8D87;
   transition: all .2s ease-out;
@@ -4678,7 +4682,7 @@ header .marca img {
   align-content: flex-end;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .container-seu-carrinho .valor-compra {
     padding: 0 1.5rem;
   }
@@ -4756,6 +4760,12 @@ header .marca img {
   right: 0;
   bottom: auto;
   left: auto;
+}
+
+@media (max-width: 767px) {
+  .container-seu-carrinho .valor-compra-total:before {
+    width: 75%;
+  }
 }
 
 .resumo-compra,
@@ -4901,13 +4911,27 @@ header .marca img {
   color: #FFFFFF;
 }
 
+.checkout-confirm .table-seu-carrinho td {
+  font-size: 1.6rem;
+}
+
 .checkout-confirm .pagamentos-confirm {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  align-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
   flex-wrap: wrap;
+}
+
+.checkout-confirm .pagamentos-confirm .dados-pagamento-box {
+  min-height: 22rem;
+}
+
+@media (max-width: 992px) {
+  .checkout-confirm .pagamentos-confirm .dados-pagamento-box {
+    min-height: auto;
+  }
 }
 
 .checkout-confirm .pagamentos-confirm .dados-pagamento-title {
@@ -4916,6 +4940,7 @@ header .marca img {
   justify-content: space-between;
   align-items: flex-end;
   align-content: flex-end;
+  margin-bottom: 3rem;
 }
 
 .checkout-confirm .pagamentos-confirm-metodo {
@@ -4924,7 +4949,6 @@ header .marca img {
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  margin-top: 3rem;
 }
 
 .checkout-confirm .pagamentos-confirm-metodo ul {
@@ -4933,6 +4957,10 @@ header .marca img {
   justify-content: flex-start;
   align-items: center;
   align-content: center;
+}
+
+.checkout-confirm .pagamentos-confirm-metodo ul li {
+  margin-right: 1.5rem;
 }
 
 .checkout-confirm .pagamentos-confirm-metodo ul i {
@@ -4944,10 +4972,40 @@ header .marca img {
   width: 100%;
 }
 
+.checkout-confirm .pagamentos-confirm-metodo ul .pagamentos-confirm-metodo-visa i {
+  width: 8rem;
+}
+
 .checkout-confirm .pagamentos-confirm-metodo p {
   margin-bottom: 0;
-  margin-left: 3rem;
+  margin-left: 1.5rem;
   font-size: 1.4rem;
   font-weight: 900;
   line-height: 1em;
+}
+
+.checkout-confirm .confirm-dados-contacto,
+.checkout-confirm .confirm-dados-faturacao {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+.checkout-confirm .confirm-dados-contacto strong,
+.checkout-confirm .confirm-dados-faturacao strong {
+  font-weight: 900;
+}
+
+.checkout-confirm .confirm-dados-contacto li,
+.checkout-confirm .confirm-dados-faturacao li {
+  margin-bottom: .8rem;
+}
+
+.checkout-confirm .confirm-dados-faturacao p:first-child {
+  margin-bottom: 3rem;
+}
+
+.checkout-confirm .confirm-dados-faturacao p:last-child {
+  margin-top: 3rem;
 }

@@ -113,6 +113,9 @@
           background-color: $white;
           padding: 0;
         }
+        span {
+          text-align: center;
+        }
         &:hover {
           border: 2px solid $secondary;
           transition: all .2s ease-out;
