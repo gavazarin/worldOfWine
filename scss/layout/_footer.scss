@@ -5,6 +5,9 @@
   height: 16rem;
   background: $black;
   @include flex(row, center, center, center);
+  @include sm {
+    height: 25rem;
+  }
   .row {
     @include flex(row, center, center, center);
     @include sm {

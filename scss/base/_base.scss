@@ -45,6 +45,9 @@ a:focus {
 
 .content-wrap {
   padding-bottom: 16rem;
+  @include sm {
+    padding-bottom: 25rem;
+  }
   /* Footer height */
 }
 
