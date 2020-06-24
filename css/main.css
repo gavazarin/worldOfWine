@@ -5163,3 +5163,43 @@ header .marca img {
   width: 100%;
   margin-bottom: 3rem;
 }
+
+.bg-404 {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 0;
+}
+
+.error-404-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding-top: 12rem;
+}
+
+.error-404-content h1 {
+  color: #8D1C22;
+  font-size: 9rem;
+  font-weight: 900;
+  line-height: 1em;
+  letter-spacing: 8px;
+  margin: .8rem 0;
+}
+
+.error-404-content h3 {
+  width: 40%;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.4em;
+  text-align: left;
+  color: #1D1D1B;
+}
+
+.error-404-content .btn {
+  margin-top: .8rem;
+  padding: 1.6rem .8rem;
+}

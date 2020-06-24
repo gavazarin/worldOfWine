@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Of Wine</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="includes/jquery-ui.css">
+
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+</head>
+
+<body>
+  <header>
+    <div class="top-header">
+      <div class="container">
+        <div class="row">
+          <input id="language-dropdown" type="checkbox">
+          <label for="language-dropdown" class="language-dropdown">
+            <span>Português</span> <i><img src="images/svg/dropdown-icon.svg" alt="ícone de dropdown"></i>
+          </label>
+          <ul class="language-dropdown-list">
+            <li><a href="#">Deutsch</a></li>
+            <li><a href="#">English</a></li>
+            <li><a href="#">Español</a></li>
+            <li><a href="#">Français</a></li>
+            <li><a href="#">Português</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navMenu col-lg-12">
+      <div class="container">
+        <div class="row">
+          <ul class="navMenu__list">
+            <li class="header-morada col-lg-4">
+              <a href="https://g.page/world-of-wine-porto?share" target="_blanck">
+                <i><img src="images/svg/map-pin.svg" alt="ícone Pin - Endereço"></i>
+                <p>Rua do Choupelo, 4400-088 <br>Vila Nova de Gaia</p>
+              </a>
+            </li>
+
+            <li class="header-marca col-lg-4">
+              <a href="index.html" class="marca col-lg-2"><img src="images/svg/wow-porto.svg" alt="Logo do World of Wine"></a>
+            </li>
+
+            <li class="header-carrinho col-lg-4">
+              <i class="shopping-cart-icon"><img src="images/svg/shopping-cart.svg" alt="ícone carrinho de compras"></i>
+              <input id="carrinho-dropdown" type="checkbox">
+              <label for="carrinho-dropdown" class="header-carrinho__infos">
+                <span>Carrinho de Compras</span>
+                <span class="carrinho-valor">0,00€</span>
+                <i class="dropdown-icon"><img src="images/svg/dropdown-icon.svg" alt="ícone de dropdown"></i>
+              </label>
+
+              <!-- CARRINHO DE COMPRAS VAZIO! -->
+              <!-- <div class="carrinho-compras carrinho-compras-empty">
+                <i><img src="images/svg/shopping-cart-secondary.svg" alt=""></i>
+                <h3>O seu carrinho está vazio</h3>
+                <p>Escolha já as suas experiências!</p>
+              </div> -->
+
+              <div class="carrinho-compras carrinho-compras-itens">
+                <!-- <p class="info-data">
+                  <i><img src="images/svg/calendar-secondary.svg" alt=""></i> <span>10/06/2020</span>
+                </p> -->
+
+                <ul class="info-compra">
+                  <li class="info-compra-item">
+                    <ul class="info-compra-detalhes">
+                      <li class="info-compra-detalhes-bilhete"><span>3 Experiences</span> <span>Adulto</span></li>
+                      <li class="info-compra-detalhes-quantidade">
+                        <select>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </li>
+                      <li class="info-compra-detalhes-valor">
+                        <span>102,00</span>€
+                      </li>
+                      <li class="info-compra-detalhes-delete">
+                        <i><img src="images/svg/trash.svg" alt=""></i>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="info-compra-item">
+                    <ul class="info-compra-detalhes">
+                      <li class="info-compra-detalhes-bilhete"><span>1 Experiences</span> <span>Criança</span></li>
+                      <li class="info-compra-detalhes-quantidade">
+                        <select>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </li>
+                      <li class="info-compra-detalhes-valor">
+                        <span>21,00</span>€
+                      </li>
+                      <li class="info-compra-detalhes-delete">
+                        <i><img src="images/svg/trash.svg" alt=""></i>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <ul class="info-total">
+                  <li class="info-total-subtotal">
+                    <span>Subtotal:</span> <span><strong>123,00€</strong></span>
+                  </li>
+                  <li class="info-total-total">
+                    <span>Total:</span> <span>123,00€</span>
+                  </li>
+                </ul>
+
+                <div class="container-btn">
+                  <button type="button" class="btn btn-outline-secondary"><span>Continuar a comprar</span></button>
+                  <a href="checkout-dados-pagamento.html" class="btn btn-secondary"><span>Proceder ao pagamento</span></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-container error-404">
+    <div class="content-wrap">
+      <div class="bg-404">
+        <img src="images/404error.png" alt="">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="error-404-content col-lg-12">
+            <h1>404</h1>
+            <h3>Desculpe! Essa página não está disponível!</h3>
+            <a href="index.html" class="btn btn-primary"><span>voltar ao início</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-marca col-lg-6 col-md-6 col-sm-12">
+            <a href="index.html">
+              <img src="images/svg/wow-negative.svg" alt="World of Wine">
+            </a>
+          </div>
+          <ul class="footer-links col-lg-6 col-md-6 col-sm-12">
+            <li>
+              <ul class="metodos-pagamento">
+                <li class="logo-meowallet"><img src="images/svg/meowallet-blue.svg" alt="MEO Wallet"></li>
+                <li class="logo-visa"><img src="images/payment-visa.png" alt="Visa"></li>
+                <li class="logo-mastercard"><img src="images/payment-mastercard.png" alt="Mastercard"></li>
+                <li class="logo-multibanco"><img src="images/svg/multibanco-white.svg" alt="Multibanco"></li>
+                <!-- <li class="logo-visa"><img src="images/svg/mbway.svg" alt="Multibanco"></li> -->
+              </ul>
+            </li>
+            <li>
+              <div class="logoSmartmove">
+                <a href="http://www.smartmove.pt/pt/" target="_blank"><img src="images/svg/smartmove_rodape.svg" alt="Smartmove"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- jQuery, Bootstrap JS -->
+  <script src="includes/jquery.min.js"></script>
+  <script src="includes/bootstrap.min.js"></script>
+</body>
+
+</html>

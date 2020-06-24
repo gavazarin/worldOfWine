@@ -1,0 +1,26 @@
+.bg-404 {
+  @include absolute(auto, auto, 0, 0);
+}
+
+.error-404 {
+  &-content {
+    @include flex(column, center, flex-start, flex-start);
+    padding-top: 12rem;
+    h1 {
+      color: $primary;
+      @include font(9rem, 900, 1em);
+      letter-spacing: 8px;
+      margin: .8rem 0;
+    }
+    h3 {
+      width: 40%;
+      @include font(2.4rem, 300, 1.4em);
+      text-align: left;
+      color: $black;
+    }
+    .btn {
+      margin-top: .8rem;
+      padding: 1.6rem .8rem;
+    }
+  }
+}
