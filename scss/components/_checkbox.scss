@@ -15,8 +15,20 @@
     width: 97%;
     @include flex(row, space-between, center, center);
     @include font(1.4rem, 900, 1.2em);
+    &-text {
+      @include flex(column, center, flex-start, flex-start);
+      width: 80%;
+      .descricao {
+        font-weight: 300;
+        margin-top: .8rem;
+        .btn-link {
+          margin-left: .8rem;
+        }
+      }
+    }
   }
   .logos-pagamento {
+    width: 20%;
     height: 3rem;
     @include flex(row, flex-end, center, center);
     li {

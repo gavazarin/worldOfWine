@@ -2843,7 +2843,26 @@ h3 strong {
   line-height: 1.2em;
 }
 
+.cbx .forma-pagamento-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 80%;
+}
+
+.cbx .forma-pagamento-text .descricao {
+  font-weight: 300;
+  margin-top: .8rem;
+}
+
+.cbx .forma-pagamento-text .descricao .btn-link {
+  margin-left: .8rem;
+}
+
 .cbx .logos-pagamento {
+  width: 20%;
   height: 3rem;
   display: flex;
   flex-direction: row;
@@ -3379,11 +3398,11 @@ table th {
 }
 
 .table-seu-carrinho thead {
-  background-color: #707070;
+  background-color: #1C8D87;
 }
 
 .table-seu-carrinho thead th {
-  color: #CCCCCC;
+  color: #FFFFFF;
 }
 
 .table-seu-carrinho td:first-child,
@@ -5219,6 +5238,14 @@ header .marca img {
 .container-detalhes {
   width: 100%;
   margin-bottom: 3rem;
+}
+
+.container-detalhes .table-seu-carrinho thead {
+  background-color: #1C8D87;
+}
+
+.container-detalhes .table-seu-carrinho thead th {
+  color: #FFFFFF;
 }
 
 .bg-404 {

@@ -328,4 +328,12 @@
 .container-detalhes {
   width: 100%;
   margin-bottom: 3rem;
+  .table-seu-carrinho {
+    thead {
+      background-color: $secondary;
+      th {
+        color: $white;
+      }
+    }
+  }
 }
