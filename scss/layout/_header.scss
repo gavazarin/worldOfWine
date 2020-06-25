@@ -56,14 +56,15 @@ header {
       li {
         text-align: right;
         background-color: $black;
-        padding: 1.6rem 1.6rem;
-        padding-left: 3.2rem;
         @include font(1.2rem, 300, 1.2em);
         text-transform: uppercase;
-        border-bottom: .5px solid $primary;
         transition: all .3s ease-in-out;
         a {
           display: block;
+          color: $white;
+          padding: 1.6rem 1.6rem;
+          padding-left: 3.2rem;
+          border-bottom: .5px solid $primary;
         }
         &:hover {
           background-color: #2e2e2d;
