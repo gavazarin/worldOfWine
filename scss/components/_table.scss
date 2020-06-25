@@ -75,6 +75,19 @@ table {
       @include font(1.4rem, 300, 1em);
       border-radius: 3px;
     }
+    &:first-child {
+      span {
+        &:first-child {
+          display: block;
+          font-size: 1.4rem;
+          font-style: italic;
+        }
+        &:nth-child(2) {
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+      }
+    }
   }
   .row-calendar {
     td {

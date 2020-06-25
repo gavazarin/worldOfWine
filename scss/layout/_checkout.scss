@@ -10,6 +10,26 @@
   h2 {
     @include font(2.5rem, 900, 1em);
   }
+  &-empty {
+    @include flex(column, flex-start, center, center);
+    i {
+      height: 16rem;
+      display: inline-block;
+      margin-bottom: 1.6rem;
+      img {
+        height: 100%;
+      }
+    }
+    h3 {
+      font-weight: 900;
+      text-transform: uppercase;
+      color: $gray-01;
+    }
+    .btn {
+      padding: 1.6rem .8rem;
+      margin-top: 1.6rem;
+    }
+  }
 }
 
 .container-seu-carrinho {

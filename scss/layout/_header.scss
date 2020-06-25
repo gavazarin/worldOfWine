@@ -207,7 +207,8 @@ header {
       @include absolute(auto, 0, -0.8rem, auto);
     }
     &-empty {
-      @include flex(column, flex-start, center, center);
+      // @include flex(column, flex-start, center, center);
+      text-align: center;
       padding: 1.5rem 3rem;
       i {
         height: 10rem;
@@ -259,6 +260,16 @@ header {
           &-bilhete {
             width: 55%;
             @include font(1.6rem, 300, 1.4em);
+            span {
+              &:first-child {
+                display: block;
+                font-size: 1.4rem;
+                font-style: italic;
+              }
+              &:nth-child(2) {
+                font-weight: 900;
+              }
+            }
           }
           &-quantidade {
             width: 15%;

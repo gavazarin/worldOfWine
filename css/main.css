@@ -3419,6 +3419,17 @@ table th {
   border-radius: 3px;
 }
 
+.table-seu-carrinho td:first-child span:first-child {
+  display: block;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.table-seu-carrinho td:first-child span:nth-child(2) {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .table-seu-carrinho .row-calendar td {
   padding-top: 1.5rem;
   display: flex;
@@ -3956,11 +3967,7 @@ header .carrinho-compras {
 }
 
 header .carrinho-compras-empty {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
+  text-align: center;
   padding: 1.5rem 3rem;
 }
 
@@ -4044,6 +4051,16 @@ header .carrinho-compras-itens .info-compra-detalhes-bilhete {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.4em;
+}
+
+header .carrinho-compras-itens .info-compra-detalhes-bilhete span:first-child {
+  display: block;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+header .carrinho-compras-itens .info-compra-detalhes-bilhete span:nth-child(2) {
+  font-weight: 900;
 }
 
 header .carrinho-compras-itens .info-compra-detalhes-quantidade {
@@ -4775,6 +4792,35 @@ header .marca img {
   font-size: 2.5rem;
   font-weight: 900;
   line-height: 1em;
+}
+
+.checkout-carrinho-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.checkout-carrinho-empty i {
+  height: 16rem;
+  display: inline-block;
+  margin-bottom: 1.6rem;
+}
+
+.checkout-carrinho-empty i img {
+  height: 100%;
+}
+
+.checkout-carrinho-empty h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #CCCCCC;
+}
+
+.checkout-carrinho-empty .btn {
+  padding: 1.6rem .8rem;
+  margin-top: 1.6rem;
 }
 
 .container-seu-carrinho {
