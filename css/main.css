@@ -3612,6 +3612,13 @@ header {
   height: 10rem;
   background-color: #1D1D1B;
   position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  header {
+    height: 15rem;
+  }
 }
 
 header .top-header {
@@ -3731,6 +3738,17 @@ header .navMenu__list {
   justify-content: center;
   align-items: center;
   align-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  header .navMenu__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
 }
 
 header .navMenu__list .header-morada a {
@@ -3768,18 +3786,40 @@ header .navMenu__list .header-morada p {
   }
 }
 
+@media (max-width: 767px) {
+  header .navMenu__list .header-morada {
+    order: 2;
+  }
+}
+
 header .navMenu__list .header-marca {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  header .navMenu__list .header-marca {
+    order: 3;
+    margin-top: 1rem;
+  }
+}
+
 header .navMenu__list .header-carrinho {
+  color: #FFFFFF;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  header .navMenu__list .header-carrinho {
+    order: 2;
+  }
+}
+
+header .navMenu__list .header-carrinho #smv_wp_popcart {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   align-content: center;
-  color: #FFFFFF;
-  position: relative;
 }
 
 header .navMenu__list .header-carrinho .shopping-cart-icon {
@@ -3886,6 +3926,16 @@ header .carrinho-compras {
   z-index: 5;
 }
 
+@media (max-width: 767px) {
+  header .carrinho-compras {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: -0.8rem;
+    left: auto;
+  }
+}
+
 header .carrinho-compras-empty {
   display: flex;
   flex-direction: column;
@@ -3924,6 +3974,12 @@ header .carrinho-compras-itens {
   background-color: #FFFFFF;
 }
 
+@media (max-width: 575px) {
+  header .carrinho-compras-itens {
+    width: 32rem;
+  }
+}
+
 header .carrinho-compras-itens .info-data {
   color: #8D1C22;
   font-size: 1.6rem;
@@ -3952,21 +4008,21 @@ header .carrinho-compras-itens .info-compra {
 }
 
 header .carrinho-compras-itens .info-compra-item {
-  margin-top: 1.6rem;
+  margin-top: 2.4rem;
 }
 
 header .carrinho-compras-itens .info-compra-detalhes {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
   color: #1D1D1B;
 }
 
 header .carrinho-compras-itens .info-compra-detalhes-bilhete {
-  width: 50%;
-  font-size: 1.8rem;
+  width: 55%;
+  font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.4em;
 }
@@ -3985,7 +4041,7 @@ header .carrinho-compras-itens .info-compra-detalhes-quantidade select {
 }
 
 header .carrinho-compras-itens .info-compra-detalhes-valor {
-  width: 25%;
+  width: 20%;
   font-size: 1.8rem;
   font-weight: 900;
   line-height: 1.2em;
@@ -3993,7 +4049,7 @@ header .carrinho-compras-itens .info-compra-detalhes-valor {
 }
 
 header .carrinho-compras-itens .info-compra-detalhes-delete {
-  width: 10%;
+  width: 5%;
   text-align: right;
   cursor: pointer;
 }
@@ -4056,24 +4112,15 @@ header .carrinho-compras-itens .info-total-total {
   line-height: 1.2em;
 }
 
-header .carrinho-compras-itens .info-total-total:before {
-  content: '';
-  width: 50%;
-  height: 1px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: auto;
-  left: auto;
-  background-color: #707070;
-}
-
 header .carrinho-compras-itens .container-btn {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  background-color: transparent;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 header .carrinho-compras-itens .container-btn .btn {
@@ -4085,6 +4132,16 @@ header .carrinho-compras-itens .container-btn .btn span {
   font-weight: 900;
   line-height: 1em;
   text-transform: uppercase;
+}
+
+@media (max-width: 575px) {
+  header .carrinho-compras-itens .container-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
 }
 
 header .marca img {
@@ -5165,20 +5222,47 @@ header .marca img {
 }
 
 .bg-404 {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: auto;
   right: auto;
   bottom: 0;
   left: 0;
+  z-index: -1;
+}
+
+.bg-404 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .bg-404 {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+  }
+  .bg-404 img {
+    object-position: top;
+  }
 }
 
 .error-404-content {
+  background-color: rgba(29, 29, 27, 0.4);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
-  padding-top: 12rem;
+  border-radius: 1rem;
+  padding: 1.6rem;
+  position: relative;
+  margin-top: 12rem;
+  margin-bottom: 3rem;
 }
 
 .error-404-content h1 {
@@ -5191,15 +5275,20 @@ header .marca img {
 }
 
 .error-404-content h3 {
-  width: 40%;
   font-size: 2.4rem;
   font-weight: 300;
   line-height: 1.4em;
   text-align: left;
-  color: #1D1D1B;
+  color: #FFFFFF;
 }
 
 .error-404-content .btn {
   margin-top: .8rem;
   padding: 1.6rem .8rem;
+}
+
+@media (max-width: 992px) {
+  .error-404-content {
+    margin-top: 6rem;
+  }
 }

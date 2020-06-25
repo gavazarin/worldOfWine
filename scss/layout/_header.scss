@@ -3,9 +3,9 @@ header {
   height: 10rem;
   background-color: $black;
   position: relative;
+  z-index: 1;
   @include sm {
-    // background-color: $primary;
-    // overflow: hidden;
+    height: 15rem;
   }
   .top-header {
     background-color: $primary;
@@ -84,6 +84,10 @@ header {
       width: 100%;
       position: relative;
       @include flex(row, center, center, center);
+      flex-wrap: wrap;
+      @include sm {
+        @include flex(row, space-between, center, center);
+      }
       .header-morada {
         a {
           text-decoration: none;
@@ -107,14 +111,26 @@ header {
             display: none;
           }
         }
+        @include sm {
+          order: 2;
+        }
       }
       .header-marca {
         text-align: center;
+        @include sm {
+          order: 3;
+          margin-top: 1rem;
+        }
       }
       .header-carrinho {
-        @include flex(row, flex-end, center, center);
         color: $white;
         position: relative;
+        @include sm {
+          order: 2;
+        }
+        #smv_wp_popcart {
+          @include flex(row, flex-end, center, center);
+        }
         .shopping-cart-icon {
           display: inline-block;
           height: 3rem;
@@ -187,6 +203,9 @@ header {
     transform: translateY(100%);
     box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
     z-index: 5;
+    @include sm {
+      @include absolute(auto, 0, -0.8rem, auto);
+    }
     &-empty {
       @include flex(column, flex-start, center, center);
       padding: 1.5rem 3rem;
@@ -212,6 +231,9 @@ header {
     &-itens {
       width: 50rem;
       background-color: $white;
+      @include xs {
+        width: 32rem;
+      }
       .info-data {
         color: $primary;
         @include font(1.6rem, 900, 1.2em);
@@ -229,14 +251,14 @@ header {
       .info-compra {
         width: 100%;
         &-item {
-          margin-top: 1.6rem;
+          margin-top: 2.4rem;
         }
         &-detalhes {
-          @include flex(row, flex-start, center, center);
+          @include flex(row, space-between, center, center);
           color: $black;
           &-bilhete {
-            width: 50%;
-            @include font(1.8rem, 300, 1.4em);
+            width: 55%;
+            @include font(1.6rem, 300, 1.4em);
           }
           &-quantidade {
             width: 15%;
@@ -248,12 +270,12 @@ header {
             }
           }
           &-valor {
-            width: 25%;
+            width: 20%;
             @include font(1.8rem, 900, 1.2em);
             text-align: right;
           }
           &-delete {
-            width: 10%;
+            width: 5%;
             text-align: right;
             cursor: pointer;
             i {
@@ -294,23 +316,29 @@ header {
         }
         &-total {
           @include font(1.8rem, 900, 1.2em);
-          &:before {
-            content: '';
-            width: 50%;
-            height: 1px;
-            @include absolute(0, 0, auto, auto);
-            background-color: $gray-02;
-          }
+          // &:before {
+          //   content: '';
+          //   width: 50%;
+          //   height: 1px;
+          //   @include absolute(0, 0, auto, auto);
+          //   background-color: $gray-02;
+          // }
         }
       }
       .container-btn {
         @include flex(row, space-between, center, center);
+        background-color: transparent;
+        margin-bottom: 0;
+        padding: 0;
         .btn {
           padding: 2.4rem .8rem;
           span {
             @include font(1.2rem, 900, 1em);
             text-transform: uppercase;
           }
+        }
+        @include xs {
+          @include flex(column, space-between, center, center);
         }
       }
     }
