@@ -4202,6 +4202,7 @@ header .marca img {
   align-items: center;
   align-content: center;
   background-color: #FFFFFF;
+  margin-bottom: 3rem;
 }
 
 .header-checkout nav {
@@ -4224,6 +4225,16 @@ header .marca img {
   margin: 0 6rem;
   opacity: .5;
   position: relative;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.2em;
+  color: #1D1D1B;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
 }
 
 .header-checkout .breadcrumb-item:before {
@@ -4251,19 +4262,7 @@ header .marca img {
   display: none;
 }
 
-.header-checkout .breadcrumb a {
-  font-size: 1.8rem;
-  font-weight: 900;
-  line-height: 1.2em;
-  color: #1D1D1B;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  align-content: center;
-}
-
-.header-checkout .breadcrumb a i {
+.header-checkout .breadcrumb-item i {
   width: 2.5rem;
   height: 2.5rem;
   background-color: #CCCCCC;
@@ -4279,11 +4278,15 @@ header .marca img {
   font-size: 1.4rem;
 }
 
-.header-checkout .breadcrumb a:hover {
+.header-checkout .breadcrumb-item i img {
+  width: 60%;
+}
+
+.header-checkout .breadcrumb-item:hover {
   text-decoration: none;
 }
 
-.header-checkout .breadcrumb a:hover i span {
+.header-checkout .breadcrumb-item:hover i span {
   color: #1D1D1B;
 }
 
@@ -4291,7 +4294,7 @@ header .marca img {
   opacity: 1;
 }
 
-.header-checkout .breadcrumb .active a i {
+.header-checkout .breadcrumb .active i {
   background-color: #FFFFFF;
 }
 
@@ -4299,12 +4302,12 @@ header .marca img {
   opacity: 1;
 }
 
-.header-checkout .breadcrumb .completed a i {
+.header-checkout .breadcrumb .completed i {
   background-color: #1C8D87;
   border-color: #1C8D87;
 }
 
-.header-checkout .breadcrumb .completed a i img {
+.header-checkout .breadcrumb .completed i img {
   width: 60%;
 }
 
@@ -4778,7 +4781,6 @@ header .marca img {
 
 .checkout-content {
   background-color: #F7F7F7;
-  padding-top: 3rem;
 }
 
 .checkout-content .row {
@@ -4787,6 +4789,14 @@ header .marca img {
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
+}
+
+.checkout-content .header-checkout .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
 .checkout-carrinho h2 {
@@ -4826,7 +4836,7 @@ header .marca img {
 
 .container-seu-carrinho {
   background-color: #FFFFFF;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #1C8D87;
   margin: 1.5rem 0;
   display: flex;
   flex-direction: column;

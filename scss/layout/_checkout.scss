@@ -1,8 +1,12 @@
 .checkout-content {
   background-color: $white-secondary;
-  padding-top: 3rem;
   .row {
     @include flex(row, center, flex-start, flex-start);
+  }
+  .header-checkout {
+    .row {
+      @include flex(row, space-between, center, center);
+    }
   }
 }
 
@@ -34,7 +38,7 @@
 
 .container-seu-carrinho {
   background-color: $white;
-  border: 1px solid $gray-01;
+  border: 1px solid $secondary;
   margin: 1.5rem 0;
   @include flex(column, flex-start, center, center);
   .valor-compra {

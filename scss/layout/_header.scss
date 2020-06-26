@@ -369,6 +369,7 @@ header {
 .header-checkout {
   @include flex(column, center, center, center);
   background-color: $white;
+  margin-bottom: 3rem;
   nav {
     @include flex(row, flex-end, center, center);
   }
@@ -378,6 +379,7 @@ header {
       margin: 0 6rem;
       opacity: .5;
       position: relative;
+      cursor: pointer;
       &:before {
         content: '';
         width: 6rem;
@@ -395,8 +397,6 @@ header {
           display: none;
         }
       }
-    }
-    a {
       @include font(1.8rem, 900, 1.2em);
       color: $black;
       @include flex(row, flex-end, center, center);
@@ -410,6 +410,9 @@ header {
         @include flex(row, center, center, center);
         margin-right: .8rem;
         font-size: 1.4rem;
+        img {
+          width: 60%;
+        }
       }
       &:hover {
         text-decoration: none;
@@ -422,21 +425,17 @@ header {
     }
     .active {
       opacity: 1;
-      a {
-        i {
-          background-color: $white;
-        }
+      i {
+        background-color: $white;
       }
     }
     .completed {
       opacity: 1;
-      a {
-        i {
-          background-color: $secondary;
-          border-color: $secondary;
-          img {
-            width: 60%;
-          }
+      i {
+        background-color: $secondary;
+        border-color: $secondary;
+        img {
+          width: 60%;
         }
       }
     }
