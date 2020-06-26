@@ -280,7 +280,8 @@
 }
 
 .success,
-.error {
+.error,
+.wait {
   width: 100%;
   position: relative;
   @include flex(column, flex-start, center, center);
@@ -321,6 +322,19 @@
       }
     }
   }
+  @include md {
+    h3 {
+      width: 80%;
+    }
+    h4 {
+      width: 100%;
+    }
+  }
+  @include xs {
+    h3 {
+      width: 100%;
+    }
+  }
 }
 
 .success {
@@ -329,9 +343,45 @@
   }
 }
 
-.error {
+.error,
+.wait {
   h3 {
     color: $primary;
+  }
+}
+
+.wait {
+  .payreturn__table {
+    width: 50%;
+    @include flex(column, center, center, center);
+    border: 2px solid $secondary;
+    border-radius: .5rem;
+    text-align: center;
+    // padding: 1.5rem;
+    img {
+      height: 6rem;
+      width: auto;
+      margin-top: 1.5rem;
+    }
+    table {
+      margin-bottom: 0;
+      tr {
+        &:nth-child(even) {
+          background-color: #eeeeee;
+        }
+      }
+    }
+    p {
+      @include font(1.8rem, 300, 1.4em);
+      text-align: center;
+      margin: 1.5rem;
+    }
+    @include md {
+      width: 70%;
+    }
+    @include sm {
+      width: 90%;
+    }
   }
 }
 
@@ -340,6 +390,9 @@
   margin-top: 1.5rem;
   .btn {
     margin: 0 .8rem;
+  }
+  @include md {
+    margin-bottom: 1.5rem;
   }
   @include xs {
     @include flex(column, center, center, center);

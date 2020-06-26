@@ -5191,7 +5191,8 @@ header .marca img {
 }
 
 .success,
-.error {
+.error,
+.wait {
   width: 100%;
   position: relative;
   display: flex;
@@ -5202,18 +5203,21 @@ header .marca img {
 }
 
 .success i,
-.error i {
+.error i,
+.wait i {
   height: 20rem;
   margin-bottom: 1.5rem;
 }
 
 .success i img,
-.error i img {
+.error i img,
+.wait i img {
   height: 100%;
 }
 
 .success h3,
-.error h3 {
+.error h3,
+.wait h3 {
   width: 40%;
   font-size: 2.2rem;
   font-weight: 900;
@@ -5224,7 +5228,8 @@ header .marca img {
 }
 
 .success h4,
-.error h4 {
+.error h4,
+.wait h4 {
   width: 50%;
   font-size: 1.8rem;
   font-weight: 300;
@@ -5234,12 +5239,14 @@ header .marca img {
 }
 
 .success .btn,
-.error .btn {
+.error .btn,
+.wait .btn {
   padding: 1.5rem .8rem;
 }
 
 .success .valor-compra li,
-.error .valor-compra li {
+.error .valor-compra li,
+.wait .valor-compra li {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -5249,21 +5256,91 @@ header .marca img {
 }
 
 .success .valor-compra li p,
-.error .valor-compra li p {
+.error .valor-compra li p,
+.wait .valor-compra li p {
   width: auto;
 }
 
 .success .valor-compra-total:before,
-.error .valor-compra-total:before {
+.error .valor-compra-total:before,
+.wait .valor-compra-total:before {
   width: 50%;
+}
+
+@media (max-width: 992px) {
+  .success h3,
+  .error h3,
+  .wait h3 {
+    width: 80%;
+  }
+  .success h4,
+  .error h4,
+  .wait h4 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .success h3,
+  .error h3,
+  .wait h3 {
+    width: 100%;
+  }
 }
 
 .success h3 {
   color: #1C8D87;
 }
 
-.error h3 {
+.error h3,
+.wait h3 {
   color: #8D1C22;
+}
+
+.wait .payreturn__table {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 2px solid #1C8D87;
+  border-radius: .5rem;
+  text-align: center;
+}
+
+.wait .payreturn__table img {
+  height: 6rem;
+  width: auto;
+  margin-top: 1.5rem;
+}
+
+.wait .payreturn__table table {
+  margin-bottom: 0;
+}
+
+.wait .payreturn__table table tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+.wait .payreturn__table p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.4em;
+  text-align: center;
+  margin: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .wait .payreturn__table {
+    width: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  .wait .payreturn__table {
+    width: 90%;
+  }
 }
 
 .container-btn-detalhes {
@@ -5277,6 +5354,12 @@ header .marca img {
 
 .container-btn-detalhes .btn {
   margin: 0 .8rem;
+}
+
+@media (max-width: 992px) {
+  .container-btn-detalhes {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width: 575px) {
