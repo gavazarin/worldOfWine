@@ -46,6 +46,9 @@ a:focus {
 
 .content-wrap {
   padding-bottom: 16rem;
+  .row {
+    @include flex(row, center, center, center);
+  }
   @include sm {
     padding-bottom: 25rem;
   }

@@ -2568,6 +2568,14 @@ a:focus {
   /* Footer height */
 }
 
+.content-wrap .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 @media (max-width: 767px) {
   .content-wrap {
     padding-bottom: 25rem;
