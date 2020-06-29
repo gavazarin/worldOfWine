@@ -137,10 +137,25 @@
     }
   }
   &-metodo {
+    form {
+      margin-top: 0;
+    }
     .form-check {
+      width: 100%;
       margin: 1.6rem 0;
       &:last-child {
         margin-bottom: 0;
+      }
+      label {
+        width: auto;
+        @include font(1.4rem, 300, 1.4em);
+        margin-right: .8rem;
+        margin-bottom: 0;
+      }
+      input {
+        width: 25%;
+        height: 3.2rem;
+        padding-left: .8rem;
       }
     }
   }

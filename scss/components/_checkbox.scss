@@ -18,6 +18,13 @@
     &-text {
       @include flex(column, center, flex-start, flex-start);
       width: 80%;
+      li {
+        width: 100%;
+        @include flex(row, flex-start, center, center);
+        &:first-child {
+          margin-top: 0;
+        }
+      }
       .descricao {
         font-weight: 300;
         margin-top: .8rem;
