@@ -115,6 +115,7 @@
 }
 
 .dados-pagamento {
+  position: relative;
   &-box {
     margin-bottom: 3rem;
   }
@@ -139,24 +140,34 @@
   &-metodo {
     form {
       margin-top: 0;
+      position: relative;
     }
     .form-check {
       width: 100%;
-      margin: 1.6rem 0;
+      margin: .8rem 0;
       &:last-child {
         margin-bottom: 0;
       }
-      label {
-        width: auto;
+      .container-input {
+        @include flex(row, flex-start, center, center);
         @include font(1.4rem, 300, 1.4em);
-        margin-right: .8rem;
-        margin-bottom: 0;
+        padding-bottom: 0;
+        padding-left: 4.5rem;
+        margin: .8rem 0 0;
+        label {
+          width: auto;
+          font-weight: 300;
+          margin: 0 .8rem;
+        }
+        input {
+          width: 25%;
+          height: 3.2rem;
+          padding-left: .8rem;
+        }
       }
-      input {
-        width: 25%;
-        height: 3.2rem;
-        padding-left: .8rem;
-      }
+    }
+    span.input-validate {
+      bottom: -1.6rem;
     }
   }
 }

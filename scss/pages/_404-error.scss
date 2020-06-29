@@ -17,6 +17,11 @@
 }
 
 .error-404 {
+  .content-wrap {
+    .row {
+      @include flex(row, flex-start, center, center);
+    }
+  }
   &-content {
     background-color: rgba(29, 29, 27, .4);
     @include flex(column, center, flex-start, flex-start);
