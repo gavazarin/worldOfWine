@@ -2572,8 +2572,8 @@ a:focus {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  align-content: center;
+  align-items: flex-wrap;
+  align-content: flex-wrap;
 }
 
 @media (max-width: 767px) {
@@ -3877,15 +3877,7 @@ header .navMenu__list .header-carrinho .shopping-cart-icon img {
   width: auto;
 }
 
-header .navMenu__list .header-carrinho input {
-  display: none;
-}
-
-header .navMenu__list .header-carrinho input:checked ~ .carrinho-compras {
-  display: block;
-}
-
-header .navMenu__list .header-carrinho input:checked ~ label i {
+header .navMenu__list .header-carrinho #carrinho-dropdown:checked ~ label i {
   transform: rotate(-180deg);
   transition: all .3s ease-out;
 }
@@ -3956,7 +3948,6 @@ header .carrinho-compras {
   min-height: 20rem;
   padding: 1.5rem;
   display: none;
-  animation: open-carrinho .3s ease-out;
   background-color: #f9f9f9;
   position: absolute;
   top: auto;
@@ -4364,17 +4355,6 @@ header .marca img {
   }
 }
 
-@keyframes open-carrinho {
-  0% {
-    opacity: 0;
-    transform: translateY(60%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(100%);
-  }
-}
-
 @keyframes icon-up-rotate {
   0% {
     opacity: 0;
@@ -4630,76 +4610,12 @@ header .marca img {
   transition: all .3s ease-in;
 }
 
-.experience-2 .img-experiencia {
-  border-bottom: 8px solid #FFB4AB;
+.experience .img-experiencia {
+  border-bottom: 8px solid;
 }
 
-.experience-2 .cards-list__item--bilhetes {
-  border-top: 8px solid #FFB4AB;
-}
-
-.experience-3 .img-experiencia {
-  border-bottom: 8px solid #8F6D4F;
-}
-
-.experience-3 .cards-list__item--bilhetes {
-  border-top: 8px solid #8F6D4F;
-}
-
-.experience-6 .img-experiencia {
-  border-bottom: 8px solid #939598;
-}
-
-.experience-6 .cards-list__item--bilhetes {
-  border-top: 8px solid #939598;
-}
-
-.experience-prata .img-experiencia {
-  border-bottom: 8px solid #3D7CC9;
-}
-
-.experience-prata .cards-list__item--bilhetes {
-  border-top: 8px solid #3D7CC9;
-}
-
-.experience-wine .img-experiencia {
-  border-bottom: 8px solid #AB0033;
-}
-
-.experience-wine .cards-list__item--bilhetes {
-  border-top: 8px solid #AB0033;
-}
-
-.experience-cork .img-experiencia {
-  border-bottom: 8px solid #DD8A03;
-}
-
-.experience-cork .cards-list__item--bilhetes {
-  border-top: 8px solid #DD8A03;
-}
-
-.experience-fashion .img-experiencia {
-  border-bottom: 8px solid #FF5100;
-}
-
-.experience-fashion .cards-list__item--bilhetes {
-  border-top: 8px solid #FF5100;
-}
-
-.experience-vessels .img-experiencia {
-  border-bottom: 8px solid #00C4B3;
-}
-
-.experience-vessels .cards-list__item--bilhetes {
-  border-top: 8px solid #00C4B3;
-}
-
-.experience-chocolate .img-experiencia {
-  border-bottom: 8px solid #F6E948;
-}
-
-.experience-chocolate .cards-list__item--bilhetes {
-  border-top: 8px solid #F6E948;
+.experience .cards-list__item--bilhetes {
+  border-top: 8px solid;
 }
 
 .modal-dialog {
@@ -5054,11 +4970,19 @@ header .marca img {
 }
 
 .politicas-dados {
-  margin-bottom: 3rem;
+  width: 100%;
+  position: relative;
+  padding-bottom: 1.6rem;
+  margin-bottom: 0.8rem;
 }
 
 .politicas-dados li {
   margin-bottom: .8rem;
+}
+
+.politicas-dados span.input-validate {
+  right: 0;
+  left: auto;
 }
 
 .container-btn {

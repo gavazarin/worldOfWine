@@ -97,8 +97,7 @@
                   </label>
 
                   <div class="container-input col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    +351
-                    <label for="smv_PMDMBW_Mobile" class="form-label" smv-langtext="lblmobile">telemovel</label>
+                    +351 <label for="smv_PMDMBW_Mobile" class="form-label" smv-langtext="lblmobile">telemovel</label>
                     <!-- PMDMBW = PAY METHOD DETAILS MBWAY -->
                     <input type="tel" name="smv_PMDMBW_Mobile" id="smv_PMDMBW_Mobile" maxlength="9">
                   </div>
@@ -196,10 +195,11 @@
               </div>
             </div>
 
-            <ul class="politicas-dados">
-              <li>
-                <input class="inp-cbx-rgpd" name="politica-privacidade" id="politica-privacidade" type="checkbox" style="display: none;" />
-                <label class="cbx-rgpd" for="politica-privacidade">
+            <form>
+              <ul class="politicas-dados">
+                <li>
+                  <input class="inp-cbx-rgpd" name="politica-privacidade" id="politica-privacidade" type="checkbox" style="display: none;" />
+                  <label class="cbx-rgpd" for="politica-privacidade">
                   <p>
                     Li e compreendo as <a href="https://www.wow.pt/pt/politica-de-privacidade/" target="_blanck">Condições de Venda e a Política de Privacidade</a>
                   </p>
@@ -209,11 +209,12 @@
                       </svg>
                   </span>
                 </label>
-              </li>
+                  <span for="smv_PayDataPisco_Privacy" generated="true" class="input-validate">You must accept the Privacy Policy.</span>
+                </li>
 
-              <li>
-                <input class="inp-cbx-rgpd" name="partilhar-dados" id="partilhar-dados" type="checkbox" style="display: none;" />
-                <label class="cbx-rgpd" for="partilhar-dados">
+                <li>
+                  <input class="inp-cbx-rgpd" name="partilhar-dados" id="partilhar-dados" type="checkbox" style="display: none;" />
+                  <label class="cbx-rgpd" for="partilhar-dados">
                   <p>
                       Quero subscrever a Newsletter
                   </p>
@@ -223,8 +224,9 @@
                       </svg>
                   </span>
                 </label>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </form>
 
             <div class="container-btn">
               <a href="checkout-carrinho.html" class="btn btn-outline-secondary">

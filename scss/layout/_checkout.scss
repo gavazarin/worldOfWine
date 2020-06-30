@@ -173,9 +173,16 @@
 }
 
 .politicas-dados {
-  margin-bottom: 3rem;
+  width: 100%;
+  position: relative;
+  padding-bottom: 1.6rem;
+  margin-bottom: 0.8rem;
   li {
     margin-bottom: .8rem;
+  }
+  span.input-validate {
+    right: 0;
+    left: auto;
   }
 }
 

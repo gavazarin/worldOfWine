@@ -166,83 +166,11 @@
   transition: all .3s ease-in;
 }
 
-.experience-2 {
+.experience {
   .img-experiencia {
-    border-bottom: 8px solid $experience-2;
+    border-bottom: 8px solid;
   }
   .cards-list__item--bilhetes {
-    border-top: 8px solid $experience-2;
-  }
-}
-
-.experience-3 {
-  .img-experiencia {
-    border-bottom: 8px solid $experience-3;
-  }
-  .cards-list__item--bilhetes {
-    border-top: 8px solid $experience-3;
-  }
-}
-
-.experience-6 {
-  .img-experiencia {
-    border-bottom: 8px solid $experience-6;
-  }
-  .cards-list__item--bilhetes {
-    border-top: 8px solid $experience-6;
-  }
-}
-
-.experience-prata {
-  .img-experiencia {
-    border-bottom: 8px solid $experience-prata;
-  }
-  .cards-list__item--bilhetes {
-    border-top: 8px solid $experience-prata;
-  }
-}
-
-.experience-wine {
-  .img-experiencia {
-    border-bottom: 8px solid $experience-wine;
-  }
-  .cards-list__item--bilhetes {
-    border-top: 8px solid $experience-wine;
-  }
-}
-
-.experience-cork {
-  .img-experiencia {
-    border-bottom: 8px solid $experience-cork;
-  }
-  .cards-list__item--bilhetes {
-    border-top: 8px solid $experience-cork;
-  }
-}
-
-.experience-fashion {
-  .img-experiencia {
-    border-bottom: 8px solid $experience-fashion;
-  }
-  .cards-list__item--bilhetes {
-    border-top: 8px solid $experience-fashion;
-  }
-}
-
-.experience-vessels {
-  .img-experiencia {
-    border-bottom: 8px solid $experience-vessels;
-  }
-  .cards-list__item--bilhetes {
-    border-top: 8px solid $experience-vessels;
-  }
-}
-
-.experience-chocolate {
-  .img-experiencia {
-    border-bottom: 8px solid $experience-chocolate;
-  }
-  .cards-list__item--bilhetes {
-    border-top: 8px solid $experience-chocolate;
+    border-top: 8px solid;
   }
 }

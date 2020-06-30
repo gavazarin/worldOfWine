@@ -57,8 +57,7 @@
               <div smv-type="widgetcontainer" smv-widget="popcart" smv-param="">
                 <div smv-type="widgetpage" id="smv_wp_popcart">
                   <i class="shopping-cart-icon"><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart.svg" alt="carrinho de compras"></i>
-                  <input id="carrinho-dropdown" type="checkbox">
-                  <label for="carrinho-dropdown" class="header-carrinho__infos">
+                  <label for="carrinho-dropdown" class="header-carrinho__infos" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                     <span>Carrinho de Compras</span>
                     <span class="carrinho-valor">0,00€</span>
                     <i class="dropdown-icon"><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/dropdown-icon.svg"></i>
@@ -71,7 +70,7 @@
                     <p>Escolha já as suas experiências!</p>
                   </div>
 
-                  <div class="carrinho-compras carrinho-compras-itens">
+                  <div class="carrinho-compras carrinho-compras-itens" id="collapseExample">
                     <!--<p class="info-data">
                       <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/calendar-secondary.svg" alt=""/></i> <span>10/06/2020</span>
                     </p>-->
@@ -167,7 +166,10 @@
                     </ul>
 
                     <div class="container-btn">
-                      <button type="button" class="btn btn-outline-secondary"><span>Continuar a comprar</span></button>
+                      <button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        <span>Continuar a comprar</span>
+                      </button>
+
                       <button type="button" class="btn btn-secondary"><span>Proceder ao pagamento</span></button>
                     </div>
                   </div>
@@ -192,9 +194,9 @@
             <h3>Personalize as suas <strong>experiências</strong></h3>
 
             <ul class="cards-list">
-              <li class="cards-list__item experience-2 col-lg-4 col-md-6">
+              <li class="cards-list__item experience col-lg-4 col-md-6">
                 <div class="cards-list__item--content">
-                  <div class="img-experiencia">
+                  <div class="img-experiencia" style="border-bottom-color: #FFB4AB;">
                     <img src="images/2experiences.jpg" alt="Multi Experiêcnia 2 Experiences">
                   </div>
 
@@ -313,9 +315,9 @@
                 </div>
               </li>
 
-              <li class="cards-list__item experience-3 col-lg-4 col-md-6">
+              <li class="cards-list__item experience col-lg-4 col-md-6">
                 <div class="cards-list__item--content">
-                  <div class="img-experiencia">
+                  <div class="img-experiencia" style="border-bottom-color: #8F6D4F;">
                     <img src="images/3experiences.jpg" alt="Multi Experiêcnia 2 Experiences">
                   </div>
 
@@ -434,9 +436,9 @@
                 </div>
               </li>
 
-              <li class="cards-list__item experience-6 col-lg-4 col-md-6">
+              <li class="cards-list__item experience col-lg-4 col-md-6">
                 <div class="cards-list__item--content">
-                  <div class="img-experiencia">
+                  <div class="img-experiencia" style="border-bottom-color: #939598;">
                     <img src="images/6experiences.jpg" alt="Multi Experiêcnia 2 Experiences">
                   </div>
 
@@ -561,9 +563,9 @@
             <h3>Selecione <strong>uma experiência</strong></h3>
 
             <ul class="cards-list">
-              <li class="cards-list__item experience-prata col-lg-4 col-md-6">
+              <li class="cards-list__item experience col-lg-4 col-md-6">
                 <div class="cards-list__item--content">
-                  <div class="img-experiencia">
+                  <div class="img-experiencia" style="border-bottom-color: #3D7CC9;">
                     <img src="images/prata.jpg" alt="Experiência Prata">
                   </div>
 
@@ -682,9 +684,9 @@
                 </div>
               </li>
 
-              <li class="cards-list__item experience-wine col-lg-4 col-md-6">
+              <li class="cards-list__item experience col-lg-4 col-md-6">
                 <div class="cards-list__item--content">
-                  <div class="img-experiencia">
+                  <div class="img-experiencia" style="border-bottom-color: #AB0033;">
                     <img src="images/wine-experience.jpg" alt="Wine Experience">
                   </div>
 
@@ -803,9 +805,9 @@
                 </div>
               </li>
 
-              <li class="cards-list__item experience-cork col-lg-4 col-md-6">
+              <li class="cards-list__item experience col-lg-4 col-md-6">
                 <div class="cards-list__item--content">
-                  <div class="img-experiencia">
+                  <div class="img-experiencia" style="border-bottom-color: #DD8A03">
                     <img src="images/cork-tree.jpg" alt="Cork Experience">
                   </div>
 
@@ -924,9 +926,9 @@
                 </div>
               </li>
 
-              <li class="cards-list__item experience-fashion col-lg-4 col-md-6">
+              <li class="cards-list__item experience col-lg-4 col-md-6">
                 <div class="cards-list__item--content">
-                  <div class="img-experiencia">
+                  <div class="img-experiencia" style="border-bottom-color: #FF5100">
                     <img src="images/fashion.jpg" alt="Fashion & Design">
                   </div>
 
@@ -1045,9 +1047,9 @@
                 </div>
               </li>
 
-              <li class="cards-list__item experience-vessels col-lg-4 col-md-6">
+              <li class="cards-list__item experience col-lg-4 col-md-6">
                 <div class="cards-list__item--content">
-                  <div class="img-experiencia">
+                  <div class="img-experiencia" style="border-bottom-color: #00C4B3">
                     <img src="images/drinking-vessels.jpg" alt="Drinking Vessels">
                   </div>
 
@@ -1166,9 +1168,9 @@
                 </div>
               </li>
 
-              <li class="cards-list__item experience-chocolate col-lg-4 col-md-6">
+              <li class="cards-list__item experience col-lg-4 col-md-6">
                 <div class="cards-list__item--content">
-                  <div class="img-experiencia">
+                  <div class="img-experiencia" style="border-bottom-color: #F6E948">
                     <img src="images/chocolate.jpg" alt="Chocolate Experience">
                   </div>
 
