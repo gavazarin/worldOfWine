@@ -3031,7 +3031,7 @@ h3 strong {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
 }
@@ -3049,6 +3049,8 @@ h3 strong {
 
 .container-datapicker input {
   cursor: pointer;
+  width: 100%;
+  padding-right: 4rem;
 }
 
 .container-datapicker input:focus {
@@ -3063,7 +3065,7 @@ h3 strong {
   align-items: center;
   align-content: center;
   position: absolute;
-  left: 5px;
+  right: 5px;
   margin-bottom: 0;
   cursor: pointer;
 }
@@ -3104,9 +3106,22 @@ h3 strong {
   height: 100%;
 }
 
+.container-datapicker .container-datapicker-text {
+  height: auto;
+  width: 50%;
+  color: #1C8D87;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.4em;
+  position: absolute;
+  text-align: left;
+  pointer-events: none;
+}
+
 .ui-datepicker {
-  width: 32rem !important;
+  width: 45rem !important;
   padding: 0;
+  margin-top: .8rem;
 }
 
 .ui-datepicker .ui-widget-header {
@@ -3156,7 +3171,7 @@ h3 strong {
   background-color: #eeeeee;
 }
 
-.ui-datepicker .ui-datepicker-calendar thead {
+.ui-datepicker .ui-datepicker-calendar tbody thead {
   border-bottom: 2px solid #8D1C22;
 }
 
@@ -3170,12 +3185,15 @@ h3 strong {
   background-color: #eeeeee;
 }
 
+.ui-datepicker .ui-datepicker-calendar th {
+  width: 100%;
+}
+
 .ui-datepicker .ui-datepicker-calendar td {
   width: 100%;
   font-size: 1.6rem;
   font-weight: 900;
   line-height: 1.6em;
-  border: 2px solid #FFFFFF;
   background-color: #FFFFFF;
   padding: 2px;
   transition: all .2s ease-in;
@@ -3194,7 +3212,6 @@ h3 strong {
 }
 
 .ui-datepicker .ui-datepicker-calendar td:hover {
-  border: 2px solid #1C8D87;
   transition: all .2s ease-out;
 }
 
