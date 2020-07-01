@@ -57,23 +57,20 @@
               <div smv-type="widgetcontainer" smv-widget="popcart" smv-param="">
                 <div smv-type="widgetpage" id="smv_wp_popcart">
                   <i class="shopping-cart-icon"><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart.svg" alt="carrinho de compras"></i>
-                  <label for="carrinho-dropdown" class="header-carrinho__infos" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  <label for="carrinho-dropdown" class="header-carrinho__infos" data-toggle="collapse" href="#dropdown-carrinho" role="button" aria-expanded="false" aria-controls="dropdown-carrinho dropdown-carrinho-empty">
                     <span>Carrinho de Compras</span>
                     <span class="carrinho-valor">0,00€</span>
                     <i class="dropdown-icon"><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/dropdown-icon.svg"></i>
                   </label>
 
                   <!-- CARRINHO DE COMPRAS VAZIO! -->
-                  <div class="carrinho-compras carrinho-compras-empty" style="display: none;">
+                  <div class="carrinho-compras carrinho-compras-empty" id="dropdown-carrinho-empty" style="display: none;">
                     <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart-secondary.svg" alt=""></i>
                     <h3>O seu carrinho está vazio</h3>
                     <p>Escolha já as suas experiências!</p>
                   </div>
 
-                  <div class="carrinho-compras carrinho-compras-itens" id="collapseExample">
-                    <!--<p class="info-data">
-                      <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/calendar-secondary.svg" alt=""/></i> <span>10/06/2020</span>
-                    </p>-->
+                  <div class="carrinho-compras carrinho-compras-itens" id="dropdown-carrinho">
                     <ul class="info-compra">
                       <li class="info-compra-item">
                         <ul class="info-compra-detalhes">
@@ -166,7 +163,7 @@
                     </ul>
 
                     <div class="container-btn">
-                      <button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                      <button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#dropdown-carrinho" aria-expanded="false" aria-controls="dropdown-carrinho">
                         <span>Continuar a comprar</span>
                       </button>
 

@@ -3877,9 +3877,8 @@ header .navMenu__list .header-carrinho .shopping-cart-icon img {
   width: auto;
 }
 
-header .navMenu__list .header-carrinho #carrinho-dropdown:checked ~ label i {
-  transform: rotate(-180deg);
-  transition: all .3s ease-out;
+header .navMenu__list .header-carrinho input {
+  display: none;
 }
 
 header .navMenu__list .header-carrinho__infos {
@@ -3943,11 +3942,29 @@ header .navMenu__list .header-carrinho__infos .dropdown-icon img {
   }
 }
 
+header .navMenu__list .header-carrinho__infos[aria-expanded="true"] i {
+  transform: rotate(-180deg);
+  transition: all .4s ease-out;
+}
+
+header .collapse {
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+  visibility: hidden;
+}
+
+header .collapse.in {
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+  visibility: visible;
+}
+
 header .carrinho-compras {
   width: 42.5rem;
   min-height: 20rem;
   padding: 1.5rem;
   display: none;
+  animation: open-carrinho .1s ease-out;
   background-color: #f9f9f9;
   position: absolute;
   top: auto;
@@ -4352,6 +4369,17 @@ header .marca img {
     width: auto;
     display: block;
     text-align: center;
+  }
+}
+
+@keyframes open-carrinho {
+  0% {
+    opacity: 0;
+    transform: translateY(60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(100%);
   }
 }
 
