@@ -3881,6 +3881,15 @@ header .navMenu__list .header-carrinho input {
   display: none;
 }
 
+header .navMenu__list .header-carrinho input:checked ~ .carrinho-compras {
+  display: block;
+}
+
+header .navMenu__list .header-carrinho input:checked ~ label i {
+  transform: rotate(-180deg);
+  transition: all .3s ease-out;
+}
+
 header .navMenu__list .header-carrinho__infos {
   position: relative;
   display: flex;
@@ -3942,29 +3951,12 @@ header .navMenu__list .header-carrinho__infos .dropdown-icon img {
   }
 }
 
-header .navMenu__list .header-carrinho__infos[aria-expanded="true"] i {
-  transform: rotate(-180deg);
-  transition: all .4s ease-out;
-}
-
-header .collapse {
-  -webkit-transition-delay: 0;
-  transition-delay: 0;
-  visibility: hidden;
-}
-
-header .collapse.in {
-  -webkit-transition-delay: 0;
-  transition-delay: 0;
-  visibility: visible;
-}
-
 header .carrinho-compras {
   width: 42.5rem;
   min-height: 20rem;
   padding: 1.5rem;
   display: none;
-  animation: open-carrinho .1s ease-out;
+  animation: open-carrinho .3s ease-out;
   background-color: #f9f9f9;
   position: absolute;
   top: auto;

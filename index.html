@@ -57,20 +57,22 @@
               <div smv-type="widgetcontainer" smv-widget="popcart" smv-param="">
                 <div smv-type="widgetpage" id="smv_wp_popcart">
                   <i class="shopping-cart-icon"><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart.svg" alt="carrinho de compras"></i>
-                  <label for="carrinho-dropdown" class="header-carrinho__infos" data-toggle="collapse" href="#dropdown-carrinho" role="button" aria-expanded="false" aria-controls="dropdown-carrinho dropdown-carrinho-empty">
+                  <input type="checkbox" id="carrinho-dropdown">
+                  <label for="carrinho-dropdown" class="header-carrinho__infos">
                     <span>Carrinho de Compras</span>
                     <span class="carrinho-valor">0,00€</span>
                     <i class="dropdown-icon"><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/dropdown-icon.svg"></i>
                   </label>
 
+
                   <!-- CARRINHO DE COMPRAS VAZIO! -->
-                  <div class="carrinho-compras carrinho-compras-empty" id="dropdown-carrinho-empty" style="display: none;">
+                  <div class="carrinho-compras carrinho-compras-empty" style="display: none;">
                     <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart-secondary.svg" alt=""></i>
                     <h3>O seu carrinho está vazio</h3>
                     <p>Escolha já as suas experiências!</p>
                   </div>
 
-                  <div class="carrinho-compras carrinho-compras-itens" id="dropdown-carrinho">
+                  <div class="carrinho-compras carrinho-compras-itens">
                     <ul class="info-compra">
                       <li class="info-compra-item">
                         <ul class="info-compra-detalhes">
@@ -163,7 +165,7 @@
                     </ul>
 
                     <div class="container-btn">
-                      <button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#dropdown-carrinho" aria-expanded="false" aria-controls="dropdown-carrinho">
+                      <button type="button" class="btn btn-outline-secondary fechar-carrinho">
                         <span>Continuar a comprar</span>
                       </button>
 
@@ -1622,6 +1624,8 @@
   <!-- jQuery, Bootstrap JS -->
   <script src="includes/jquery.min.js"></script>
   <script src="includes/bootstrap.min.js"></script>
+
+  <script src="js/fecharCarrinho.js"></script>
 
   <!-- Abrir bilhetes -->
   <script src="js/bilhetes.js"></script>
