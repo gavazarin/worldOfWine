@@ -10,6 +10,9 @@
     background-color: transparent;
     @include font(1.6rem, 900, 1em);
     text-align: right;
+    @include sm {
+      font-size: 1.4rem;
+    }
   }
   input {
     cursor: pointer;
@@ -63,8 +66,10 @@
   @include font(1.8rem, 900, 1.4em);
   position: absolute;
   text-align: left;
-  // border-right: 1px solid $secondary;
   pointer-events: none;
+  @include sm {
+    display: none;
+  }
 }
 
 // .container-datapicker {
@@ -74,12 +79,19 @@
   width: 45rem !important;
   padding: 0;
   margin-top: .8rem;
+  @include sm {
+    width: 32rem !important;
+  }
+  .ui-datepicker-header {
+    padding: 1rem 0 !important;
+  }
   .ui-widget-header {
-    padding: .8rem 0;
+    padding: 1em 0;
     background-color: $primary;
     .ui-datepicker-prev,
     .ui-datepicker-next {
-      top: 7px;
+      top: 50%;
+      transform: translateY(-50%);
       cursor: pointer;
     }
     .ui-icon-circle-triangle-e {
@@ -112,37 +124,54 @@
       tbody thead {
         border-bottom: 2px solid $primary;
       }
+      thead {
+        tr {
+          background-color: #c45f6433;
+          border-top: 1px solid $primary;
+          border-bottom: 1px solid $primary;
+        }
+      }
       tr {
         @include flex(row, space-between, center, center);
         border-radius: 0;
         background-color: #eeeeee;
+        @include sm {
+          border: none;
+          margin: 0;
+        }
       }
       th {
         width: 100%;
       }
       td {
         width: 100%;
+        height: 5rem;
         @include font(1.6rem, 900, 1.6em);
         background-color: $white;
-        padding: 2px;
+        // padding: 2px;
         transition: all .2s ease-in;
         a {
-          text-align: center;
+          height: 100%;
           color: $black;
           border: none;
           background-color: $white;
           padding: 0;
+          @include flex(column, center, center, center);
         }
         span {
+          height: 100%;
           text-align: center;
+          padding: 0;
+          @include flex(column, center, center, center);
         }
         &:hover {
-          // border: 2px solid $secondary;
+          background-color: #1c8d872c;
           transition: all .2s ease-out;
         }
       }
       .ui-state-default {
         background: none;
+        border: none;
       }
       .ui-datepicker-unselectable {
         border: none;
