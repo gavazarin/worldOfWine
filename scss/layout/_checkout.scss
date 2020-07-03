@@ -5,7 +5,7 @@
   }
   .header-checkout {
     .row {
-      @include flex(row, space-between, center, center);
+      @include flex(row, center, center, center);
     }
   }
 }
@@ -132,8 +132,10 @@
       }
     }
     @include xs {
+      @include flex(row, space-between, center, center);
       h2 {
         text-align: left;
+        margin-bottom: 1.2rem;
       }
     }
   }
@@ -152,7 +154,7 @@
         @include flex(row, flex-start, center, center);
         @include font(1.4rem, 300, 1.4em);
         padding-bottom: 0;
-        padding-left: 4.5rem;
+        padding-left: 0;
         margin: .8rem 0 0;
         label {
           width: auto;
@@ -163,6 +165,18 @@
           width: 25%;
           height: 3.2rem;
           padding-left: .8rem;
+        }
+        @include sm {
+          input {
+            width: 50%;
+          }
+        }
+        @include xs {
+          flex-wrap: wrap;
+          padding-right: 0;
+          input {
+            width: 100%;
+          }
         }
       }
     }
@@ -177,6 +191,12 @@
   position: relative;
   padding-bottom: 1.6rem;
   margin-bottom: 0.8rem;
+  .cbx-rgpd {
+    p {
+      text-align: right;
+      width: 90%;
+    }
+  }
   li {
     margin-bottom: .8rem;
   }
@@ -217,6 +237,18 @@
     thead {
       margin-bottom: 1.5rem;
     }
+    tbody {
+      tr {
+        td {
+          font-weight: 300;
+          span {
+            &:nth-child(2) {
+              font-weight: 900;
+            }
+          }
+        }
+      }
+    }
     th,
     td {
       text-align: left;
@@ -226,6 +258,77 @@
     }
     th {
       font-size: 1.2rem;
+    }
+    tfoot {
+      tr {
+        &:nth-child(1) {
+          td {
+            padding-top: 3.2rem;
+          }
+        }
+        &:nth-child(2) {
+          td {
+            font-weight: 300;
+          }
+        }
+        &:nth-child(3) {
+          td {
+            padding-top: 1.6rem;
+          }
+        }
+      }
+      td {
+        font-weight: 900;
+        padding-bottom: 0;
+        &:first-child {
+          padding-left: 8rem;
+        }
+      }
+    }
+    @include xs {
+      tbody {
+        tr {
+          margin-bottom: 4rem;
+        }
+        td {
+          position: relative;
+          padding-left: 50%;
+          text-align: right;
+          &::before {
+            @include font(1.4rem, 900, 1em);
+            position: absolute;
+            left: .5rem;
+          }
+          &:nth-child(1) {
+            &:before {
+              content: 'Qt.';
+            }
+          }
+          &:nth-child(2) {
+            &:before {
+              content: 'Ticket';
+            }
+          }
+          &:nth-child(3) {
+            &:before {
+              content: 'Value';
+            }
+          }
+        }
+      }
+      tfoot {
+        tr {
+          @include flex(row, center, center, center);
+          border: none;
+          &:nth-child(2) {
+            border-bottom: 1px solid #ddd;
+          }
+        }
+        td {
+          width: 50%;
+          border: none;
+        }
+      }
     }
   }
   @include md {

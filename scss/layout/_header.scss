@@ -475,6 +475,15 @@ header {
       }
     }
   }
+  @include xs {
+    .breadcrumb {
+      .active {
+        .breadcrumb-item-text {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @keyframes open-carrinho {

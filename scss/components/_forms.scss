@@ -55,6 +55,7 @@ form {
   @include font(1.4rem, 300, 1em);
   font-style: italic;
   margin-bottom: 0;
+  padding-left: 1.5rem;
 }
 
 @keyframes animation-card {

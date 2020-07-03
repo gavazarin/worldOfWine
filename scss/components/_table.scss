@@ -67,6 +67,10 @@ table {
     &:first-child {
       text-align: left;
       padding-left: 1.5rem;
+      @include xs {
+        text-align: right;
+        padding-left: 50%;
+      }
     }
   }
   td {
@@ -114,6 +118,42 @@ table {
       display: inline-block;
       img {
         width: 100%;
+      }
+    }
+  }
+  @include xs {
+    tbody {
+      tr {
+        margin-bottom: 4rem;
+      }
+      td {
+        position: relative;
+        padding-left: 50%;
+        &::before {
+          @include font(1.4rem, 900, 1em);
+          position: absolute;
+          left: .5rem;
+        }
+        &:nth-child(1) {
+          &:before {
+            content: 'Experiências';
+          }
+        }
+        &:nth-child(2) {
+          &:before {
+            content: 'Preço';
+          }
+        }
+        &:nth-child(3) {
+          &:before {
+            content: 'Quantidade';
+          }
+        }
+        &:nth-child(4) {
+          &:before {
+            content: 'Sub-Total';
+          }
+        }
       }
     }
   }

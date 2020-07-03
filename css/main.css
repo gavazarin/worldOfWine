@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,300&display=swap");
 html {
@@ -2820,7 +2821,22 @@ h3 strong {
   align-items: center;
   align-content: center;
   padding: .8rem 1.6rem;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 992px) {
+  .cbx {
+    padding: .8rem;
+  }
+  .cbx .forma-pagamento {
+    width: 95%;
+  }
+}
+
+@media (max-width: 575px) {
+  .cbx {
+    padding: 1.6rem;
+  }
 }
 
 .cbx span {
@@ -2830,13 +2846,13 @@ h3 strong {
 }
 
 .cbx .forma-pagamento {
-  width: 97%;
+  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 900;
   line-height: 1.2em;
 }
@@ -2872,6 +2888,24 @@ h3 strong {
   margin-left: .8rem;
 }
 
+@media (max-width: 575px) {
+  .cbx .forma-pagamento-text {
+    order: 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .cbx .forma-pagamento {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+}
+
 .cbx .logos-pagamento {
   width: 20%;
   height: 3rem;
@@ -2893,19 +2927,29 @@ h3 strong {
 }
 
 .cbx .logos-pagamento li img {
-  height: 100%;
+  height: 3rem;
 }
 
 .cbx .logos-pagamento .logos-pagamento-visa img {
   height: 2rem;
 }
 
-@media (max-width: 767px) {
-  .cbx {
-    padding: .8rem;
+@media (max-width: 575px) {
+  .cbx .logos-pagamento {
+    order: 1;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
   }
-  .cbx .forma-pagamento {
-    width: 95%;
+  .cbx .logos-pagamento li {
+    margin: .8rem 0;
+  }
+  .cbx .logos-pagamento li img {
+    height: 4rem;
   }
 }
 
@@ -2999,7 +3043,7 @@ h3 strong {
 }
 
 .inp-cbx:checked + .cbx {
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
   transition: all .3 ease-in;
 }
 
@@ -3365,6 +3409,7 @@ form span.input-validate {
   line-height: 1em;
   font-style: italic;
   margin-bottom: 0;
+  padding-left: 1.5rem;
 }
 
 @keyframes animation-card {
@@ -3489,6 +3534,14 @@ table th {
   padding-left: 1.5rem;
 }
 
+@media (max-width: 575px) {
+  .table-seu-carrinho td:first-child,
+  .table-seu-carrinho th:first-child {
+    text-align: right;
+    padding-left: 50%;
+  }
+}
+
 .table-seu-carrinho td select {
   background-color: #f3f3f3;
   font-size: 1.4rem;
@@ -3540,6 +3593,35 @@ table th {
 
 .table-seu-carrinho .item-delete a img {
   width: 100%;
+}
+
+@media (max-width: 575px) {
+  .table-seu-carrinho tbody tr {
+    margin-bottom: 4rem;
+  }
+  .table-seu-carrinho tbody td {
+    position: relative;
+    padding-left: 50%;
+  }
+  .table-seu-carrinho tbody td::before {
+    font-size: 1.4rem;
+    font-weight: 900;
+    line-height: 1em;
+    position: absolute;
+    left: .5rem;
+  }
+  .table-seu-carrinho tbody td:nth-child(1):before {
+    content: 'Experiências';
+  }
+  .table-seu-carrinho tbody td:nth-child(2):before {
+    content: 'Preço';
+  }
+  .table-seu-carrinho tbody td:nth-child(3):before {
+    content: 'Quantidade';
+  }
+  .table-seu-carrinho tbody td:nth-child(4):before {
+    content: 'Sub-Total';
+  }
 }
 
 .footer {
@@ -4431,6 +4513,12 @@ header .marca img {
   }
 }
 
+@media (max-width: 575px) {
+  .header-checkout .breadcrumb .active .breadcrumb-item-text {
+    display: none;
+  }
+}
+
 @keyframes open-carrinho {
   0% {
     opacity: 0;
@@ -4811,7 +4899,7 @@ header .marca img {
 .checkout-content .header-checkout .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   align-content: center;
 }
@@ -5011,8 +5099,16 @@ header .marca img {
 }
 
 @media (max-width: 575px) {
+  .dados-pagamento-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
   .dados-pagamento-title h2 {
     text-align: left;
+    margin-bottom: 1.2rem;
   }
 }
 
@@ -5040,7 +5136,7 @@ header .marca img {
   font-weight: 300;
   line-height: 1.4em;
   padding-bottom: 0;
-  padding-left: 4.5rem;
+  padding-left: 0;
   margin: .8rem 0 0;
 }
 
@@ -5056,6 +5152,22 @@ header .marca img {
   padding-left: .8rem;
 }
 
+@media (max-width: 767px) {
+  .dados-pagamento-metodo .form-check .container-input input {
+    width: 50%;
+  }
+}
+
+@media (max-width: 575px) {
+  .dados-pagamento-metodo .form-check .container-input {
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+  .dados-pagamento-metodo .form-check .container-input input {
+    width: 100%;
+  }
+}
+
 .dados-pagamento-metodo span.input-validate {
   bottom: -1.6rem;
 }
@@ -5065,6 +5177,11 @@ header .marca img {
   position: relative;
   padding-bottom: 1.6rem;
   margin-bottom: 0.8rem;
+}
+
+.politicas-dados .cbx-rgpd p {
+  text-align: right;
+  width: 90%;
 }
 
 .politicas-dados li {
@@ -5121,6 +5238,14 @@ header .marca img {
   margin-bottom: 1.5rem;
 }
 
+.resumo-compra table tbody tr td {
+  font-weight: 300;
+}
+
+.resumo-compra table tbody tr td span:nth-child(2) {
+  font-weight: 900;
+}
+
 .resumo-compra table th,
 .resumo-compra table td {
   text-align: left;
@@ -5133,6 +5258,69 @@ header .marca img {
 
 .resumo-compra table th {
   font-size: 1.2rem;
+}
+
+.resumo-compra table tfoot tr:nth-child(1) td {
+  padding-top: 3.2rem;
+}
+
+.resumo-compra table tfoot tr:nth-child(2) td {
+  font-weight: 300;
+}
+
+.resumo-compra table tfoot tr:nth-child(3) td {
+  padding-top: 1.6rem;
+}
+
+.resumo-compra table tfoot td {
+  font-weight: 900;
+  padding-bottom: 0;
+}
+
+.resumo-compra table tfoot td:first-child {
+  padding-left: 8rem;
+}
+
+@media (max-width: 575px) {
+  .resumo-compra table tbody tr {
+    margin-bottom: 4rem;
+  }
+  .resumo-compra table tbody td {
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+  .resumo-compra table tbody td::before {
+    font-size: 1.4rem;
+    font-weight: 900;
+    line-height: 1em;
+    position: absolute;
+    left: .5rem;
+  }
+  .resumo-compra table tbody td:nth-child(1):before {
+    content: 'Qt.';
+  }
+  .resumo-compra table tbody td:nth-child(2):before {
+    content: 'Ticket';
+  }
+  .resumo-compra table tbody td:nth-child(3):before {
+    content: 'Value';
+  }
+  .resumo-compra table tfoot tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: none;
+  }
+  .resumo-compra table tfoot tr:nth-child(2) {
+    border-bottom: 1px solid #ddd;
+  }
+  .resumo-compra table tfoot td {
+    width: 50%;
+    border: none;
+  }
 }
 
 @media (max-width: 992px) {
