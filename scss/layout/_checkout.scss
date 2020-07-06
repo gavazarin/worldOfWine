@@ -43,7 +43,7 @@
   @include flex(column, flex-start, center, center);
   .valor-compra {
     width: 100%;
-    padding: 0 8rem;
+    padding: 0 7rem;
     margin: 1.5rem 0;
     @include flex(column, flex-end, flex-end, flex-end);
     @include sm {
@@ -55,6 +55,9 @@
       margin: .5rem 0;
       p {
         margin: 0 1.5rem 0;
+        &:last-child {
+          margin-right: 0;
+        }
       }
       @include md {
         width: 50%;
@@ -421,25 +424,48 @@
   width: 100%;
   position: relative;
   @include flex(column, flex-start, center, center);
+  div {
+    width: 100%;
+    text-align: center;
+  }
   i {
     height: 20rem;
     margin-bottom: 1.5rem;
+    display: inline-block;
     img {
       height: 100%;
     }
   }
   h3 {
-    width: 40%;
+    // width: 40%;
     @include font(2.2rem, 900, 1.4em);
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 1.5rem;
   }
   h4 {
-    width: 50%;
     @include font(1.8rem, 300, 1.4em);
     text-align: center;
     margin-bottom: 1.6rem;
+  }
+  .payreturn__table {
+    margin-top: 3rem;
+    @include flex(column, flex-start, center, center);
+    img {
+      height: 5rem;
+    }
+    table {
+      width: auto;
+      td {
+        margin: 0 1.6rem;
+        &:first-child {
+          text-align: left;
+        }
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
   }
   .btn {
     padding: 1.5rem .8rem;
@@ -541,12 +567,20 @@
 .container-detalhes {
   width: 100%;
   margin-bottom: 3rem;
+  .container-seu-carrinho {
+    background-color: transparent;
+    border: 1px solid $gray-02;
+  }
   .table-seu-carrinho {
-    thead {
-      background-color: $secondary;
-      th {
-        color: $white;
+    th,
+    td {
+      &:last-child {
+        width: 15%;
+        padding-right: 1.5rem;
       }
     }
+  }
+  .valor-compra {
+    padding-right: 1.5rem;
   }
 }

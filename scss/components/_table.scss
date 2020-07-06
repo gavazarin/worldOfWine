@@ -72,6 +72,13 @@ table {
         padding-left: 50%;
       }
     }
+    &:nth-child(4) {
+      text-align: right;
+    }
+    &:last-child {
+      width: 6rem;
+      text-align: right;
+    }
   }
   td {
     select {
@@ -155,6 +162,37 @@ table {
           }
         }
       }
+    }
+  }
+}
+
+.table-detalhes-compra {
+  @include flex(row, space-between, center, center);
+  tr {
+    @include flex(column, center, flex-start, flex-start);
+    th,
+    td {
+      padding: 1rem 1.5rem;
+    }
+  }
+  tbody {
+    margin-left: .8rem;
+    tr {
+      @include flex(column, center, flex-end, flex-end);
+    }
+  }
+  @include xs {
+    thead {
+      width: auto;
+      height: auto;
+      position: relative;
+      th {
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+    tbody {
+      margin-right: 0;
     }
   }
 }

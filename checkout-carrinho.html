@@ -239,6 +239,65 @@
   <!-- jQuery, Bootstrap JS -->
   <script src="includes/jquery.min.js "></script>
   <script src="includes/bootstrap.min.js "></script>
+
+  <!-- Modal Error -->
+  <div id="smv-modal-msg" class="modal fade in" tabindex="-1" role="dialog" smv-ismodal="1" style="display: none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 id="smv-modalmsg-title" smv-langtext="msg_title">Warning</h1>
+          <i class="close close-infos" data-dismiss="modal"><img src="https://lisboa.smartmove.pt:8083/WOW/Resources/images/svg/close-icon.svg" alt=""></i>
+        </div>
+
+        <div class="modal-body">
+          <h3 id="smv-modalmsg-t1">There was an error.</h3>
+          <h3 id="smv-modalmsg-t2">Please retry later.</h3>
+        </div>
+
+        <div class="modal-footer">
+          <button id="smv-modalmsg-bt-cancel" type="button" class="btn btn-primary" onclick="javascript:smv_Msg_Modal_BtClick('cancel')">
+            <span smv-langtext="btcancel">Cancel</span>
+          </button>
+          <button id="smv-modalmsg-bt-back" type="button" class="btn btn-secondary" onclick="javascript:smv_Msg_Modal_BtClick('back')">
+            <span smv-langtext="btback">Back</span>
+          </button>
+          <button id="smv-modalmsg-bt-retry" type="button" class="btn btn-secondary" onclick="javascript:smv_Msg_Modal_BtClick('retry')">
+            <span smv-langtext="btrefresh">Refresh</span>
+          </button>
+          <button id="smv-modalmsg-bt-close" type="button" class="btn btn-primary" onclick="javascript:smv_Msg_Modal_BtClick('close')">
+            <span smv-langtext="btclose">Close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Empty Cart -->
+  <div id="smv-modal-confirm" class="modal fade in" tabindex="-1" role="dialog" data-backdrop="static" smv-ismodal="1" smv-onclose="smv_MsgConfirmReset" style="display: none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 id="smv-modalconfirm-title" smv-langtext="msg_title">Warning</h1>
+        </div>
+
+
+        <div class="modal-body">
+          <h3 id="smv-modalconfirm-t1" smv-langtext="msg_checkdelcart">Empty shopping cart?</h3>
+
+          <h3 id="smv-modalconfirm-t2" style="display: none;"></h3>
+        </div>
+
+        <div class="modal-footer">
+          <button id="smv-modalconfirm-bt-yes" type="button" class="btn btn-primary" onclick="javascript:smv_Msg_Confirm_BtClick('yes')" smv-onclick="smv_paycart_DelCart">
+            <span smv-langtext="btyes">Yes</span>
+          </button>
+          <button id="smv-modalconfirm-bt-no" type="button" class="btn btn-primary" onclick="javascript:smv_Msg_Confirm_BtClick('no')">
+            <span smv-langtext="btno">No</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
