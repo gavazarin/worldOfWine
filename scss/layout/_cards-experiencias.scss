@@ -15,6 +15,9 @@
   border-top: 2px solid $primary;
   h2 {
     @include font(2.4rem, 900, 1.2em);
+    @include xs {
+      font-size: 2rem;
+    }
   }
   &__item {
     width: 100%;
@@ -126,9 +129,15 @@
         strong {
           font-weight: 900;
         }
+        @include xs {
+          font-size: 1.8rem;
+        }
       }
       &-description {
         @include font(1.4rem, 300, 1.2em);
+        @include xs {
+          padding-right: .4rem;
+        }
       }
       &-gratuito {
         @include font(1.4rem, 700, 1.2em);

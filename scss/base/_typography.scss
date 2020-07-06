@@ -15,6 +15,9 @@ h1 {
   strong {
     font-weight: 900;
   }
+  @include xs {
+    font-size: 2.5rem;
+  }
 }
 
 h2 {
@@ -25,6 +28,9 @@ h2 {
   strong {
     font-weight: 900;
   }
+  @include xs {
+    font-size: 2rem;
+  }
 }
 
 h3 {
@@ -33,5 +39,8 @@ h3 {
   text-align: center;
   strong {
     font-weight: 900;
+  }
+  @include xs {
+    font-size: 1.6rem;
   }
 }
