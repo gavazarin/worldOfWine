@@ -2701,6 +2701,13 @@ h3 strong {
   height: 100%;
 }
 
+@media (max-width: 575px) {
+  .btn i {
+    height: 3rem;
+    margin: 4px 8px;
+  }
+}
+
 .btn span {
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
@@ -2709,6 +2716,13 @@ h3 strong {
   margin: 0 8px;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+
+@media (max-width: 575px) {
+  .btn span {
+    font-size: 1.4rem;
+    margin: 4px 8px;
+  }
 }
 
 .btn-primary {
@@ -3539,6 +3553,12 @@ table th {
   margin-bottom: 3rem;
 }
 
+@media (max-width: 575px) {
+  .table-seu-carrinho {
+    margin-bottom: 0;
+  }
+}
+
 .table-seu-carrinho thead {
   background-color: #1C8D87;
 }
@@ -3689,16 +3709,41 @@ table th {
 
 @media (max-width: 575px) {
   .table-detalhes-compra thead {
-    width: auto;
-    height: auto;
-    position: relative;
-  }
-  .table-detalhes-compra thead th {
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    display: none;
   }
   .table-detalhes-compra tbody {
+    width: 100%;
     margin-right: 0;
+  }
+  .table-detalhes-compra td {
+    position: relative;
+    padding-left: 50%;
+  }
+  .table-detalhes-compra td::before {
+    width: 50%;
+    font-size: 1.4rem;
+    font-weight: 900;
+    line-height: 1em;
+    position: absolute;
+    left: .5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+  .table-detalhes-compra td:nth-child(1):before {
+    content: 'Método de pagamento';
+  }
+  .table-detalhes-compra td:nth-child(2):before {
+    content: 'Nome';
+  }
+  .table-detalhes-compra td:nth-child(3):before {
+    content: 'E-mail';
+  }
+  .table-detalhes-compra td:nth-child(4):before {
+    content: 'País';
+  }
+  .table-detalhes-compra td:nth-child(5):before {
+    content: 'Contribuinte nº';
   }
 }
 
@@ -4298,11 +4343,13 @@ header .carrinho-compras {
 
 @media (max-width: 767px) {
   header .carrinho-compras {
+    height: 80vh;
     position: absolute;
     top: auto;
-    right: 0;
+    right: -0.4rem;
     bottom: -0.8rem;
     left: auto;
+    overflow-y: scroll;
   }
 }
 
@@ -4547,7 +4594,6 @@ header .marca img {
   align-items: center;
   align-content: center;
   background-color: #FFFFFF;
-  margin-bottom: 3rem;
 }
 
 .header-checkout nav {
@@ -4981,12 +5027,6 @@ header .marca img {
   margin: 0 4px;
 }
 
-.cards-list__item--bilhetes .btn-experience .btn span {
-  font-size: 1.6rem;
-  margin: 0;
-  text-transform: uppercase;
-}
-
 .cards-list__item--bilhetes.mostrar {
   transform: translateY(0);
   transition: all .3s ease-in;
@@ -5002,6 +5042,7 @@ header .marca img {
 
 .checkout-content {
   background-color: #F7F7F7;
+  padding-top: 13rem;
 }
 
 .checkout-content .row {
@@ -5010,6 +5051,12 @@ header .marca img {
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
+}
+
+@media (max-width: 992px) {
+  .checkout-content {
+    padding-top: 15rem;
+  }
 }
 
 .checkout-content .header-checkout .row {
@@ -5658,6 +5705,23 @@ header .marca img {
   text-align: right;
 }
 
+@media (max-width: 575px) {
+  .success .payreturn__table,
+  .error .payreturn__table,
+  .wait .payreturn__table {
+    margin-top: 1.5rem;
+  }
+  .success .payreturn__table table tr,
+  .error .payreturn__table table tr,
+  .wait .payreturn__table table tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+}
+
 .success .btn,
 .error .btn,
 .wait .btn {
@@ -5809,6 +5873,14 @@ header .marca img {
 .container-detalhes .table-seu-carrinho td:last-child {
   width: 15%;
   padding-right: 1.5rem;
+}
+
+@media (max-width: 575px) {
+  .container-detalhes .table-seu-carrinho th:last-child,
+  .container-detalhes .table-seu-carrinho td:last-child {
+    width: 100%;
+    padding-right: 0.5rem;
+  }
 }
 
 .container-detalhes .valor-compra {

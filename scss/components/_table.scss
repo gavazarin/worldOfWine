@@ -56,6 +56,9 @@ table {
 .table-seu-carrinho {
   margin: 0;
   margin-bottom: 3rem;
+  @include xs {
+    margin-bottom: 0;
+  }
   thead {
     background-color: $secondary;
     th {
@@ -183,16 +186,49 @@ table {
   }
   @include xs {
     thead {
-      width: auto;
-      height: auto;
-      position: relative;
-      th {
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-      }
+      display: none
     }
     tbody {
+      width: 100%;
       margin-right: 0;
+    }
+    td {
+      position: relative;
+      padding-left: 50%;
+      &::before {
+        width: 50%;
+        @include font(1.4rem, 900, 1em);
+        position: absolute;
+        left: .5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+      }
+      &:nth-child(1) {
+        &:before {
+          content: 'Método de pagamento';
+        }
+      }
+      &:nth-child(2) {
+        &:before {
+          content: 'Nome';
+        }
+      }
+      &:nth-child(3) {
+        &:before {
+          content: 'E-mail';
+        }
+      }
+      &:nth-child(4) {
+        &:before {
+          content: 'País';
+        }
+      }
+      &:nth-child(5) {
+        &:before {
+          content: 'Contribuinte nº';
+        }
+      }
     }
   }
 }

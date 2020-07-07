@@ -206,7 +206,9 @@ header {
     box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
     z-index: 5;
     @include sm {
-      @include absolute(auto, 0, -0.8rem, auto);
+      height: 80vh;
+      @include absolute(auto, -.4rem, -0.8rem, auto);
+      overflow-y: scroll;
     }
     &-empty {
       // @include flex(column, flex-start, center, center);
@@ -375,7 +377,6 @@ header {
 .header-checkout {
   @include flex(column, center, center, center);
   background-color: $white;
-  margin-bottom: 3rem;
   nav {
     @include flex(row, flex-end, center, center);
   }

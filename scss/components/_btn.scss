@@ -9,6 +9,10 @@
     img {
       height: 100%;
     }
+    @include xs {
+      height: 3rem;
+      margin: 4px 8px;
+    }
   }
   span {
     font-family: $font-01;
@@ -16,6 +20,10 @@
     margin: 0 8px;
     color: $white;
     text-transform: uppercase;
+    @include xs {
+      font-size: 1.4rem;
+      margin: 4px 8px;
+    }
   }
   &-primary {
     background-color: $primary;

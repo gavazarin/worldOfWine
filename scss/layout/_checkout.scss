@@ -1,7 +1,11 @@
 .checkout-content {
   background-color: $white-secondary;
+  padding-top: 13rem;
   .row {
     @include flex(row, center, flex-start, flex-start);
+  }
+  @include md {
+    padding-top: 15rem;
   }
   .header-checkout {
     .row {
@@ -466,6 +470,14 @@
         }
       }
     }
+    @include xs {
+      margin-top: 1.5rem;
+      table {
+        tr {
+          @include flex(row, space-between, center, center);
+        }
+      }
+    }
   }
   .btn {
     padding: 1.5rem .8rem;
@@ -577,6 +589,10 @@
       &:last-child {
         width: 15%;
         padding-right: 1.5rem;
+        @include xs {
+          width: 100%;
+          padding-right: 0.5rem;
+        }
       }
     }
   }
