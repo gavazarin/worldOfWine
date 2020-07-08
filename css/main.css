@@ -4343,7 +4343,7 @@ header .carrinho-compras {
 
 @media (max-width: 767px) {
   header .carrinho-compras {
-    height: 80vh;
+    max-height: 80vh;
     position: absolute;
     top: auto;
     right: -0.4rem;
@@ -4380,6 +4380,12 @@ header .carrinho-compras-empty p {
   font-weight: 300;
   line-height: 1.2em;
   color: #CCCCCC;
+}
+
+@media (max-width: 575px) {
+  header .carrinho-compras-empty {
+    width: 32rem;
+  }
 }
 
 header .carrinho-compras-itens {
@@ -5749,19 +5755,6 @@ header .marca img {
 .error .valor-compra-total:before,
 .wait .valor-compra-total:before {
   width: 50%;
-}
-
-@media (max-width: 992px) {
-  .success h3,
-  .error h3,
-  .wait h3 {
-    width: 80%;
-  }
-  .success h4,
-  .error h4,
-  .wait h4 {
-    width: 100%;
-  }
 }
 
 @media (max-width: 575px) {

@@ -206,7 +206,7 @@ header {
     box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
     z-index: 5;
     @include sm {
-      height: 80vh;
+      max-height: 80vh;
       @include absolute(auto, -.4rem, -0.8rem, auto);
       overflow-y: scroll;
     }
@@ -231,6 +231,9 @@ header {
       p {
         @include font(1.8rem, 300, 1.2em);
         color: $gray-01;
+      }
+      @include xs {
+        width: 32rem;
       }
     }
     &-itens {

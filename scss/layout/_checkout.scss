@@ -496,14 +496,6 @@
       }
     }
   }
-  @include md {
-    h3 {
-      width: 80%;
-    }
-    h4 {
-      width: 100%;
-    }
-  }
   @include xs {
     h3 {
       width: 100%;
