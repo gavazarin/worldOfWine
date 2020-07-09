@@ -363,7 +363,8 @@ header {
   }
   .marca {
     img {
-      height: 5rem;
+      width: 100%;
+      max-height: 5rem;
     }
     @include md {
       @include flex(row, center, center, center);
