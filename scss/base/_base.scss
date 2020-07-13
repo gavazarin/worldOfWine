@@ -45,12 +45,26 @@ a:focus {
 }
 
 .content-wrap {
-  padding-bottom: 30rem;
+  padding-bottom: 45rem;
   .row {
     @include flex(row, center, flex-wrap, flex-wrap);
   }
   @include sm {
-    padding-bottom: 25rem;
+    padding-bottom: 55rem;
+  }
+  @include xs {
+    padding-bottom: 90rem;
   }
   /* Footer height */
+}
+
+.cofinanciado-portugal {
+  width: 100%;
+  padding: .8rem 0;
+  .row {
+    @include flex(column, center, center, center);
+  }
+  img {
+    width: 100%
+  }
 }
