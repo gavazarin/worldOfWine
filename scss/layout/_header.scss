@@ -1,89 +1,19 @@
 header {
   width: 100%;
-  height: 10rem;
+  height: 8rem;
   background-color: $black;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
-  .top-header {
-    background-color: $primary;
-    height: 25%;
-    color: $black;
-    @include flex(row, center, center, center);
-    .row {
-      @include flex(row, flex-end, center, center);
-    }
-    input {
-      display: none;
-    }
-    input:checked~.language-dropdown-list {
-      display: block;
-    }
-    input:checked~label i {
-      transform: rotate(-180deg);
-      transition: all .3s ease-out;
-    }
-    .language-dropdown {
-      color: $white;
-      @include font(1.2rem, 300, 1.2em);
-      text-transform: uppercase;
-      cursor: pointer;
-      margin-bottom: 0;
-      position: relative;
-      @include flex(row, flex-end, center, center);
-      i {
-        height: 1rem;
-        width: auto;
-        display: flex;
-        margin-left: 4px;
-        img {
-          height: 100%;
-          width: auto;
-        }
-      }
-      &:hover {
-        text-decoration: none;
-      }
-    }
-    .language-dropdown-list {
-      position: absolute;
-      bottom: 0;
-      transform: translateY(70%);
-      z-index: 15;
-      display: none;
-      li {
-        text-align: right;
-        background-color: $black;
-        @include font(1.2rem, 300, 1.2em);
-        text-transform: uppercase;
-        transition: all .3s ease-in-out;
-        a {
-          display: block;
-          color: $white;
-          padding: 1.6rem 1.6rem;
-          padding-left: 3.2rem;
-          border-bottom: .5px solid $primary;
-        }
-        &:hover {
-          background-color: #2e2e2d;
-          transition: all .3s ease-in-out;
-          a {
-            color: $white;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
   .navMenu {
-    height: 75%;
+    height: 100%;
     padding: .8rem 0;
     @include flex(row, center, center, center);
     &__list {
       width: 100%;
       position: relative;
-      @include flex(row, center, center, center);
+      @include flex(row, space-between, center, center);
       flex-wrap: wrap;
       @include sm {
         @include flex(row, space-between, center, center);
@@ -113,16 +43,17 @@ header {
         }
       }
       .header-marca {
-        text-align: center;
+        text-align: left;
       }
       .header-carrinho {
         color: $white;
         position: relative;
+        @include flex(row, flex-end, center, center);
         #smv_wp_popcart {
           @include flex(row, flex-end, center, center);
-          @include xs {
-            @include flex(column, center, flex-end, flex-end);
-          }
+          // @include xs {
+          //   @include flex(column, center, flex-end, flex-end);
+          // }
         }
         .shopping-cart-icon {
           display: inline-block;
@@ -155,9 +86,10 @@ header {
         }
         &__infos {
           position: relative;
-          @include flex(column, center, flex-start, flex-start);
+          @include flex(row, center, center, center);
           @include font(1.6rem, 300, 1.2em);
           text-transform: uppercase;
+          margin-bottom: 0;
           cursor: pointer;
           span {
             margin: 2px 0;
@@ -169,7 +101,7 @@ header {
             width: 1.2rem;
             height: auto;
             display: flex;
-            @include absolute(auto, 0, 6px, auto);
+            margin-left: .8rem;
             img {
               width: 100%;
               height: auto;
@@ -188,6 +120,68 @@ header {
               position: relative;
               margin-left: 5px;
               bottom: auto;
+            }
+          }
+        }
+        .header-idioma {
+          position: relative;
+        }
+        input:checked~.language-dropdown-list {
+          display: block;
+        }
+        input:checked~label i {
+          transform: rotate(-180deg);
+          transition: all .3s ease-out;
+        }
+        .language-dropdown {
+          color: $white;
+          @include font(1.6rem, 300, 1.2em);
+          text-transform: uppercase;
+          cursor: pointer;
+          margin-bottom: 0;
+          position: relative;
+          @include flex(row, flex-end, center, center);
+          i {
+            height: 1rem;
+            width: auto;
+            display: flex;
+            margin-left: 4px;
+            img {
+              height: 100%;
+              width: auto;
+            }
+          }
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        .language-dropdown-list {
+          position: absolute;
+          bottom: 0;
+          transform: translateY(105%);
+          border-top: 1px solid $primary;
+          z-index: 15;
+          display: none;
+          li {
+            text-align: right;
+            background-color: $black;
+            @include font(1.2rem, 300, 1.2em);
+            text-transform: uppercase;
+            transition: all .3s ease-in-out;
+            a {
+              display: block;
+              color: $white;
+              padding: 1.6rem 1.6rem;
+              padding-left: 3.2rem;
+              border-bottom: .5px solid $primary;
+            }
+            &:hover {
+              background-color: #2e2e2d;
+              transition: all .3s ease-in-out;
+              a {
+                color: $white;
+                text-decoration: none;
+              }
             }
           }
         }
@@ -362,9 +356,14 @@ header {
     }
   }
   .marca {
+    display: inline-block;
+    width: 15rem;
+    max-width: 100%;
     img {
       width: 100%;
-      max-height: 5rem;
+      height: 100%;
+      object-fit: contain;
+      display: inline-block;
     }
     @include md {
       @include flex(row, center, center, center);
