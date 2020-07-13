@@ -1,6 +1,7 @@
 .btn {
   @include flex(row, center, center, center);
   flex-wrap: wrap;
+  color: $white;
   i {
     height: 4rem;
     width: auto;
@@ -85,6 +86,9 @@
       border: 1px solid $secondary-dark;
       transition: all .3s ease-out;
     }
+  }
+  &-block {
+    height: 5.2rem;
   }
   &-link {
     color: $primary;

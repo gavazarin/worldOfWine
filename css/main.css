@@ -2688,6 +2688,7 @@ h3 strong {
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
+  color: #FFFFFF;
 }
 
 .btn i {
@@ -2779,6 +2780,10 @@ h3 strong {
   background-color: #FFFFFF;
   border: 1px solid #38706D;
   transition: all .3s ease-out;
+}
+
+.btn-block {
+  height: 5.2rem;
 }
 
 .btn-link {
@@ -4845,6 +4850,7 @@ header .marca img {
 }
 
 .cards-list__item .info-experience {
+  width: 100%;
   height: 42%;
 }
 
