@@ -98,7 +98,11 @@
   .title-experience {
     margin: 0;
     margin-bottom: .4rem;
+    h2 {
+      width: 90%;
+    }
     .close-bilhetes {
+      width: 10%;
       height: auto;
       @include font(1.6rem, 900, 1.2em);
       color: $primary;
@@ -111,6 +115,8 @@
   }
   .bilhetes-list {
     width: 100%;
+    height: 32rem;
+    overflow-y: scroll;
     position: relative;
     li {
       @include flex(row, space-between, center, center);

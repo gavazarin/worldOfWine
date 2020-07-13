@@ -4,7 +4,7 @@
   user-select: none;
   background-color: $white;
   @include flex(row, space-between, center, center);
-  padding: .8rem 1.6rem;
+  padding: 2rem 1.6rem;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
   @include md {
     padding: .8rem;

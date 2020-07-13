@@ -2566,7 +2566,7 @@ a:focus {
 }
 
 .content-wrap {
-  padding-bottom: 16rem;
+  padding-bottom: 30rem;
   /* Footer height */
 }
 
@@ -2858,7 +2858,7 @@ h3 strong {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  padding: .8rem 1.6rem;
+  padding: 2rem 1.6rem;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -3116,6 +3116,7 @@ h3 strong {
   justify-content: space-between;
   align-items: center;
   align-content: center;
+  margin: .8rem 0;
 }
 
 .container-datapicker .btn-select-date {
@@ -3857,7 +3858,7 @@ table th {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 16rem;
+  height: 30rem;
   background: #1D1D1B;
   display: flex;
   flex-direction: row;
@@ -3896,13 +3897,13 @@ table th {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   align-content: center;
 }
 
 .footer .footer-marca a {
-  height: 6rem;
+  height: 10rem;
   width: auto;
   display: inline-block;
 }
@@ -4916,7 +4917,12 @@ header .marca img {
   margin-bottom: .4rem;
 }
 
+.cards-list__item--bilhetes .title-experience h2 {
+  width: 90%;
+}
+
 .cards-list__item--bilhetes .title-experience .close-bilhetes {
+  width: 10%;
   height: auto;
   font-size: 1.6rem;
   font-weight: 900;
@@ -4936,6 +4942,8 @@ header .marca img {
 
 .cards-list__item--bilhetes .bilhetes-list {
   width: 100%;
+  height: 32rem;
+  overflow-y: scroll;
   position: relative;
 }
 
@@ -5305,13 +5313,14 @@ header .marca img {
 .dados-pagamento-metodo .form-check .container-input label {
   width: auto;
   font-weight: 300;
-  margin: 0 .8rem;
+  margin-right: .8rem;
 }
 
 .dados-pagamento-metodo .form-check .container-input input {
   width: 25%;
   height: 3.2rem;
   padding-left: .8rem;
+  margin-left: .8rem;
 }
 
 @media (max-width: 767px) {
@@ -5331,7 +5340,8 @@ header .marca img {
 }
 
 .dados-pagamento-metodo span.input-validate {
-  bottom: -1.6rem;
+  bottom: -1.2rem;
+  left: 0;
 }
 
 .politicas-dados {
@@ -5402,6 +5412,11 @@ header .marca img {
 
 .resumo-compra table tbody tr td {
   font-weight: 300;
+}
+
+.resumo-compra table tbody tr td span:nth-child(1) {
+  display: block;
+  margin-bottom: 4px;
 }
 
 .resumo-compra table tbody tr td span:nth-child(2) {

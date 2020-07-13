@@ -3,6 +3,7 @@
   height: 4rem;
   position: relative;
   @include flex(row, space-between, center, center);
+  margin: .8rem 0;
   .btn-select-date {
     height: 100%;
     color: $secondary;
