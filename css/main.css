@@ -2534,6 +2534,7 @@ body {
   height: auto;
   position: relative;
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
 section {
@@ -2591,8 +2592,7 @@ a:focus {
 }
 
 .cofinanciado-portugal {
-  width: 100%;
-  padding: .8rem 0;
+  margin: 0 auto;
 }
 
 .cofinanciado-portugal .row {
@@ -2603,8 +2603,15 @@ a:focus {
   align-content: center;
 }
 
+.cofinanciado-portugal a {
+  text-align: center;
+}
+
 .cofinanciado-portugal img {
   width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-top: 10px;
 }
 
 .clearfix::after {
@@ -4088,7 +4095,11 @@ table th {
 
 .footer .metodos-pagamento li {
   width: 2.5rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
+}
+
+.footer .metodos-pagamento li:last-child {
+  margin-right: 0;
 }
 
 .footer .metodos-pagamento li img {
