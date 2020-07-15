@@ -1,11 +1,11 @@
 .checkout-content {
   background-color: $white-secondary;
-  padding-top: 13rem;
+  padding-top: 10rem;
   .row {
     @include flex(row, center, flex-start, flex-start);
   }
   @include md {
-    padding-top: 15rem;
+    padding-top: 10rem;
   }
   .header-checkout {
     .row {
@@ -123,6 +123,9 @@
 
 .dados-pagamento {
   position: relative;
+  @include sm {
+    order: 2;
+  }
   &-box {
     margin-bottom: 3rem;
   }
@@ -184,6 +187,7 @@
           padding-right: 0;
           input {
             width: 100%;
+            margin-left: 0;
           }
         }
       }
@@ -347,6 +351,143 @@
   @include md {
     min-height: auto;
     margin-bottom: 3rem;
+  }
+  @include sm {
+    display: none;
+  }
+}
+
+.resumo-compra-mobile {
+  min-height: 35rem;
+  height: 100%;
+  text-align: right;
+  display: none;
+  table {
+    thead {
+      margin-bottom: 1.5rem;
+    }
+    tbody {
+      tr {
+        td {
+          font-weight: 300;
+          span {
+            &:nth-child(1) {
+              display: block;
+              margin-bottom: 4px;
+            }
+            &:nth-child(2) {
+              font-weight: 900;
+            }
+          }
+        }
+      }
+    }
+    th,
+    td {
+      text-align: left;
+      &:last-child {
+        text-align: right;
+      }
+    }
+    th {
+      font-size: 1.2rem;
+    }
+    tfoot {
+      tr {
+        &:nth-child(1) {
+          td {
+            padding-top: 3.2rem;
+          }
+        }
+        &:nth-child(2) {
+          td {
+            font-weight: 300;
+          }
+        }
+        &:nth-child(3) {
+          td {
+            padding-top: 1.6rem;
+          }
+        }
+      }
+      td {
+        font-weight: 900;
+        padding-bottom: 0;
+        &:first-child {
+          padding-left: 8rem;
+        }
+      }
+    }
+    @include xs {
+      tbody {
+        tr {
+          margin-bottom: 4rem;
+        }
+        td {
+          position: relative;
+          padding-left: 50%;
+          text-align: right;
+          &::before {
+            @include font(1.4rem, 900, 1em);
+            position: absolute;
+            left: .5rem;
+          }
+          &:nth-child(1) {
+            &:before {
+              content: 'Qt.';
+            }
+          }
+          &:nth-child(2) {
+            &:before {
+              content: 'Ticket';
+            }
+          }
+          &:nth-child(3) {
+            &:before {
+              content: 'Value';
+            }
+          }
+        }
+      }
+      tfoot {
+        tr {
+          @include flex(row, center, center, center);
+          border: none;
+          &:nth-child(2) {
+            border-bottom: 1px solid #ddd;
+          }
+        }
+        td {
+          width: 50%;
+          border: none;
+        }
+      }
+    }
+  }
+  @include md {
+    min-height: auto;
+    margin-bottom: 1.5rem;
+  }
+  .btn-resumo-compra {
+    border: 2px solid $gray-01;
+    background-color: $white;
+    @include flex(row, space-between, center, center);
+    flex-wrap: wrap;
+    padding: 3rem 1.5rem;
+    span {
+      color: $black;
+      @include font(2rem, 900, 1.2em);
+      margin-left: 0;
+      margin-bottom: 8px;
+    }
+  }
+  .dados-pagamento-box {
+    padding: 1.5rem;
+    margin-top: .8rem;
+  }
+  @include sm {
+    display: block;
+    order: 1;
   }
 }
 

@@ -449,17 +449,26 @@ header {
       }
     }
   }
+  .marca {
+    img {
+      max-height: 5rem;
+    }
+  }
   @include md {
     height: auto;
     padding: 1.5rem 0;
     .row {
-      @include flex(column, center, center, center);
+      @include flex(row, space-between, center, center);
     }
     .marca {
-      margin-bottom: 3rem;
+      max-height: 5rem;
+      @include flex(row, flex-start, center, center);
+      img {
+        width: auto;
+      }
     }
     nav {
-      @include flex(row, center, center, center);
+      @include flex(row, flex-end, center, center);
     }
     .breadcrumb {
       &-item {
@@ -486,12 +495,12 @@ header {
     }
   }
   @include xs {
+    padding: 1.2rem 0 .8rem;
     .breadcrumb {
-      .active {
-        .breadcrumb-item-text {
-          display: none;
-        }
-      }
+      display: none;
+    }
+    .marca {
+      justify-content: center;
     }
   }
 }
