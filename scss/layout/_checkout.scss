@@ -469,6 +469,7 @@
     margin-bottom: 1.5rem;
   }
   .btn-resumo-compra {
+    height: auto;
     border: 2px solid $gray-01;
     background-color: $white;
     @include flex(row, space-between, center, center);

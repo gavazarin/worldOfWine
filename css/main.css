@@ -5811,6 +5811,7 @@ header .marca img {
 }
 
 .resumo-compra-mobile .btn-resumo-compra {
+  height: auto;
   border: 2px solid #CCCCCC;
   background-color: #FFFFFF;
   display: flex;
