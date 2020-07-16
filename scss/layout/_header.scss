@@ -72,13 +72,6 @@ header {
         input {
           display: none;
         }
-        input:checked~.carrinho-compras {
-          display: block;
-        }
-        input:checked~label i {
-          transform: rotate(-180deg);
-          transition: all .3s ease-out;
-        }
         @include xs {
           label {
             margin-bottom: 0;
@@ -109,6 +102,12 @@ header {
           }
           &:after {
             display: none;
+          }
+          &[aria-expanded="true"] {
+            i {
+              transform: rotate(-180deg);
+              transition: all .3s ease-out;
+            }
           }
           @include sm {
             @include flex(row, center, center, center);
