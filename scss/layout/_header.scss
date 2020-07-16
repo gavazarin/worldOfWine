@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  height: 8rem;
+  height: 6rem;
   background-color: $black;
   position: fixed;
   top: 0;
@@ -107,6 +107,9 @@ header {
               height: auto;
             }
           }
+          &:after {
+            display: none;
+          }
           @include sm {
             @include flex(row, center, center, center);
             span {
@@ -126,13 +129,6 @@ header {
         .header-idioma {
           position: relative;
         }
-        input:checked~.language-dropdown-list {
-          display: block;
-        }
-        input:checked~label i {
-          transform: rotate(-180deg);
-          transition: all .3s ease-out;
-        }
         .language-dropdown {
           color: $white;
           @include font(1.6rem, 300, 1.2em);
@@ -141,42 +137,36 @@ header {
           margin-bottom: 0;
           position: relative;
           @include flex(row, flex-end, center, center);
-          i {
-            height: 1rem;
-            width: auto;
-            display: flex;
-            margin-left: 4px;
-            img {
-              height: 100%;
-              width: auto;
-            }
+          &:after {
+            display: none;
           }
           &:hover {
             text-decoration: none;
           }
         }
         .language-dropdown-list {
-          position: absolute;
-          bottom: 0;
-          transform: translateY(105%);
-          border-top: 1px solid $primary;
-          z-index: 15;
-          display: none;
+          padding: 0;
+          right: auto;
+          top: 200%;
+          left: auto;
+          background-color: transparent;
+          min-width: auto;
+          border-top: 2px solid $white;
           li {
-            text-align: right;
+            text-align: left;
             background-color: $black;
-            @include font(1.2rem, 300, 1.2em);
+            @include font(1.4rem, 300, 1.2em);
+            cursor: pointer;
             text-transform: uppercase;
             transition: all .3s ease-in-out;
             a {
               display: block;
               color: $white;
               padding: 1.6rem 1.6rem;
-              padding-left: 3.2rem;
-              border-bottom: .5px solid $primary;
+              padding-right: 3.2rem;
             }
             &:hover {
-              background-color: #2e2e2d;
+              background-color: #2e2e2dec;
               transition: all .3s ease-in-out;
               a {
                 color: $white;
@@ -356,13 +346,14 @@ header {
     }
   }
   .marca {
-    display: inline-block;
-    width: 15rem;
+    display: block;
+    height: 40px;
     max-width: 100%;
     img {
-      width: 100%;
+      // width: 100%;
+      padding: 5px 0;
       height: 100%;
-      object-fit: contain;
+      // object-fit: contain;
       display: inline-block;
     }
     @include md {

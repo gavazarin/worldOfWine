@@ -33,7 +33,7 @@
                 <div smv-type="widgetpage" id="smv_wp_popcart">
                   <i class="shopping-cart-icon"><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart.svg" alt="carrinho de compras"></i>
                   <input type="checkbox" id="carrinho-dropdown">
-                  <label for="carrinho-dropdown" class="header-carrinho__infos">
+                  <label for="carrinho-dropdown" class="header-carrinho__infos" id="dropdownCarrinho" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <!-- <span>Carrinho de Compras</span> -->
                     <span class="carrinho-valor">0,00€</span>
                     <i class="dropdown-icon"><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/dropdown-icon.svg"></i>
@@ -41,13 +41,13 @@
 
 
                   <!-- CARRINHO DE COMPRAS VAZIO! -->
-                  <div class="carrinho-compras carrinho-compras-empty" style="display: none;">
+                  <div class="carrinho-compras carrinho-compras-empty" aria-labelledby="dropdownCarrinho" style="display: none;">
                     <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart-secondary.svg" alt=""></i>
                     <h3>O seu carrinho está vazio</h3>
                     <p>Escolha já as suas experiências!</p>
                   </div>
 
-                  <div class="carrinho-compras carrinho-compras-itens">
+                  <div class="carrinho-compras carrinho-compras-itens" aria-labelledby="dropdownCarrinho">
                     <ul class="info-compra">
                       <li class="info-compra-item">
                         <ul class="info-compra-detalhes">
@@ -150,18 +150,30 @@
                 </div>
               </div>
 
-              <div class="header-idioma">
+              <!-- <div class="header-idioma">
                 <input id="language-dropdown" type="checkbox">
                 <label for="language-dropdown" class="language-dropdown col-lg-12">
-                  <span>PT</span> 
-                  <!-- <i><img src="images/svg/dropdown-icon.svg" alt="ícone de dropdown"></i> -->
+                  <span class="site-language">PT</span> 
                 </label>
                 <ul class="language-dropdown-list">
-                  <li><a href="#">de</a></li>
-                  <li><a href="#">EN</a></li>
-                  <li><a href="#">ES</a></li>
-                  <li><a href="#">FR</a></li>
-                  <li><a href="#">PT</a></li>
+                  <li><a onclick="">de</a></li>
+                  <li><a onclick="">EN</a></li>
+                  <li><a onclick="">ES</a></li>
+                  <li><a onclick="">FR</a></li>
+                  <li><a onclick="">PT</a></li>
+                </ul>
+              </div> -->
+              <div class="header-idioma">
+                <!-- <input id="language-dropdown" type="checkbox"> -->
+                <label class="language-dropdown col-lg-12" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="site-language">PT</span> 
+                </label>
+                <ul class="language-dropdown-list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a onclick="">de</a></li>
+                  <li><a onclick="">EN</a></li>
+                  <li><a onclick="">ES</a></li>
+                  <li><a onclick="">FR</a></li>
+                  <li><a onclick="">PT</a></li>
                 </ul>
               </div>
             </li>
