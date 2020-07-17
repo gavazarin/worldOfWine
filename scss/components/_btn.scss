@@ -1,30 +1,27 @@
 .btn {
   @include flex(row, center, center, center);
   flex-wrap: wrap;
+  // i {
+  //   height: 4rem;
+  //   width: auto;
+  //   display: inline-block;
+  //   margin: 0 8px;
+  //   img {
+  //     height: 100%;
+  //   }
+  //   @include xs {
+  //     height: 3rem;
+  //     margin: 4px 8px;
+  //   }
+  // }
+  font-family: $font-01;
+  @include font(1.6rem, 400, 1.2em);
+  margin: 0 8px;
   color: $white;
-  i {
-    height: 4rem;
-    width: auto;
-    display: inline-block;
-    margin: 0 8px;
-    img {
-      height: 100%;
-    }
-    @include xs {
-      height: 3rem;
-      margin: 4px 8px;
-    }
-  }
-  span {
-    font-family: $font-01;
-    @include font(1.6rem, 900, 1.2em);
-    margin: 0 8px;
-    color: $white;
-    text-transform: uppercase;
-    @include xs {
-      font-size: 1.4rem;
-      margin: 4px 8px;
-    }
+  text-transform: uppercase;
+  @include xs {
+    font-size: 1.4rem;
+    margin: 4px 8px;
   }
   &-primary {
     background-color: $primary;
@@ -34,15 +31,15 @@
     &.active {
       &:focus,
       &.focus {
-        background-color: $primary-dark;
-        border-color: $primary-dark;
+        background-color: $white;
+        border-color: $white;
         transition: all .3s ease-out;
       }
     }
     &:hover,
     &:focus {
-      background-color: $primary-dark;
-      border-color: $primary-dark;
+      background-color: $white;
+      border-color: $white;
       transition: all .3s ease-out;
     }
   }
@@ -54,16 +51,24 @@
     &.active {
       &:focus,
       &.focus {
-        background-color: $secondary-dark;
-        border-color: $secondary-dark;
+        background-color: $white;
+        border-color: $secondary;
         transition: all .3s ease-out;
+        span {
+          color: $secondary;
+          transition: all .3s ease-out;
+        }
       }
     }
     &:hover,
     &:focus {
-      background-color: $secondary-dark;
-      border-color: $secondary-dark;
+      background-color: $white;
+      border-color: $secondary;
       transition: all .3s ease-out;
+      span {
+        color: $secondary;
+        transition: all .3s ease-out;
+      }
     }
   }
   &-outline-secondary {
