@@ -34,6 +34,7 @@
                   <i class="shopping-cart-icon"><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart.svg" alt="carrinho de compras"></i>
                   <input type="checkbox" id="carrinho-dropdown">
                   <label for="carrinho-dropdown" class="header-carrinho__infos" id="dropdownCarrinho" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
                     <!-- <span>Carrinho de Compras</span> -->
                     <span class="carrinho-valor">0,00€</span>
                     <i class="dropdown-icon"><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/dropdown-icon.svg"></i>
@@ -41,13 +42,13 @@
 
 
                   <!-- CARRINHO DE COMPRAS VAZIO! -->
-                  <div class="carrinho-compras carrinho-compras-empty dropdown-menu" aria-labelledby="dropdownCarrinho" style="display: none;">
+                  <div class="carrinho-compras carrinho-compras-empty dropdown-menu" aria-labelledby="dropdownCarrinho">
                     <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart-secondary.svg" alt=""></i>
                     <h3>O seu carrinho está vazio</h3>
                     <p>Escolha já as suas experiências!</p>
                   </div>
 
-                  <div class="carrinho-compras carrinho-compras-itens dropdown-menu" aria-labelledby="dropdownCarrinho">
+                  <div class="carrinho-compras carrinho-compras-itens dropdown-menu" aria-labelledby="dropdownCarrinho" style="display: none;">
                     <ul class="info-compra">
                       <li class="info-compra-item">
                         <ul class="info-compra-detalhes">
@@ -1358,6 +1359,25 @@
       </section>
     </div>
 
+    <div class="div-wait" smv-type="widgetloading" smv-widget="" style="display:none;">
+      <div class="container">
+        <div class="row">
+          <i class="icon-animate"><img src="images/svg/wait-icon.svg" alt=""></i>
+          <p>a carregar dados</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="div-error" smv-type="widgeterror" smv-widget="<?= $widget_name; ?>" style="display:none;">
+      <div class="container">
+        <div class="row">
+          <i><img src="images/svg/error-icon.svg" alt="Ícone de erro"></i>
+          <p>desculpe! ocorreu um problema ao carregar os dados</p>
+          <a href="javascript:retryWidget('')" class="btn btn-primary" smv-type="widgetreloadbutton"><span>Tentar novamente</span></a>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -1722,6 +1742,7 @@
       </div>
     </div>
   </div>
+
 
 
   <!-- jQuery, Bootstrap JS -->

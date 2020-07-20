@@ -32,14 +32,16 @@
       &:focus,
       &.focus {
         background-color: $white;
-        border-color: $white;
+        border-color: $primary;
+        color: $primary;
         transition: all .3s ease-out;
       }
     }
     &:hover,
     &:focus {
       background-color: $white;
-      border-color: $white;
+      border-color: $primary;
+      color: $primary;
       transition: all .3s ease-out;
     }
   }
