@@ -5241,6 +5241,7 @@ header .marca img {
   align-items: center;
   align-content: center;
   cursor: pointer;
+  overflow: visible;
 }
 
 .cards-list__item--bilhetes .title-experience .close-bilhetes i {

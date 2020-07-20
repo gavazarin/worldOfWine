@@ -121,6 +121,7 @@
       color: $primary;
       @include flex(row, flex-end, center, center);
       cursor: pointer;
+      overflow: visible;
       i {
         margin-left: 4px;
       }
