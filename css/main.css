@@ -3316,6 +3316,7 @@ button:hover, button:focus {
   cursor: pointer;
   width: 100%;
   padding-right: 4rem;
+  z-index: 20;
 }
 
 .container-datapicker input:focus {
@@ -3332,6 +3333,7 @@ button:hover, button:focus {
   position: absolute;
   right: 5px;
   margin-bottom: 0;
+  z-index: 10;
   cursor: pointer;
 }
 
