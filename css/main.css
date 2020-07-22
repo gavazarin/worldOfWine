@@ -5448,6 +5448,15 @@ header .marca img {
   align-content: center;
 }
 
+.checkout-content .div-error .row,
+.checkout-content .div-wait .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 .checkout-carrinho h2 {
   font-size: 2.5rem;
   font-weight: 900;

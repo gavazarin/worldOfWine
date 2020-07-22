@@ -40,7 +40,7 @@
       </div>
     </header>
 
-    <div class="content-wrap">
+    <div class="content-wrap" style="display: none;">
       <div class="container">
         <div class="row">
           <div class="success col-lg-7 col-md-10 col-sm-12">
@@ -177,6 +177,25 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="div-wait" smv-type="widgetloading" smv-widget="" style="display:none;">
+      <div class="container">
+        <div class="row">
+          <i class="icon-animate"><img src="images/svg/wait-icon.svg" alt=""></i>
+          <p>a carregar dados</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="div-error" smv-type="widgeterror" smv-widget="<?= $widget_name; ?>">
+      <div class="container">
+        <div class="row">
+          <i><img src="images/svg/error-icon.svg" alt="Ícone de erro"></i>
+          <p>desculpe! ocorreu um problema ao carregar os dados</p>
+          <a href="javascript:retryWidget('')" class="btn btn-primary" smv-type="widgetreloadbutton"><span>Tentar novamente</span></a>
         </div>
       </div>
     </div>

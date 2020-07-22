@@ -12,6 +12,12 @@
       @include flex(row, center, center, center);
     }
   }
+  .div-error,
+  .div-wait {
+    .row {
+      @include flex(column, center, center, center);
+    }
+  }
 }
 
 .checkout-carrinho {
