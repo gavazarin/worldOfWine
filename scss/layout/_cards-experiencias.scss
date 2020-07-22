@@ -146,7 +146,7 @@
       }
       &-title {
         text-transform: uppercase;
-        @include font(2rem, 300, 1.2em);
+        @include font(1.8rem, 300, 1.2em);
         strong {
           font-weight: 900;
         }
@@ -169,14 +169,14 @@
       width: 35%;
       @include flex(row, flex-end, center, center);
       i {
-        width: 2.4rem;
-        height: 2.4rem;
+        width: 2rem;
+        height: 2rem;
         display: inline-block;
         cursor: pointer;
       }
       span {
         width: 35%;
-        @include font(2.2rem, 900, 1em);
+        @include font(2rem, 900, 1em);
         letter-spacing: 1px;
         text-align: center;
         margin: 0 4px;

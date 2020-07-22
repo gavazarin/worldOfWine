@@ -5283,7 +5283,7 @@ header .marca img {
 
 .cards-list__item--bilhetes .bilhetes-list__type-title {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.2em;
 }
@@ -5327,15 +5327,15 @@ header .marca img {
 }
 
 .cards-list__item--bilhetes .bilhetes-list__quantidade i {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
   display: inline-block;
   cursor: pointer;
 }
 
 .cards-list__item--bilhetes .bilhetes-list__quantidade span {
   width: 35%;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 900;
   line-height: 1em;
   letter-spacing: 1px;
@@ -6281,7 +6281,14 @@ header .marca img {
 .success .valor-compra li p,
 .error .valor-compra li p,
 .wait .valor-compra li p {
-  width: auto;
+  width: 20%;
+  text-align: right;
+}
+
+.success .valor-compra li p:first-child,
+.error .valor-compra li p:first-child,
+.wait .valor-compra li p:first-child {
+  width: 25%;
 }
 
 .success .valor-compra-total:before,

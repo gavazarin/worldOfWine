@@ -83,28 +83,6 @@
 
               <div class="container-detalhes collapse" id="detalhes-compra">
                 <div class="container-seu-carrinho">
-                  <table class="table table-detalhes-compra">
-                    <thead>
-                      <tr>
-                        <th scope="col">Método de Pagamento</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">E-mail</th>
-                        <th scope="col">País</th>
-                        <th scope="col">Contribuinte nº:</th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <td>Cartão de Crédito</td>
-                        <td>Paulo Frutuoso</td>
-                        <td>paulo.frutuoso@smartmove.pt</td>
-                        <td>Portugal</td>
-                        <td>000000000</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
                   <table class="table table-seu-carrinho">
                     <thead>
                       <tr>
@@ -158,18 +136,41 @@
                     </tbody>
                   </table>
 
-                  <ul class="valor-compra">
-                    <li class="valor-compra-subtotal">
-                      <p>Subtotal:</p>
-                      <p><span>123,00</span>€</p>
+                  <ul class="valor-compra ">
+                    <!--
+                    <li class="valor-compra-subtotal ">
+                      <p><span smv-langtext="subtotal">Subtotal</span>:</p>
+                      <p><span></span>&#128;</p>
                     </li>
-                    <li class="valor-compra-taxas">
-                      <p>IVA 23%</p>
-                      <p><span>16,10</span>€</p>
+                    <li class="valor-compra-taxas ">
+                      <p><span smv-langtext="vat">VAT</span> % </p>
+                      <p><span></span>&#128;</p>
+                    </li> -->
+                    <li class="valor-compra-total ">
+                      <p><span smv-langtext="total">Total</span>:</p>
+                      <span>60,00 €</span>
                     </li>
-                    <li class="valor-compra-total">
-                      <p>Total:</p>
-                      <p><span>139,10</span>€</p>
+                  </ul>
+
+                  <ul class="valor-compra ">
+                    <li class="valor-compra-subtotal ">
+                      <p><span smv-langtext="lblnumenc">Order number</span>:</p>
+                      <p>4UB7M0GKRE6T</p>
+                    </li>
+
+                    <li class="valor-compra-subtotal ">
+                      <p><span smv-langtext="lblcontactdata">Dados de contacto</span>:</p>
+                      <p>tetetet<br>a@a.a</p>
+                    </li>
+
+                    <li class="valor-compra-subtotal ">
+                      <p><span smv-langtext="lblpaymethod">Método de Pagamento</span>:</p>
+                      <p smv-langtext="xpaynameMULTIBANCO">MULTIBANCO</p>
+                    </li>
+
+                    <li class="valor-compra-subtotal ">
+                      <p><span smv-langtext="lbltotal">Total</span>:</p>
+                      <p><strong>60,00 <span smv-langtext="currencysymbol">€</span></strong></p>
                     </li>
                   </ul>
                 </div>

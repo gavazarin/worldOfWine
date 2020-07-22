@@ -642,7 +642,11 @@
       width: 100%;
       @include flex(row, flex-end, center, center);
       p {
-        width: auto;
+        width: 20%;
+        text-align: right;
+        &:first-child {
+          width: 25%;
+        }
       }
     }
     &-total {
