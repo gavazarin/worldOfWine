@@ -1,22 +1,9 @@
 .btn {
+  min-width: 15rem;
   @include flex(row, center, center, center);
   flex-wrap: wrap;
-  // i {
-  //   height: 4rem;
-  //   width: auto;
-  //   display: inline-block;
-  //   margin: 0 8px;
-  //   img {
-  //     height: 100%;
-  //   }
-  //   @include xs {
-  //     height: 3rem;
-  //     margin: 4px 8px;
-  //   }
-  // }
   font-family: $font-01;
   @include font(1.6rem, 400, 1.2em);
-  margin: 0 8px;
   color: $white;
   text-transform: uppercase;
   @include xs {
