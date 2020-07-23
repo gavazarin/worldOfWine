@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 45rem;
+  height: 58rem;
   background: #000000;
   @include flex(row, center, center, center);
   @include sm {
@@ -23,9 +23,10 @@
     height: 100%;
     position: relative;
     @include flex(row, center, center, center);
+    margin-bottom: 3rem;
     a {
       height: auto;
-      width: 32rem;
+      width: 35rem;
       display: inline-block;
       img {
         height: 100%;
@@ -47,7 +48,7 @@
     margin-top: 5rem;
     h3 {
       color: $white;
-      @include font(1.6rem, 700, 1.2em);
+      @include font(1.8rem, 700, 1.2em);
       margin-bottom: 1.2rem;
       text-align: left;
     }
@@ -68,7 +69,7 @@
         }
       }
     }
-    .footer-links-morada {
+    &-morada {
       padding-left: 8rem;
       img {
         width: 6rem;
@@ -87,6 +88,15 @@
         }
       }
     }
+    &-gps {
+      @include font(1.5rem, 300, 1.4em);
+      color: $white;
+      margin-top: 1rem;
+      a {
+        color: $white;
+        display: block;
+      }
+    }
     &-list {
       @include font(1.5rem, 300, 1.4em);
       color: $white;
@@ -98,9 +108,6 @@
           opacity: .7;
           transition: all .2s ease-in;
         }
-      }
-      li {
-        margin-bottom: .8rem;
       }
       @include xs {
         text-align: center;

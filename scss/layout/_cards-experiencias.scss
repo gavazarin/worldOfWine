@@ -77,6 +77,18 @@
         }
       }
     }
+    .validade-pack {
+      width: 100%;
+      min-height: 4rem;
+      @include font(1.8rem, 900, 1.4em);
+      text-transform: uppercase;
+      text-align: center;
+      color: $secondary;
+      border: 1px solid $secondary;
+      padding: .5rem 1rem;
+      border-radius: 0.25rem;
+      margin: .8rem 0;
+    }
     p {
       @include font(1.8rem, 300, 1.4em);
       height: 10rem;

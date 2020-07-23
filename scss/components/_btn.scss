@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   font-family: $font-01;
   @include font(1.6rem, 400, 1.2em);
+  padding: 1.6rem 3.2rem;
   color: $white;
   text-transform: uppercase;
   @include xs {

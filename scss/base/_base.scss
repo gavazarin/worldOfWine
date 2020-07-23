@@ -46,7 +46,7 @@ a:focus {
 }
 
 .content-wrap {
-  padding-bottom: 48rem;
+  padding-bottom: 58rem;
   .row {
     @include flex(row, center, flex-wrap, flex-wrap);
   }
@@ -61,6 +61,8 @@ a:focus {
 
 .cofinanciado-portugal {
   margin: 0 auto;
+  padding: 1% 0;
+  position: relative;
   .row {
     @include flex(column, center, center, center);
   }
@@ -69,8 +71,17 @@ a:focus {
   }
   img {
     width: 100%;
-    max-width: 500px;
+    max-width: 410px;
     height: auto;
     margin-top: 10px;
+  }
+  &:after {
+    content: "RNAAT nº: 567/2020";
+    @include font(1.6rem, 400, 1em);
+    color: rgba(0, 0, 0, .2);
+    display: table;
+    clear: both;
+    margin: auto;
+    margin-top: .8rem;
   }
 }
