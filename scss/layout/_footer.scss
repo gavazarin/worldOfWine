@@ -102,6 +102,9 @@
           transition: all .2s ease-in;
         }
       }
+      @include xs {
+        text-align: center;
+      }
     }
     &-list {
       @include font(1.5rem, 300, 1.4em);

@@ -4235,6 +4235,12 @@ table th {
   transition: all .2s ease-in;
 }
 
+@media (max-width: 575px) {
+  .footer .footer-links-gps {
+    text-align: center;
+  }
+}
+
 .footer .footer-links-list {
   font-size: 1.5rem;
   font-weight: 300;
@@ -5177,7 +5183,7 @@ header .marca img {
 
 .cards-list__item .info-experience {
   width: 100%;
-  height: 42%;
+  height: 46%;
 }
 
 .cards-list__item .title-experience {
@@ -5855,7 +5861,18 @@ header .marca img {
 
 @media (max-width: 575px) {
   .container-btn {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    position: sticky;
+    bottom: 0;
+    margin: 0;
+  }
+  .container-btn .btn {
+    width: 80%;
+    margin: 8px 0;
   }
 }
 
@@ -5865,11 +5882,6 @@ header .marca img {
 
 @media (max-width: 575px) {
   .container-btn-mobile {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
     position: sticky;
     bottom: 0;
     margin: 0;
@@ -6293,7 +6305,7 @@ header .marca img {
 .success i,
 .error i,
 .wait i {
-  height: 20rem;
+  height: 12rem;
   margin-bottom: 1.5rem;
   display: inline-block;
 }
@@ -6302,6 +6314,14 @@ header .marca img {
 .error i img,
 .wait i img {
   height: 100%;
+}
+
+@media (max-width: 575px) {
+  .success i,
+  .error i,
+  .wait i {
+    height: 10rem;
+  }
 }
 
 .success h3,
@@ -6366,6 +6386,16 @@ header .marca img {
   text-align: right;
 }
 
+.success .payreturn__table p,
+.error .payreturn__table p,
+.wait .payreturn__table p {
+  width: 70%;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6em;
+  margin-top: 1.5rem;
+}
+
 @media (max-width: 575px) {
   .success .payreturn__table,
   .error .payreturn__table,
@@ -6380,6 +6410,11 @@ header .marca img {
     justify-content: space-between;
     align-items: center;
     align-content: center;
+  }
+  .success .payreturn__table p,
+  .error .payreturn__table p,
+  .wait .payreturn__table p {
+    width: 90%;
   }
 }
 
@@ -6472,6 +6507,12 @@ header .marca img {
   .error h3,
   .wait h3 {
     width: 100%;
+    font-size: 1.8rem;
+  }
+  .success h4,
+  .error h4,
+  .wait h4 {
+    font-size: 1.6rem;
   }
 }
 

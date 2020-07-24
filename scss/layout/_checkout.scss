@@ -239,14 +239,22 @@
     padding: 1.6rem 3.2rem;
   }
   @include xs {
-    display: none;
+    // display: none;
+    @include flex(column, space-between, center, center);
+    position: sticky;
+    bottom: 0;
+    margin: 0;
+    .btn {
+      width: 80%;
+      margin: 8px 0;
+    }
   }
 }
 
 .container-btn-mobile {
   display: none;
   @include xs {
-    @include flex(row, space-between, center, center);
+    // @include flex(row, space-between, center, center);
     position: sticky;
     bottom: 0;
     margin: 0;
@@ -618,11 +626,14 @@
     text-align: center;
   }
   i {
-    height: 20rem;
+    height: 12rem;
     margin-bottom: 1.5rem;
     display: inline-block;
     img {
       height: 100%;
+    }
+    @include xs {
+      height: 10rem;
     }
   }
   h3 {
@@ -655,12 +666,20 @@
         }
       }
     }
+    p {
+      width: 70%;
+      @include font(1.6rem, 300, 1.6em);
+      margin-top: 1.5rem;
+    }
     @include xs {
       margin-top: 1.5rem;
       table {
         tr {
           @include flex(row, space-between, center, center);
         }
+      }
+      p {
+        width: 90%;
       }
     }
   }
@@ -714,6 +733,10 @@
   @include xs {
     h3 {
       width: 100%;
+      font-size: 1.8rem;
+    }
+    h4 {
+      font-size: 1.6rem;
     }
   }
 }
