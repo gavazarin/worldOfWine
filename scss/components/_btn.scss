@@ -9,7 +9,6 @@
   text-transform: uppercase;
   @include xs {
     font-size: 1.4rem;
-    margin: 4px 8px;
   }
   &-primary {
     background-color: $primary;
