@@ -208,11 +208,6 @@
       left: 0;
     }
   }
-  .container-btn {
-    position: sticky;
-    bottom: 0;
-    margin: 0;
-  }
 }
 
 .politicas-dados {
@@ -252,6 +247,9 @@
   display: none;
   @include xs {
     @include flex(row, space-between, center, center);
+    position: sticky;
+    bottom: 0;
+    margin: 0;
   }
   .btn {
     @include flex(column, center, center, center);
@@ -263,7 +261,7 @@
   i {
     width: 3rem;
     height: auto;
-    margin-bottom: .5rem;
+    margin-bottom: .8rem;
     img {
       width: 100%;
     }
@@ -670,6 +668,11 @@
     padding: 1.5rem .8rem;
   }
   .valor-compra {
+    padding-bottom: 16px;
+    border-bottom: 1px solid $black;
+    &:last-child {
+      border-bottom: none;
+    }
     li {
       width: 100%;
       @include flex(row, flex-end, center, center);
@@ -690,7 +693,15 @@
         &:first-child {
           width: 50%;
           font-weight: 900;
+          margin-left: 0;
           text-align: right;
+        }
+      }
+      @include xs {
+        p {
+          &:first-child {
+            text-align: left;
+          }
         }
       }
     }

@@ -4226,6 +4226,13 @@ table th {
 .footer .footer-links-gps a {
   color: #FFFFFF;
   display: block;
+  text-decoration: none;
+  transition: all .2s ease-in;
+}
+
+.footer .footer-links-gps a:hover {
+  opacity: .7;
+  transition: all .2s ease-in;
 }
 
 .footer .footer-links-list {
@@ -5810,12 +5817,6 @@ header .marca img {
   left: 0;
 }
 
-.dados-pagamento .container-btn {
-  position: sticky;
-  bottom: 0;
-  margin: 0;
-}
-
 .politicas-dados {
   width: 100%;
   position: relative;
@@ -5869,6 +5870,9 @@ header .marca img {
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    position: sticky;
+    bottom: 0;
+    margin: 0;
   }
 }
 
@@ -5887,7 +5891,7 @@ header .marca img {
 .container-btn-mobile i {
   width: 3rem;
   height: auto;
-  margin-bottom: .5rem;
+  margin-bottom: .8rem;
 }
 
 .container-btn-mobile i img {
@@ -6385,6 +6389,19 @@ header .marca img {
   padding: 1.5rem .8rem;
 }
 
+.success .valor-compra,
+.error .valor-compra,
+.wait .valor-compra {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1D1D1B;
+}
+
+.success .valor-compra:last-child,
+.error .valor-compra:last-child,
+.wait .valor-compra:last-child {
+  border-bottom: none;
+}
+
 .success .valor-compra li,
 .error .valor-compra li,
 .wait .valor-compra li {
@@ -6432,7 +6449,16 @@ header .marca img {
 .wait .valor-compra .valor-compra-subtotal p:first-child {
   width: 50%;
   font-weight: 900;
+  margin-left: 0;
   text-align: right;
+}
+
+@media (max-width: 575px) {
+  .success .valor-compra .valor-compra-subtotal p:first-child,
+  .error .valor-compra .valor-compra-subtotal p:first-child,
+  .wait .valor-compra .valor-compra-subtotal p:first-child {
+    text-align: left;
+  }
 }
 
 .success .valor-compra-total:before,
