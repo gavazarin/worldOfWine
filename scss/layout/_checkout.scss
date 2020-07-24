@@ -7,6 +7,9 @@
   @include md {
     padding-top: 10rem;
   }
+  @include xs {
+    padding-top: 0;
+  }
   .header-checkout {
     .row {
       @include flex(row, center, center, center);
@@ -149,9 +152,11 @@
     }
     @include xs {
       @include flex(row, space-between, center, center);
+      margin-bottom: .8rem;
       h2 {
+        width: calc(100% - 5rem);
+        font-size: 1.8rem;
         text-align: left;
-        margin-bottom: 1.2rem;
       }
     }
   }
@@ -239,16 +244,28 @@
     padding: 1.6rem 3.2rem;
   }
   @include xs {
+    display: none;
+  }
+}
+
+.container-btn-mobile {
+  display: none;
+  @include xs {
+    @include flex(row, space-between, center, center);
+  }
+  .btn {
     @include flex(column, center, center, center);
-    .btn {
-      width: 80%;
-      margin: 1.5rem;
-    }
-    .btn-secondary {
-      order: 1;
-    }
-    .btn-outline-secondary {
-      order: 2;
+    min-width: 48%;
+    height: 8rem;
+    margin: 0 1%;
+    padding: 4px;
+  }
+  i {
+    width: 3rem;
+    height: auto;
+    margin-bottom: .5rem;
+    img {
+      width: 100%;
     }
   }
 }
@@ -487,12 +504,21 @@
     background-color: $white;
     @include flex(row, space-between, center, center);
     flex-wrap: wrap;
-    padding: 3rem 1.5rem;
+    padding: 3rem;
     span {
+      width: 80%;
       color: $black;
       @include font(2rem, 900, 1.2em);
+      text-align: left;
       margin-left: 0;
       margin-bottom: 8px;
+      @include xs {
+        font-size: 1.8rem;
+        text-align: left;
+      }
+    }
+    @include sm {
+      padding: 3rem 1.5rem;
     }
   }
   .dados-pagamento-box {
@@ -652,6 +678,19 @@
         text-align: right;
         &:first-child {
           width: 25%;
+        }
+      }
+    }
+    .valor-compra-subtotal {
+      font-weight: 300;
+      @include flex(row, center, center, center);
+      p {
+        width: 50%;
+        text-align: left;
+        &:first-child {
+          width: 50%;
+          font-weight: 900;
+          text-align: right;
         }
       }
     }

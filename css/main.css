@@ -2708,7 +2708,7 @@ a:focus {
 }
 
 .content-wrap {
-  padding-bottom: 60rem;
+  padding-bottom: 63rem;
   /* Footer height */
 }
 
@@ -2740,7 +2740,7 @@ a:focus {
   align-content: center;
 }
 
-.cofinanciado-portugal a {
+.cofinanciado-portugal-wrapper {
   text-align: center;
 }
 
@@ -5062,7 +5062,9 @@ header .marca img {
 
 @media (max-width: 575px) {
   .header-checkout {
+    position: relative;
     padding: 1.2rem 0 .8rem;
+    margin-bottom: 3rem;
   }
   .header-checkout .breadcrumb {
     display: none;
@@ -5502,6 +5504,12 @@ header .marca img {
   }
 }
 
+@media (max-width: 575px) {
+  .checkout-content {
+    padding-top: 0;
+  }
+}
+
 .checkout-content .header-checkout .row {
   display: flex;
   flex-direction: row;
@@ -5730,10 +5738,12 @@ header .marca img {
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    margin-bottom: .8rem;
   }
   .dados-pagamento-title h2 {
+    width: calc(100% - 5rem);
+    font-size: 1.8rem;
     text-align: left;
-    margin-bottom: 1.2rem;
   }
 }
 
@@ -5844,22 +5854,44 @@ header .marca img {
 
 @media (max-width: 575px) {
   .container-btn {
+    display: none;
+  }
+}
+
+.container-btn-mobile {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .container-btn-mobile {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
   }
-  .container-btn .btn {
-    width: 80%;
-    margin: 1.5rem;
-  }
-  .container-btn .btn-secondary {
-    order: 1;
-  }
-  .container-btn .btn-outline-secondary {
-    order: 2;
-  }
+}
+
+.container-btn-mobile .btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-width: 48%;
+  height: 8rem;
+  margin: 0 1%;
+  padding: 4px;
+}
+
+.container-btn-mobile i {
+  width: 3rem;
+  height: auto;
+  margin-bottom: .5rem;
+}
+
+.container-btn-mobile i img {
+  width: 100%;
 }
 
 .resumo-compra {
@@ -6090,16 +6122,31 @@ header .marca img {
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-  padding: 3rem 1.5rem;
+  padding: 3rem;
 }
 
 .resumo-compra-mobile .btn-resumo-compra span {
+  width: 80%;
   color: #1D1D1B;
   font-size: 2rem;
   font-weight: 900;
   line-height: 1.2em;
+  text-align: left;
   margin-left: 0;
   margin-bottom: 8px;
+}
+
+@media (max-width: 575px) {
+  .resumo-compra-mobile .btn-resumo-compra span {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .resumo-compra-mobile .btn-resumo-compra {
+    padding: 3rem 1.5rem;
+  }
 }
 
 .resumo-compra-mobile .dados-pagamento-box {
@@ -6360,6 +6407,32 @@ header .marca img {
 .error .valor-compra li p:first-child,
 .wait .valor-compra li p:first-child {
   width: 25%;
+}
+
+.success .valor-compra .valor-compra-subtotal,
+.error .valor-compra .valor-compra-subtotal,
+.wait .valor-compra .valor-compra-subtotal {
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.success .valor-compra .valor-compra-subtotal p,
+.error .valor-compra .valor-compra-subtotal p,
+.wait .valor-compra .valor-compra-subtotal p {
+  width: 50%;
+  text-align: left;
+}
+
+.success .valor-compra .valor-compra-subtotal p:first-child,
+.error .valor-compra .valor-compra-subtotal p:first-child,
+.wait .valor-compra .valor-compra-subtotal p:first-child {
+  width: 50%;
+  font-weight: 900;
+  text-align: right;
 }
 
 .success .valor-compra-total:before,

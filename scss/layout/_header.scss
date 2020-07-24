@@ -487,7 +487,9 @@ header {
     }
   }
   @include xs {
+    position: relative;
     padding: 1.2rem 0 .8rem;
+    margin-bottom: 3rem;
     .breadcrumb {
       display: none;
     }

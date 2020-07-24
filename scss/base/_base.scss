@@ -46,13 +46,10 @@ a:focus {
 }
 
 .content-wrap {
-  padding-bottom: 60rem;
+  padding-bottom: 63rem;
   .row {
     @include flex(row, center, flex-wrap, flex-wrap);
   }
-  // @include sm {
-  //   padding-bottom: 55rem;
-  // }
   @include xs {
     padding-bottom: 95rem;
   }
@@ -66,7 +63,7 @@ a:focus {
   .row {
     @include flex(column, center, center, center);
   }
-  a {
+  &-wrapper {
     text-align: center;
   }
   img {
