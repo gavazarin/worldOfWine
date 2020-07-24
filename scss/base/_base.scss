@@ -46,15 +46,15 @@ a:focus {
 }
 
 .content-wrap {
-  padding-bottom: 58rem;
+  padding-bottom: 60rem;
   .row {
     @include flex(row, center, flex-wrap, flex-wrap);
   }
-  @include sm {
-    padding-bottom: 55rem;
-  }
+  // @include sm {
+  //   padding-bottom: 55rem;
+  // }
   @include xs {
-    padding-bottom: 90rem;
+    padding-bottom: 95rem;
   }
   /* Footer height */
 }

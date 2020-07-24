@@ -2708,7 +2708,7 @@ a:focus {
 }
 
 .content-wrap {
-  padding-bottom: 58rem;
+  padding-bottom: 60rem;
   /* Footer height */
 }
 
@@ -2720,15 +2720,9 @@ a:focus {
   align-content: flex-wrap;
 }
 
-@media (max-width: 767px) {
-  .content-wrap {
-    padding-bottom: 55rem;
-  }
-}
-
 @media (max-width: 575px) {
   .content-wrap {
-    padding-bottom: 90rem;
+    padding-bottom: 95rem;
   }
 }
 
@@ -3308,10 +3302,10 @@ button:hover, button:focus {
   align-items: center;
   align-content: center;
   margin: .8rem 0;
+  padding: 4px 8px;
 }
 
 .container-datapicker .btn-select-date {
-  height: 100%;
   color: #1C8D87;
   border: none;
   background-color: transparent;
@@ -5410,7 +5404,8 @@ header .marca img {
 .div-error {
   width: 100%;
   height: auto;
-  padding: 3rem 0;
+  min-height: 25rem;
+  padding: 3rem 0 65rem;
   margin-bottom: 6rem;
   font-size: 1.6rem;
   font-weight: 900;
@@ -5439,6 +5434,24 @@ header .marca img {
   width: 30%;
   text-align: center;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .div-wait p,
+  .div-error p {
+    width: 60%;
+  }
+}
+
+@media (max-width: 575px) {
+  .div-wait,
+  .div-error {
+    padding-bottom: 93rem;
+  }
+  .div-wait p,
+  .div-error p {
+    width: 80%;
+  }
 }
 
 .icon-animate {
