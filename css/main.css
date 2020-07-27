@@ -3196,10 +3196,10 @@ button:hover, button:focus {
     align-content: center;
   }
   .cbx .logos-pagamento li {
-    margin: .8rem 0;
+    margin: .4rem 0;
   }
   .cbx .logos-pagamento li img {
-    height: 4rem;
+    height: 3rem;
   }
 }
 
