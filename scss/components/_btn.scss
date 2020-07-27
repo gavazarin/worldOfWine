@@ -59,6 +59,31 @@
         transition: all .3s ease-out;
       }
     }
+    @include xs {
+      &:active,
+      &.active {
+        &:focus,
+        &.focus {
+          background-color: $secondary-dark;
+          border-color: $secondary-dark;
+          transition: all .3s ease-out;
+          span {
+            color: $white;
+            transition: all .3s ease-out;
+          }
+        }
+      }
+      &:hover,
+      &:focus {
+        background-color: $secondary-dark;
+        border-color: $secondary-dark;
+        transition: all .3s ease-out;
+        span {
+          color: $white;
+          transition: all .3s ease-out;
+        }
+      }
+    }
   }
   &-outline-secondary {
     border-color: $secondary;

@@ -2931,6 +2931,27 @@ h3 strong {
   transition: all .3s ease-out;
 }
 
+@media (max-width: 575px) {
+  .btn-secondary:active:focus, .btn-secondary:active.focus, .btn-secondary.active:focus, .btn-secondary.active.focus {
+    background-color: #38706D;
+    border-color: #38706D;
+    transition: all .3s ease-out;
+  }
+  .btn-secondary:active:focus span, .btn-secondary:active.focus span, .btn-secondary.active:focus span, .btn-secondary.active.focus span {
+    color: #FFFFFF;
+    transition: all .3s ease-out;
+  }
+  .btn-secondary:hover, .btn-secondary:focus {
+    background-color: #38706D;
+    border-color: #38706D;
+    transition: all .3s ease-out;
+  }
+  .btn-secondary:hover span, .btn-secondary:focus span {
+    color: #FFFFFF;
+    transition: all .3s ease-out;
+  }
+}
+
 .btn-outline-secondary {
   border-color: #1C8D87;
 }
