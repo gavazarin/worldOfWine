@@ -30,9 +30,9 @@
       padding-bottom: 1.5rem;
       box-shadow: 5px 5px 10px 0px rgba(29, 29, 27, 0.55);
       overflow-y: hidden;
-      @include xs {
-        height: 60rem;
-      }
+      // @include xs {
+      //   height: 60rem;
+      // }
     }
     .img-experiencia {
       width: 100%;
@@ -43,12 +43,12 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
-        transition: all .3s ease-in;
+        transition: all 0.3s ease-in;
       }
       &:hover {
         img {
           transform: scale(1.1);
-          transition: all .3s ease-in;
+          transition: all 0.3s ease-in;
         }
       }
     }
@@ -70,13 +70,13 @@
         width: 3rem;
         display: inline-block;
         cursor: pointer;
-        transition: all .3s ease-in;
+        transition: all 0.3s ease-in;
         img {
           width: 100%;
         }
         &:hover {
           transform: scale(1.1);
-          transition: all .3s ease-in;
+          transition: all 0.3s ease-in;
         }
       }
     }
@@ -88,15 +88,24 @@
       text-align: center;
       color: $secondary;
       border: 1px solid $secondary;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
       border-radius: 0.25rem;
-      margin: .8rem 0;
+      margin: 0.8rem 0;
+      @include xs {
+        min-height: auto;
+        font-size: 1.4rem;
+        margin-top:0;
+      }
     }
     p {
       @include font(1.8rem, 300, 1.4em);
       height: 18rem;
       overflow-y: hidden;
       margin-bottom: 0;
+      @include xs{
+        height: 15rem;
+        overflow-y: scroll;
+      }
     }
   }
   .btn-experience {
@@ -104,7 +113,7 @@
     padding: 1.5rem 0 0;
     position: relative;
     &:before {
-      content: '';
+      content: "";
       width: 90%;
       height: 1px;
       background-color: #cccccc85;
@@ -122,10 +131,10 @@
   padding: 1.5rem;
   // overflow-y: scroll;
   transform: translateY(100%);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
   .title-experience {
     margin: 0;
-    margin-bottom: .4rem;
+    margin-bottom: 0.4rem;
     h2 {
       width: 90%;
     }
@@ -160,6 +169,7 @@
       width: 65%;
       p {
         height: auto;
+        overflow-y: hidden;
       }
       &-title {
         text-transform: uppercase;
@@ -174,7 +184,7 @@
       &-description {
         @include font(1.4rem, 300, 1.2em);
         @include xs {
-          padding-right: .4rem;
+          padding-right: 0.4rem;
         }
       }
       &-gratuito {
@@ -204,7 +214,7 @@
 
 .cards-list__item--bilhetes.mostrar {
   transform: translateY(0);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .experience {

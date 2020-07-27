@@ -45,6 +45,14 @@
       @include xs {
         order: 2;
         width: 100%;
+        li{
+          &:first-child{
+            display: none;
+          }
+        }
+        .descricao{
+          margin-top: 0;
+        }
       }
     }
     @include xs {

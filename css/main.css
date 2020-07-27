@@ -3136,6 +3136,12 @@ button:hover, button:focus {
     order: 2;
     width: 100%;
   }
+  .cbx .forma-pagamento-text li:first-child {
+    display: none;
+  }
+  .cbx .forma-pagamento-text .descricao {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 575px) {
@@ -5184,12 +5190,6 @@ header .marca img {
   overflow-y: hidden;
 }
 
-@media (max-width: 575px) {
-  .cards-list__item--content {
-    height: 60rem;
-  }
-}
-
 .cards-list__item .img-experiencia {
   width: 100%;
   height: 40%;
@@ -5201,12 +5201,12 @@ header .marca img {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .cards-list__item .img-experiencia:hover img {
   transform: scale(1.1);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .cards-list__item .info-experience {
@@ -5236,7 +5236,7 @@ header .marca img {
   width: 3rem;
   display: inline-block;
   cursor: pointer;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .cards-list__item .title-experience i img {
@@ -5245,7 +5245,7 @@ header .marca img {
 
 .cards-list__item .title-experience i:hover {
   transform: scale(1.1);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .cards-list__item .validade-pack {
@@ -5258,9 +5258,17 @@ header .marca img {
   text-align: center;
   color: #1C8D87;
   border: 1px solid #1C8D87;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  margin: .8rem 0;
+  margin: 0.8rem 0;
+}
+
+@media (max-width: 575px) {
+  .cards-list__item .validade-pack {
+    min-height: auto;
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
 }
 
 .cards-list__item p {
@@ -5272,6 +5280,13 @@ header .marca img {
   margin-bottom: 0;
 }
 
+@media (max-width: 575px) {
+  .cards-list__item p {
+    height: 15rem;
+    overflow-y: scroll;
+  }
+}
+
 .cards-list .btn-experience {
   width: 100%;
   padding: 1.5rem 0 0;
@@ -5279,7 +5294,7 @@ header .marca img {
 }
 
 .cards-list .btn-experience:before {
-  content: '';
+  content: "";
   width: 90%;
   height: 1px;
   background-color: #cccccc85;
@@ -5306,12 +5321,12 @@ header .marca img {
   align-content: center;
   padding: 1.5rem;
   transform: translateY(100%);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .cards-list__item--bilhetes .title-experience {
   margin: 0;
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
 }
 
 .cards-list__item--bilhetes .title-experience h2 {
@@ -5369,6 +5384,7 @@ header .marca img {
 
 .cards-list__item--bilhetes .bilhetes-list__type p {
   height: auto;
+  overflow-y: hidden;
 }
 
 .cards-list__item--bilhetes .bilhetes-list__type-title {
@@ -5396,7 +5412,7 @@ header .marca img {
 
 @media (max-width: 575px) {
   .cards-list__item--bilhetes .bilhetes-list__type-description {
-    padding-right: .4rem;
+    padding-right: 0.4rem;
   }
 }
 
@@ -5435,7 +5451,7 @@ header .marca img {
 
 .cards-list__item--bilhetes.mostrar {
   transform: translateY(0);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .experience .img-experiencia {
