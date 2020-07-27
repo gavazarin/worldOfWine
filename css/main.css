@@ -5184,6 +5184,12 @@ header .marca img {
   overflow-y: hidden;
 }
 
+@media (max-width: 575px) {
+  .cards-list__item--content {
+    height: 60rem;
+  }
+}
+
 .cards-list__item .img-experiencia {
   width: 100%;
   height: 40%;
@@ -5299,7 +5305,6 @@ header .marca img {
   align-items: center;
   align-content: center;
   padding: 1.5rem;
-  overflow-y: scroll;
   transform: translateY(100%);
   transition: all .3s ease-in;
 }
@@ -5336,8 +5341,13 @@ header .marca img {
 .cards-list__item--bilhetes .bilhetes-list {
   width: 100%;
   height: 32rem;
-  overflow-y: scroll;
   position: relative;
+}
+
+@media (max-width: 575px) {
+  .cards-list__item--bilhetes .bilhetes-list {
+    overflow-y: scroll;
+  }
 }
 
 .cards-list__item--bilhetes .bilhetes-list li {
