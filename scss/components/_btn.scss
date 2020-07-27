@@ -87,6 +87,7 @@
   &-link {
     color: $primary;
     @include font(1.2rem, 900, 1.2em);
+    cursor: pointer;
     &:active,
     &.active {
       &:focus,

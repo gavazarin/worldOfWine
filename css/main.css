@@ -2960,6 +2960,7 @@ h3 strong {
   font-size: 1.2rem;
   font-weight: 900;
   line-height: 1.2em;
+  cursor: pointer;
 }
 
 .btn-link:active:focus, .btn-link:active.focus, .btn-link.active:focus, .btn-link.active.focus {
@@ -5861,11 +5862,7 @@ header .marca img {
 
 @media (max-width: 575px) {
   .container-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
+    display: none;
     position: sticky;
     bottom: 0;
     margin: 0;
@@ -5882,6 +5879,11 @@ header .marca img {
 
 @media (max-width: 575px) {
   .container-btn-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
     position: sticky;
     bottom: 0;
     margin: 0;

@@ -239,8 +239,7 @@
     padding: 1.6rem 3.2rem;
   }
   @include xs {
-    // display: none;
-    @include flex(column, space-between, center, center);
+    display: none;
     position: sticky;
     bottom: 0;
     margin: 0;
@@ -254,7 +253,7 @@
 .container-btn-mobile {
   display: none;
   @include xs {
-    // @include flex(row, space-between, center, center);
+    @include flex(row, space-between, center, center);
     position: sticky;
     bottom: 0;
     margin: 0;
