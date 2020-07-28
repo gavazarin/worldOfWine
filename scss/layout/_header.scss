@@ -136,6 +136,15 @@ header {
           margin-bottom: 0;
           position: relative;
           @include flex(row, flex-end, center, center);
+          i{
+            width:1.5rem;
+            height: auto;
+            display: inline-block;
+            margin-right: .8rem;
+            img{
+              width:100%;
+            }
+          }
           &:after {
             display: none;
           }
@@ -159,10 +168,19 @@ header {
             text-transform: uppercase;
             transition: all .3s ease-in-out;
             a {
-              display: block;
+              display: flex;
               color: $white;
               padding: 1.6rem 1.6rem;
-              padding-right: 3.2rem;
+              padding-right: 2.4rem;
+            }
+            i{
+              width:1.5rem;
+              height: auto;
+              display: inline-block;
+              margin-right: .8rem;
+              img{
+                width:100%;
+              }
             }
             &:hover {
               background-color: #2e2e2dec;
