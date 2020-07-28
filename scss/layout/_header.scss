@@ -68,6 +68,9 @@ header {
           @include xs {
             margin-bottom: .4rem;
           }
+          @include xxs{
+            display: none;
+          }
         }
         input {
           display: none;
@@ -289,11 +292,18 @@ header {
               @include font(1.4rem, 300, 1em);
               border-radius: 3px;
             }
+            @include xxs{
+              width:20%;
+            }
           }
           &-valor {
             width: 25%;
             @include font(1.8rem, 900, 1.2em);
             text-align: right;
+            @include xxs{
+              font-size: 1.6rem;
+              width:18%;
+            }
           }
           &-delete {
             width: 5%;

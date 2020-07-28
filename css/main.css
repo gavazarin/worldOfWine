@@ -4509,6 +4509,12 @@ header .navMenu__list .header-carrinho .shopping-cart-icon img {
   }
 }
 
+@media (max-width: 330px) {
+  header .navMenu__list .header-carrinho .shopping-cart-icon {
+    display: none;
+  }
+}
+
 header .navMenu__list .header-carrinho input {
   display: none;
 }
@@ -4822,12 +4828,25 @@ header .carrinho-compras-itens .info-compra-detalhes-quantidade select {
   border-radius: 3px;
 }
 
+@media (max-width: 330px) {
+  header .carrinho-compras-itens .info-compra-detalhes-quantidade {
+    width: 20%;
+  }
+}
+
 header .carrinho-compras-itens .info-compra-detalhes-valor {
   width: 25%;
   font-size: 1.8rem;
   font-weight: 900;
   line-height: 1.2em;
   text-align: right;
+}
+
+@media (max-width: 330px) {
+  header .carrinho-compras-itens .info-compra-detalhes-valor {
+    font-size: 1.6rem;
+    width: 18%;
+  }
 }
 
 header .carrinho-compras-itens .info-compra-detalhes-delete {
@@ -6506,6 +6525,20 @@ header .marca img {
 .error .valor-compra:last-child,
 .wait .valor-compra:last-child {
   border-bottom: none;
+}
+
+@media (max-width: 575px) {
+  .success .valor-compra:last-child li,
+  .error .valor-compra:last-child li,
+  .wait .valor-compra:last-child li {
+    display: block;
+  }
+  .success .valor-compra:last-child li p,
+  .error .valor-compra:last-child li p,
+  .wait .valor-compra:last-child li p {
+    width: 100%;
+    margin: 8px 0;
+  }
 }
 
 .success .valor-compra li,

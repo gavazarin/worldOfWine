@@ -690,6 +690,15 @@
     border-bottom: 1px solid $black;
     &:last-child {
       border-bottom: none;
+      @include xs{
+        li{
+          display: block;
+          p{
+            width:100%;
+            margin:8px 0;
+          }
+        }
+      }
     }
     li {
       width: 100%;
