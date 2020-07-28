@@ -4509,7 +4509,7 @@ header .navMenu__list .header-carrinho .shopping-cart-icon img {
   }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 360px) {
   header .navMenu__list .header-carrinho .shopping-cart-icon {
     display: none;
   }
@@ -4828,7 +4828,7 @@ header .carrinho-compras-itens .info-compra-detalhes-quantidade select {
   border-radius: 3px;
 }
 
-@media (max-width: 330px) {
+@media (max-width: 360px) {
   header .carrinho-compras-itens .info-compra-detalhes-quantidade {
     width: 20%;
   }
@@ -4842,7 +4842,7 @@ header .carrinho-compras-itens .info-compra-detalhes-valor {
   text-align: right;
 }
 
-@media (max-width: 330px) {
+@media (max-width: 360px) {
   header .carrinho-compras-itens .info-compra-detalhes-valor {
     font-size: 1.6rem;
     width: 18%;
@@ -5912,6 +5912,12 @@ header .marca img {
   left: 0;
 }
 
+@media (max-width: 360px) {
+  .dados-pagamento #smv_frmPayDataBuyer .container-input:last-child span {
+    bottom: -0.6rem;
+  }
+}
+
 .politicas-dados {
   width: 100%;
   position: relative;
@@ -5998,6 +6004,12 @@ header .marca img {
 
 .container-btn-mobile i img {
   width: 100%;
+}
+
+@media (max-width: 360px) {
+  .container-btn-mobile .btn span {
+    display: none;
+  }
 }
 
 .resumo-compra {

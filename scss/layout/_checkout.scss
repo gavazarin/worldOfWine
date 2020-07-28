@@ -208,6 +208,17 @@
       left: 0;
     }
   }
+  @include xxs{
+    #smv_frmPayDataBuyer{
+      .container-input{
+        &:last-child{
+          span{
+            bottom:-0.6rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 .politicas-dados {
@@ -271,6 +282,13 @@
     margin-bottom: .8rem;
     img {
       width: 100%;
+    }
+  }
+  @include xxs{
+    .btn{
+      span{
+        display:none;
+      }
     }
   }
 }
