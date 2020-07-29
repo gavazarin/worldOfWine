@@ -366,7 +366,7 @@ header {
         }
       }
       .container-btn {
-        @include flex(row, space-around, center, center);
+        @include flex(row, space-between, center, center);
         background-color: transparent;
         margin-bottom: 0;
         padding: 0;

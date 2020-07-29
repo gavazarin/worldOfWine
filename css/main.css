@@ -4934,7 +4934,7 @@ header .carrinho-compras-itens .info-total-total {
 header .carrinho-compras-itens .container-btn {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
   background-color: transparent;
