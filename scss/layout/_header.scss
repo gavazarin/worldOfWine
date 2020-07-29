@@ -215,6 +215,9 @@ header {
       @include absolute(auto, -.4rem, -0.8rem, auto);
       overflow-y: scroll;
     }
+    @include xxs{
+      padding-bottom: 0;
+    }
     &-empty {
       // @include flex(column, flex-start, center, center);
       text-align: center;
@@ -283,6 +286,9 @@ header {
                 font-weight: 900;
               }
             }
+            @include xxs{
+              width: 52%;
+            }
           }
           &-quantidade {
             width: 15%;
@@ -316,6 +322,9 @@ header {
               img {
                 height: 100%;
               }
+            }
+            @include xxs{
+              width:10%;
             }
           }
         }
@@ -357,7 +366,7 @@ header {
         }
       }
       .container-btn {
-        @include flex(row, space-between, center, center);
+        @include flex(row, space-around, center, center);
         background-color: transparent;
         margin-bottom: 0;
         padding: 0;
@@ -370,6 +379,7 @@ header {
         }
         @include xs {
           @include flex(column, space-between, center, center);
+          background-color: $white;
         }
       }
     }

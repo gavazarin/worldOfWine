@@ -4711,6 +4711,12 @@ header .carrinho-compras {
   }
 }
 
+@media (max-width: 360px) {
+  header .carrinho-compras {
+    padding-bottom: 0;
+  }
+}
+
 header .carrinho-compras-empty {
   text-align: center;
   padding: 1.5rem 3rem;
@@ -4815,6 +4821,12 @@ header .carrinho-compras-itens .info-compra-detalhes-bilhete span:nth-child(2) {
   font-weight: 900;
 }
 
+@media (max-width: 360px) {
+  header .carrinho-compras-itens .info-compra-detalhes-bilhete {
+    width: 52%;
+  }
+}
+
 header .carrinho-compras-itens .info-compra-detalhes-quantidade {
   width: 15%;
   text-align: center;
@@ -4863,6 +4875,12 @@ header .carrinho-compras-itens .info-compra-detalhes-delete i {
 
 header .carrinho-compras-itens .info-compra-detalhes-delete i img {
   height: 100%;
+}
+
+@media (max-width: 360px) {
+  header .carrinho-compras-itens .info-compra-detalhes-delete {
+    width: 10%;
+  }
 }
 
 header .carrinho-compras-itens .info-total {
@@ -4916,7 +4934,7 @@ header .carrinho-compras-itens .info-total-total {
 header .carrinho-compras-itens .container-btn {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
   background-color: transparent;
@@ -4942,6 +4960,7 @@ header .carrinho-compras-itens .container-btn .btn span {
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    background-color: #FFFFFF;
   }
 }
 
