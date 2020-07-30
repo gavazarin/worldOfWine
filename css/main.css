@@ -3501,6 +3501,16 @@ button:hover, button:focus {
   border-bottom: 1px solid #8D1C22;
 }
 
+@media (max-width: 575px) {
+  .ui-datepicker .ui-datepicker-calendar thead {
+    overflow: auto;
+    height: auto;
+    clip: auto;
+    position: relative;
+    width: auto;
+  }
+}
+
 .ui-datepicker .ui-datepicker-calendar tr {
   display: flex;
   flex-direction: row;
