@@ -4505,7 +4505,7 @@ header .navMenu__list .header-carrinho .shopping-cart-icon {
   height: 3rem;
   width: auto;
   position: relative;
-  margin-right: 1.5rem;
+  margin-right: 2.5rem;
 }
 
 header .navMenu__list .header-carrinho .shopping-cart-icon img {
@@ -4523,6 +4523,29 @@ header .navMenu__list .header-carrinho .shopping-cart-icon img {
   header .navMenu__list .header-carrinho .shopping-cart-icon {
     display: none;
   }
+}
+
+header .navMenu__list .header-carrinho .shopping-cart-icon .badge-shopping {
+  min-width: 3rem;
+  min-height: 3rem;
+  padding: .4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1em;
+  font-style: normal;
+  background-color: #8d1c22da;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  transform: translate(60%, -30%);
 }
 
 header .navMenu__list .header-carrinho input {

@@ -60,7 +60,7 @@ header {
           height: 3rem;
           width: auto;
           position: relative;
-          margin-right: 1.5rem;
+          margin-right: 2.5rem;
           img {
             height: 100%;
             width: auto;
@@ -70,6 +70,18 @@ header {
           }
           @include xxs{
             display: none;
+          }
+          .badge-shopping{
+            min-width: 3rem;
+            min-height: 3rem;
+            padding:.4rem;
+            @include flex(column, center, center, center);
+            @include font(1.2rem, 900, 1em);
+            font-style: normal;
+            background-color: #8d1c22da;
+            border-radius: 50%;
+            @include absolute(0, 0, auto, auto);
+            transform: translate(60%, -30%);
           }
         }
         input {
