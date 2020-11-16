@@ -6,92 +6,116 @@ header {
   top: 0;
   left: 0;
   z-index: 1;
+
   .navMenu {
     height: 100%;
     padding: .8rem 0;
-    @include flex(row, center, center, center);
+    // @include flex(row, center, center, center);
+    display: block;
+
     &__list {
       width: 100%;
       position: relative;
       @include flex(row, space-between, center, center);
       flex-wrap: wrap;
+
       @include sm {
         @include flex(row, space-between, center, center);
       }
+
       .header-morada {
         a {
           text-decoration: none;
           @include flex(row, flex-start, center, center);
         }
+
         i {
           display: inline-block;
           height: 3rem;
           width: auto;
           margin-right: 1.5rem;
+
           img {
             width: auto;
             height: 100%;
           }
         }
+
         p {
           color: $white;
           @include font(1.4rem, 300, 1.4em);
           margin-bottom: 0;
+
           @include sm {
             display: none;
           }
         }
       }
+
       .header-marca {
         text-align: left;
       }
+
       .header-carrinho {
         color: $white;
         position: relative;
         @include flex(row, flex-end, center, center);
+
         #smv_wp_popcart {
           @include flex(row, flex-end, center, center);
           // @include xs {
           //   @include flex(column, center, flex-end, flex-end);
           // }
         }
+
         .shopping-cart-icon {
           display: inline-block;
           height: 3rem;
           width: auto;
           position: relative;
           margin-right: 2.5rem;
+
           img {
             height: 100%;
             width: auto;
           }
+
           @include xs {
             margin-bottom: .4rem;
           }
-          @include xxs{
+
+          @include xxs {
             display: none;
           }
-          .badge-shopping{
+
+          .badge-shopping {
             min-width: 3rem;
             min-height: 3rem;
-            padding:.4rem;
-            @include flex(column, center, center, center);
+            padding: .4rem;
             @include font(1.2rem, 900, 1em);
             font-style: normal;
-            background-color: #8d1c22da;
+            background-color: rgba(141, 28, 34, .8);
             border-radius: 50%;
             @include absolute(0, 0, auto, auto);
             transform: translate(60%, -30%);
+
+            span {
+              @include absolute(50%, auto, auto, 50%);
+              transform: translate(-50%, -50%);
+            }
           }
         }
+
         input {
           display: none;
         }
+
         @include xs {
           label {
             margin-bottom: 0;
           }
         }
+
         &__infos {
           position: relative;
           @include flex(row, center, center, center);
@@ -99,40 +123,50 @@ header {
           text-transform: uppercase;
           margin-bottom: 0;
           cursor: pointer;
+
           span {
             margin: 2px 0;
           }
+
           .carrinho-valor {
             @include font(1.8rem, 900, 1.2em);
           }
+
           .dropdown-icon {
             width: 1.2rem;
             height: auto;
             display: flex;
             margin-left: .8rem;
+
             img {
               width: 100%;
               height: auto;
             }
           }
+
           &:after {
             display: none;
           }
+
           &[aria-expanded="true"] {
             i {
               transform: rotate(-180deg);
               transition: all .3s ease-out;
             }
           }
+
           @include sm {
             @include flex(row, center, center, center);
+
             span {
               display: none;
             }
+
             .carrinho-valor {
               display: block;
               font-size: 1.6rem;
             }
+
             .dropdown-icon {
               position: relative;
               margin-left: 5px;
@@ -140,9 +174,11 @@ header {
             }
           }
         }
+
         .header-idioma {
           position: relative;
         }
+
         .language-dropdown {
           color: $white;
           @include font(1.6rem, 300, 1.2em);
@@ -151,22 +187,27 @@ header {
           margin-bottom: 0;
           position: relative;
           @include flex(row, flex-end, center, center);
-          i{
-            width:1.5rem;
+
+          i {
+            width: 1.5rem;
             height: auto;
             display: inline-block;
             margin-right: .8rem;
-            img{
-              width:100%;
+
+            img {
+              width: 100%;
             }
           }
+
           &:after {
             display: none;
           }
+
           &:hover {
             text-decoration: none;
           }
         }
+
         .language-dropdown-list {
           padding: 0;
           right: auto;
@@ -175,6 +216,7 @@ header {
           background-color: transparent;
           min-width: auto;
           border-top: 2px solid $white;
+
           li {
             text-align: left;
             background-color: $black;
@@ -182,24 +224,29 @@ header {
             cursor: pointer;
             text-transform: uppercase;
             transition: all .3s ease-in-out;
+
             a {
               display: flex;
               color: $white;
               padding: 1.6rem 1.6rem;
               padding-right: 2.4rem;
             }
-            i{
-              width:1.5rem;
+
+            i {
+              width: 1.5rem;
               height: auto;
               display: inline-block;
               margin-right: .8rem;
-              img{
-                width:100%;
+
+              img {
+                width: 100%;
               }
             }
+
             &:hover {
               background-color: #2e2e2dec;
               transition: all .3s ease-in-out;
+
               a {
                 color: $white;
                 text-decoration: none;
@@ -210,6 +257,7 @@ header {
       }
     }
   }
+
   .carrinho-compras {
     width: 42.5rem;
     min-height: 20rem;
@@ -222,125 +270,164 @@ header {
     text-align: right;
     box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
     z-index: 5;
+
     @include sm {
       max-height: 80vh;
       @include absolute(auto, -.4rem, -0.8rem, auto);
       overflow-y: scroll;
     }
-    @include xxs{
+
+    @include xxs {
       padding-bottom: 0;
     }
+
     &-empty {
       // @include flex(column, flex-start, center, center);
       text-align: center;
       padding: 1.5rem 3rem;
+
       i {
         height: 10rem;
         width: auto;
         display: inline-block;
         margin-bottom: 1.5rem;
+
         img {
           height: 100%;
         }
       }
+
       h3 {
         font-weight: 900;
         text-transform: uppercase;
         color: $gray-01;
       }
+
       p {
         @include font(1.8rem, 300, 1.2em);
         color: $gray-01;
       }
+
       @include xs {
         width: 32rem;
       }
     }
+
     &-itens {
       width: 50rem;
       background-color: $white;
+
       @include xs {
         width: 32rem;
       }
+
       .info-data {
         color: $primary;
         @include font(1.6rem, 900, 1.2em);
         @include flex(row, flex-start, center, center);
+
         i {
           width: 2rem;
           height: 2rem;
           display: inline-block;
           margin-right: .8rem;
+
           img {
             width: 100%;
           }
         }
       }
+
       .info-compra {
         width: 100%;
         text-align: left;
+
         &-item {
-          margin-top: 2.4rem;
+          margin-top: 1.6rem;
         }
+
         &-detalhes {
           @include flex(row, space-between, center, center);
           color: $black;
+          padding-top: 1.5rem;
+
           &-bilhete {
             width: 55%;
             @include font(1.6rem, 300, 1.4em);
+
             span {
               &:first-child {
                 display: block;
                 font-size: 1.4rem;
-                font-style: italic;
               }
+
               &:nth-child(2) {
                 font-weight: 900;
               }
             }
-            @include xxs{
+
+            .label-gift {
+              color: $secondary;
+              font-weight: 900;
+              font-style: normal;
+              text-transform: uppercase;
+              position: absolute;
+              transform: translateY(-80%);
+            }
+
+            @include xxs {
               width: 52%;
             }
           }
+
           &-quantidade {
             width: 15%;
             text-align: center;
+
             select {
               background-color: #f3f3f3;
               @include font(1.4rem, 300, 1em);
               border-radius: 3px;
             }
-            @include xxs{
-              width:20%;
+
+            @include xxs {
+              width: 20%;
             }
           }
+
           &-valor {
             width: 25%;
             @include font(1.8rem, 900, 1.2em);
             text-align: right;
-            @include xxs{
+
+            @include xxs {
               font-size: 1.6rem;
-              width:18%;
+              width: 18%;
             }
           }
+
           &-delete {
             width: 5%;
             text-align: right;
             cursor: pointer;
+
             i {
               height: 2rem;
               width: 2rem;
               display: inline-block;
+
               img {
                 height: 100%;
               }
             }
-            @include xxs{
-              width:10%;
+
+            @include xxs {
+              width: 10%;
             }
           }
         }
       }
+
       .info-total {
         width: 100%;
         padding: .8rem 1.6rem;
@@ -348,24 +435,30 @@ header {
         color: $black;
         margin: 1.5rem 0;
         @include flex(column, center, flex-end, flex-end);
+
         li {
           width: 100%;
           padding: .8rem 0;
           position: relative;
           @include flex(row, flex-end, center, center);
+
           span {
             margin: 0 1.5rem;
+
             &:last-child {
               margin-right: 0;
             }
           }
         }
+
         &-subtotal {
           @include font(1.6rem, 300, 1.2em);
+
           strong {
             font-weight: 900;
           }
         }
+
         &-total {
           @include font(1.8rem, 900, 1.2em);
           // &:before {
@@ -377,18 +470,22 @@ header {
           // }
         }
       }
+
       .container-btn {
         @include flex(row, space-between, center, center);
         background-color: transparent;
         margin-bottom: 0;
         padding: 0;
+
         .btn {
           padding: 2.4rem .8rem;
+
           span {
             @include font(1.2rem, 900, 1em);
             text-transform: uppercase;
           }
         }
+
         @include xs {
           @include flex(column, space-between, center, center);
           background-color: $white;
@@ -396,20 +493,19 @@ header {
       }
     }
   }
+
   .marca {
     display: block;
     height: 40px;
-    max-width: 100%;
+    text-align: left;
+    float: left;
+
     img {
-      // width: 100%;
       padding: 5px 0;
       height: 100%;
-      // object-fit: contain;
       display: inline-block;
     }
-    @include md {
-      @include flex(row, center, center, center);
-    }
+
     @include xs {
       img {
         height: 4rem;
@@ -422,35 +518,43 @@ header {
 .header-checkout {
   @include flex(column, center, center, center);
   background-color: $white;
+
   nav {
     @include flex(row, flex-end, center, center);
   }
+
   .breadcrumb {
     @include flex(row, flex-end, center, center);
+
     &-item {
-      margin: 0 6rem;
+      padding-right: 10rem;
       opacity: .5;
       position: relative;
+
       &:before {
         content: '';
         width: 6rem;
         height: 3px;
         background-color: $black;
-        @include absolute(50%, 0, auto, auto);
-        transform: translateX(calc(100% + 3rem));
+        @include absolute(50%, 2rem, auto, auto);
       }
+
       &:first-child {
         margin-left: 0;
       }
+
       &:last-child {
-        margin-right: 0;
+        padding-right: 0;
+
         &:before {
           display: none;
         }
       }
+
       @include font(1.8rem, 900, 1.2em);
       color: $black;
       @include flex(row, flex-end, center, center);
+
       i {
         width: 2.5rem;
         height: 2.5rem;
@@ -461,12 +565,15 @@ header {
         @include flex(row, center, center, center);
         margin-right: .8rem;
         font-size: 1.4rem;
+
         img {
           width: 60%;
         }
       }
+
       &:hover {
         text-decoration: none;
+
         i {
           span {
             color: $black;
@@ -474,59 +581,75 @@ header {
         }
       }
     }
+
     .active {
       opacity: 1;
+
       i {
         background-color: $white;
       }
     }
+
     .completed {
       opacity: 1;
+
       i {
         background-color: $secondary;
         border-color: $secondary;
+
         img {
           width: 60%;
         }
       }
     }
   }
+
   .marca {
     img {
       max-height: 5rem;
     }
   }
+
   @include md {
     height: auto;
     padding: 1.5rem 0;
+
     .row {
       @include flex(row, space-between, center, center);
     }
+
     .marca {
       max-height: 5rem;
       @include flex(row, flex-start, center, center);
+
       img {
         width: auto;
       }
     }
+
     nav {
       @include flex(row, flex-end, center, center);
     }
+
     .breadcrumb {
       &-item {
-        margin: 0 2rem;
+        padding-right: 4.5rem;
+
         &:before {
           width: 1.5rem;
           height: 3px;
-          transform: translateX(calc(100% + 1rem));
+          right: 1.5rem;
         }
+
         a {
           font-size: 1.6rem;
         }
+
         &-text {
           display: none;
         }
       }
+
       .active {
         .breadcrumb-item-text {
           width: auto;
@@ -536,13 +659,16 @@ header {
       }
     }
   }
+
   @include xs {
     position: relative;
     padding: 1.2rem 0 .8rem;
     margin-bottom: 3rem;
+
     .breadcrumb {
       display: none;
     }
+
     .marca {
       justify-content: center;
     }
@@ -554,6 +680,7 @@ header {
     opacity: 0;
     transform: translateY(60%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(100%);
@@ -565,6 +692,7 @@ header {
     opacity: 0;
     transform: rotate(0);
   }
+
   100% {
     opacity: 1;
     transform: rotate(-180deg);

@@ -3219,13 +3219,27 @@ button:hover, button:focus {
   margin-right: .8rem;
 }
 
+.cbx-gift {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.cbx-gift p {
+  width: 80%;
+}
+
 .cbx,
-.cbx-rgpd {
+.cbx-rgpd,
+.cbx-gift {
   cursor: pointer;
 }
 
 .cbx .icone-check,
-.cbx-rgpd .icone-check {
+.cbx-rgpd .icone-check,
+.cbx-gift .icone-check {
   position: relative;
   width: 18px;
   height: 18px;
@@ -3237,7 +3251,8 @@ button:hover, button:focus {
 }
 
 .cbx .icone-check svg,
-.cbx-rgpd .icone-check svg {
+.cbx-rgpd .icone-check svg,
+.cbx-gift .icone-check svg {
   position: absolute;
   top: 3px;
   left: 2px;
@@ -3254,7 +3269,8 @@ button:hover, button:focus {
 }
 
 .cbx .icone-check:before,
-.cbx-rgpd .icone-check:before {
+.cbx-rgpd .icone-check:before,
+.cbx-gift .icone-check:before {
   content: "";
   width: 100%;
   height: 100%;
@@ -3274,6 +3290,15 @@ button:hover, button:focus {
 .cbx-rgpd .icone-check svg {
   top: 1px;
   left: 1px;
+}
+
+.cbx-gift .icone-check {
+  border-radius: 2.5px;
+}
+
+.cbx-gift .icone-check svg {
+  left: 3px;
+  stroke-width: 3;
 }
 
 .inp-cbx:checked + .cbx span.icone-check {
@@ -3309,6 +3334,22 @@ button:hover, button:focus {
 
 .inp-cbx-rgpd:checked + .cbx-rgpd span.icone-check:before {
   transform: scale(3.5);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.inp-cbx-gift:checked + .cbx-gift span.icone-check {
+  background: #1C8D87;
+  border-color: #1C8D87;
+  animation: wave 0.4s ease;
+}
+
+.inp-cbx-gift:checked + .cbx-gift span.icone-check svg {
+  stroke-dashoffset: 0;
+}
+
+.inp-cbx-gift:checked + .cbx-gift span.icone-check:before {
+  transform: scale(2);
   opacity: 0;
   transition: all 0.6s ease;
 }
@@ -3436,6 +3477,8 @@ button:hover, button:focus {
 @media (max-width: 767px) {
   .ui-datepicker {
     width: 32rem !important;
+    left: 50% !important;
+    transform: translateX(-50%);
   }
 }
 
@@ -3491,8 +3534,15 @@ button:hover, button:focus {
   background-color: #eeeeee;
 }
 
-.ui-datepicker .ui-datepicker-calendar tbody thead {
-  border-bottom: 2px solid #8D1C22;
+.ui-datepicker .ui-datepicker-calendar tbody, .ui-datepicker .ui-datepicker-calendar thead {
+  display: table;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  box-sizing: border-box;
 }
 
 .ui-datepicker .ui-datepicker-calendar thead tr {
@@ -3504,21 +3554,25 @@ button:hover, button:focus {
 @media (max-width: 575px) {
   .ui-datepicker .ui-datepicker-calendar thead {
     overflow: auto;
-    height: auto;
     clip: auto;
     position: relative;
-    width: auto;
   }
 }
 
 .ui-datepicker .ui-datepicker-calendar tr {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
+  display: -webkit-flex;
   border-radius: 0;
   background-color: #eeeeee;
+}
+
+@media (max-width: 992px) {
+  .ui-datepicker .ui-datepicker-calendar tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
 }
 
 @media (max-width: 767px) {
@@ -4415,11 +4469,7 @@ header {
 header .navMenu {
   height: 100%;
   padding: .8rem 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  display: block;
 }
 
 header .navMenu__list {
@@ -4519,7 +4569,7 @@ header .navMenu__list .header-carrinho .shopping-cart-icon img {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   header .navMenu__list .header-carrinho .shopping-cart-icon {
     display: none;
   }
@@ -4529,16 +4579,11 @@ header .navMenu__list .header-carrinho .shopping-cart-icon .badge-shopping {
   min-width: 3rem;
   min-height: 3rem;
   padding: .4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
   font-size: 1.2rem;
   font-weight: 900;
   line-height: 1em;
   font-style: normal;
-  background-color: #8d1c22da;
+  background-color: rgba(141, 28, 34, 0.8);
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -4546,6 +4591,15 @@ header .navMenu__list .header-carrinho .shopping-cart-icon .badge-shopping {
   bottom: auto;
   left: auto;
   transform: translate(60%, -30%);
+}
+
+header .navMenu__list .header-carrinho .shopping-cart-icon .badge-shopping span {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 header .navMenu__list .header-carrinho input {
@@ -4744,7 +4798,7 @@ header .carrinho-compras {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   header .carrinho-compras {
     padding-bottom: 0;
   }
@@ -4825,7 +4879,7 @@ header .carrinho-compras-itens .info-compra {
 }
 
 header .carrinho-compras-itens .info-compra-item {
-  margin-top: 2.4rem;
+  margin-top: 1.6rem;
 }
 
 header .carrinho-compras-itens .info-compra-detalhes {
@@ -4835,6 +4889,7 @@ header .carrinho-compras-itens .info-compra-detalhes {
   align-items: center;
   align-content: center;
   color: #1D1D1B;
+  padding-top: 1.5rem;
 }
 
 header .carrinho-compras-itens .info-compra-detalhes-bilhete {
@@ -4847,14 +4902,22 @@ header .carrinho-compras-itens .info-compra-detalhes-bilhete {
 header .carrinho-compras-itens .info-compra-detalhes-bilhete span:first-child {
   display: block;
   font-size: 1.4rem;
-  font-style: italic;
 }
 
 header .carrinho-compras-itens .info-compra-detalhes-bilhete span:nth-child(2) {
   font-weight: 900;
 }
 
-@media (max-width: 360px) {
+header .carrinho-compras-itens .info-compra-detalhes-bilhete .label-gift {
+  color: #1C8D87;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase;
+  position: absolute;
+  transform: translateY(-80%);
+}
+
+@media (max-width: 375px) {
   header .carrinho-compras-itens .info-compra-detalhes-bilhete {
     width: 52%;
   }
@@ -4873,7 +4936,7 @@ header .carrinho-compras-itens .info-compra-detalhes-quantidade select {
   border-radius: 3px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   header .carrinho-compras-itens .info-compra-detalhes-quantidade {
     width: 20%;
   }
@@ -4887,7 +4950,7 @@ header .carrinho-compras-itens .info-compra-detalhes-valor {
   text-align: right;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   header .carrinho-compras-itens .info-compra-detalhes-valor {
     font-size: 1.6rem;
     width: 18%;
@@ -4910,7 +4973,7 @@ header .carrinho-compras-itens .info-compra-detalhes-delete i img {
   height: 100%;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   header .carrinho-compras-itens .info-compra-detalhes-delete {
     width: 10%;
   }
@@ -5000,23 +5063,14 @@ header .carrinho-compras-itens .container-btn .btn span {
 header .marca {
   display: block;
   height: 40px;
-  max-width: 100%;
+  text-align: left;
+  float: left;
 }
 
 header .marca img {
   padding: 5px 0;
   height: 100%;
   display: inline-block;
-}
-
-@media (max-width: 992px) {
-  header .marca {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
 }
 
 @media (max-width: 575px) {
@@ -5051,7 +5105,7 @@ header .marca img {
 }
 
 .header-checkout .breadcrumb-item {
-  margin: 0 6rem;
+  padding-right: 10rem;
   opacity: .5;
   position: relative;
   font-size: 1.8rem;
@@ -5072,10 +5126,9 @@ header .marca img {
   background-color: #1D1D1B;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 2rem;
   bottom: auto;
   left: auto;
-  transform: translateX(calc(100% + 3rem));
 }
 
 .header-checkout .breadcrumb-item:first-child {
@@ -5083,7 +5136,7 @@ header .marca img {
 }
 
 .header-checkout .breadcrumb-item:last-child {
-  margin-right: 0;
+  padding-right: 0;
 }
 
 .header-checkout .breadcrumb-item:last-child:before {
@@ -5174,12 +5227,12 @@ header .marca img {
     align-content: center;
   }
   .header-checkout .breadcrumb-item {
-    margin: 0 2rem;
+    padding-right: 4.5rem;
   }
   .header-checkout .breadcrumb-item:before {
     width: 1.5rem;
     height: 3px;
-    transform: translateX(calc(100% + 1rem));
+    right: 1.5rem;
   }
   .header-checkout .breadcrumb-item a {
     font-size: 1.6rem;
@@ -5347,8 +5400,13 @@ header .marca img {
   font-size: 1.8rem;
   font-weight: 900;
   line-height: 1.4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   color: #1C8D87;
   border: 1px solid #1C8D87;
   padding: 0.5rem 1rem;
@@ -5464,7 +5522,7 @@ header .marca img {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .cards-list__item--bilhetes .bilhetes-list li:last-child {
@@ -5540,6 +5598,18 @@ header .marca img {
   letter-spacing: 1px;
   text-align: center;
   margin: 0 4px;
+}
+
+.cards-list__item--bilhetes .bilhetes-list .cbx-gift .bilhetes-list__type {
+  width: 90%;
+}
+
+.cards-list__item--bilhetes .bilhetes-list .cbx-gift .bilhetes-list__type-title {
+  color: #1C8D87;
+}
+
+.cards-list__item--bilhetes .bilhetes-list .cbx-gift .bilhetes-list__type-title span:last-child {
+  color: #1D1D1B;
 }
 
 .cards-list__item--bilhetes.mostrar {
@@ -5964,7 +6034,7 @@ header .marca img {
   left: 0;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   .dados-pagamento #smv_frmPayDataBuyer .container-input:last-child span {
     bottom: -0.6rem;
   }
@@ -6058,7 +6128,7 @@ header .marca img {
   width: 100%;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   .container-btn-mobile .btn span {
     display: none;
   }

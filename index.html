@@ -36,7 +36,7 @@
                       alt="carrinho de compras">
 
                     <div class="badge-shopping">
-                      <span>10</span>
+                      <span>1</span>
                     </div>
                   </i>
                   <input type="checkbox" id="carrinho-dropdown">
@@ -44,7 +44,7 @@
                     aria-haspopup="true" aria-expanded="false">
 
                     <!-- <span>Carrinho de Compras</span> -->
-                    <span class="carrinho-valor">380,00€</span>
+                    <span class="carrinho-valor">80,00€</span>
                     <i class="dropdown-icon"><img
                         src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/dropdown-icon.svg"></i>
                   </label>
@@ -65,8 +65,11 @@
                     <ul class="info-compra">
                       <li class="info-compra-item">
                         <ul class="info-compra-detalhes">
-                          <li class="info-compra-detalhes-bilhete"><span></span> <span>4 EXPERIENCES</span>
-                            <span></span> <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span> 
+                            <span>4 EXPERIENCES</span> 
+                            <span></span> 
+                            <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
                           </li>
                           <li class="info-compra-detalhes-quantidade">
                             <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
@@ -87,36 +90,15 @@
 
                       <li class="info-compra-item">
                         <ul class="info-compra-detalhes">
-                          <li class="info-compra-detalhes-bilhete"><span></span> <span>4 EXPERIENCES</span>
-                            <span></span> <span smv-langtext="xtickettypeCrias de borla">Crias de borla</span></li>
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span> 
+                            <span>4 EXPERIENCES</span> <span></span> <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          </li>
                           <li class="info-compra-detalhes-quantidade">
-
-                            <select id="smv_cart_ttype1" name="smv_cart_ttype1" value="1"
-                              onchange="javascript:smv_cart_TTypeChange(1)">
-                              <option value="0">0</option>
-                              <option value="1" selected="selected">1</option>
-                              <option value="2">2</option>
-                            </select>
-                          </li>
-                          <li class="info-compra-detalhes-valor">
-                            <span>0,00</span>€
-                          </li>
-                          <li class="info-compra-detalhes-delete">
-                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="info-compra-item">
-                        <ul class="info-compra-detalhes">
-                          <li class="info-compra-detalhes-bilhete"> <span>08-07-2020</span> <span>Cork Experience</span>
-                            <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span></li>
-                          <li class="info-compra-detalhes-quantidade">
-
-                            <select id="smv_cart_ttype2" name="smv_cart_ttype2" value="5"
-                              onchange="javascript:smv_cart_TTypeChange(2)">
-                              <option value="4">4</option>
-                              <option value="5" selected="selected">5</option>
+                            <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
+                              onchange="javascript:smv_cart_TTypeChange(0)">
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
                               <option value="6">6</option>
                             </select>
                           </li>
@@ -131,153 +113,20 @@
 
                       <li class="info-compra-item">
                         <ul class="info-compra-detalhes">
-                          <li class="info-compra-detalhes-bilhete"><span>08-07-2020</span> <span>Cork Experience</span>
-                            <span smv-langtext="xtickettypeNormal">Normal</span></li>
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span> 
+                            <span>4 EXPERIENCES</span> <span></span> <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          </li>
                           <li class="info-compra-detalhes-quantidade">
-
-                            <select id="smv_cart_ttype3" name="smv_cart_ttype3" value="3"
-                              onchange="javascript:smv_cart_TTypeChange(3)">
-                              <option value="0">0</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3" selected="selected">3</option>
-                              <option value="4">4</option>
+                            <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
+                              onchange="javascript:smv_cart_TTypeChange(0)">
+                              <option value="4" selected="selected">4</option>
                               <option value="5">5</option>
                               <option value="6">6</option>
                             </select>
                           </li>
                           <li class="info-compra-detalhes-valor">
-                            <span>40,00</span>€
-                          </li>
-                          <li class="info-compra-detalhes-delete">
-                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="info-compra-item">
-                        <ul class="info-compra-detalhes">
-                          <li class="info-compra-detalhes-bilhete"><span>08-07-2020</span> <span>Cork Experience</span>
-                            <span smv-langtext="xtickettypeNormal">Normal</span></li>
-                          <li class="info-compra-detalhes-quantidade">
-
-                            <select id="smv_cart_ttype3" name="smv_cart_ttype3" value="3"
-                              onchange="javascript:smv_cart_TTypeChange(3)">
-                              <option value="0">0</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3" selected="selected">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                            </select>
-                          </li>
-                          <li class="info-compra-detalhes-valor">
-                            <span>40,00</span>€
-                          </li>
-                          <li class="info-compra-detalhes-delete">
-                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="info-compra-item">
-                        <ul class="info-compra-detalhes">
-                          <li class="info-compra-detalhes-bilhete"><span>08-07-2020</span> <span>Cork Experience</span>
-                            <span smv-langtext="xtickettypeNormal">Normal</span></li>
-                          <li class="info-compra-detalhes-quantidade">
-
-                            <select id="smv_cart_ttype3" name="smv_cart_ttype3" value="3"
-                              onchange="javascript:smv_cart_TTypeChange(3)">
-                              <option value="0">0</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3" selected="selected">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                            </select>
-                          </li>
-                          <li class="info-compra-detalhes-valor">
-                            <span>40,00</span>€
-                          </li>
-                          <li class="info-compra-detalhes-delete">
-                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="info-compra-item">
-                        <ul class="info-compra-detalhes">
-                          <li class="info-compra-detalhes-bilhete"><span>08-07-2020</span> <span>Cork Experience</span>
-                            <span smv-langtext="xtickettypeNormal">Normal</span></li>
-                          <li class="info-compra-detalhes-quantidade">
-
-                            <select id="smv_cart_ttype3" name="smv_cart_ttype3" value="3"
-                              onchange="javascript:smv_cart_TTypeChange(3)">
-                              <option value="0">0</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3" selected="selected">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                            </select>
-                          </li>
-                          <li class="info-compra-detalhes-valor">
-                            <span>40,00</span>€
-                          </li>
-                          <li class="info-compra-detalhes-delete">
-                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="info-compra-item">
-                        <ul class="info-compra-detalhes">
-                          <li class="info-compra-detalhes-bilhete"><span>08-07-2020</span> <span>Cork Experience</span>
-                            <span smv-langtext="xtickettypeNormal">Normal</span></li>
-                          <li class="info-compra-detalhes-quantidade">
-
-                            <select id="smv_cart_ttype3" name="smv_cart_ttype3" value="3"
-                              onchange="javascript:smv_cart_TTypeChange(3)">
-                              <option value="0">0</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3" selected="selected">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                            </select>
-                          </li>
-                          <li class="info-compra-detalhes-valor">
-                            <span>40,00</span>€
-                          </li>
-                          <li class="info-compra-detalhes-delete">
-                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li class="info-compra-item">
-                        <ul class="info-compra-detalhes">
-                          <li class="info-compra-detalhes-bilhete"><span>08-07-2020</span> <span>Cork Experience</span>
-                            <span smv-langtext="xtickettypeNormal">Normal</span></li>
-                          <li class="info-compra-detalhes-quantidade">
-
-                            <select id="smv_cart_ttype3" name="smv_cart_ttype3" value="3"
-                              onchange="javascript:smv_cart_TTypeChange(3)">
-                              <option value="0">0</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3" selected="selected">3</option>
-                              <option value="4">4</option>
-                              <option value="5">5</option>
-                              <option value="6">6</option>
-                            </select>
-                          </li>
-                          <li class="info-compra-detalhes-valor">
-                            <span>40,00</span>€
+                            <span>80,00</span>€
                           </li>
                           <li class="info-compra-detalhes-delete">
                             <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
@@ -288,7 +137,7 @@
 
                     <ul class="info-total">
                       <li class="info-total-total">
-                        <span>Total:</span> <span>200,00€</span>
+                        <span>Total:</span> <span>80,00€</span>
                       </li>
                     </ul>
 
@@ -337,7 +186,7 @@
             <ul class="cards-list">
               <li class="cards-list__item experience col-lg-4 col-md-6">
                 <div class="cards-list__item--content">
-                  <div class="img-experiencia" style="border-bottom-color: #FFB4AB;">
+                  <div class="img-experiencia" style="border-bottom-color: #8D1C22;">
                     <img src="images/2experiences.jpg" alt="Multi Experiêcnia 2 Experiences">
                   </div>
 
@@ -345,13 +194,10 @@
                     <div class="container">
                       <div class="title-experience">
                         <h2><strong>2 Experiences</strong></h2>
-                        <i data-toggle="modal" data-target="#modal2exp"><img src="images/svg/information.svg"
-                            alt="Icone Informação sobre a experiência"></i>
                       </div>
 
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                       </p>
                     </div>
                   </div>
@@ -359,9 +205,8 @@
                   <div class="btn-experience">
                     <div class="container">
                       <button type="button" class="btn btn-primary btn-block btn-2exp"
-                        style="background-color: #FFB4AB; border-color:#FFB4AB;"
-                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#FFB4AB'" onMouseOut="this.style.backgroundColor='#FFB4AB'
-      ; this.style.color='#FFF'">
+                        style="background-color: #8D1C22; border-color:#8D1C22;"
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#8D1C22'" onMouseOut="this.style.backgroundColor='#8D1C22'; this.style.color='#FFF'">
                         <!-- <i><img src="images/svg/tickets.svg" alt="ícone bilhetes"></i> -->
                         <span>Selecione os seus bilhetes</span>
                       </button>
@@ -372,13 +217,29 @@
                   <div id="cards-2exp" class="cards-list__item--bilhetes">
                     <div class="title-experience">
                       <h2><strong>2 Experiences</strong></h2>
-                      <p class="close-bilhetes close-2exp"><i><img src="images/svg/close-icon.svg"
-                            alt="Icone Informação sobre a experiência"></i></p>
+                      <p class="close-bilhetes close-2exp"><i><img src="images/svg/close-icon.svg" alt="Icone Informação sobre a experiência"></i></p>
                     </div>
 
-                    <div class="validade-pack">Tickets valid for 6 months</div>
+                    <div class="validade-pack">Gift válido até 3 meses</div>
 
                     <ul class="bilhetes-list">
+                      <li>
+                        <input class="inp-cbx-gift" name="checkbox-gift" id="checkbox-gift" type="checkbox"
+                          style="display: none;"/>
+                        <label class="cbx-gift" for="checkbox-gift">
+                          <div class="bilhetes-list__type">
+                            <p class="bilhetes-list__type-title"><span><strong>WOW Gift</strong></span> <span>0,00€</span>
+                            </p>
+                            <p class="bilhetes-list__type-description">Active o <strong>GIFT WOW</strong> de oferta e selecione o(s) bilhete(s) que pretende oferecer.</p>
+                          </div>
+                          <span class="icone-check">
+                            <svg width="10px" height="10px" viewbox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                          </span>
+                        </label>
+                      </li>
+
                       <li>
                         <div class="bilhetes-list__type">
                           <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span>
@@ -424,22 +285,28 @@
 
                       <li>
                         <div class="bilhetes-list__type">
-                          <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span>
+                          <p class="bilhetes-list__type-gratuito">
+                            <span>CRIANÇAS ATÉ 3 ANOS</span>
+                            <!--<span smv-langtext="xtickettype_FREEKIDS" smv-langtext-default="CRIANÇA"></span>-->
                           </p>
-                          <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 28,00€)</p>
+                          <p class="bilhetes-list__type-description">
+                            <span>Entrada gratuita. Não é necessário bilhete.</span>
+                            <!--<span smv-langtext="xtickettypetext_FREEKIDS">No tickets needed.</span>-->
+                            </p>
                         </div>
-
+                        
                         <div class="bilhetes-list__quantidade">
-                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
-                          <span>0</span>
-                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                          <i><img onclick="javascript:smv_QtButtonClick('-', 'smvTktQt_900002_-99')" src="images/svg/menos-icon.svg" alt=""></i>
+                          <span id="smvTktQt_900002_-99" smv-type="evtickettypeqt" smv-min="0" smv-max="999" smv-val="0" smv-event="900002" smv-ttype="-99">0</span>
+                          <i><img onclick="javascript:smv_QtButtonClick('+', 'smvTktQt_900002_-99')" src="images/svg/mais-icon.svg" alt=""></i>
                         </div>
                       </li>
 
                       <li>
                         <div class="bilhetes-list__type">
-                          <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão
-                              consigo</span></p>
+                          <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 28,00€)</p>
                         </div>
 
                         <div class="bilhetes-list__quantidade">
@@ -462,7 +329,7 @@
 
               <li class="cards-list__item experience col-lg-4 col-md-6">
                 <div class="cards-list__item--content">
-                  <div class="img-experiencia" style="border-bottom-color: #8F6D4F;">
+                  <div class="img-experiencia" style="border-bottom-color: #8D1C22;">
                     <img src="images/3experiences.jpg" alt="Multi Experiêcnia 2 Experiences">
                   </div>
 
@@ -470,8 +337,6 @@
                     <div class="container">
                       <div class="title-experience">
                         <h2><strong>3 Experiences</strong></h2>
-                        <i data-toggle="modal" data-target="#modal3exp"><img src="images/svg/information.svg"
-                            alt="Icone Informação sobre a experiência"></i>
                       </div>
 
                       <p>
@@ -484,9 +349,8 @@
                   <div class="btn-experience">
                     <div class="container">
                       <button type="button" class="btn btn-primary btn-block btn-3exp"
-                        style="background-color: #8F6D4F; border-color:#8F6D4F;"
-                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#8F6D4F'" onMouseOut="this.style.backgroundColor='#8F6D4F'
-      ; this.style.color='#FFF'">
+                        style="background-color: #8D1C22; border-color:#8D1C22;"
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#8D1C22'" onMouseOut="this.style.backgroundColor='#8D1C22'; this.style.color='#FFF'">
                         <span>Selecione os seus bilhetes</span>
                       </button>
                     </div>
@@ -612,8 +476,7 @@
                     <div class="container">
                       <button type="button" class="btn btn-primary btn-block btn-prata"
                         style="background-color: #005DA2; border-color:#005DA2;"
-                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#005DA2'" onMouseOut="this.style.backgroundColor='#005DA2'
-      ; this.style.color='#FFF'">
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#005DA2'" onMouseOut="this.style.backgroundColor='#005DA2'; this.style.color='#FFF'">
                         <span>Selecione os seus bilhetes</span>
                       </button>
                     </div>
@@ -744,8 +607,7 @@
                     <div class="container">
                       <button type="button" class="btn btn-primary btn-block btn-wine"
                         style="background-color: #64385D; border-color: #64385D;"
-                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#64385D'" onMouseOut="this.style.backgroundColor='#64385D'
-      ; this.style.color='#FFF'">
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#64385D'" onMouseOut="this.style.backgroundColor='#64385D'; this.style.color='#FFF'">
                         <span>Selecione os seus bilhetes</span>
                       </button>
                     </div>
@@ -876,8 +738,7 @@
                     <div class="container">
                       <button type="button" class="btn btn-primary btn-block btn-cork"
                         style="background-color: #F09B28; border-color:#F09B28;"
-                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#F09B28'" onMouseOut="this.style.backgroundColor='#F09B28'
-      ; this.style.color='#FFF'">
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#F09B28'" onMouseOut="this.style.backgroundColor='#F09B28'; this.style.color='#FFF'">
                         <span>Selecione os seus bilhetes</span>
                       </button>
                     </div>
@@ -1008,8 +869,7 @@
                     <div class="container">
                       <button type="button" class="btn btn-primary btn-block btn-vessels"
                         style="background-color: #00C7B9; border-color:#00C7B9;"
-                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#00C7B9'" onMouseOut="this.style.backgroundColor='#00C7B9'
-      ; this.style.color='#FFF'">
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#00C7B9'" onMouseOut="this.style.backgroundColor='#00C7B9'; this.style.color='#FFF'">
                         <span>Selecione os seus bilhetes</span>
                       </button>
                     </div>

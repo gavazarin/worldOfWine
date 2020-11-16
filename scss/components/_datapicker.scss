@@ -84,6 +84,8 @@
   margin-top: .8rem;
   @include sm {
     width: 32rem !important;
+    left: 50% !important;
+    transform: translateX(-50%);
   }
   .ui-datepicker-header {
     padding: 1rem 0 !important;
@@ -124,8 +126,15 @@
     &-calendar {
       margin: 0;
       background-color: #eeeeee;
-      tbody thead {
-        border-bottom: 2px solid $primary;
+      tbody, thead {
+        display: table;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        table-layout: fixed;
+        border-collapse: collapse;
+        box-sizing: border-box;
       }
       thead {
         tr {
@@ -135,16 +144,21 @@
         }
         @include xs{
           overflow:auto;
-          height: auto;
           clip: auto;
           position: relative;
-          width: auto;
+          // height: auto;
+          // width: auto;
         }
       }
       tr {
-        @include flex(row, space-between, center, center);
+        display:-webkit-flex;
+        // display: -ms-flexbox;
+        // @include flex(row, space-between, center, center);
         border-radius: 0;
         background-color: #eeeeee;
+        @include md{
+          @include flex(row, space-between, center, center);
+        }
         @include sm {
           border: none;
           margin: 0;
