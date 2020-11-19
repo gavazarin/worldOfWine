@@ -3292,6 +3292,10 @@ button:hover, button:focus {
   left: 1px;
 }
 
+.cbx-gift {
+  width: 100%;
+}
+
 .cbx-gift .icone-check {
   border-radius: 2.5px;
 }
