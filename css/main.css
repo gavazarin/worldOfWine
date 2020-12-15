@@ -2732,26 +2732,39 @@ a:focus {
   position: relative;
 }
 
+@media (max-width: 992px) {
+  .cofinanciado-portugal {
+    padding: 3% 0;
+  }
+}
+
 .cofinanciado-portugal .row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   align-content: center;
+}
+
+.cofinanciado-portugal img {
+  max-height: 5rem;
+  max-width: 410px;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 767px) {
+  .cofinanciado-portugal img {
+    max-height: 8rem;
+  }
 }
 
 .cofinanciado-portugal-wrapper {
   text-align: center;
 }
 
-.cofinanciado-portugal img {
-  width: 100%;
-  max-width: 410px;
-  height: auto;
-  margin-top: 10px;
-}
-
-.cofinanciado-portugal:after {
+.cofinanciado-portugal-wrapper:after {
   content: "RNAAT nº: 567/2020";
   font-size: 1.6rem;
   font-weight: 400;
@@ -2761,6 +2774,52 @@ a:focus {
   clear: both;
   margin: auto;
   margin-top: .8rem;
+}
+
+.cofinanciado-portugal-wrapper img {
+  width: 70%;
+}
+
+@media (max-width: 767px) {
+  .cofinanciado-portugal-wrapper {
+    margin: 32px 0;
+  }
+  .cofinanciado-portugal-wrapper img {
+    width: 90%;
+  }
+}
+
+.cofinanciado-portugal a {
+  display: inline-block;
+}
+
+.cofinanciado-portugal .clean-safe {
+  text-align: center;
+}
+
+.cofinanciado-portugal .clean-safe img {
+  max-height: 7rem;
+  width: auto;
+}
+
+@media (max-width: 767px) {
+  .cofinanciado-portugal .clean-safe img {
+    max-height: 9rem;
+  }
+}
+
+.cofinanciado-portugal .livro-reclamacoes {
+  text-align: center;
+}
+
+.cofinanciado-portugal .livro-reclamacoes img {
+  max-height: 4rem;
+}
+
+@media (max-width: 767px) {
+  .cofinanciado-portugal .livro-reclamacoes img {
+    max-height: 6rem;
+  }
 }
 
 .clearfix::after {

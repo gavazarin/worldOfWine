@@ -47,12 +47,15 @@ a:focus {
 
 .content-wrap {
   padding-bottom: 63rem;
+
   .row {
     @include flex(row, center, flex-wrap, flex-wrap);
   }
+
   @include xs {
     padding-bottom: 95rem;
   }
+
   /* Footer height */
 }
 
@@ -60,25 +63,83 @@ a:focus {
   margin: 0 auto;
   padding: 1% 0;
   position: relative;
+
+  @include md {
+    padding: 3% 0;
+  }
+
   .row {
-    @include flex(column, center, center, center);
+    @include flex(row, center, center, center);
   }
-  &-wrapper {
-    text-align: center;
-  }
+
   img {
-    width: 100%;
+    max-height: 5rem;
     max-width: 410px;
     height: auto;
-    margin-top: 10px;
+    object-fit: contain;
+    object-position: center;
+
+    @include sm {
+      max-height: 8rem;
+    }
   }
-  &:after {
-    content: "RNAAT nº: 567/2020";
-    @include font(1.6rem, 400, 1em);
-    color: rgba(0, 0, 0, .2);
-    display: table;
-    clear: both;
-    margin: auto;
-    margin-top: .8rem;
+
+  &-wrapper {
+    text-align: center;
+
+    &:after {
+      content: "RNAAT nº: 567/2020";
+      @include font(1.6rem, 400, 1em);
+      color: rgba(0, 0, 0, .2);
+      display: table;
+      clear: both;
+      margin: auto;
+      margin-top: .8rem;
+    }
+
+    img {
+      width: 70%;
+    }
+
+    @include sm {
+      margin: 32px 0;
+
+      img {
+        width: 90%;
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  .clean-safe {
+    text-align: center;
+
+    img {
+      max-height: 7rem;
+      width: auto;
+    }
+
+    @include sm {
+      img {
+        max-height: 9rem;
+      }
+    }
+  }
+
+  .livro-reclamacoes {
+    text-align: center;
+
+    img {
+      max-height: 4rem;
+    }
+
+    @include sm {
+      img {
+        max-height: 6rem;
+      }
+    }
   }
 }
