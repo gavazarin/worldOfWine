@@ -1,0 +1,36 @@
+header.bo-resellers {
+    background: #EDEDED;
+    border-bottom: 1px solid #D9DEE4;
+
+    .navMenu__list {
+        .header-carrinho {
+            color: #515356;
+
+            .shopping-cart-icon {
+                .badge-shopping {
+                    color: #ffffff;
+                }
+            }
+
+            label.language-dropdown {
+                color: #515356;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.bo-resellers {
+    .content-wrap {
+        padding-bottom: 0;
+    }
+
+    .container-seu-carrinho {
+        border: 2px solid #CCCCCC;
+    }
+
+    .breadcrumb {
+        background-color: #fff;
+        margin-bottom: 0;
+    }
+}

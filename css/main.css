@@ -4205,6 +4205,37 @@ table th {
   margin: .4rem;
 }
 
+header.bo-resellers {
+  background: #EDEDED;
+  border-bottom: 1px solid #D9DEE4;
+}
+
+header.bo-resellers .navMenu__list .header-carrinho {
+  color: #515356;
+}
+
+header.bo-resellers .navMenu__list .header-carrinho .shopping-cart-icon .badge-shopping {
+  color: #ffffff;
+}
+
+header.bo-resellers .navMenu__list .header-carrinho label.language-dropdown {
+  color: #515356;
+  font-weight: bold;
+}
+
+.bo-resellers .content-wrap {
+  padding-bottom: 0;
+}
+
+.bo-resellers .container-seu-carrinho {
+  border: 2px solid #CCCCCC;
+}
+
+.bo-resellers .breadcrumb {
+  background-color: #fff;
+  margin-bottom: 0;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
