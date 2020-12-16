@@ -4218,9 +4218,19 @@ header.bo-resellers .navMenu__list .header-carrinho .shopping-cart-icon .badge-s
   color: #ffffff;
 }
 
+header.bo-resellers .navMenu__list .header-carrinho .shopping-cart-icon img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+
 header.bo-resellers .navMenu__list .header-carrinho label.language-dropdown {
   color: #515356;
   font-weight: bold;
+}
+
+header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }
 
 .bo-resellers .content-wrap {
