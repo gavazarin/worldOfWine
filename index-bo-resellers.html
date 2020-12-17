@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Of Wine</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="includes/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="https://resources/demos/style.css"> -->
+
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+</head>
+
+<body>
+  <div class="spinner-loader" style="display: none;">
+    <div class="spinner"></div>
+  </div>
+
+  <header class="bo-resellers">
+    <nav class="navMenu col-lg-12">
+      <div class="container">
+        <div class="row">
+          <ul class="navMenu__list">
+            <li class="header-marca col-lg-6 col-md-6 col-sm-4 col-xs-4">
+              <a href="index.html" class="marca"><img src="images/svg/bo-resellers-wow-header.svg" alt="Logo do World of Wine"></a>
+            </li>
+
+            <li class="header-carrinho col-lg-6 col-md-6 col-sm-8 col-xs-8">
+              <div smv-type="widgetcontainer" smv-widget="popcart" smv-param="">
+                <div smv-type="widgetpage" id="smv_wp_popcart">
+                  <i class="shopping-cart-icon">
+                    <img src="/images/svg/shopping-cart.svg"
+                      alt="carrinho de compras">
+
+                    <div class="badge-shopping">
+                      <span>1</span>
+                    </div>
+                  </i>
+                  <input type="checkbox" id="carrinho-dropdown">
+                  <label for="carrinho-dropdown" class="header-carrinho__infos" id="dropdownCarrinho"
+                    aria-haspopup="true" aria-expanded="false">
+
+                    <!-- <span>Carrinho de Compras</span> -->
+                    <span class="carrinho-valor">80,00€</span>
+                    <i class="dropdown-icon"><img
+                        src="/images/svg/dropdown-icon.svg"></i>
+                  </label>
+
+
+                  <!-- CARRINHO DE COMPRAS VAZIO! -->
+                  <div class="carrinho-compras carrinho-compras-empty dropdown-menu" aria-labelledby="dropdownCarrinho"
+                    style="display: none;">
+                    <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart-secondary.svg"
+                        alt=""></i>
+                    <h3>O seu carrinho está vazio</h3>
+                    <p>Escolha já as suas experiências!</p>
+                  </div>
+
+                  <div class="carrinho-compras carrinho-compras-itens dropdown-menu" aria-labelledby="dropdownCarrinho">
+                    <a href="#" class="btn-link">esvaziar carrinho</a>
+
+                    <ul class="info-compra">
+                      <li class="info-compra-item">
+                        <ul class="info-compra-detalhes">
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span> 
+                            <span>4 EXPERIENCES</span> 
+                            <span></span> 
+                            <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          </li>
+                          <li class="info-compra-detalhes-quantidade">
+                            <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
+                              onchange="javascript:smv_cart_TTypeChange(0)">
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                          </li>
+                          <li class="info-compra-detalhes-valor">
+                            <span>80,00</span>€
+                          </li>
+                          <li class="info-compra-detalhes-delete">
+                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="info-compra-item">
+                        <ul class="info-compra-detalhes">
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span> 
+                            <span>4 EXPERIENCES</span> <span></span> <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          </li>
+                          <li class="info-compra-detalhes-quantidade">
+                            <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
+                              onchange="javascript:smv_cart_TTypeChange(0)">
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                          </li>
+                          <li class="info-compra-detalhes-valor">
+                            <span>80,00</span>€
+                          </li>
+                          <li class="info-compra-detalhes-delete">
+                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="info-compra-item">
+                        <ul class="info-compra-detalhes">
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span> 
+                            <span>4 EXPERIENCES</span> <span></span> <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          </li>
+                          <li class="info-compra-detalhes-quantidade">
+                            <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
+                              onchange="javascript:smv_cart_TTypeChange(0)">
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                          </li>
+                          <li class="info-compra-detalhes-valor">
+                            <span>80,00</span>€
+                          </li>
+                          <li class="info-compra-detalhes-delete">
+                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                    <ul class="info-total">
+                      <li class="info-total-total">
+                        <span>Total:</span> <span>80,00€</span>
+                      </li>
+                    </ul>
+
+                    <div class="container-btn">
+                      <button type="button" class="btn btn-outline-secondary fechar-carrinho">
+                        <span>keep shopping</span>
+                      </button>
+
+                      <button type="button" class="btn btn-secondary"><span>pay</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="header-idioma">
+                <label class="language-dropdown col-lg-12" id="dropdownMenuButton" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i><img src="images/svg/flag-pt.svg" alt=""></i> <span class="site-language">PT</span>
+                </label>
+                <ul class="language-dropdown-list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a onclick=""><i><img src="images/svg/flag-de.svg" alt=""></i> de</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-en.svg" alt=""></i> EN</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-es.svg" alt=""></i> ES</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-fr.svg" alt=""></i> FR</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-pt.svg" alt=""></i> PT</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="bo-resellers page-container">
+    <div class="content-wrap">
+      <h1>Escolha os seus Bilhetes</h1>
+
+      <section class=" cards-experiencias">
+        <div class="container">
+          <div class="row">
+            <h2><strong>Multi</strong> Experiência</h2>
+
+            <h3>Personalize as suas <strong>experiências</strong></h3>
+
+            <ul class="cards-list">
+              <li class="cards-list__item experience col-lg-4 col-md-6">
+                <div class="cards-list__item--content">
+                  <div class="img-experiencia" style="border-bottom-color: #8D1C22;">
+                    <img src="images/2experiences.jpg" alt="Multi Experiêcnia 2 Experiences">
+                  </div>
+
+                  <div class="info-experience">
+                    <div class="container">
+                      <div class="title-experience">
+                        <h2><strong>2 Experiences</strong></h2>
+                      </div>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="btn-experience">
+                    <div class="container">
+                      <button type="button" class="btn btn-primary btn-block btn-2exp"
+                        style="background-color: #8D1C22; border-color:#8D1C22;"
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#8D1C22'" onMouseOut="this.style.backgroundColor='#8D1C22'; this.style.color='#FFF'">
+                        <!-- <i><img src="images/svg/tickets.svg" alt="ícone bilhetes"></i> -->
+                        <span>Selecione os seus bilhetes</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- selecionar bilhetes -->
+                  <div id="cards-2exp" class="cards-list__item--bilhetes">
+                    <div class="title-experience">
+                      <h2><strong>2 Experiences</strong></h2>
+                      <p class="close-bilhetes close-2exp"><i><img src="images/svg/close-icon.svg" alt="Icone Informação sobre a experiência"></i></p>
+                    </div>
+
+                    <div class="validade-pack">Gift válido até 3 meses</div>
+
+                    <ul class="bilhetes-list">
+                      <li>
+                        <input class="inp-cbx-gift" name="checkbox-gift" id="checkbox-gift" type="checkbox"
+                          style="display: none;"/>
+                        <label class="cbx-gift" for="checkbox-gift">
+                          <div class="bilhetes-list__type">
+                            <p class="bilhetes-list__type-title"><span><strong>WOW Gift</strong></span> <span>0,00€</span>
+                            </p>
+                            <p class="bilhetes-list__type-description">Active o <strong>GIFT WOW</strong> de oferta e selecione o(s) bilhete(s) que pretende oferecer.</p>
+                          </div>
+                          <span class="icone-check">
+                            <svg width="10px" height="10px" viewbox="0 0 12 10">
+                              <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                          </span>
+                        </label>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 34,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 21,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un.
+                            100,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-gratuito">
+                            <span>CRIANÇAS ATÉ 3 ANOS</span>
+                            <!--<span smv-langtext="xtickettype_FREEKIDS" smv-langtext-default="CRIANÇA"></span>-->
+                          </p>
+                          <p class="bilhetes-list__type-description">
+                            <span>Entrada gratuita. Não é necessário bilhete.</span>
+                            <!--<span smv-langtext="xtickettypetext_FREEKIDS">No tickets needed.</span>-->
+                            </p>
+                        </div>
+                        
+                        <div class="bilhetes-list__quantidade">
+                          <i><img onclick="javascript:smv_QtButtonClick('-', 'smvTktQt_900002_-99')" src="images/svg/menos-icon.svg" alt=""></i>
+                          <span id="smvTktQt_900002_-99" smv-type="evtickettypeqt" smv-min="0" smv-max="999" smv-val="0" smv-event="900002" smv-ttype="-99">0</span>
+                          <i><img onclick="javascript:smv_QtButtonClick('+', 'smvTktQt_900002_-99')" src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 28,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="btn-experience">
+                      <button type="button" class="btn btn-secondary btn-block">
+                        <!-- <i><img src="images/svg/shopping-cart.svg" alt="ícone bilhetes"></i> -->
+                        <span>adicionar ao carrinho <span>(00,00€)</span></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cards-list__item experience col-lg-4 col-md-6">
+                <div class="cards-list__item--content">
+                  <div class="img-experiencia" style="border-bottom-color: #8D1C22;">
+                    <img src="images/3experiences.jpg" alt="Multi Experiêcnia 2 Experiences">
+                  </div>
+
+                  <div class="info-experience">
+                    <div class="container">
+                      <div class="title-experience">
+                        <h2><strong>3 Experiences</strong></h2>
+                      </div>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="btn-experience">
+                    <div class="container">
+                      <button type="button" class="btn btn-primary btn-block btn-3exp"
+                        style="background-color: #8D1C22; border-color:#8D1C22;"
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#8D1C22'" onMouseOut="this.style.backgroundColor='#8D1C22'; this.style.color='#FFF'">
+                        <span>Selecione os seus bilhetes</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- selecionar bilhetes -->
+                  <div id="cards-3exp" class="cards-list__item--bilhetes">
+                    <div class="title-experience">
+                      <h2><strong>3 Experiences</strong></h2>
+                      <p class="close-bilhetes close-3exp"><i><img src="images/svg/close-icon.svg"
+                            alt="Icone Informação sobre a experiência"></i></p>
+                    </div>
+
+                    <ul class="bilhetes-list">
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 50,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 21,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un.
+                            125,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 40,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão
+                              consigo</span></p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="btn-experience">
+                      <button type="button" class="btn btn-secondary btn-block">
+                        <span>adicionar ao carrinho <span>(00,00€)</span></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <h2>Experiências <strong>Únicas</strong></h2>
+
+            <h3>Selecione <strong>uma experiência</strong></h3>
+
+            <ul class="cards-list">
+              <li class="cards-list__item experience col-lg-4 col-md-6">
+                <div class="cards-list__item--content">
+                  <div class="img-experiencia" style="border-bottom-color: #005DA2;">
+                    <img src="images/banner-porto-view.jpg" alt="Porto region across the ages">
+                  </div>
+
+                  <div class="info-experience">
+                    <div class="container">
+                      <div class="title-experience">
+                        <h2><strong>Porto region across the ages</strong></h2>
+                        <i data-toggle="modal" data-target="#modalprata"><img src="images/svg/information.svg"
+                            alt="Icone Informação sobre a experiência"></i>
+                      </div>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="btn-experience">
+                    <div class="container">
+                      <button type="button" class="btn btn-primary btn-block btn-prata"
+                        style="background-color: #005DA2; border-color:#005DA2;"
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#005DA2'" onMouseOut="this.style.backgroundColor='#005DA2'; this.style.color='#FFF'">
+                        <span>Selecione os seus bilhetes</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- selecionar bilhetes -->
+                  <div id="cards-prata" class="cards-list__item--bilhetes">
+                    <div class="title-experience">
+                      <h2><strong>Porto region across the ages</strong></h2>
+                      <p class="close-bilhetes close-prata"><i><img src="images/svg/close-icon.svg"
+                            alt="Icone Informação sobre a experiência"></i></p>
+                    </div>
+
+                    <div class="container-datapicker btn btn-outline-secondary">
+                      <p class="container-datapicker-text">Data da vista</p>
+                      <label for="datepicker-prata">
+                        <div class="select-date">
+                          <i><img src="images/svg/calendar-primary.svg" alt="ícone calendário"></i>
+                          <!-- <span>Selecione a data</span> -->
+                        </div>
+                      </label>
+                      <input type="text" id="datepicker-prata" class="btn-select-date" placeholder="Selecione sua data">
+                    </div>
+
+                    <ul class="bilhetes-list">
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 20,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 10,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un.
+                            55,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 16,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão
+                              consigo</span></p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="btn-experience">
+                      <button type="button" class="btn btn-secondary btn-block">
+                        <span>adicionar ao carrinho <span>(00,00€)</span></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cards-list__item experience col-lg-4 col-md-6">
+                <div class="cards-list__item--content">
+                  <div class="img-experiencia" style="border-bottom-color: #64385D;">
+                    <img src="images/banner-wine-experience.jpg" alt="Wine Experience">
+                  </div>
+
+                  <div class="info-experience">
+                    <div class="container">
+                      <div class="title-experience">
+                        <h2><strong>Wine Experience</strong></h2>
+                        <i data-toggle="modal" data-target="#modalwine"><img src="images/svg/information.svg"
+                            alt="Icone Informação sobre a experiência"></i>
+                      </div>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="btn-experience">
+                    <div class="container">
+                      <button type="button" class="btn btn-primary btn-block btn-wine"
+                        style="background-color: #64385D; border-color: #64385D;"
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#64385D'" onMouseOut="this.style.backgroundColor='#64385D'; this.style.color='#FFF'">
+                        <span>Selecione os seus bilhetes</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- selecionar bilhetes -->
+                  <div id="cards-wine" class="cards-list__item--bilhetes">
+                    <div class="title-experience">
+                      <h2><strong>Wine Experience</strong></h2>
+                      <p class="close-bilhetes close-wine"><i><img src="images/svg/close-icon.svg"
+                            alt="Icone Informação sobre a experiência"></i></p>
+                    </div>
+
+                    <div class="container-datapicker btn btn-outline-secondary">
+                      <p class="container-datapicker-text">Data da vista</p>
+                      <label for="datepicker-wine">
+                        <div class="select-date">
+                          <i><img src="images/svg/calendar-primary.svg" alt="ícone calendário"></i>
+                          <!-- <span>Selecione a data</span> -->
+                        </div>
+                      </label>
+                      <input type="text" id="datepicker-wine" class="btn-select-date" placeholder="Selecione sua data">
+                    </div>
+
+                    <ul class="bilhetes-list">
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 20,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 10,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un.
+                            55,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 16,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão
+                              consigo</span></p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="btn-experience">
+                      <button type="button" class="btn btn-secondary btn-block" disabled>
+                        <span>adicionar ao carrinho <span>(00,00€)</span></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cards-list__item experience col-lg-4 col-md-6">
+                <div class="cards-list__item--content">
+                  <div class="img-experiencia" style="border-bottom-color: #F09B28">
+                    <img src="images/banner-cork-planet.jpg" alt="Cork Experience">
+                  </div>
+
+                  <div class="info-experience">
+                    <div class="container">
+                      <div class="title-experience">
+                        <h2><strong>PLANET CORK</strong></h2>
+                        <i data-toggle="modal" data-target="#modalcork"><img src="images/svg/information.svg"
+                            alt="Icone Informação sobre a experiência"></i>
+                      </div>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="btn-experience">
+                    <div class="container">
+                      <button type="button" class="btn btn-primary btn-block btn-cork"
+                        style="background-color: #F09B28; border-color:#F09B28;"
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#F09B28'" onMouseOut="this.style.backgroundColor='#F09B28'; this.style.color='#FFF'">
+                        <span>Selecione os seus bilhetes</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- selecionar bilhetes -->
+                  <div id="cards-cork" class="cards-list__item--bilhetes">
+                    <div class="title-experience">
+                      <h2><strong>PLANET CORK</strong></h2>
+                      <p class="close-bilhetes close-cork"><i><img src="images/svg/close-icon.svg"
+                            alt="Icone Informação sobre a experiência"></i></p>
+                    </div>
+
+                    <div class="container-datapicker btn btn-outline-secondary">
+                      <p class="container-datapicker-text">Data da vista</p>
+                      <label for="datepicker-cork">
+                        <div class="select-date">
+                          <i><img src="images/svg/calendar-primary.svg" alt="ícone calendário"></i>
+                          <!-- <span>Selecione a data</span> -->
+                        </div>
+                      </label>
+                      <input type="text" id="datepicker-cork" class="btn-select-date" placeholder="Selecione sua data">
+                    </div>
+
+                    <ul class="bilhetes-list">
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 20,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 10,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un.
+                            55,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 16,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão
+                              consigo</span></p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="btn-experience">
+                      <button type="button" class="btn btn-secondary btn-block">
+                        <span>adicionar ao carrinho <span>(00,00€)</span></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cards-list__item experience col-lg-4 col-md-6">
+                <div class="cards-list__item--content">
+                  <div class="img-experiencia" style="border-bottom-color: #00C7B9">
+                    <img src="images/banner-bridge-collection.JPG" alt="Drinking Vessels">
+                  </div>
+
+                  <div class="info-experience">
+                    <div class="container">
+                      <div class="title-experience">
+                        <h2><strong>THE BRIDGE COLLECTION</strong></h2>
+                        <i data-toggle="modal" data-target="#modalvessels"><img src="images/svg/information.svg"
+                            alt="Icone Informação sobre a experiência"></i>
+                      </div>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="btn-experience">
+                    <div class="container">
+                      <button type="button" class="btn btn-primary btn-block btn-vessels"
+                        style="background-color: #00C7B9; border-color:#00C7B9;"
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#00C7B9'" onMouseOut="this.style.backgroundColor='#00C7B9'; this.style.color='#FFF'">
+                        <span>Selecione os seus bilhetes</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- selecionar bilhetes -->
+                  <div id="cards-vessels" class="cards-list__item--bilhetes mostrar">
+                    <div class="title-experience">
+                      <h2><strong>THE BRIDGE COLLECTION</strong></h2>
+                      <p class="close-bilhetes close-vessels"><i><img src="images/svg/close-icon.svg"
+                            alt="Icone Informação sobre a experiência"></i></p>
+                    </div>
+
+                    <div class="container-datapicker btn btn-outline-secondary">
+                      <p class="container-datapicker-text">Data da vista</p>
+                      <label for="datepicker-vessels">
+                        <div class="select-date">
+                          <i><img src="images/svg/calendar-primary.svg" alt="ícone calendário"></i>
+                          <!-- <span>Selecione a data</span> -->
+                        </div>
+                      </label>
+                      <input type="text" id="datepicker-vessels" class="btn-select-date"
+                        placeholder="Selecione sua data">
+                    </div>
+
+                    <ul class="bilhetes-list">
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 12,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 6,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un.
+                            30,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 10,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão
+                              consigo</span></p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="btn-experience">
+                      <button type="button" class="btn btn-secondary btn-block" disabled>
+                        <span>adicionar ao carrinho <span>(00,00€)</span></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="cards-list__item experience col-lg-4 col-md-6">
+                <div class="cards-list__item--content">
+                  <div class="img-experiencia" style="border-bottom-color: #DBB500">
+                    <img src="images/chocolate.jpg" alt="Chocolate Experience">
+                  </div>
+
+                  <div class="info-experience">
+                    <div class="container">
+                      <div class="title-experience">
+                        <h2><strong>THE CHOCOLATE STORY</strong></h2>
+                        <i data-toggle="modal" data-target="#modalchocolate"><img src="images/svg/information.svg"
+                            alt="Icone Informação sobre a experiência"></i>
+                      </div>
+
+                      <p>
+                        egin a journey through the amazing world of chocolate, from its origins, following it as it
+                        grows, is harvested and transformed into chocolate. At the end of the experience you have the
+                        chance to create your own personalised chocolate bar.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="btn-experience">
+                    <div class="container">
+                      <button type="button" class="btn btn-primary btn-block btn-chocolate"
+                        style="background-color: #DBB500; border-color:#DBB500;"
+                        onMouseOver="this.style.backgroundColor='#FFF' ; this.style.color='#DBB500'" onMouseOut="this.style.backgroundColor='#DBB500'
+      ; this.style.color='#FFF'">
+                        <span>Selecione os seus bilhetes</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- selecionar bilhetes -->
+                  <div id="cards-chocolate" class="cards-list__item--bilhetes">
+                    <div class="title-experience">
+                      <h2><strong>THE CHOCOLATE STORY</strong></h2>
+                      <p class="close-bilhetes close-chocolate"><i><img src="images/svg/close-icon.svg"
+                            alt="Icone Informação sobre a experiência"></i></p>
+                    </div>
+
+                    <div class="container-datapicker btn btn-outline-secondary">
+                      <p class="container-datapicker-text">Data da vista</p>
+                      <label for="datepicker-chocolate">
+                        <div class="select-date">
+                          <i><img src="images/svg/calendar-primary.svg" alt="ícone calendário"></i>
+                          <!-- <span>Selecione a data</span> -->
+                        </div>
+                      </label>
+                      <input type="text" id="datepicker-chocolate" class="btn-select-date"
+                        placeholder="Selecione sua data">
+                    </div>
+
+                    <ul class="bilhetes-list">
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Adulto</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: +13 anos (preço un. 20,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Criança</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">visitante: 5-12 anos (preço un. 16,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Família</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">2 adultos + 2 crianças de 5-12 anos (preço un.
+                            65,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-title"><span><strong>Grupo</strong></span> <span>0,00€</span>
+                          </p>
+                          <p class="bilhetes-list__type-description">+ de 12 bilhetes adulto (preço un. 16,00€)</p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="bilhetes-list__type">
+                          <p class="bilhetes-list__type-gratuito"><span>Indique-nos quantas crianças até aos 4 anos vão
+                              consigo</span></p>
+                        </div>
+
+                        <div class="bilhetes-list__quantidade">
+                          <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                          <span>0</span>
+                          <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="btn-experience">
+                      <button type="button" class="btn btn-secondary btn-block">
+                        <span>adicionar ao carrinho <span>(00,00€)</span></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="div-wait" smv-type="widgetloading" smv-widget="" style="display:none;">
+      <div class="container">
+        <div class="row">
+          <i class="icon-animate"><img src="images/svg/wait-icon.svg" alt=""></i>
+          <p>a carregar dados</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="div-error" smv-type="widgeterror" smv-widget="<?= $widget_name; ?>" style="display:none;">
+      <div class="container">
+        <div class="row">
+          <i><img src="images/svg/error-icon.svg" alt="Ícone de erro"></i>
+          <p>desculpe! ocorreu um problema ao carregar os dados</p>
+          <a href="javascript:retryWidget('')" class="btn btn-primary" smv-type="widgetreloadbutton"><span>Tentar
+              novamente</span></a>
+        </div>
+      </div>
+    </div>
+
+    <section class="bo-resellers-footer">
+      <div align="center">
+        Powered by <a href="http://www.smartmove.pt"><img class="brand" src="images/Smartmove.png"></a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal / Informações Experiências-->
+  <div class="modal fade" id="modal2exp" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title">2 Experiences</h1>
+          <i class="close close-infos" data-dismiss="modal"><img src="images/svg/close-icon.svg" alt=""></i>
+        </div>
+
+        <div class="modal-body">
+          <div class="banner-exp">
+            <img src="images/2experiences.jpg" alt="2 Experiences">
+          </div>
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal3exp" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title">3 Experiences</h1>
+          <i class="close close-infos" data-dismiss="modal"><img src="images/svg/close-icon.svg" alt=""></i>
+        </div>
+
+        <div class="modal-body">
+          <div class="banner-exp">
+            <img src="images/3experiences.jpg" alt="3 Experiences">
+          </div>
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal6exp" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title">6 Experiences</h1>
+          <i class="close close-infos" data-dismiss="modal"><img src="images/svg/close-icon.svg" alt=""></i>
+        </div>
+
+        <div class="modal-body">
+          <div class="banner-exp">
+            <img src="images/6experiences.jpg" alt="6 Experiences">
+          </div>
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalprata" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title">Prata</h1>
+          <i class="close close-infos" data-dismiss="modal"><img src="images/svg/close-icon.svg" alt=""></i>
+        </div>
+
+        <div class="modal-body">
+          <div class="banner-exp">
+            <img src="images/prata.jpg" alt="Experiência Prata">
+          </div>
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalwine" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title">Wine <strong>Experience</strong></h1>
+          <i class="close close-infos" data-dismiss="modal"><img src="images/svg/close-icon.svg" alt=""></i>
+        </div>
+
+        <div class="modal-body">
+          <div class="banner-exp">
+            <img src="images/banner-wine-experience.jpg" alt="Wine Experience">
+          </div>
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalcork" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title">Cork <strong>Experience</strong></h1>
+          <i class="close close-infos" data-dismiss="modal"><img src="images/svg/close-icon.svg" alt=""></i>
+        </div>
+
+        <div class="modal-body">
+          <div class="banner-exp">
+            <img src="images/cork-tree.jpg" alt="Cork Experience">
+          </div>
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalfashion" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title">Fashion & Design</h1>
+          <i class="close close-infos" data-dismiss="modal"><img src="images/svg/close-icon.svg" alt=""></i>
+        </div>
+
+        <div class="modal-body">
+          <div class="banner-exp">
+            <img src="images/fashion.jpg" alt="Fashion & Design">
+          </div>
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalvessels" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title">Drinking <strong>Vessels</strong></h1>
+          <i class="close close-infos" data-dismiss="modal"><img src="images/svg/close-icon.svg" alt=""></i>
+        </div>
+
+        <div class="modal-body">
+          <div class="banner-exp">
+            <img src="images/drinking-vessels.jpg" alt="Drinking Vessels">
+          </div>
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalchocolate" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title">Chocolate</h1>
+          <i class="close close-infos" data-dismiss="modal"><img src="images/svg/close-icon.svg" alt=""></i>
+        </div>
+
+        <div class="modal-body">
+          <div class="banner-exp">
+            <img src="images/chocolate.jpg" alt="Chocolate">
+          </div>
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris
+              vitae ultricies leo integer malesuada. Ac odio
+              tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery, Bootstrap JS -->
+  <script src="includes/jquery.min.js"></script>
+  <script src="includes/bootstrap.min.js"></script>
+
+  <script>
+    $('.header-carrinho__infos').on('click', function (event) {
+      $(this).parent().toggleClass('open');
+    });
+
+    $('body').on('click', function (e) {
+      if (!$('.dropdown-menu').is(e.target) &&
+        $('.dropdown-menu').has(e.target).length === 0 &&
+        $('.open').has(e.target).length === 0
+      ) {
+        $('#smv_wp_popcart').removeClass('open');
+      }
+    });
+
+    $('.carrinho-compras').on('click', function (event) {
+      event.stopPropagation();
+      return false;
+    });
+
+    $('.fechar-carrinho').on('click', function (e) {
+      $('#smv_wp_popcart').removeClass('open');
+    });
+  </script>
+
+  <script src="js/fecharCarrinho.js"></script>
+
+  <!-- Abrir bilhetes -->
+  <script src="js/bilhetes.js"></script>
+
+  <!-- jQuery - datapicker -->
+  <script src="includes/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#datepicker-2exp").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-3exp").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-6exp").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-prata").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-wine").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-cork").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-fashion").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-vessels").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-chocolate").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+    });
+  </script>
+</body>
+
+</html>

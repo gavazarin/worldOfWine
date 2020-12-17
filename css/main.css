@@ -4233,6 +4233,18 @@ header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
   filter: invert(1);
 }
 
+.bo-resellers {
+  background: #f7f7f7;
+}
+
+.bo-resellers .cards-list__item {
+  background: #f7f7f7;
+}
+
+.bo-resellers .cards-list__item--content {
+  background: #ffffff;
+}
+
 .bo-resellers .content-wrap {
   padding-bottom: 0;
 }
@@ -4244,6 +4256,19 @@ header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
 .bo-resellers .breadcrumb {
   background-color: #fff;
   margin-bottom: 0;
+}
+
+.bo-resellers-footer {
+  background: #fff;
+  padding: 35px 20px 21px;
+  margin-top: -25px;
+  border-top: 1px solid #D9DEE4;
+  font-size: 13px;
+}
+
+.bo-resellers-footer .brand {
+  width: 100px;
+  margin-left: 4px;
 }
 
 .footer {

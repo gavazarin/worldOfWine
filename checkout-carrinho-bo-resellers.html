@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Of Wine</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="includes/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="https://resources/demos/style.css"> -->
+
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+</head>
+
+<body>
+  <div class="load-screen" style="display: none;">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="bo-resellers page-container checkout-content">
+    <header class="header-checkout">
+      <div class="container ">
+        <div class="row ">
+          <a href="index.html " class="marca col-lg-1 col-md-2 col-sm-2"><img src="images/svg/wow_min.svg " alt=" "></a>
+
+          <nav class="col-lg-11 col-md-10 col-sm-9">
+            <ul class="breadcrumb ">
+              <li class="breadcrumb-item active ">
+                <i><span>1</span></i>
+                <span class="breadcrumb-item-text ">Carrinho de compras</span>
+              </li>
+              <li class="breadcrumb-item ">
+                <i><span>2</span></i>
+                <span class="breadcrumb-item-text ">Dados para pagamento</span>
+              </li>
+              <li class="breadcrumb-item ">
+                <i><span>3</span></i>
+                <span class="breadcrumb-item-text ">Confirmação</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrap ">
+      <div class="container ">
+        <div class="row ">
+          <div class="checkout-carrinho col-lg-12">
+            <div class="dados-pagamento-title ">
+              <h2>O seu carrinho</h2>
+              <a href="# " class="btn-link ">esvaziar carrinho</a>
+            </div>
+
+            <div class="container-seu-carrinho ">
+              <table class="table table-seu-carrinho ">
+                <thead>
+                  <tr>
+                    <th scope="col">Experiências</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Sub-Total</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <!-- <tr class="row-calendar ">
+                    <td>
+                      <i><img src="images/svg/calendar-secondary.svg " alt=" "></i>
+                      <span>10/06/2020</span>
+                    </td>
+                  </tr> -->
+
+                  <tr>
+                    <td class="item-experiencia"><span></span> <span>4 EXPERIENCES</span> <span></span> <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span></td>
+                    <td><strong><span>20,00</span>€</strong></td>
+                    <td>
+                      <select>
+                      <option value="1 ">1</option>
+                      <option value="2 ">2</option>
+                      <option value="3 ">3</option>
+                      <option value="4 ">4</option>
+                      <option value="5 ">5</option>
+                      <option value="6 ">6</option>
+                      <option value="7 ">7</option>
+                      <option value="8 ">8</option>
+                      <option value="9 ">9</option>
+                      <option value="10 ">10</option>
+                    </select>
+                    </td>
+                    <td><strong><span>80,00</span>€</strong></td>
+                    <td class="item-delete ">
+                      <a href="# "><img src="images/svg/trash.svg " alt=" "></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="item-exp "><span></span> <span>4 EXPERIENCES</span> <span></span> <span smv-langtext="xtickettypeCrias de borla">Crias de borla</span></td>
+                    <td><strong><span>00,00</span>€</strong></td>
+                    <td>
+                      <select>
+                      <option value="1 ">1</option>
+                      <option value="2 ">2</option>
+                      <option value="3 ">3</option>
+                      <option value="4 ">4</option>
+                      <option value="5 ">5</option>
+                      <option value="6 ">6</option>
+                      <option value="7 ">7</option>
+                      <option value="8 ">8</option>
+                      <option value="9 ">9</option>
+                      <option value="10 ">10</option>
+                    </select>
+                    </td>
+                    <td><strong><span>00,00</span>€</strong></td>
+                    <td class="item-delete ">
+                      <a href="# "><img src="images/svg/trash.svg " alt=" "></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="item-exp "><span>08-07-2020</span> <span>Cork Experience</span> <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span></td>
+                    <td><strong><span>20,00</span>€</strong></td>
+
+                    <td>
+                      <select>
+                      <option value="1 ">1</option>
+                      <option value="2 ">2</option>
+                      <option value="3 ">3</option>
+                      <option value="4 ">4</option>
+                      <option value="5 ">5</option>
+                      <option value="6 ">6</option>
+                      <option value="7 ">7</option>
+                      <option value="8 ">8</option>
+                      <option value="9 ">9</option>
+                      <option value="10 ">10</option>
+                    </select>
+                    </td>
+
+                    <td><strong><span>80,00</span>€</strong></td>
+                    <td class="item-delete ">
+                      <a href="# "><img src="images/svg/trash.svg " alt=" "></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="item-exp "><span>08-07-2020</span> <span>Cork Experience</span> <span smv-langtext="xtickettypeNormal">Normal</span></td>
+                    <td><strong><span>20,00</span>€</strong></td>
+
+                    <td>
+                      <select>
+                      <option value="1 ">1</option>
+                      <option value="2 ">2</option>
+                      <option value="3 ">3</option>
+                      <option value="4 ">4</option>
+                      <option value="5 ">5</option>
+                      <option value="6 ">6</option>
+                      <option value="7 ">7</option>
+                      <option value="8 ">8</option>
+                      <option value="9 ">9</option>
+                      <option value="10 ">10</option>
+                    </select>
+                    </td>
+
+                    <td><strong><span>80,00</span>€</strong></td>
+                    <td class="item-delete ">
+                      <a href="# "><img src="images/svg/trash.svg " alt=" "></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <ul class="valor-compra ">
+                <li class="valor-compra-subtotal ">
+                  <p>Subtotal:</p>
+                  <p><span>123,00</span>€</p>
+                </li>
+                <li class="valor-compra-taxas ">
+                  <p>IVA 23% <i><img src="images/svg/question.svg " alt=" "></i></p>
+                  <p><span>16,10</span>€</p>
+                </li>
+                <li class="valor-compra-total ">
+                  <p>Total:</p>
+                  <p><span>139,10</span>€</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="container-btn ">
+              <a href="index.html " class="btn btn-outline-secondary ">
+                <span>Recuar</span>
+              </a>
+              <a href="checkout-dados-pagamento.html " class="btn btn-secondary ">
+                <span>Pagar</span>
+              </a>
+            </div>
+
+            <div class="container-btn container-btn-mobile">
+              <a href="index.html " class="btn btn-outline-secondary ">
+                <i><img src="images/svg/tickets-btn.svg" alt=""></i>
+                <span>Recuar</span>
+              </a>
+              <a href="checkout-dados-pagamento.html " class="btn btn-secondary ">
+                <i><img src="images/svg/check-icon.svg" alt=""></i>
+                <span>Pagar</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="checkout-carrinho-empty col-lg-10" style="display: none;">
+            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart-secondary.svg" alt=""></i>
+            <h3>O seu carrinho está vazio</h3>
+            <a href="index.html" class="btn btn-secondary"><span>Voltar ao início</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" style="display: none;">
+      <div class="container">
+        <div class="row">
+          <div class="footer-marca col-lg-12">
+            <a href="index.html">
+              <img src="images/svg/wow-porto.svg" alt="World of Wine">
+            </a>
+          </div>
+          <ul class="footer-links col-lg-12">
+            <li class="footer-links-item footer-links-morada col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <img src="images/svg/wow_min-white.svg" alt="">
+              <h3>World of Wine</h3>
+              <ul class="footer-links-list">
+                <li>Rua do Choupelo</li>
+                <li>Vila Nova de Gaia</li>
+                <li>4400-088 Porto</li>
+              </ul>
+            </li>
+
+            <li class="footer-links-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <h3>Contactos</h3>
+              <ul class="footer-links-list">
+                <li><a href="mailto:geral@wow.pt">geral@wow.pt</a></li>
+                <li><a href="tel:+351910910910">+351 910 910 910</a></li>
+                <li>Fale Conosco</li>
+              </ul>
+            </li>
+
+            <li class="footer-links-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <h3>Links úteis</h3>
+              <ul class="footer-links-list">
+                <li><a href="https://www.wow.pt/pt/politica-de-privacidade/" target="_blank">Política de Privacidade</a></li>
+                <li><a href="https://www.wow.pt/pt/politica-de-privacidade/" target="_blank">FAQ</a></li>
+                <li><a href="https://www.wow.pt/pt/recrutamento/" target="_blank">Recurtamento</a></li>
+                <li><a href="https://www.wow.pt/pt/politica-de-privacidade/" target="_blank">Termos e Condições</a></li>
+              </ul>
+            </li>
+
+            <li class="footer-links-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <h3>Métodos de Pagamento</h3>
+              <ul class="metodos-pagamento">
+                <li class="logo-meowallet"><img src="images/svg/meowallet.svg" alt="MEO Wallet"></li>
+                <li class="logo-visa"><img src="images/payment-visa.png" alt="Visa"></li>
+                <li class="logo-mastercard"><img src="images/payment-mastercard.png" alt="Mastercard"></li>
+                <li class="logo-multibanco"><img src="images/svg/multibanco-white.svg" alt="Multibanco"></li>
+                <li class="logo-visa"><img src="images/svg/mbway-footer.svg" alt="Multibanco"></li>
+              </ul>
+              <div class="logoSmartmove">
+                <a href="http://www.smartmove.pt/pt/" target="_blank"><img src="images/svg/smartmove_rodape.svg" alt="Smartmove"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- jQuery, Bootstrap JS -->
+  <script src="includes/jquery.min.js "></script>
+  <script src="includes/bootstrap.min.js "></script>
+
+  <!-- Modal Error -->
+  <div id="smv-modal-msg" class="modal fade in" tabindex="-1" role="dialog" smv-ismodal="1" style="display: none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 id="smv-modalmsg-title" smv-langtext="msg_title">Warning</h1>
+          <i class="close close-infos" data-dismiss="modal"><img src="https://lisboa.smartmove.pt:8083/WOW/Resources/images/svg/close-icon.svg" alt=""></i>
+        </div>
+
+        <div class="modal-body">
+          <h3 id="smv-modalmsg-t1">There was an error.</h3>
+          <h3 id="smv-modalmsg-t2">Please retry later.</h3>
+        </div>
+
+        <div class="modal-footer">
+          <button id="smv-modalmsg-bt-cancel" type="button" class="btn btn-primary" onclick="javascript:smv_Msg_Modal_BtClick('cancel')">
+            <span smv-langtext="btcancel">Cancel</span>
+          </button>
+          <button id="smv-modalmsg-bt-back" type="button" class="btn btn-secondary" onclick="javascript:smv_Msg_Modal_BtClick('back')">
+            <span smv-langtext="btback">Back</span>
+          </button>
+          <button id="smv-modalmsg-bt-retry" type="button" class="btn btn-secondary" onclick="javascript:smv_Msg_Modal_BtClick('retry')">
+            <span smv-langtext="btrefresh">Refresh</span>
+          </button>
+          <button id="smv-modalmsg-bt-close" type="button" class="btn btn-primary" onclick="javascript:smv_Msg_Modal_BtClick('close')">
+            <span smv-langtext="btclose">Close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Empty Cart -->
+  <div id="smv-modal-confirm" class="modal fade in" tabindex="-1" role="dialog" data-backdrop="static" smv-ismodal="1" smv-onclose="smv_MsgConfirmReset" style="display: none;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 id="smv-modalconfirm-title" smv-langtext="msg_title">Warning</h1>
+        </div>
+
+
+        <div class="modal-body">
+          <h3 id="smv-modalconfirm-t1" smv-langtext="msg_checkdelcart">Empty shopping cart?</h3>
+
+          <h3 id="smv-modalconfirm-t2" style="display: none;"></h3>
+        </div>
+
+        <div class="modal-footer">
+          <button id="smv-modalconfirm-bt-yes" type="button" class="btn btn-primary" onclick="javascript:smv_Msg_Confirm_BtClick('yes')" smv-onclick="smv_paycart_DelCart">
+            <span smv-langtext="btyes">Yes</span>
+          </button>
+          <button id="smv-modalconfirm-bt-no" type="button" class="btn btn-primary" onclick="javascript:smv_Msg_Confirm_BtClick('no')">
+            <span smv-langtext="btno">No</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
