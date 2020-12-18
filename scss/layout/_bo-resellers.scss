@@ -1,8 +1,59 @@
 header.bo-resellers {
     background: #EDEDED;
     border-bottom: 1px solid #D9DEE4;
+    height: 9rem;
 
     .navMenu__list {
+        .header-marca {
+            @include flex(column, flex-start, flex-start, flex-start);
+
+            .back-consola {
+                @include flex(row, flex-start, center, center);
+                margin-top: 8px;
+
+                i {
+                    display: inline-block;
+                    height: 15px;
+                    width: 15px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        object-position: center;
+                        -webkit-filter: invert(1);
+                        filter: invert(1);
+                        transition: all .2s ease-in;
+                    }
+                }
+
+                span {
+                    @include font(1.4rem, 700, 1.4em);
+                    margin-left: 4px;
+                    color: $black;
+                    transition: all .2s ease-in;
+                }
+
+                &:hover {
+                    text-decoration: none;
+
+                    i {
+                        img {
+                            -webkit-filter: invert(.7);
+                            filter: invert(.7);
+                            transition: all .2s ease-out;
+                        }
+                    }
+
+                    span {
+                        -webkit-filter: invert(.2);
+                        filter: invert(.2);
+                        transition: all .2s ease-out;
+                    }
+                }
+            }
+        }
+
         .header-carrinho {
             color: #515356;
 
@@ -76,4 +127,8 @@ header.bo-resellers {
             margin-left: 4px;
         }
     }
+}
+
+.bo-resellers.page-container {
+    padding-top: 9rem;
 }

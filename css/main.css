@@ -4208,6 +4208,65 @@ table th {
 header.bo-resellers {
   background: #EDEDED;
   border-bottom: 1px solid #D9DEE4;
+  height: 9rem;
+}
+
+header.bo-resellers .navMenu__list .header-marca {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+header.bo-resellers .navMenu__list .header-marca .back-consola {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin-top: 8px;
+}
+
+header.bo-resellers .navMenu__list .header-marca .back-consola i {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+}
+
+header.bo-resellers .navMenu__list .header-marca .back-consola i img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  transition: all .2s ease-in;
+}
+
+header.bo-resellers .navMenu__list .header-marca .back-consola span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.4em;
+  margin-left: 4px;
+  color: #1D1D1B;
+  transition: all .2s ease-in;
+}
+
+header.bo-resellers .navMenu__list .header-marca .back-consola:hover {
+  text-decoration: none;
+}
+
+header.bo-resellers .navMenu__list .header-marca .back-consola:hover i img {
+  -webkit-filter: invert(0.7);
+  filter: invert(0.7);
+  transition: all .2s ease-out;
+}
+
+header.bo-resellers .navMenu__list .header-marca .back-consola:hover span {
+  -webkit-filter: invert(0.2);
+  filter: invert(0.2);
+  transition: all .2s ease-out;
 }
 
 header.bo-resellers .navMenu__list .header-carrinho {
@@ -4277,6 +4336,10 @@ header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
 .bo-resellers-footer .brand {
   width: 100px;
   margin-left: 4px;
+}
+
+.bo-resellers.page-container {
+  padding-top: 9rem;
 }
 
 .footer {
