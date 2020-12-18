@@ -4258,6 +4258,14 @@ header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
   margin-bottom: 0;
 }
 
+.bo-resellers .container-btn-detalhes {
+  padding: 2rem 0;
+}
+
+.bo-resellers .btn {
+  min-width: auto;
+}
+
 .bo-resellers-footer {
   background: #fff;
   padding: 35px 20px 21px;
