@@ -57,6 +57,19 @@ header.bo-resellers {
         .header-carrinho {
             color: #515356;
 
+            .profile {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                margin-right: 2rem;
+                font-size: 1.4rem;
+                line-height: 1.4em;
+
+                span:first-child {
+                    font-weight: 700;
+                }
+            }
+
             .shopping-cart-icon {
                 .badge-shopping {
                     color: #ffffff;
