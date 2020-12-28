@@ -180,7 +180,23 @@
   .bilhetes-list {
     width: 100%;
     height: 32rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 5px;
     position: relative;
+
+    &::-webkit-scrollbar {
+      width: .8rem;
+      background: $gray-01;
+      border-radius: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 1rem;
+      border-radius: 1rem;
+      background: $white;
+      box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    }
 
     @include xs {
       overflow-y: scroll;

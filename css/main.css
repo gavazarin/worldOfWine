@@ -5720,7 +5720,23 @@ header .marca img {
 .cards-list__item--bilhetes .bilhetes-list {
   width: 100%;
   height: 32rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 5px;
   position: relative;
+}
+
+.cards-list__item--bilhetes .bilhetes-list::-webkit-scrollbar {
+  width: .8rem;
+  background: #CCCCCC;
+  border-radius: 1rem;
+}
+
+.cards-list__item--bilhetes .bilhetes-list::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  background: #FFFFFF;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 575px) {
