@@ -32,17 +32,13 @@
 
     img {
       height: 100%;
+      width: 35rem;
       max-width: 35rem;
     }
 
     @include sm {
       @include flex(row, center, center, center);
       margin-bottom: 12px;
-
-      a {
-        height: 8rem;
-        text-align: center;
-      }
     }
   }
 
