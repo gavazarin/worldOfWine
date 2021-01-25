@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Of Wine</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="includes/jquery-ui.css">
+
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+</head>
+
+<body>
+  <div class="bo-resellers page-container checkout-content">
+    <header class="header-checkout">
+      <div class="container">
+        <div class="row">
+          <a href="index.html" class="marca col-lg-1 col-md-2 col-sm-2"><img src="images/svg/wow_min.svg" alt=""></a>
+
+          <nav class="col-lg-11 col-md-10 col-sm-12">
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item completed">
+                <i><img src="images/svg/check-icon.svg" alt=""></i>
+                <span class="breadcrumb-item-text">Carrinho de compras</span>
+              </li>
+              <li class="breadcrumb-item completed">
+                <i><img src="images/svg/check-icon.svg" alt=""></i>
+                <span class="breadcrumb-item-text">Dados para pagamento</span>
+              </li>
+              <li class="breadcrumb-item completed">
+                <i><img src="images/svg/check-icon.svg" alt=""></i>
+                <span class="breadcrumb-item-text">Confirmação</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="success col-lg-7 col-md-10 col-sm-12">
+            <div>
+              <i><img src="images/svg/success-buy-icon.svg" alt=""></i>
+              <h3>A Sua compra foi realizada com sucesso!</h3>
+              <h4>Os bilhetes das suas experiências serão enviados para o e-mail indicado</h4>
+
+              <div class="bo-resellers container-btn-detalhes">
+                <a href="javascript:smv_payret_popResend()" class="btn btn-secondary" role="button"><span smv-langtext="bttktresend">Resend Tickets</span></a>
+                <a href="javascript:alert('download pdf tickets')" class="btn btn-secondary" role="button"><span smv-langtext="btdownloadtickets">Download tickets</span></a>
+                <a href="javascript:alert('download comprovativo')" class="btn btn-secondary" role="button"><span smv-langtext="btdownloadproof">Download comprovativo</span></a>
+                <a href="javascript:smv_goBackFromPayReturn()" class="btn btn-outline-secondary"><span smv-langtext="btbacktostart">Back to start</span></a>
+            </div>
+            </div>
+
+            <div>
+              <div class="payreturn__table" smv-type="paymentDataContainer" style="display: none;">
+                <img src="images/svg/multibanco.svg" alt="">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><strong smv-langtext="payretmbent">Entidade</strong></td>
+                      <td>90426</td>
+                    </tr>
+                    <tr>
+                      <td><strong smv-langtext="payretmbref">Referencia</strong></td>
+                      <td>094494091</td>
+                    </tr>
+                    <tr>
+                      <td><strong smv-langtext="payretmbvalor">Valor</strong></td>
+                      <td>10,00 <span smv-langtext="currencysymbol">€</span></td>
+                    </tr>
+                    <tr>
+                      <td><strong smv-langtext="payretmbtimelimit">Data Limite</strong></td>
+                      <td>09-07-2020 08:25</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="container-detalhes collapse in" id="detalhes-compra">
+                <div class="container-seu-carrinho">
+                  <table class="table table-seu-carrinho">
+                    <thead>
+                      <tr>
+                        <th scope="col">Experiências</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Sub-Total</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td class="item-experiencia "><span></span> <span>4 EXPERIENCES</span> <span></span> <span
+                            smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span></td>
+                        <td><strong><span>20,00</span>€</strong></td>
+                        <td>
+                          <p><span>3</span></p>
+                        </td>
+                        <td><strong><span>80,00</span>€</strong></td>
+                      </tr>
+
+                      <tr>
+                        <td class="item-exp "><span></span> <span>4 EXPERIENCES</span> <span></span> <span
+                            smv-langtext="xtickettypeCrias de borla">Crias de borla</span></td>
+                        <td><strong><span>00,00</span>€</strong></td>
+                        <td>
+                          <p><span>2</span></p>
+                        </td>
+                        <td><strong><span>00,00</span>€</strong></td>
+                      </tr>
+
+                      <tr>
+                        <td class="item-exp "><span>08-07-2020</span> <span>Cork Experience</span> <span
+                            smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span></td>
+                        <td><strong><span>20,00</span>€</strong></td>
+
+                        <td>
+                          <p><span>1</span></p>
+                        </td>
+
+                        <td><strong><span>80,00</span>€</strong></td>
+                      </tr>
+
+                      <tr>
+                        <td class="item-exp "><span>08-07-2020</span> <span>Cork Experience</span> <span
+                            smv-langtext="xtickettypeNormal">Normal</span></td>
+                        <td><strong><span>20,00</span>€</strong></td>
+
+                        <td>
+                          <p><span>3</span></p>
+                        </td>
+
+                        <td><strong><span>80,00</span>€</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <ul class="valor-compra">
+                    <!--
+                    <li class="valor-compra-subtotal ">
+                      <p><span smv-langtext="subtotal">Subtotal</span>:</p>
+                      <p><span></span>&#128;</p>
+                    </li>
+                    <li class="valor-compra-taxas ">
+                      <p><span smv-langtext="vat">VAT</span> % </p>
+                      <p><span></span>&#128;</p>
+                    </li> -->
+                    <li class="valor-compra-total ">
+                      <p><span smv-langtext="total">Total</span>:</p>
+                      <span>60,00 €</span>
+                    </li>
+                  </ul>
+
+                  <ul class="valor-compra">
+                    <li class="valor-compra-subtotal ">
+                      <p><span smv-langtext="lblnumenc">Order number</span>:</p>
+                      <p>4UB7M0GKRE6T</p>
+                    </li>
+
+                    <li class="valor-compra-subtotal ">
+                      <p><span smv-langtext="lblcontactdata">Dados de contacto</span>:</p>
+                      <p>Gabriel Vazarin<br>gabrielvazarin@gmail.com</p>
+                    </li>
+
+                    <li class="valor-compra-subtotal ">
+                      <p><span smv-langtext="lblpaymethod">Método de Pagamento</span>:</p>
+                      <p smv-langtext="xpaynameMULTIBANCO">MULTIBANCO</p>
+                    </li>
+
+                    <li class="valor-compra-subtotal ">
+                      <p><span smv-langtext="lbltotal">Total</span>:</p>
+                      <p><strong>60,00 <span smv-langtext="currencysymbol">€</span></strong></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery, Bootstrap JS -->
+  <script src="includes/jquery.min.js"></script>
+  <script src="includes/bootstrap.min.js"></script>
+</body>
+
+</html>

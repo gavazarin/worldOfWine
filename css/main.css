@@ -4411,15 +4411,9 @@ header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
   margin-bottom: 3rem;
 }
 
-.footer .footer-marca a {
-  height: auto;
-  width: 35rem;
-  display: inline-block;
-}
-
-.footer .footer-marca a img {
+.footer .footer-marca img {
   height: 100%;
-  width: auto;
+  max-width: 35rem;
 }
 
 @media (max-width: 767px) {
@@ -4532,12 +4526,12 @@ header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
   color: #FFFFFF;
   display: block;
   text-decoration: none;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .footer .footer-links-gps a:hover {
-  opacity: .7;
-  transition: all .2s ease-in;
+  opacity: 0.7;
+  transition: all 0.2s ease-in;
 }
 
 @media (max-width: 575px) {
@@ -4556,12 +4550,12 @@ header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
 .footer .footer-links-list a {
   color: #FFFFFF;
   text-decoration: none;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .footer .footer-links-list a:hover {
-  opacity: .7;
-  transition: all .2s ease-in;
+  opacity: 0.7;
+  transition: all 0.2s ease-in;
 }
 
 @media (max-width: 575px) {
@@ -4644,7 +4638,7 @@ header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
 }
 
 .footer .logoSmartmove a:before {
-  content: 'Powered by:';
+  content: "Powered by:";
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.2em;
@@ -4659,7 +4653,7 @@ header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
 
 @media (max-width: 767px) {
   .footer .logoSmartmove a {
-    margin-top: .8rem;
+    margin-top: 0.8rem;
   }
 }
 
