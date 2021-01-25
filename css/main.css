@@ -4413,6 +4413,7 @@ header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
 
 .footer .footer-marca img {
   height: 100%;
+  width: 35rem;
   max-width: 35rem;
 }
 
@@ -4424,10 +4425,6 @@ header.bo-resellers .navMenu__list .header-carrinho .dropdown-icon img {
     align-items: center;
     align-content: center;
     margin-bottom: 12px;
-  }
-  .footer .footer-marca a {
-    height: 8rem;
-    text-align: center;
   }
 }
 
