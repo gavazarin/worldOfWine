@@ -117,12 +117,29 @@
 
     p {
       @include font(1.8rem, 300, 1.4em);
-      height: 18rem;
-      overflow-y: hidden;
+      height: 14.5rem;
+      overflow-y: scroll;
       margin-bottom: 0;
 
+      &::-webkit-scrollbar {
+        width: .8rem;
+        background: $gray-01;
+        border-radius: 1rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 1rem;
+        border-radius: 1rem;
+        background: $white;
+        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+      }
+
+      @include md {
+        height: 12rem;
+      }
+
       @include xs {
-        height: 15rem;
+        height: 13.5rem;
         overflow-y: scroll;
       }
     }

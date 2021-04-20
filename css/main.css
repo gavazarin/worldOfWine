@@ -5630,14 +5630,33 @@ header .marca img {
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.4em;
-  height: 18rem;
-  overflow-y: hidden;
+  height: 14.5rem;
+  overflow-y: scroll;
   margin-bottom: 0;
+}
+
+.cards-list__item p::-webkit-scrollbar {
+  width: .8rem;
+  background: #CCCCCC;
+  border-radius: 1rem;
+}
+
+.cards-list__item p::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  background: #FFFFFF;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+  .cards-list__item p {
+    height: 12rem;
+  }
 }
 
 @media (max-width: 575px) {
   .cards-list__item p {
-    height: 15rem;
+    height: 13.5rem;
     overflow-y: scroll;
   }
 }
