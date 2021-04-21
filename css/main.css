@@ -5626,26 +5626,37 @@ header .marca img {
   }
 }
 
-.cards-list__item p {
-  font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 1.4em;
+.cards-list__item .text-description {
   height: 14.5rem;
-  overflow-y: scroll;
-  margin-bottom: 0;
+  overflow-y: auto;
 }
 
-.cards-list__item p::-webkit-scrollbar {
+.cards-list__item .text-description::-webkit-scrollbar {
   width: .8rem;
   background: #CCCCCC;
   border-radius: 1rem;
 }
 
-.cards-list__item p::-webkit-scrollbar-thumb {
+.cards-list__item .text-description::-webkit-scrollbar-thumb {
   -webkit-border-radius: 1rem;
   border-radius: 1rem;
   background: #FFFFFF;
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.cards-list__item .text-description p {
+  margin-bottom: .8rem;
+}
+
+.cards-list__item .text-description p:last-child {
+  margin-bottom: 0;
+}
+
+.cards-list__item p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.4em;
+  margin-bottom: 0;
 }
 
 @media (max-width: 992px) {
