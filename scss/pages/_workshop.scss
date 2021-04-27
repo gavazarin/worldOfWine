@@ -1,0 +1,257 @@
+.workshop {
+    padding-top: 6rem;
+
+    .title {
+        background-color: $primary;
+        padding: 3.2rem 0 2.4rem;
+
+        h1 {
+            margin: 0;
+            color: $white;
+            @include font(2.4rem, 900, 1.2em);
+            text-align: left;
+        }
+    }
+
+    &-evento {
+        padding-top: 3.2rem;
+
+        .evento-details {
+            border: 1px solid $gray-02;
+            padding: 1.2rem 0;
+            @include flex(row, flex-start, center, center);
+
+            li {
+                height: 100%;
+                border-right: 1px solid $gray-02;
+                @include flex(column, center, flex-start, flex-start);
+            }
+
+            span {
+                @include font(1.4rem, 300, 1.2em);
+                margin-bottom: .4rem;
+            }
+
+            h3 {
+                @include font(1.6rem, 400, 1.2em);
+                text-align: left;
+                margin-bottom: 0;
+                text-transform: uppercase;
+            }
+
+            .dropdown {
+                a {
+                    span {
+                        @include font(1.6rem, 400, 1.2em);
+                        text-align: left;
+                        color: $black;
+                    }
+
+                    &:after {
+                        margin-left: 1.2rem;
+                        color: $black;
+                        border-top: .5rem solid;
+                        border-right: .5rem solid transparent;
+                        border-left: .5rem solid transparent;
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                .dropdown-menu {
+                    min-width: 25rem;
+                    left: auto;
+                    right: 0;
+                    border: none;
+                    box-shadow: 3px 3px 13px 0px rgba(112, 112, 112, 0.3);
+
+                    .bilhetes-list {
+                        width: 100%;
+                        padding: 1.6rem 2.4rem;
+                        @include flex(column, flex-start, flex-start, flex-start);
+
+                        li {
+                            width: 100%;
+                            @include flex(row, space-between, center, center);
+                            margin-bottom: 1.6rem;
+                            border: none;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        &-type {
+                            width: 65%;
+                            margin-bottom: 0;
+
+                            span {
+                                @include font(1.6rem, 400, 1.2em);
+                            }
+                        }
+
+                        &-quantidade {
+                            width: 35%;
+                            @include flex(row, flex-end, center, center);
+
+                            i {
+                                width: 2rem;
+                                height: 2rem;
+                                display: inline-block;
+                                cursor: pointer;
+                            }
+
+                            span {
+                                width: 35%;
+                                @include font(1.6rem, 400, 1em);
+                                letter-spacing: 1px;
+                                text-align: center;
+                                margin: 0 4px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .item-gift {
+                position: relative;
+
+                input {
+                    display: none;
+                }
+
+                label {
+                    width: 2.8rem;
+                    height: 2.8rem;
+                    border: 1px solid $gray-02;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    @include absolute (50%, 2.4rem, auto, auto);
+                    transform: translateY(-50%);
+
+                    &:before {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        background-color: $primary;
+                        @include absolute(3px, auto, 0, 3px);
+                        border-radius: 50%;
+                        transform-origin: 0 0;
+                    }
+                }
+
+                input:checked~label:before {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+
+        .btn-alterar {
+            padding-left: 0;
+
+            .btn {
+                height: 100%;
+                background-color: $black;
+                border: 1px solid $black;
+                border-radius: 0;
+
+                &:hover {
+                    background-color: $white-secondary;
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    .content-wrap {
+        padding-top: 2.4rem;
+    }
+
+    &-wrapper {
+        .infos {
+            width: 100%;
+            @include flex(row, space-between, center, center);
+
+            h2 {
+                width: auto;
+                text-align: left;
+                @include font(2rem, 900, 1.2em);
+                color: $black;
+            }
+
+            &-duracao {
+                @include flex(row, flex-end, center, center);
+
+                i {
+                    height: 3.2rem;
+                    width: 3.2rem;
+                    display: inline-block;
+                    margin-right: .8rem;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                span {
+                    @include font(2rem, 900, 1.2em);
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    &-resumo {
+
+        .img-workshop {
+            width: 100%;
+            height: 30rem;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .resumo-content {
+            background-color: $white-secondary;
+            padding-bottom: 1.6rem;
+        }
+
+        .resumo-bilhetes {
+            @include flex(column, flex-start, flex-start, flex-start);
+            padding-top: 1.6rem;
+            padding-bottom: 1.6rem;
+
+            li {
+                width: 100%;
+                @include flex(row, space-between, center, center);
+                @include font(1.8rem, 900, 1.2em);
+                margin-bottom: 1.6rem;
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-valor {
+                color: $primary;
+            }
+        }
+
+        .resumo-description {
+            @include font(1.6rem, 300, 1.2em);
+        }
+    }
+}

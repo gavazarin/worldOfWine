@@ -7198,3 +7198,316 @@ header .marca img {
     margin-top: 6rem;
   }
 }
+
+.workshop {
+  padding-top: 6rem;
+}
+
+.workshop .title {
+  background-color: #8D1C22;
+  padding: 3.2rem 0 2.4rem;
+}
+
+.workshop .title h1 {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: left;
+}
+
+.workshop-evento {
+  padding-top: 3.2rem;
+}
+
+.workshop-evento .evento-details {
+  border: 1px solid #707070;
+  padding: 1.2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.workshop-evento .evento-details li {
+  height: 100%;
+  border-right: 1px solid #707070;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.workshop-evento .evento-details span {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin-bottom: .4rem;
+}
+
+.workshop-evento .evento-details h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2em;
+  text-align: left;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.workshop-evento .evento-details .dropdown a span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2em;
+  text-align: left;
+  color: #1D1D1B;
+}
+
+.workshop-evento .evento-details .dropdown a:after {
+  margin-left: 1.2rem;
+  color: #1D1D1B;
+  border-top: .5rem solid;
+  border-right: .5rem solid transparent;
+  border-left: .5rem solid transparent;
+}
+
+.workshop-evento .evento-details .dropdown a:hover {
+  text-decoration: none;
+}
+
+.workshop-evento .evento-details .dropdown .dropdown-menu {
+  min-width: 25rem;
+  left: auto;
+  right: 0;
+  border: none;
+  box-shadow: 3px 3px 13px 0px rgba(112, 112, 112, 0.3);
+}
+
+.workshop-evento .evento-details .dropdown .dropdown-menu .bilhetes-list {
+  width: 100%;
+  padding: 1.6rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.workshop-evento .evento-details .dropdown .dropdown-menu .bilhetes-list li {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 1.6rem;
+  border: none;
+}
+
+.workshop-evento .evento-details .dropdown .dropdown-menu .bilhetes-list li:last-child {
+  margin-bottom: 0;
+}
+
+.workshop-evento .evento-details .dropdown .dropdown-menu .bilhetes-list-type {
+  width: 65%;
+  margin-bottom: 0;
+}
+
+.workshop-evento .evento-details .dropdown .dropdown-menu .bilhetes-list-type span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+
+.workshop-evento .evento-details .dropdown .dropdown-menu .bilhetes-list-quantidade {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+.workshop-evento .evento-details .dropdown .dropdown-menu .bilhetes-list-quantidade i {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.workshop-evento .evento-details .dropdown .dropdown-menu .bilhetes-list-quantidade span {
+  width: 35%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1em;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0 4px;
+}
+
+.workshop-evento .evento-details .item-gift {
+  position: relative;
+}
+
+.workshop-evento .evento-details .item-gift input {
+  display: none;
+}
+
+.workshop-evento .evento-details .item-gift label {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid #707070;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 2.4rem;
+  bottom: auto;
+  left: auto;
+  transform: translateY(-50%);
+}
+
+.workshop-evento .evento-details .item-gift label:before {
+  content: '';
+  width: 0;
+  height: 0;
+  background-color: #8D1C22;
+  position: absolute;
+  top: 3px;
+  right: auto;
+  bottom: 0;
+  left: 3px;
+  border-radius: 50%;
+  transform-origin: 0 0;
+}
+
+.workshop-evento .evento-details .item-gift input:checked ~ label:before {
+  width: 2rem;
+  height: 2rem;
+}
+
+.workshop-evento .btn-alterar {
+  padding-left: 0;
+}
+
+.workshop-evento .btn-alterar .btn {
+  height: 100%;
+  background-color: #1D1D1B;
+  border: 1px solid #1D1D1B;
+  border-radius: 0;
+}
+
+.workshop-evento .btn-alterar .btn:hover {
+  background-color: #F7F7F7;
+  color: #1D1D1B;
+}
+
+.workshop .content-wrap {
+  padding-top: 2.4rem;
+}
+
+.workshop-wrapper .infos {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.workshop-wrapper .infos h2 {
+  width: auto;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.2em;
+  color: #1D1D1B;
+}
+
+.workshop-wrapper .infos-duracao {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+}
+
+.workshop-wrapper .infos-duracao i {
+  height: 3.2rem;
+  width: 3.2rem;
+  display: inline-block;
+  margin-right: .8rem;
+}
+
+.workshop-wrapper .infos-duracao i img {
+  width: 100%;
+  height: 100%;
+}
+
+.workshop-wrapper .infos-duracao span {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.2em;
+  color: #8D1C22;
+}
+
+.workshop-resumo .img-workshop {
+  width: 100%;
+  height: 30rem;
+  position: relative;
+}
+
+.workshop-resumo .img-workshop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.workshop-resumo .resumo-content {
+  background-color: #F7F7F7;
+  padding-bottom: 1.6rem;
+}
+
+.workshop-resumo .resumo-bilhetes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+
+.workshop-resumo .resumo-bilhetes li {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.2em;
+  margin-bottom: 1.6rem;
+}
+
+.workshop-resumo .resumo-bilhetes li p {
+  margin-bottom: 0;
+}
+
+.workshop-resumo .resumo-bilhetes li:last-child {
+  margin-bottom: 0;
+}
+
+.workshop-resumo .resumo-bilhetes-valor {
+  color: #8D1C22;
+}
+
+.workshop-resumo .resumo-description {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.2em;
+}

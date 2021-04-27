@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Of Wine</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="includes/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="https://resources/demos/style.css"> -->
+
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+</head>
+
+<body>
+  <div class="spinner-loader" style="display: none;">
+    <div class="spinner"></div>
+  </div>
+
+  <header>
+    <nav class="navMenu col-lg-12">
+      <div class="container">
+        <div class="row">
+          <ul class="navMenu__list">
+            <li class="header-marca col-lg-6 col-md-6 col-sm-4 col-xs-4">
+              <a href="index.html" class="marca"><img src="images/svg/wow-header.svg" alt="Logo do World of Wine"></a>
+            </li>
+
+            <li class="header-carrinho col-lg-6 col-md-6 col-sm-8 col-xs-8">
+              <div smv-type="widgetcontainer" smv-widget="popcart" smv-param="">
+                <div smv-type="widgetpage" id="smv_wp_popcart">
+                  <i class="shopping-cart-icon">
+                    <img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart.svg"
+                      alt="carrinho de compras">
+
+                    <div class="badge-shopping">
+                      <span>1</span>
+                    </div>
+                  </i>
+                  <input type="checkbox" id="carrinho-dropdown">
+                  <label for="carrinho-dropdown" class="header-carrinho__infos" id="dropdownCarrinho"
+                    aria-haspopup="true" aria-expanded="false">
+
+                    <!-- <span>Carrinho de Compras</span> -->
+                    <span class="carrinho-valor">80,00€</span>
+                    <i class="dropdown-icon"><img
+                        src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/dropdown-icon.svg"></i>
+                  </label>
+
+
+                  <!-- CARRINHO DE COMPRAS VAZIO! -->
+                  <div class="carrinho-compras carrinho-compras-empty dropdown-menu" aria-labelledby="dropdownCarrinho"
+                    style="display: none;">
+                    <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart-secondary.svg"
+                        alt=""></i>
+                    <h3>O seu carrinho está vazio</h3>
+                    <p>Escolha já as suas experiências!</p>
+                  </div>
+
+                  <div class="carrinho-compras carrinho-compras-itens dropdown-menu" aria-labelledby="dropdownCarrinho">
+                    <a href="#" class="btn-link">esvaziar carrinho</a>
+
+                    <ul class="info-compra">
+                      <li class="info-compra-item">
+                        <ul class="info-compra-detalhes">
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span>
+                            <span>4 EXPERIENCES</span>
+                            <span></span>
+                            <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          </li>
+                          <li class="info-compra-detalhes-quantidade">
+                            <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
+                              onchange="javascript:smv_cart_TTypeChange(0)">
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                          </li>
+                          <li class="info-compra-detalhes-valor">
+                            <span>80,00</span>€
+                          </li>
+                          <li class="info-compra-detalhes-delete">
+                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="info-compra-item">
+                        <ul class="info-compra-detalhes">
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span>
+                            <span>4 EXPERIENCES</span> <span></span> <span
+                              smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          </li>
+                          <li class="info-compra-detalhes-quantidade">
+                            <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
+                              onchange="javascript:smv_cart_TTypeChange(0)">
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                          </li>
+                          <li class="info-compra-detalhes-valor">
+                            <span>80,00</span>€
+                          </li>
+                          <li class="info-compra-detalhes-delete">
+                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li class="info-compra-item">
+                        <ul class="info-compra-detalhes">
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span>
+                            <span>4 EXPERIENCES</span> <span></span> <span
+                              smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          </li>
+                          <li class="info-compra-detalhes-quantidade">
+                            <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
+                              onchange="javascript:smv_cart_TTypeChange(0)">
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                          </li>
+                          <li class="info-compra-detalhes-valor">
+                            <span>80,00</span>€
+                          </li>
+                          <li class="info-compra-detalhes-delete">
+                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                    <ul class="info-total">
+                      <li class="info-total-total">
+                        <span>Total:</span> <span>80,00€</span>
+                      </li>
+                    </ul>
+
+                    <div class="container-btn">
+                      <button type="button" class="btn btn-outline-secondary fechar-carrinho">
+                        <span>keep shopping</span>
+                      </button>
+
+                      <button type="button" class="btn btn-secondary"><span>pay</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="header-idioma">
+                <label class="language-dropdown col-lg-12" id="dropdownMenuButton" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i><img src="images/svg/flag-pt.svg" alt=""></i> <span class="site-language">PT</span>
+                </label>
+                <ul class="language-dropdown-list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a onclick=""><i><img src="images/svg/flag-de.svg" alt=""></i> de</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-en.svg" alt=""></i> EN</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-es.svg" alt=""></i> ES</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-fr.svg" alt=""></i> FR</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-pt.svg" alt=""></i> PT</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-container workshop">
+
+    <div class="title" style="background-color: #8C611D;">
+      <div class="container">
+        <div class="row">
+          <h1 class="col-lg-12">Workshop</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="workshop-evento">
+      <div class="container">
+        <div class="row">
+
+          <ul class="evento-details col-lg-10">
+            <li class="col-lg-5">
+              <span>Evento</span>
+              <h3>Workshop 1</h3>
+            </li>
+
+            <li class="col-lg-2 dropdown">
+              <span>Tipo de bilhete</span>
+              <a class="dropdown-toggle" href="#" role="button" id="bilhetes-type" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span>2x Adulto...</span>
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="bilhetes-type">
+                <ul class="bilhetes-list">
+                  <li>
+                    <p class="bilhetes-list-type">
+                      <span><strong>Adulto</strong></span>
+                      <span>(+13)</span>
+                    </p>
+
+                    <div class="bilhetes-list-quantidade">
+                      <i><img src="images/svg/menos-icon.svg" alt=""></i>
+
+                      <span>2</span>
+
+                      <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                    </div>
+                  </li>
+
+                  <li>
+                    <p class="bilhetes-list-type">
+                      <span><strong>Criança</strong></span>
+                      <span>(4 - 12)</span>
+                    </p>
+
+                    <div class="bilhetes-list-quantidade">
+                      <i><img src="images/svg/menos-icon.svg" alt=""></i>
+                      <span>0</span>
+                      <i><img src="images/svg/mais-icon.svg" alt=""></i>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </li>
+
+            <li class="col-lg-2 item-gift">
+              <span>É uma oferta</span>
+              <h3>WOW GIFT</h3>
+
+              <input type="checkbox" name="wow-gift" id="wow-gift">
+              <label for="wow-gift"></label>
+            </li>
+          </ul>
+
+          <div class="btn-alterar col-lg-2">
+            <a href="#" class="btn">Alterar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrap">
+      <div class="container">
+        <div class="row">
+
+          <div class="workshop-wrapper col-lg-8">
+
+            <div class="infos">
+              <h2>Workshop 1</h2>
+
+              <div class="infos-duracao">
+                <i><img src="images/svg/timer.svg" alt=""></i>
+                <span>1h30</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="workshop-resumo col-lg-4">
+
+            <div class="img-workshop">
+              <img src="images/img-workshop.jpg" alt="">
+            </div>
+
+            <div class="resumo-content col-lg-12">
+              <ul class="resumo-bilhetes">
+                <li>
+                  <p><span>Adulto</span> <span>(+13 anos)</span></p>
+                  <p class="resumo-bilhetes-valor"><span>100,00</span>€</p>
+                </li>
+
+                <li>
+                  <p><span>Criança</span> <span>(4-12 anos)</span></p>
+                  <p class="resumo-bilhetes-valor"><span>60,00</span>€</p>
+                </li>
+              </ul>
+
+              <div class="resumo-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam, velit id auctor ornare,
+                  urna ante fermentum tellus, non rutrum nisi ante ac ex. Ut vulputate turpis ante. Cras consequat
+                  sapien
+                  urna, id luctus purus tempus sed. Quisque sollicitudin auctor porttitor.</p>
+                <p>Donec imperdiet neque nec nisi tempus faucibus. Sed blandit, est placerat luctus tristique, tortor
+                  justo ultrices tortor, id pellentesque lacus urna sit amet eros. Quisque sollicitudin auctor
+                  porttitor.
+                  Donec imperdiet neque nec nisi tempus faucibus. Sed blandit, est placerat luctus tristique, tortor
+                  justo
+                  ultrices tortor, id pellentesque lacus urna sit amet eros.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-marca col-lg-12">
+            <!-- <a href="https://wow.pt/pt/"> -->
+            <img src="images/svg/wow-header.svg" alt="World of Wine">
+            <!-- </a> -->
+          </div>
+          <ul class="footer-links col-lg-12">
+            <li class="footer-links-item footer-links-morada col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <img src="images/svg/wow_min-white.svg" alt="">
+              <h3>World of Wine</h3>
+              <ul class="footer-links-list">
+                <li>Rua do Choupelo</li>
+                <li>Vila Nova de Gaia</li>
+                <li>4400-088 Porto</li>
+              </ul>
+              <p class="footer-links-gps">
+                GPS: <a href="https://g.page/wow-porto?we" target="_blank">41.135531, -8.613553</a>
+              </p>
+            </li>
+
+            <li class="footer-links-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <h3>contactos</h3>
+              <ul class="footer-links-list">
+                <li><a href="mailto:geral@wow.pt">geral@wow.pt</a></li>
+                <li><a href="tel:+351910910910">+351 910 910 910</a></li>
+                <li>Fale Conosco</li>
+              </ul>
+            </li>
+
+            <li class="footer-links-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <h3>links úteis</h3>
+              <ul class="footer-links-list">
+                <li><a href="https://www.wow.pt/pt/politica-de-privacidade/" target="_blank">Política de Privacidade</a>
+                </li>
+                <li><a href="https://www.wow.pt/pt/politica-de-privacidade/" target="_blank">FAQ</a></li>
+                <li><a href="https://www.wow.pt/pt/recrutamento/" target="_blank">Recurtamento</a></li>
+                <li><a href="https://www.wow.pt/pt/politica-de-privacidade/" target="_blank">Termos e Condições</a></li>
+              </ul>
+            </li>
+
+            <li class="footer-links-item col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <h3>métodos de pagamento</h3>
+              <ul class="metodos-pagamento">
+                <li class="logo-meowallet"><img src="images/svg/meowallet.svg" alt="MEO Wallet"></li>
+                <li class="logo-visa"><img src="images/payment-visa.png" alt="Visa"></li>
+                <li class="logo-mastercard"><img src="images/payment-mastercard.png" alt="Mastercard"></li>
+                <li class="logo-multibanco"><img src="images/svg/multibanco-white.svg" alt="Multibanco"></li>
+                <li class="logo-visa"><img src="images/svg/mbway-footer.svg" alt="Multibanco"></li>
+              </ul>
+              <div class="logoSmartmove">
+                <a href="http://www.smartmove.pt/pt/" target="_blank"><img src="images/svg/smartmove_rodape.svg"
+                    alt="Smartmove"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="cofinanciado-portugal">
+    <div class="container">
+      <div class="row">
+        <div class="clean-safe col-lg-2 col-md-3 col-sm-12 col-xs-12">
+          <img src="images/icone-clean-and-safe.png" alt="">
+        </div>
+        <div class="cofinanciado-portugal-wrapper col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <a href="https://wow.pt/wp-content/uploads/2020/11/WOW_Ficha-de-projeto-PT2020.pdf" target="_blank">
+            <img src="images/portugal2020.png" alt="">
+          </a>
+        </div>
+        <div class="livro-reclamacoes col-lg-2 col-md-3 col-sm-12 col-xs-12">
+          <a href="https://www.livroreclamacoes.pt/inicio" target="_blank">
+            <img src="images/icone-livro-de-reclamações.png" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery, Bootstrap JS -->
+  <script src="includes/jquery.min.js"></script>
+  <script src="includes/bootstrap.min.js"></script>
+
+  <script>
+    $('.header-carrinho__infos').on('click', function (event) {
+      $(this).parent().toggleClass('open');
+    });
+
+    $('body').on('click', function (e) {
+      if (!$('.dropdown-menu').is(e.target) &&
+        $('.dropdown-menu').has(e.target).length === 0 &&
+        $('.open').has(e.target).length === 0
+      ) {
+        $('#smv_wp_popcart').removeClass('open');
+      }
+    });
+
+    $('.carrinho-compras').on('click', function (event) {
+      event.stopPropagation();
+      return false;
+    });
+
+    $('.fechar-carrinho').on('click', function (e) {
+      $('#smv_wp_popcart').removeClass('open');
+    });
+  </script>
+
+  <script src="js/fecharCarrinho.js"></script>
+
+  <!-- Abrir bilhetes -->
+  <script src="js/bilhetes.js"></script>
+
+  <!-- jQuery - datapicker -->
+  <script src="includes/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#datepicker-2exp").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-3exp").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-6exp").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-prata").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-wine").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-cork").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-fashion").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-vessels").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+
+      $("#datepicker-chocolate").datepicker({
+        dateFormat: 'dd/mm/yy',
+        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        minDate: 0,
+      });
+    });
+  </script>
+</body>
+
+</html>
