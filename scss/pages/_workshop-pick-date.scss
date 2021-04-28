@@ -1,0 +1,106 @@
+.workshop {
+    .pick-date {
+        width: 100%;
+        padding-top: 2.8rem;
+        @include flex(row, flex-start, center, center);
+        flex-wrap: wrap;
+
+        .controls-slide {
+            @include flex(row, flex-start, center, center);
+
+            .controls-slide-btn {
+                a {
+                    display: inline-block;
+                    margin: 0 .8rem;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+
+                i {
+                    display: inline-block;
+
+                    img {
+                        height: 2.4rem;
+                    }
+                }
+            }
+
+            .mes-active {
+                margin-left: .8rem;
+
+                h3 {
+                    @include font(1.8rem, 500, 1.2em);
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .nav-date {
+            @include flex(row, flex-end, center, center);
+
+            .btn {
+                min-width: auto;
+                border: 2px solid $black;
+                color: $black;
+                font-size: 1.6rem;
+                padding: .8rem 1.6rem;
+                text-transform: none;
+
+                margin-right: 2.4rem;
+
+                &:hover {
+                    background-color: $white-secondary;
+                    color: $gray-02;
+                }
+            }
+
+            .nav-pills {
+                .nav-item {
+                    margin: 0;
+
+                    .nav-link {
+                        min-width: 10rem;
+                        @include font(1.6rem, 400, 1.2em);
+                        padding: 1rem 1.2rem;
+                        color: $primary;
+                        background-color: $white;
+                        border: 1px solid $primary;
+                        border-radius: 0;
+                        text-align: center;
+
+                        &.active {
+                            color: $white;
+                            background-color: $primary;
+                        }
+                    }
+
+
+
+                    &:first-child {
+                        .nav-link {
+                            border-bottom-left-radius: 3.2rem;
+                            border-top-left-radius: 3.2rem;
+                        }
+                    }
+
+                    &:last-child {
+                        .nav-link {
+                            border-bottom-right-radius: 3.2rem;
+                            border-top-right-radius: 3.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper-container {
+
+            .swiper-slide {
+                background-color: $primary;
+                color: $black;
+            }
+        }
+    }
+}

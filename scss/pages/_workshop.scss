@@ -1,3 +1,6 @@
+@import "pages/workshop-pick-date.scss";
+@import "pages/workshop-resumo.scss";
+
 .workshop {
     padding-top: 6rem;
 
@@ -27,9 +30,10 @@
                 @include flex(column, center, flex-start, flex-start);
             }
 
-            span {
+            h4 {
                 @include font(1.4rem, 300, 1.2em);
                 margin-bottom: .4rem;
+                color: $black;
             }
 
             h3 {
@@ -203,55 +207,41 @@
                 }
             }
         }
-    }
 
-    &-resumo {
-
-        .img-workshop {
+        .bilhetes-details {
             width: 100%;
-            height: 30rem;
-            position: relative;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-            }
-        }
-
-        .resumo-content {
+            @include flex(row, flex-start, center, center);
             background-color: $white-secondary;
-            padding-bottom: 1.6rem;
-        }
-
-        .resumo-bilhetes {
-            @include flex(column, flex-start, flex-start, flex-start);
-            padding-top: 1.6rem;
-            padding-bottom: 1.6rem;
+            padding: 1.6rem 0;
+            margin-top: 1.6rem;
 
             li {
-                width: 100%;
-                @include flex(row, space-between, center, center);
-                @include font(1.8rem, 900, 1.2em);
-                margin-bottom: 1.6rem;
+                height: 100%;
+                @include flex(column, flex-start, flex-start, flex-start);
+                border-right: 1px solid $black;
 
-                p {
+                h4 {
+                    @include font(1.4rem, 300, 1.2em);
+                    margin-bottom: .4rem;
+                    color: $black;
+                }
+
+                h3 {
+                    @include font(1.6rem, 500, 1.2em);
+                    color: $gray-02;
+                    text-transform: uppercase;
                     margin-bottom: 0;
                 }
 
                 &:last-child {
-                    margin-bottom: 0;
+                    border: none;
+
+                    h3 {
+                        font-size: 2.4rem;
+                        color: $primary;
+                    }
                 }
             }
-
-            &-valor {
-                color: $primary;
-            }
-        }
-
-        .resumo-description {
-            @include font(1.6rem, 300, 1.2em);
         }
     }
 }

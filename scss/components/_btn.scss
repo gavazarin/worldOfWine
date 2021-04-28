@@ -6,16 +6,21 @@
   @include font(1.6rem, 400, 1.2em);
   padding: 1.6rem 3.2rem;
   color: $white;
+  border-radius: 0;
   text-transform: uppercase;
+
   @include xs {
     font-size: 1.4rem;
   }
+
   &-primary {
     background-color: $primary;
     border-color: $primary;
     transition: all .3s ease-in;
+
     &:active,
     &.active {
+
       &:focus,
       &.focus {
         background-color: $white;
@@ -24,6 +29,7 @@
         transition: all .3s ease-out;
       }
     }
+
     &:hover,
     &:focus {
       background-color: $white;
@@ -32,52 +38,64 @@
       transition: all .3s ease-out;
     }
   }
+
   &-secondary {
     background-color: $secondary;
     border-color: $secondary;
     transition: all .3s ease-in;
+
     &:active,
     &.active {
+
       &:focus,
       &.focus {
         background-color: $white;
         border-color: $secondary;
         transition: all .3s ease-out;
+
         span {
           color: $secondary;
           transition: all .3s ease-out;
         }
       }
     }
+
     &:hover,
     &:focus {
       background-color: $white;
       border-color: $secondary;
       transition: all .3s ease-out;
+
       span {
         color: $secondary;
         transition: all .3s ease-out;
       }
     }
+
     @include xs {
+
       &:active,
       &.active {
+
         &:focus,
         &.focus {
           background-color: $secondary-dark;
           border-color: $secondary-dark;
           transition: all .3s ease-out;
+
           span {
             color: $white;
             transition: all .3s ease-out;
           }
         }
       }
+
       &:hover,
       &:focus {
         background-color: $secondary-dark;
         border-color: $secondary-dark;
         transition: all .3s ease-out;
+
         span {
           color: $white;
           transition: all .3s ease-out;
@@ -85,13 +103,17 @@
       }
     }
   }
+
   &-outline-secondary {
     border-color: $secondary;
+
     span {
       color: $secondary;
     }
+
     &:active,
     &.active {
+
       &:focus,
       &.focus {
         background-color: $white;
@@ -99,6 +121,7 @@
         transition: all .3s ease-out;
       }
     }
+
     &:hover,
     &:focus {
       background-color: $white;
@@ -106,32 +129,39 @@
       transition: all .3s ease-out;
     }
   }
+
   &-block {
     height: 5.2rem;
   }
+
   &-link {
     color: $primary;
     @include font(1.2rem, 900, 1.2em);
     cursor: pointer;
+
     &:active,
     &.active {
+
       &:focus,
       &.focus {
         color: $primary-dark;
         transition: all .3s ease-out;
       }
     }
+
     &:hover,
     &:focus {
       color: $primary-dark;
       transition: all .3s ease-out;
     }
   }
+
   &[disabled] {
     background: $gray-01;
     border-color: $gray-02;
     pointer-events: none;
   }
+
   &-dados-faturacao {
     width: 4.5rem;
     height: 1.5rem;
@@ -140,6 +170,7 @@
     margin-bottom: 8px;
     border-radius: 5px;
     transition: none;
+
     &:before {
       content: '';
       width: 2.5rem;
@@ -150,9 +181,11 @@
       @include absolute(0, auto, auto, -5px);
       transform: translateY(-5px);
     }
+
     &[aria-expanded="true"] {
       background-color: #1c8d8769;
       transition: none;
+
       &:before {
         background-color: $secondary;
         border: 1px solid $secondary-dark;
@@ -162,15 +195,45 @@
   }
 }
 
+.btn-line {
+  @include font(1.6rem, 900, 1.2em);
+  color: $primary;
+  text-transform: uppercase;
+  transition: .5s;
+
+  &:before {
+    content: '';
+    width: 100px;
+    height: 1px;
+    display: inline-block;
+    background: $primary;
+    margin-bottom: 3px;
+    margin-right: 15px;
+    transition: .5s;
+  }
+
+  &:hover {
+    color: $black;
+    text-decoration: none;
+
+    &:before {
+      width: 160px;
+    }
+  }
+}
+
 button {
   border: none;
+
   &:active,
   &.active {
+
     &:focus,
     &.focus {
       outline: none;
     }
   }
+
   &:hover,
   &:focus {
     outline: none;
