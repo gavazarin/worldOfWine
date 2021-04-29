@@ -52,5 +52,9 @@
         .resumo-btn {
             margin-top: .8rem;
         }
+
+        @include md {
+            margin-top: 4rem;
+        }
     }
 }

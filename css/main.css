@@ -7783,6 +7783,19 @@ header .marca img {
   margin-bottom: 0;
 }
 
+@media (max-width: 767px) {
+  .workshop .pick-date .controls-slide {
+    order: 2;
+    margin-bottom: 1.6rem;
+  }
+  .workshop .pick-date .controls-slide .controls-slide-btn i img {
+    height: 3.2rem;
+  }
+  .workshop .pick-date .controls-slide .mes-active h3 {
+    font-size: 2rem;
+  }
+}
+
 .workshop .pick-date .nav-date {
   display: flex;
   flex-direction: row;
@@ -7838,12 +7851,30 @@ header .marca img {
   border-top-right-radius: 3.2rem;
 }
 
+@media (max-width: 767px) {
+  .workshop .pick-date .nav-date {
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 3.2rem;
+  }
+}
+
 .workshop .pick-date .tab-content {
   padding-top: 1.6rem;
 }
 
 .workshop .pick-date .tab-content .tab-pane {
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .workshop .pick-date .tab-content {
+    order: 3;
+  }
 }
 
 .workshop .pick-date .swiper-container {
@@ -7915,7 +7946,7 @@ header .marca img {
 }
 
 .workshop .pick-date .tab-hours .list-hours li {
-  width: 20%;
+  width: 50%;
   height: 100%;
 }
 
@@ -8016,6 +8047,12 @@ header .marca img {
 
 .workshop-resumo .resumo-btn {
   margin-top: .8rem;
+}
+
+@media (max-width: 992px) {
+  .workshop-resumo {
+    margin-top: 4rem;
+  }
 }
 
 .workshop {
@@ -8309,6 +8346,7 @@ header .marca img {
   line-height: 1.2em;
   color: #707070;
   text-transform: uppercase;
+  text-align: left;
   margin-bottom: 0;
 }
 
