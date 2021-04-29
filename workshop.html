@@ -336,27 +336,578 @@
               </div>
 
               <div class="tab-content col-lg-12" id="pills-tabContent">
+                <!-- VIEW SEMANA -->
                 <div class="tab-pane fade show active in" id="pills-semana" role="tabpanel"
                   aria-labelledby="pills-semana-tab" aria-expanded="true">
 
                   <div class="swiper-container">
                     <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
+                    <ul class="swiper-wrapper nav-tabs" id="myTab" role="tablist">
                       <!-- Slides -->
-                      <div class="swiper-slide">Slide 1</div>
-                      <div class="swiper-slide">Slide 2</div>
-                      <div class="swiper-slide">Slide 3</div>
-                      <div class="swiper-slide">Slide 4</div>
-                      <div class="swiper-slide">Slide 5</div>
-                      <div class="swiper-slide">Slide 6</div>
-                      <div class="swiper-slide">Slide 7</div>
+                      <li class="swiper-slide nav-item" role="presentation">
+                        <a class="btn-day active" data-toggle="tab" href="#day-one" role="tab" aria-selected="true"
+                          aria-expanded="true">
+                          <span class="week-day">DOM</span>
+                          <span class="number-day">25</span>
+                        </a>
+                      </li>
+
+                      <li class="swiper-slide nav-item" role="presentation">
+                        <a class="btn-day" data-toggle="tab" href="#day-two" role="tab" aria-selected="false">
+                          <span class="week-day">SEG</span>
+                          <span class="number-day">26</span>
+                        </a>
+                      </li>
+
+                      <li class="swiper-slide nav-item" role="presentation">
+                        <a class="btn-day" data-toggle="tab" href="#day-three" role="tab" aria-selected="false">
+                          <span class="week-day">TER</span>
+                          <span class="number-day">27</span>
+                        </a>
+                      </li>
+
+                      <li class="swiper-slide nav-item" role="presentation">
+                        <a class="btn-day" data-toggle="tab" href="#day-four" role="tab" aria-selected="false">
+                          <span class="week-day">QUA</span>
+                          <span class="number-day">28</span>
+                        </a>
+                      </li>
+
+                      <li class="swiper-slide nav-item">
+                        <a class="btn-day" data-toggle="tab" href="#day-five" role="tab" aria-selected="false">
+                          <span class="week-day">QUI</span>
+                          <span class="number-day">29</span>
+                        </a>
+                      </li>
+
+                      <li class="swiper-slide nav-item">
+                        <a class="btn-day" data-toggle="tab" href="#day-six" role="tab" aria-selected="false">
+                          <span class="week-day">SEX</span>
+                          <span class="number-day">30</span>
+                        </a>
+                      </li>
+
+                      <li class="swiper-slide nav-item">
+                        <a class="btn-day" data-toggle="tab" href="#day-seven" role="tab" aria-selected="false">
+                          <span class="week-day">SÁB</span>
+                          <span class="number-day">01</span>
+                        </a>
+                      </li>
+
+                      <li class="swiper-slide nav-item">
+                        <a class="btn-day" data-toggle="tab" href="#day-eight" role="tab" aria-selected="false">
+                          <span class="week-day">DOM</span>
+                          <span class="number-day">02</span>
+                        </a>
+                      </li>
+
+                      <li class="swiper-slide nav-item">
+                        <a class="btn-day" data-toggle="tab" href="#day-nine" role="tab" aria-selected="false">
+                          <span class="week-day">SEG</span>
+                          <span class="number-day">03</span>
+                        </a>
+                      </li>
+
+                      <li class="swiper-slide nav-item">
+                        <a class="btn-day" data-toggle="tab" href="#day-ten" role="tab" aria-selected="false">
+                          <span class="week-day">TER</span>
+                          <span class="number-day">04</span>
+                        </a>
+                      </li>
+
+                      <li class="swiper-slide nav-item">
+                        <a class="btn-day" data-toggle="tab" href="#day-eleven" role="tab" aria-selected="false">
+                          <span class="week-day">QUA</span>
+                          <span class="number-day">05</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- List hours - Tabs -->
+                  <div class="tab-content tab-hours">
+                    <div class="tab-pane fade active in" id="day-one">
+                      <ul class="list-hours">
+                        <li>
+                          <a href="#" disabled>
+                            <span>12:00</span> - <span>13:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>13:30</span> - <span>15:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>15:00</span> - <span>16:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>16:30</span> - <span>18:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>18:00</span> - <span>19:30</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="day-two">
+                      <ul class="list-hours">
+                        <li>
+                          <a href="#">
+                            <span>9:00</span> - <span>10:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>10:30</span> - <span>12:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>12:00</span> - <span>13:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>13:30</span> - <span>15:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>15:00</span> - <span>16:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>16:30</span> - <span>18:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>18:00</span> - <span>19:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>19:30</span> - <span>20:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>20:00</span> - <span>21:30</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="day-three">
+                      <ul class="list-hours">
+                        <li>
+                          <a href="#" disabled>
+                            <span>10:30</span> - <span>12:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>12:00</span> - <span>13:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>13:30</span> - <span>15:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>15:00</span> - <span>16:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>16:30</span> - <span>18:00</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="day-four">
+                      <ul class="list-hours">
+                        <li>
+                          <a href="#" disabled>
+                            <span>10:30</span> - <span>12:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>12:00</span> - <span>13:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>13:30</span> - <span>15:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>15:00</span> - <span>16:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>16:30</span> - <span>18:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>18:00</span> - <span>19:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>19:30</span> - <span>20:00</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="day-five">
+                      <ul class="list-hours">
+                        <li>
+                          <a href="#">
+                            <span>10:30</span> - <span>12:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>12:00</span> - <span>13:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>13:30</span> - <span>15:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>15:00</span> - <span>16:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>16:30</span> - <span>18:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>18:00</span> - <span>19:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>19:30</span> - <span>20:00</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="day-six">
+                      <ul class="list-hours">
+                        <li>
+                          <a href="#" disabled>
+                            <span>10:30</span> - <span>12:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>12:00</span> - <span>13:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>13:30</span> - <span>15:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>15:00</span> - <span>16:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>16:30</span> - <span>18:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>18:00</span> - <span>19:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>19:30</span> - <span>20:00</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="day-seven">
+                      <ul class="list-hours">
+                        <li>
+                          <a href="#" disabled>
+                            <span>10:30</span> - <span>12:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>12:00</span> - <span>13:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>13:30</span> - <span>15:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>15:00</span> - <span>16:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>16:30</span> - <span>18:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>18:00</span> - <span>19:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>19:30</span> - <span>20:00</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="day-eight">
+                      <ul class="list-hours">
+                        <li>
+                          <a href="#" disabled>
+                            <span>10:30</span> - <span>12:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>12:00</span> - <span>13:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>13:30</span> - <span>15:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>15:00</span> - <span>16:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>16:30</span> - <span>18:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>18:00</span> - <span>19:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>19:30</span> - <span>20:00</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="day-nine">
+                      <ul class="list-hours">
+                        <li>
+                          <a href="#" disabled>
+                            <span>12:00</span> - <span>13:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>13:30</span> - <span>15:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>15:00</span> - <span>16:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>16:30</span> - <span>18:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>18:00</span> - <span>19:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>19:30</span> - <span>20:00</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="day-ten">
+                      <ul class="list-hours">
+                        <li>
+                          <a href="#" disabled>
+                            <span>10:30</span> - <span>12:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>12:00</span> - <span>13:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>13:30</span> - <span>15:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>15:00</span> - <span>16:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>16:30</span> - <span>18:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>18:00</span> - <span>19:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>19:30</span> - <span>20:00</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-pane fade" id="day-eleven">
+                      <ul class="list-hours">
+                        <li>
+                          <a href="#" disabled>
+                            <span>10:30</span> - <span>12:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>12:00</span> - <span>13:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#">
+                            <span>13:30</span> - <span>15:00</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>15:00</span> - <span>16:30</span>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="#" disabled>
+                            <span>16:30</span> - <span>18:00</span>
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
 
                 </div>
 
-                <div class="tab-pane fade" id="pills-mes" role="tabpanel" aria-labelledby="pills-mes-tab">
-                  Mês - PILLS 2
+                <!-- VIEW MES -->
+                <div class="tab-pane fade" id="pills-mes" role="tabpanel">
+                  <div id="datepicker"></div>
                 </div>
               </div>
 
@@ -531,71 +1082,7 @@
   <script src="includes/jquery-ui.js"></script>
   <script>
     $(function () {
-      $("#datepicker-2exp").datepicker({
-        dateFormat: 'dd/mm/yy',
-        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
-        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-        minDate: 0,
-      });
-
-      $("#datepicker-3exp").datepicker({
-        dateFormat: 'dd/mm/yy',
-        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
-        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-        minDate: 0,
-      });
-
-      $("#datepicker-6exp").datepicker({
-        dateFormat: 'dd/mm/yy',
-        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
-        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-        minDate: 0,
-      });
-
-      $("#datepicker-prata").datepicker({
-        dateFormat: 'dd/mm/yy',
-        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
-        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-        minDate: 0,
-      });
-
-      $("#datepicker-wine").datepicker({
-        dateFormat: 'dd/mm/yy',
-        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
-        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-        minDate: 0,
-      });
-
-      $("#datepicker-cork").datepicker({
-        dateFormat: 'dd/mm/yy',
-        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
-        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-        minDate: 0,
-      });
-
-      $("#datepicker-fashion").datepicker({
-        dateFormat: 'dd/mm/yy',
-        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
-        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-        minDate: 0,
-      });
-
-      $("#datepicker-vessels").datepicker({
-        dateFormat: 'dd/mm/yy',
-        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
-        monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-        monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-        minDate: 0,
-      });
-
-      $("#datepicker-chocolate").datepicker({
+      $("#datepicker").datepicker({
         dateFormat: 'dd/mm/yy',
         dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
         monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],

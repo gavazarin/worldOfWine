@@ -7768,6 +7768,10 @@ header .marca img {
   height: 2.4rem;
 }
 
+.workshop .pick-date .controls-slide .controls-slide-btn .swiper-button-disabled {
+  opacity: .3;
+}
+
 .workshop .pick-date .controls-slide .mes-active {
   margin-left: .8rem;
 }
@@ -7834,9 +7838,120 @@ header .marca img {
   border-top-right-radius: 3.2rem;
 }
 
+.workshop .pick-date .tab-content {
+  padding-top: 1.6rem;
+}
+
+.workshop .pick-date .tab-content .tab-pane {
+  text-align: center;
+}
+
+.workshop .pick-date .swiper-container {
+  border-bottom: 3px solid #8D1C22;
+}
+
 .workshop .pick-date .swiper-container .swiper-slide {
-  background-color: #8D1C22;
+  margin: 0;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: .8rem 0;
+  background-color: rgba(143, 36, 41, 0.3);
   color: #1D1D1B;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide a span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.2em;
+  color: #8D1C22;
+  margin-bottom: .8rem;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide a span:last-child {
+  margin-bottom: 0;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide a span.number-day {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.2em;
+  color: #1D1D1B;
+  background-color: rgba(143, 36, 41, 0);
+  padding: .5rem;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide a:hover {
+  text-decoration: none;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide a:hover span.number-day {
+  background-color: rgba(143, 36, 41, 0.2);
+}
+
+.workshop .pick-date .swiper-container .swiper-slide a[aria-expanded="true"] span.number-day {
+  background-color: #8f2429;
+  color: #FFFFFF;
+}
+
+.workshop .pick-date .tab-hours {
+  padding-top: 0;
+}
+
+.workshop .pick-date .tab-hours .list-hours {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.workshop .pick-date .tab-hours .list-hours li {
+  width: 20%;
+  height: 100%;
+}
+
+.workshop .pick-date .tab-hours .list-hours li a {
+  width: 100%;
+  height: 100%;
+  padding: 2.4rem .8rem;
+  border: 1px solid #707070;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.2em;
+  color: #1D1D1B;
+  transition: all .3s ease-in-out;
+}
+
+.workshop .pick-date .tab-hours .list-hours li a:hover {
+  text-decoration: none;
+  color: #5E1216;
+  border-color: #1D1D1B;
+  background-color: #F7F7F7;
+}
+
+.workshop .pick-date .tab-hours .list-hours li a[disabled] {
+  background-color: #CCCCCC;
+  color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+.workshop .pick-date .ui-datepicker {
+  width: 100% !important;
 }
 
 .workshop-resumo .img-workshop {
