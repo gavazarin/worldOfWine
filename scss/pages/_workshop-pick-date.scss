@@ -47,7 +47,6 @@
                 .controls-slide-btn {
 
                     i {
-
                         img {
                             height: 3.2rem;
                         }
@@ -125,6 +124,16 @@
                 @include flex(row, space-between, center, center);
                 margin-bottom: 3.2rem;
             }
+
+            @include xxs {
+                .nav-pills {
+                    .nav-item {
+                        .nav-link {
+                            min-width: 7rem;
+                        }
+                    }
+                }
+            }
         }
 
         .tab-content {
@@ -164,7 +173,7 @@
                             @include font(1.4rem, 400, 1.2em);
                             color: $black;
                             background-color: rgba(143, 36, 41, 0);
-                            padding: .5rem;
+                            padding: .8rem;
                             border-radius: 50%;
                             transition: all .3s ease-in-out;
                         }
@@ -196,7 +205,7 @@
                 flex-wrap: wrap;
 
                 li {
-                    width: 50%;
+                    width: 20%;
                     height: 100%;
 
                     a {
@@ -204,6 +213,8 @@
                         height: 100%;
                         padding: 2.4rem .8rem;
                         border: 1px solid $gray-02;
+                        border-right: 1px solid transparent;
+                        border-top: none;
                         @include flex(row, center, center, center);
                         flex-wrap: wrap;
 
@@ -214,9 +225,9 @@
 
                         &:hover {
                             text-decoration: none;
-                            color: $primary-dark;
-                            border-color: $black;
-                            background-color: $white-secondary;
+                            color: $white;
+                            border-color: $primary;
+                            background-color: $primary;
                         }
 
                         &[disabled] {
@@ -225,12 +236,34 @@
                             pointer-events: none;
                         }
                     }
+
+                    &:last-child,
+                    &:nth-child(5),
+                    &:nth-child(10),
+                    &:nth-child(15) {
+                        a {
+                            border-right: 1px solid $gray-02;
+                        }
+                    }
+
+                    @include sm {
+                        width: 50%;
+
+                        &:last-child,
+                        &:nth-child(even) {
+                            a {
+                                border-right: 1px solid $gray-02;
+                            }
+                        }
+                    }
                 }
             }
         }
 
         .ui-datepicker {
             width: 100% !important;
+            position: relative;
+            margin-top: 0;
         }
     }
 }

@@ -23,6 +23,7 @@
             border: 1px solid $gray-02;
             padding: 1.2rem 0;
             @include flex(row, flex-start, center, center);
+            flex-wrap: wrap;
 
             li {
                 height: 100%;
@@ -119,38 +120,52 @@
                 }
             }
 
-            .item-gift {
-                position: relative;
-
-                input {
-                    display: none;
-                }
-
-                label {
-                    width: 2.8rem;
-                    height: 2.8rem;
-                    border: 1px solid $gray-02;
-                    border-radius: 50%;
-                    cursor: pointer;
-                    @include absolute (50%, 2.4rem, auto, auto);
-                    transform: translateY(-50%);
-
-                    &:before {
-                        content: '';
-                        width: 0;
-                        height: 0;
-                        background-color: $primary;
-                        @include absolute(3px, auto, 0, 3px);
-                        border-radius: 50%;
-                        transform-origin: 0 0;
+            @include sm {
+                li {
+                    &:last-child {
+                        border: none;
                     }
                 }
 
-                input:checked~label:before {
-                    width: 2rem;
-                    height: 2rem;
+                .dropdown {
+                    .dropdown-menu {
+                        left: 0;
+                        right: auto;
+                    }
                 }
             }
+
+            @include xs {
+                li {
+                    margin-bottom: 1.6rem;
+                    border: none;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .dropdown {
+                    .dropdown-menu {
+                        min-width: 28rem;
+
+                        .bilhetes-list {
+                            li {
+                                margin-bottom: 2rem;
+                            }
+
+                            &-quantidade {
+
+                                i {
+                                    width: 2.4rem;
+                                    height: 2.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
 
         .btn-alterar {
@@ -166,6 +181,18 @@
                     background-color: $white-secondary;
                     color: $black;
                 }
+            }
+
+            @include sm {
+                padding-right: 0;
+                margin-top: .8rem;
+            }
+        }
+
+        @include sm {
+            .row {
+                padding: 0 1.5rem;
+                flex-direction: column;
             }
         }
     }
@@ -210,28 +237,67 @@
 
         .bilhetes-details {
             width: 100%;
-            @include flex(row, flex-start, center, center);
+            @include flex(row, flex-start, flex-start, flex-start);
+            flex-wrap: wrap;
             background-color: $white-secondary;
             padding: 1.6rem 0;
             margin-top: 1.6rem;
 
             li {
-                height: 100%;
+                min-height: 5.3rem;
                 @include flex(column, flex-start, flex-start, flex-start);
                 border-right: 1px solid $black;
 
                 h4 {
                     @include font(1.4rem, 300, 1.2em);
-                    margin-bottom: .4rem;
+                    margin-bottom: .8rem;
                     color: $black;
                 }
 
                 h3 {
-                    @include font(1.6rem, 500, 1.2em);
+                    @include font(1.6rem, 300, 1.2em);
                     color: $gray-02;
                     text-transform: uppercase;
                     text-align: left;
                     margin-bottom: 0;
+
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+
+                &.item-gift {
+                    @include flex(column, center, center, center);
+                    position: relative;
+
+                    input {
+                        display: none;
+                    }
+
+                    label {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        border: 1px solid $gray-02;
+                        background-color: $white;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        position: relative;
+
+                        &:before {
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            background-color: $primary;
+                            @include absolute(3px, auto, 0, 3px);
+                            border-radius: 50%;
+                            transform-origin: 0 0;
+                        }
+                    }
+
+                    input:checked~label:before {
+                        width: 1.6rem;
+                        height: 1.6rem;
+                    }
                 }
 
                 &:last-child {
@@ -240,6 +306,48 @@
                     h3 {
                         font-size: 2.4rem;
                         color: $primary;
+                    }
+                }
+            }
+
+            @include sm {
+                li {
+                    margin: .8rem 0;
+
+                    &.item-gift {
+                        border-right: 0;
+                    }
+
+                    &:first-child {
+                        border: none;
+                    }
+                }
+            }
+
+            @include xs {
+                li {
+                    border: none;
+                    min-height: auto;
+                    margin: 1.6rem 0;
+
+                    &.item-gift {
+                        @include flex(row, flex-start, center, center);
+
+                        h4 {
+                            order: 2;
+                            margin-bottom: 0;
+                        }
+
+                        label {
+                            order: 1;
+                            margin-right: .8rem;
+                            margin-bottom: 0;
+                        }
+
+                        input:checked~label:before {
+                            width: 1.6rem;
+                            height: 1.6rem;
+                        }
                     }
                 }
             }
