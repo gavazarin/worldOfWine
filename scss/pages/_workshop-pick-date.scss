@@ -187,11 +187,15 @@
                         }
                     }
 
-                    &[aria-expanded="true"] {
+                    &.active {
                         span.number-day {
                             background-color: rgba(143, 36, 41, 1);
                             color: $white;
                         }
+                    }
+
+                    &.disabled {
+                        opacity: .5;
                     }
                 }
             }

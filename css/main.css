@@ -7933,9 +7933,13 @@ header .marca img {
   background-color: rgba(143, 36, 41, 0.2);
 }
 
-.workshop .pick-date .swiper-container .swiper-slide a[aria-expanded="true"] span.number-day {
+.workshop .pick-date .swiper-container .swiper-slide a.active span.number-day {
   background-color: #8f2429;
   color: #FFFFFF;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide a.disabled {
+  opacity: .5;
 }
 
 .workshop .pick-date .tab-hours {
