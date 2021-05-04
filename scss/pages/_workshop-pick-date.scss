@@ -149,16 +149,18 @@
         }
 
         .swiper-container {
-            border-bottom: 3px solid $primary;
 
             .swiper-slide {
                 margin: 0;
 
-                a {
+                .item-day {
                     @include flex(column, center, center, center);
                     padding: .8rem 0;
                     background-color: rgba(143, 36, 41, .3);
                     color: $black;
+                    border-bottom: 3px solid $primary;
+
+                    border-left: 1px solid rgba(143, 36, 41, .3);
 
                     span {
                         @include font(1.2rem, 300, 1.2em);
@@ -179,15 +181,7 @@
                         }
                     }
 
-                    &:hover {
-                        text-decoration: none;
-
-                        span.number-day {
-                            background-color: rgba(143, 36, 41, .2);
-                        }
-                    }
-
-                    &.active {
+                    &.today {
                         span.number-day {
                             background-color: rgba(143, 36, 41, 1);
                             color: $white;
@@ -198,71 +192,95 @@
                         opacity: .5;
                     }
                 }
-            }
-        }
 
-        .tab-hours {
-            padding-top: 0;
+                .list-hours {
+                    width: 100%;
+                    @include flex(column, flex-start, center, center);
+                    flex-wrap: wrap;
 
-            .list-hours {
-                @include flex(row, flex-start, center, center);
-                flex-wrap: wrap;
-
-                li {
-                    width: 20%;
-                    height: 100%;
-
-                    a {
+                    li {
                         width: 100%;
-                        height: 100%;
-                        padding: 2.4rem .8rem;
-                        border: 1px solid $gray-02;
-                        border-right: 1px solid transparent;
-                        border-top: none;
-                        @include flex(row, center, center, center);
-                        flex-wrap: wrap;
 
-                        @include font(1.4rem, 400, 1.2em);
-                        color: $black;
-
-                        transition: all .3s ease-in-out;
-
-                        &:hover {
-                            text-decoration: none;
-                            color: $white;
-                            border-color: $primary;
-                            background-color: $primary;
-                        }
-
-                        &[disabled] {
-                            background-color: $gray-01;
-                            color: rgba(0, 0, 0, .3);
-                            pointer-events: none;
-                        }
-                    }
-
-                    &:last-child,
-                    &:nth-child(5),
-                    &:nth-child(10),
-                    &:nth-child(15) {
                         a {
-                            border-right: 1px solid $gray-02;
-                        }
-                    }
+                            width: 100%;
+                            height: 100%;
+                            padding: 1.6rem 0 .8rem;
+                            border: 1px solid $primary;
+                            border-right: 1px solid transparent;
+                            border-top: none;
+                            @include flex(row, center, center, center);
+                            flex-wrap: wrap;
 
-                    @include sm {
-                        width: 50%;
+                            @include font(2rem, 900, 1.2em);
+                            color: $black;
 
-                        &:last-child,
-                        &:nth-child(even) {
-                            a {
-                                border-right: 1px solid $gray-02;
+                            transition: all .3s ease-in-out;
+
+                            .hour-infos {
+                                width: 100%;
+                                margin-top: 1.2rem;
+                                @include flex(row, space-around, center, center);
+                                position: relative;
+
+                                span {
+                                    // width: 50%;
+                                    text-align: center;
+                                    font-size: 1.6rem;
+
+                                    &.idioma {
+                                        width: 2.4rem;
+                                        height: 2.4rem;
+                                        background-color: $primary;
+                                        border: 2px solid $primary;
+                                        color: $white;
+                                        font-size: 1.4rem;
+                                        @include flex(row, center, center, center);
+                                        padding: 0.4rem;
+                                        border-radius: 50%;
+                                        transition: all .3s ease-in-out;
+                                    }
+                                }
+
+                                &:before {
+                                    content: '';
+                                    width: 2px;
+                                    height: 100%;
+                                    background-color: $primary;
+                                    @include absolute(0, auto, auto, 50%);
+                                    transition: all .3s ease-in-out;
+                                }
+                            }
+
+                            &:hover {
+                                text-decoration: none;
+                                color: $white;
+                                border-color: $primary;
+                                background-color: $primary;
+
+                                .hour-infos {
+                                    span {
+                                        &.idioma {
+                                            border-color: $white;
+                                        }
+                                    }
+
+                                    &:before {
+                                        background-color: $white;
+                                    }
+                                }
+                            }
+
+                            &[disabled] {
+                                background-color: $gray-01;
+                                pointer-events: none;
+                                opacity: .5;
                             }
                         }
                     }
                 }
             }
         }
+
 
         .ui-datepicker {
             width: 100% !important;
