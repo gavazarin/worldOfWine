@@ -206,12 +206,13 @@
                             height: 100%;
                             padding: 1.6rem 0 .8rem;
                             border: 1px solid $primary;
-                            border-right: 1px solid transparent;
+                            border-right: 1px solid $primary;
+                            border-bottom-width: 2px;
                             border-top: none;
                             @include flex(row, center, center, center);
                             flex-wrap: wrap;
 
-                            @include font(2rem, 900, 1.2em);
+                            @include font(1.6rem, 900, 1.2em);
                             color: $black;
 
                             transition: all .3s ease-in-out;
@@ -225,15 +226,16 @@
                                 span {
                                     // width: 50%;
                                     text-align: center;
-                                    font-size: 1.6rem;
+                                    font-size: 1.4rem;
 
                                     &.idioma {
-                                        width: 2.4rem;
-                                        height: 2.4rem;
+                                        width: 2rem;
+                                        height: 2rem;
                                         background-color: $primary;
                                         border: 2px solid $primary;
                                         color: $white;
-                                        font-size: 1.4rem;
+                                        font-size: 1.2rem;
+                                        font-weight: 400;
                                         @include flex(row, center, center, center);
                                         padding: 0.4rem;
                                         border-radius: 50%;

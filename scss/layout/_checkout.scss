@@ -1,24 +1,42 @@
 .checkout-content {
   background-color: $white-secondary;
-  padding-top: 10rem;
+  padding-top: 8rem;
+
   .row {
     @include flex(row, center, flex-start, flex-start);
   }
+
   @include md {
     padding-top: 10rem;
   }
+
   @include xs {
     padding-top: 0;
   }
+
   .header-checkout {
     .row {
       @include flex(row, center, center, center);
     }
   }
+
   .div-error,
   .div-wait {
     .row {
       @include flex(column, center, center, center);
+    }
+  }
+
+
+  .shop-timer {
+    @include flex(row, flex-end, center, center);
+
+    @include md {
+      justify-content: center;
+    }
+
+    @include xxs {
+      flex-direction: column;
     }
   }
 }
@@ -27,21 +45,26 @@
   h2 {
     @include font(2.5rem, 900, 1em);
   }
+
   &-empty {
     @include flex(column, flex-start, center, center);
+
     i {
       height: 16rem;
       display: inline-block;
       margin-bottom: 1.6rem;
+
       img {
         height: 100%;
       }
     }
+
     h3 {
       font-weight: 900;
       text-transform: uppercase;
       color: $gray-01;
     }
+
     .btn {
       padding: 1.6rem .8rem;
       margin-top: 1.6rem;
@@ -54,51 +77,64 @@
   border: 1px solid $secondary;
   margin: 1.5rem 0;
   @include flex(column, flex-start, center, center);
+
   .valor-compra {
     width: 100%;
     padding: 0 7rem;
     margin: 1.5rem 0;
     @include flex(column, flex-end, flex-end, flex-end);
+
     @include sm {
       padding: 0 1.5rem;
     }
+
     li {
       width: 20%;
       @include flex(row, space-between, center, center);
       margin: .5rem 0;
+
       p {
         margin: 0 1.5rem 0;
+
         &:last-child {
           margin-right: 0;
         }
       }
+
       @include md {
         width: 50%;
       }
+
       @include sm {
         width: 100%;
         @include flex(row, flex-end, center, center);
       }
     }
+
     &-subtotal {
       @include font(1.6rem, 900, 1.2em);
     }
+
     &-taxas {
       padding-bottom: .5rem;
       @include font(1.4rem, 300, 1.2em);
+
       i {
         height: 1.5rem;
         display: inline-block;
+
         img {
           height: 100%;
         }
       }
     }
+
     &-total {
       @include font(2rem, 900, 1.2em);
       text-transform: uppercase;
       padding-top: 1.5rem;
       position: relative;
+
       &:before {
         content: '';
         width: 120%;
@@ -106,6 +142,7 @@
         background-color: $gray-01;
         @include absolute(0, 0, auto, auto);
       }
+
       @include sm {
         &:before {
           width: 75%;
@@ -121,10 +158,12 @@
   background-color: $white;
   padding: 3rem;
   border: 2px solid $gray-01;
+
   h2 {
     @include font(2rem, 900, 1em);
     margin: 0;
   }
+
   @include sm {
     padding: 3rem 1.5rem;
   }
@@ -132,27 +171,34 @@
 
 .dados-pagamento {
   position: relative;
+
   @include md {
     order: 2;
   }
+
   &-box {
     margin-bottom: 3rem;
   }
+
   &-title {
     width: 100%;
     @include flex(row, space-between, center, center);
     flex-wrap: wrap;
+
     i {
       display: inline-block;
       height: 3rem;
       width: auto;
+
       img {
         height: 100%;
       }
     }
+
     @include xs {
       @include flex(row, space-between, center, center);
       margin-bottom: .8rem;
+
       h2 {
         width: calc(100% - 5rem);
         font-size: 1.8rem;
@@ -160,42 +206,51 @@
       }
     }
   }
+
   &-metodo {
     form {
       margin-top: 0;
       position: relative;
     }
+
     .form-check {
       width: 100%;
       margin: .8rem 0;
+
       &:last-child {
         margin-bottom: 0;
       }
+
       .container-input {
         @include flex(row, flex-start, center, center);
         @include font(1.4rem, 300, 1.4em);
         padding-bottom: 0;
         padding-left: 0;
         margin: .8rem 0 0;
+
         label {
           width: auto;
           font-weight: 300;
           margin-right: .8rem;
         }
+
         input {
           width: 25%;
           height: 3.2rem;
           padding-left: .8rem;
           margin-left: .8rem;
         }
+
         @include sm {
           input {
             width: 50%;
           }
         }
+
         @include xs {
           flex-wrap: wrap;
           padding-right: 0;
+
           input {
             width: 100%;
             margin-left: 0;
@@ -203,17 +258,19 @@
         }
       }
     }
+
     span.input-validate {
       bottom: -1.2rem;
       left: 0;
     }
   }
-  @include xxs{
-    #smv_frmPayDataBuyer{
-      .container-input{
-        &:last-child{
-          span{
-            bottom:-0.6rem;
+
+  @include xxs {
+    #smv_frmPayDataBuyer {
+      .container-input {
+        &:last-child {
+          span {
+            bottom: -0.6rem;
           }
         }
       }
@@ -226,15 +283,18 @@
   position: relative;
   padding-bottom: 1.6rem;
   margin-bottom: 0.8rem;
+
   .cbx-rgpd {
     p {
       text-align: right;
       width: 90%;
     }
   }
+
   li {
     margin-bottom: .8rem;
   }
+
   span.input-validate {
     right: 0;
     left: auto;
@@ -246,14 +306,17 @@
   padding: 1.5rem;
   margin-bottom: 3rem;
   @include flex(row, space-between, center, center);
+
   .btn {
     padding: 1.6rem 3.2rem;
   }
+
   @include xs {
     display: none;
     position: sticky;
     bottom: 0;
     margin: 0;
+
     .btn {
       width: 80%;
       margin: 8px 0;
@@ -263,12 +326,14 @@
 
 .container-btn-mobile {
   display: none;
+
   @include xs {
     @include flex(row, space-between, center, center);
     position: sticky;
     bottom: 0;
     margin: 0;
   }
+
   .btn {
     @include flex(column, center, center, center);
     min-width: 48%;
@@ -276,18 +341,21 @@
     margin: 0 1%;
     padding: 4px;
   }
+
   i {
     width: 3rem;
     height: auto;
     margin-bottom: .8rem;
+
     img {
       width: 100%;
     }
   }
-  @include xxs{
-    .btn{
-      span{
-        display:none;
+
+  @include xxs {
+    .btn {
+      span {
+        display: none;
       }
     }
   }
@@ -297,19 +365,23 @@
   min-height: 35rem;
   height: 100%;
   text-align: right;
+
   table {
     thead {
       margin-bottom: 1.5rem;
     }
+
     tbody {
       tr {
         td {
           font-weight: 300;
+
           span {
             &:nth-child(1) {
               display: block;
               margin-bottom: 4px;
             }
+
             &:nth-child(2) {
               font-weight: 900;
             }
@@ -317,16 +389,20 @@
         }
       }
     }
+
     th,
     td {
       text-align: left;
+
       &:last-child {
         text-align: right;
       }
     }
+
     th {
       font-size: 1.2rem;
     }
+
     tfoot {
       tr {
         &:nth-child(1) {
@@ -334,49 +410,59 @@
             padding-top: 3.2rem;
           }
         }
+
         &:nth-child(2) {
           td {
             font-weight: 300;
           }
         }
+
         &:nth-child(3) {
           td {
             padding-top: 1.6rem;
           }
         }
       }
+
       td {
         font-weight: 900;
         padding-bottom: 0;
+
         &:first-child {
           padding-left: 8rem;
         }
       }
     }
+
     @include xs {
       tbody {
         tr {
           margin-bottom: 4rem;
         }
+
         td {
           position: relative;
           padding-left: 50%;
           text-align: right;
+
           &::before {
             @include font(1.4rem, 900, 1em);
             position: absolute;
             left: .5rem;
           }
+
           &:nth-child(1) {
             &:before {
               content: 'Qt.';
             }
           }
+
           &:nth-child(2) {
             &:before {
               content: 'Ticket';
             }
           }
+
           &:nth-child(3) {
             &:before {
               content: 'Value';
@@ -384,14 +470,17 @@
           }
         }
       }
+
       tfoot {
         tr {
           @include flex(row, center, center, center);
           border: none;
+
           &:nth-child(2) {
             border-bottom: 1px solid #ddd;
           }
         }
+
         td {
           width: 50%;
           border: none;
@@ -399,11 +488,13 @@
       }
     }
   }
+
   @include md {
     display: none;
     min-height: auto;
     margin-bottom: 3rem;
   }
+
   // @include sm {
   // }
 }
@@ -413,19 +504,23 @@
   height: 100%;
   text-align: right;
   display: none;
+
   table {
     thead {
       margin-bottom: 1.5rem;
     }
+
     tbody {
       tr {
         td {
           font-weight: 300;
+
           span {
             &:nth-child(1) {
               display: block;
               margin-bottom: 4px;
             }
+
             &:nth-child(2) {
               font-weight: 900;
             }
@@ -433,16 +528,20 @@
         }
       }
     }
+
     th,
     td {
       text-align: left;
+
       &:last-child {
         text-align: right;
       }
     }
+
     th {
       font-size: 1.2rem;
     }
+
     tfoot {
       tr {
         &:nth-child(1) {
@@ -450,49 +549,59 @@
             padding-top: 3.2rem;
           }
         }
+
         &:nth-child(2) {
           td {
             font-weight: 300;
           }
         }
+
         &:nth-child(3) {
           td {
             padding-top: 1.6rem;
           }
         }
       }
+
       td {
         font-weight: 900;
         padding-bottom: 0;
+
         &:first-child {
           padding-left: 8rem;
         }
       }
     }
+
     @include xs {
       tbody {
         tr {
           margin-bottom: 4rem;
         }
+
         td {
           position: relative;
           padding-left: 50%;
           text-align: right;
+
           &::before {
             @include font(1.4rem, 900, 1em);
             position: absolute;
             left: .5rem;
           }
+
           &:nth-child(1) {
             &:before {
               content: 'Qt.';
             }
           }
+
           &:nth-child(2) {
             &:before {
               content: 'Ticket';
             }
           }
+
           &:nth-child(3) {
             &:before {
               content: 'Value';
@@ -500,14 +609,17 @@
           }
         }
       }
+
       tfoot {
         tr {
           @include flex(row, center, center, center);
           border: none;
+
           &:nth-child(2) {
             border-bottom: 1px solid #ddd;
           }
         }
+
         td {
           width: 50%;
           border: none;
@@ -515,12 +627,14 @@
       }
     }
   }
+
   @include md {
     display: block;
     order: 1;
     min-height: auto;
     margin-bottom: 1.5rem;
   }
+
   .btn-resumo-compra {
     height: auto;
     border: 2px solid $gray-01;
@@ -528,6 +642,7 @@
     @include flex(row, space-between, center, center);
     flex-wrap: wrap;
     padding: 3rem;
+
     span {
       width: 80%;
       color: $black;
@@ -535,19 +650,23 @@
       text-align: left;
       margin-left: 0;
       margin-bottom: 8px;
+
       @include xs {
         font-size: 1.8rem;
         text-align: left;
       }
     }
+
     @include sm {
       padding: 3rem 1.5rem;
     }
   }
+
   .dados-pagamento-box {
     padding: 1.5rem;
     margin-top: .8rem;
   }
+
   // @include sm {
   //   display: block;
   //   order: 1;
@@ -558,50 +677,64 @@
   h2 {
     @include font(2.5rem, 900, 1em);
   }
+
   .table-seu-carrinho {
     thead {
       background-color: $secondary;
+
       th {
         color: $white;
       }
     }
+
     td {
       font-size: 1.6rem;
     }
   }
+
   .pagamentos-confirm {
     @include flex(row, space-between, flex-start, flex-start);
     flex-wrap: wrap;
+
     .dados-pagamento-box {
       min-height: 22rem;
+
       @include md {
         min-height: auto;
       }
     }
+
     .dados-pagamento-title {
       @include flex(row, space-between, flex-end, flex-end);
       margin-bottom: 3rem;
     }
+
     &-metodo {
       @include flex(row, flex-start, center, center);
+
       ul {
         @include flex(row, flex-start, center, center);
+
         li {
           margin-right: 1.5rem;
         }
+
         i {
           width: 6rem;
           display: inline-block;
+
           img {
             width: 100%;
           }
         }
+
         .pagamentos-confirm-metodo-visa {
           i {
             width: 8rem;
           }
         }
       }
+
       p {
         margin-bottom: 0;
         margin-left: 1.5rem;
@@ -609,22 +742,27 @@
       }
     }
   }
+
   .confirm-dados-contacto,
   .confirm-dados-faturacao {
     margin-bottom: 1.5rem;
     @include font(1.6rem, 300, 1.2em);
+
     strong {
       font-weight: 900;
     }
+
     li {
       margin-bottom: .8rem;
     }
   }
+
   .confirm-dados-faturacao {
     p {
       &:first-child {
         margin-bottom: 3rem;
       }
+
       &:last-child {
         margin-top: 3rem;
       }
@@ -638,21 +776,26 @@
   width: 100%;
   position: relative;
   @include flex(column, flex-start, center, center);
+
   div {
     width: 100%;
     text-align: center;
   }
+
   i {
     height: 12rem;
     margin-bottom: 1.5rem;
     display: inline-block;
+
     img {
       height: 100%;
     }
+
     @include xs {
       height: 10rem;
     }
   }
+
   h3 {
     // width: 40%;
     @include font(2.2rem, 900, 1.4em);
@@ -660,81 +803,103 @@
     text-align: center;
     margin-bottom: 1.5rem;
   }
+
   h4 {
     @include font(1.8rem, 300, 1.4em);
     text-align: center;
     margin-bottom: 1.6rem;
   }
+
   .payreturn__table {
     margin-top: 3rem;
     @include flex(column, flex-start, center, center);
+
     img {
       height: 5rem;
     }
+
     table {
       width: auto;
+
       td {
         margin: 0 1.6rem;
+
         &:first-child {
           text-align: left;
         }
+
         &:last-child {
           text-align: right;
         }
       }
     }
+
     p {
       width: 70%;
       @include font(1.6rem, 300, 1.6em);
       margin-top: 1.5rem;
     }
+
     @include xs {
       margin-top: 1.5rem;
+
       table {
         tr {
           @include flex(row, space-between, center, center);
         }
       }
+
       p {
         width: 90%;
       }
     }
   }
+
   .btn {
     padding: 1.5rem .8rem;
   }
+
   .valor-compra {
     padding-bottom: 16px;
     border-bottom: 1px solid $black;
+
     &:last-child {
       border-bottom: none;
-      @include xs{
-        li{
+
+      @include xs {
+        li {
           display: block;
-          p{
-            width:100%;
-            margin:8px 0;
+
+          p {
+            width: 100%;
+            margin: 8px 0;
           }
         }
       }
     }
+
     li {
       width: 100%;
       @include flex(row, flex-end, center, center);
+
       p {
         width: 20%;
         text-align: right;
+
         &:first-child {
           width: 25%;
         }
       }
     }
+
     .valor-compra-subtotal {
       font-weight: 300;
       @include flex(row, center, center, center);
+
       p {
         width: 50%;
         text-align: left;
+
         &:first-child {
           width: 50%;
           font-weight: 900;
@@ -742,6 +907,7 @@
           text-align: right;
         }
       }
+
       @include xs {
         p {
           &:first-child {
@@ -750,17 +916,20 @@
         }
       }
     }
+
     &-total {
       &:before {
         width: 50%;
       }
     }
   }
+
   @include xs {
     h3 {
       width: 100%;
       font-size: 1.8rem;
     }
+
     h4 {
       font-size: 1.6rem;
     }
@@ -787,28 +956,34 @@
     border: 2px solid $secondary;
     border-radius: .5rem;
     text-align: center;
+
     // padding: 1.5rem;
     img {
       height: 6rem;
       width: auto;
       margin-top: 1.5rem;
     }
+
     table {
       margin-bottom: 0;
+
       tr {
         &:nth-child(even) {
           background-color: #eeeeee;
         }
       }
     }
+
     p {
       @include font(1.8rem, 300, 1.4em);
       text-align: center;
       margin: 1.5rem;
     }
+
     @include md {
       width: 70%;
     }
+
     @include sm {
       width: 90%;
     }
@@ -818,14 +993,18 @@
 .container-btn-detalhes {
   @include flex(row, center, center, center);
   margin-top: 1.5rem;
+
   .btn {
     margin: 0 .8rem;
   }
+
   @include md {
     margin-bottom: 1.5rem;
   }
+
   @include xs {
     @include flex(column, center, center, center);
+
     .btn {
       margin: .8rem;
     }
@@ -835,16 +1014,20 @@
 .container-detalhes {
   width: 100%;
   margin-bottom: 3rem;
+
   .container-seu-carrinho {
     background-color: transparent;
     border: 1px solid $gray-02;
   }
+
   .table-seu-carrinho {
+
     th,
     td {
       &:last-child {
         width: 15%;
         padding-right: 1.5rem;
+
         @include xs {
           width: 100%;
           padding-right: 0.5rem;
@@ -852,6 +1035,7 @@
       }
     }
   }
+
   .valor-compra {
     padding-right: 1.5rem;
   }
