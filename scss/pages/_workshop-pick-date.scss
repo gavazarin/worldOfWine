@@ -67,7 +67,7 @@
 
             .btn {
                 min-width: auto;
-                border: 2px solid $black;
+                border: 1px solid $black;
                 color: $black;
                 font-size: 1.6rem;
                 padding: .8rem 1.6rem;
@@ -216,6 +216,24 @@
                             color: $black;
 
                             transition: all .3s ease-in-out;
+
+                            &.active {
+                                color: $white;
+                                border-color: $primary;
+                                background-color: $primary;
+
+                                .hour-infos {
+                                    span {
+                                        &.idioma {
+                                            border-color: $white;
+                                        }
+                                    }
+
+                                    &:before {
+                                        background-color: $white;
+                                    }
+                                }
+                            }
 
                             .hour-infos {
                                 width: 100%;

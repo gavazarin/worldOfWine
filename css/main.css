@@ -7923,7 +7923,7 @@ header .countdown-header i img {
 
 .workshop .pick-date .nav-date .btn {
   min-width: auto;
-  border: 2px solid #1D1D1B;
+  border: 1px solid #1D1D1B;
   color: #1D1D1B;
   font-size: 1.6rem;
   padding: .8rem 1.6rem;
@@ -8082,6 +8082,20 @@ header .countdown-header i img {
   line-height: 1.2em;
   color: #1D1D1B;
   transition: all .3s ease-in-out;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide .list-hours li a.active {
+  color: #FFFFFF;
+  border-color: #8D1C22;
+  background-color: #8D1C22;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide .list-hours li a.active .hour-infos span.idioma {
+  border-color: #FFFFFF;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide .list-hours li a.active .hour-infos:before {
+  background-color: #FFFFFF;
 }
 
 .workshop .pick-date .swiper-container .swiper-slide .list-hours li a .hour-infos {
@@ -8639,4 +8653,71 @@ header .countdown-header i img {
 
 .workshop-wrapper .btn-wrapper {
   margin: 8rem 0 2.4rem;
+}
+
+.home-carousel .cards-experiencias .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.home-carousel h2,
+.home-carousel h3 {
+  text-align: left;
+}
+
+.home-carousel .cards-list {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  margin-top: 1.6rem;
+  padding-bottom: 3.2rem;
+  margin-bottom: 4rem;
+  border-top: none;
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: thin;
+}
+
+.home-carousel .cards-list::-webkit-scrollbar {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  padding: 5px 50px;
+  background: #FFFFFF;
+  border-radius: 0;
+}
+
+.home-carousel .cards-list::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 0;
+  background: #8D1C22;
+}
+
+.home-carousel .cards-list::-webkit-scrollbar-button {
+  color: red;
+  width: 10px;
+  height: 10px;
+  background-image: url(../../images/svg/icon-next.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  z-index: 999;
+}
+
+.home-carousel .cards-list .cards-list__item {
+  margin-top: 0;
 }
