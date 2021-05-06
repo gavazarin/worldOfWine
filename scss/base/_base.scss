@@ -43,6 +43,10 @@ a:focus {
   position: relative;
   min-height: 100vh;
   padding-top: 8rem;
+
+  @include xs {
+    padding-top: 13rem;
+  }
 }
 
 .content-wrap {

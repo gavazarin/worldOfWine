@@ -3210,6 +3210,12 @@ a:focus {
   padding-top: 8rem;
 }
 
+@media (max-width: 575px) {
+  .page-container {
+    padding-top: 13rem;
+  }
+}
+
 .content-wrap {
   padding-bottom: 63rem;
   /* Footer height */
@@ -5230,6 +5236,16 @@ header .navMenu__list {
   }
 }
 
+@media (max-width: 575px) {
+  header .navMenu__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+
 header .navMenu__list .header-morada a {
   text-decoration: none;
   display: flex;
@@ -5265,6 +5281,12 @@ header .navMenu__list .header-morada p {
   }
 }
 
+@media (max-width: 575px) {
+  header .navMenu__list .header-morada {
+    justify-content: center;
+  }
+}
+
 header .navMenu__list .header-marca {
   text-align: left;
 }
@@ -5277,6 +5299,13 @@ header .navMenu__list .header-carrinho {
   justify-content: flex-end;
   align-items: center;
   align-content: center;
+}
+
+@media (max-width: 575px) {
+  header .navMenu__list .header-carrinho {
+    margin-top: 2.4rem;
+    justify-content: center;
+  }
 }
 
 header .navMenu__list .header-carrinho #smv_wp_popcart {
@@ -5813,6 +5842,35 @@ header .marca img {
 @media (max-width: 575px) {
   header .marca img {
     height: 4rem;
+  }
+}
+
+header .countdown-header {
+  margin-right: 2.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.2em;
+}
+
+header .countdown-header i {
+  width: 3.2rem;
+  height: 3.2rem;
+  display: inline-block;
+  margin-right: .8rem;
+}
+
+header .countdown-header i img {
+  width: 100%;
+}
+
+@media (max-width: 575px) {
+  header {
+    height: auto;
   }
 }
 
