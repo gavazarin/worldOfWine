@@ -7,6 +7,7 @@
 
         .controls-slide {
             @include flex(row, flex-start, center, center);
+            padding: 0;
 
             .controls-slide-btn {
                 a {
@@ -64,6 +65,7 @@
 
         .nav-date {
             @include flex(row, flex-end, center, center);
+            padding: 0;
 
             .btn {
                 min-width: auto;
@@ -137,7 +139,7 @@
         }
 
         .tab-content {
-            padding-top: 1.6rem;
+            padding: 1.6rem 0;
 
             .tab-pane {
                 text-align: center;
@@ -291,9 +293,8 @@
                             }
 
                             &[disabled] {
-                                background-color: $gray-01;
                                 pointer-events: none;
-                                opacity: .5;
+                                opacity: .2;
                             }
                         }
                     }

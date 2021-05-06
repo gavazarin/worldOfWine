@@ -4,6 +4,14 @@
 .workshop {
     padding-top: 6rem;
 
+    @include xs {
+        padding-top: 11rem;
+    }
+
+    @include xxs {
+        padding-top: 10rem;
+    }
+
     .title {
         background-color: $primary;
         padding: 3.2rem 0 2.4rem;
@@ -17,6 +25,10 @@
     }
 
     &-evento {
+        .row {
+            padding-left: 15px;
+        }
+
         padding-top: 3.2rem;
 
         .evento-details {
@@ -230,7 +242,7 @@
 
                 span {
                     @include font(2rem, 900, 1.2em);
-                    color: $primary;
+                    color: $secondary;
                 }
             }
         }
@@ -355,6 +367,7 @@
 
         .btn-wrapper {
             margin: 8rem 0 2.4rem;
+            padding: 0;
         }
     }
 }

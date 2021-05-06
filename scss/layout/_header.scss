@@ -332,6 +332,7 @@ header {
 
       @include xs {
         width: 32rem;
+        right: -25%;
       }
 
       .info-data {
@@ -379,9 +380,10 @@ header {
               }
             }
 
-            .label-gift {
+            .label-gift,
+            .label-details {
               color: $secondary;
-              font-weight: 900;
+              font-weight: 400;
               font-style: normal;
               text-transform: uppercase;
               position: absolute;
