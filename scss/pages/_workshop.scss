@@ -257,7 +257,7 @@
 
             li {
                 min-height: 5.3rem;
-                @include flex(column, flex-start, flex-start, flex-start);
+                @include flex(column, center, flex-start, flex-start);
                 border-right: 1px solid $black;
 
                 h4 {

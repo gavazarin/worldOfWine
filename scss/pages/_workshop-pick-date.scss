@@ -209,7 +209,7 @@
                             padding: 1.6rem 0 .8rem;
                             border: 1px solid $primary;
                             border-right: 1px solid $primary;
-                            border-bottom-width: 2px;
+                            // border-bottom-width: 2px;
                             border-top: none;
                             @include flex(row, center, center, center);
                             flex-wrap: wrap;
@@ -225,11 +225,7 @@
                                 background-color: $primary;
 
                                 .hour-infos {
-                                    span {
-                                        &.idioma {
-                                            border-color: $white;
-                                        }
-                                    }
+                                    color: $white;
 
                                     &:before {
                                         background-color: $white;
@@ -241,20 +237,14 @@
                                 width: 100%;
                                 margin-top: 1.2rem;
                                 @include flex(row, space-around, center, center);
+                                color: $primary;
+                                @include font(1.4rem, 400, 1.2em);
                                 position: relative;
 
                                 span {
-                                    // width: 50%;
                                     text-align: center;
-                                    font-size: 1.4rem;
 
                                     &.idioma {
-                                        width: 2rem;
-                                        height: 2rem;
-                                        background-color: $primary;
-                                        border: 2px solid $primary;
-                                        color: $white;
-                                        font-size: 1.2rem;
                                         font-weight: 400;
                                         @include flex(row, center, center, center);
                                         padding: 0.4rem;
@@ -265,7 +255,7 @@
 
                                 &:before {
                                     content: '';
-                                    width: 2px;
+                                    width: 1px;
                                     height: 100%;
                                     background-color: $primary;
                                     @include absolute(0, auto, auto, 50%);
@@ -281,9 +271,7 @@
 
                                 .hour-infos {
                                     span {
-                                        &.idioma {
-                                            border-color: $white;
-                                        }
+                                        color: $white;
                                     }
 
                                     &:before {

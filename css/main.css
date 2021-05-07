@@ -3565,7 +3565,8 @@ h3 strong {
 
 .btn[disabled] {
   background: #CCCCCC;
-  border-color: #707070;
+  border-color: #CCCCCC;
+  color: #efefef;
   pointer-events: none;
 }
 
@@ -8073,7 +8074,6 @@ header .countdown-header i img {
   padding: 1.6rem 0 .8rem;
   border: 1px solid #8D1C22;
   border-right: 1px solid #8D1C22;
-  border-bottom-width: 2px;
   border-top: none;
   display: flex;
   flex-direction: row;
@@ -8094,8 +8094,8 @@ header .countdown-header i img {
   background-color: #8D1C22;
 }
 
-.workshop .pick-date .swiper-container .swiper-slide .list-hours li a.active .hour-infos span.idioma {
-  border-color: #FFFFFF;
+.workshop .pick-date .swiper-container .swiper-slide .list-hours li a.active .hour-infos {
+  color: #FFFFFF;
 }
 
 .workshop .pick-date .swiper-container .swiper-slide .list-hours li a.active .hour-infos:before {
@@ -8110,21 +8110,18 @@ header .countdown-header i img {
   justify-content: space-around;
   align-items: center;
   align-content: center;
+  color: #8D1C22;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.2em;
   position: relative;
 }
 
 .workshop .pick-date .swiper-container .swiper-slide .list-hours li a .hour-infos span {
   text-align: center;
-  font-size: 1.4rem;
 }
 
 .workshop .pick-date .swiper-container .swiper-slide .list-hours li a .hour-infos span.idioma {
-  width: 2rem;
-  height: 2rem;
-  background-color: #8D1C22;
-  border: 2px solid #8D1C22;
-  color: #FFFFFF;
-  font-size: 1.2rem;
   font-weight: 400;
   display: flex;
   flex-direction: row;
@@ -8138,7 +8135,7 @@ header .countdown-header i img {
 
 .workshop .pick-date .swiper-container .swiper-slide .list-hours li a .hour-infos:before {
   content: '';
-  width: 2px;
+  width: 1px;
   height: 100%;
   background-color: #8D1C22;
   position: absolute;
@@ -8156,8 +8153,8 @@ header .countdown-header i img {
   background-color: #8D1C22;
 }
 
-.workshop .pick-date .swiper-container .swiper-slide .list-hours li a:hover .hour-infos span.idioma {
-  border-color: #FFFFFF;
+.workshop .pick-date .swiper-container .swiper-slide .list-hours li a:hover .hour-infos span {
+  color: #FFFFFF;
 }
 
 .workshop .pick-date .swiper-container .swiper-slide .list-hours li a:hover .hour-infos:before {
@@ -8250,7 +8247,7 @@ header .countdown-header i img {
 }
 
 .workshop-resumo .resumo-btn {
-  margin-top: .8rem;
+  margin-bottom: .8rem;
 }
 
 @media (max-width: 992px) {
@@ -8551,7 +8548,7 @@ header .countdown-header i img {
   min-height: 5.3rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
   border-right: 1px solid #1D1D1B;
@@ -8673,71 +8670,4 @@ header .countdown-header i img {
 .workshop-wrapper .btn-wrapper {
   margin: 8rem 0 2.4rem;
   padding: 0;
-}
-
-.home-carousel .cards-experiencias .row {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-}
-
-.home-carousel h2,
-.home-carousel h3 {
-  text-align: left;
-}
-
-.home-carousel .cards-list {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  flex-wrap: nowrap;
-  margin-top: 1.6rem;
-  padding-bottom: 3.2rem;
-  margin-bottom: 4rem;
-  border-top: none;
-  overflow-x: auto;
-  overflow-y: visible;
-  scrollbar-width: thin;
-}
-
-.home-carousel .cards-list::-webkit-scrollbar {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  padding: 5px 50px;
-  background: #FFFFFF;
-  border-radius: 0;
-}
-
-.home-carousel .cards-list::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 0;
-  width: 5px;
-  height: 5px;
-  border-radius: 0;
-  background: #8D1C22;
-}
-
-.home-carousel .cards-list::-webkit-scrollbar-button {
-  color: red;
-  width: 10px;
-  height: 10px;
-  background-image: url(../../images/svg/icon-next.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: auto;
-  right: 0;
-  bottom: 0;
-  left: auto;
-  z-index: 999;
-}
-
-.home-carousel .cards-list .cards-list__item {
-  margin-top: 0;
 }

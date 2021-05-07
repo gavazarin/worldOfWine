@@ -158,7 +158,8 @@
 
   &[disabled] {
     background: $gray-01;
-    border-color: $gray-02;
+    border-color: $gray-01;
+    color: #efefef;
     pointer-events: none;
   }
 
