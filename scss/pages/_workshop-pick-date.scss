@@ -284,6 +284,23 @@
                                 pointer-events: none;
                                 opacity: .2;
                             }
+
+                            &.not-over {
+                                &:hover {
+                                    background-color: $white;
+                                    color: $black;
+
+                                    .hour-infos {
+                                        span {
+                                            color: $primary;
+                                        }
+
+                                        &:before {
+                                            background-color: $primary;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }

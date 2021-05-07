@@ -8166,6 +8166,19 @@ header .countdown-header i img {
   opacity: .2;
 }
 
+.workshop .pick-date .swiper-container .swiper-slide .list-hours li a.not-over:hover {
+  background-color: #FFFFFF;
+  color: #1D1D1B;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide .list-hours li a.not-over:hover .hour-infos span {
+  color: #8D1C22;
+}
+
+.workshop .pick-date .swiper-container .swiper-slide .list-hours li a.not-over:hover .hour-infos:before {
+  background-color: #8D1C22;
+}
+
 .workshop .pick-date .ui-datepicker {
   width: 100% !important;
   position: relative;
