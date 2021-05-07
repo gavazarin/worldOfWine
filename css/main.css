@@ -6305,13 +6305,13 @@ header .countdown-header i img {
   }
 }
 
-.cards-list .btn-experience {
+.btn-experience {
   width: 100%;
   padding: 1.5rem 0 0;
   position: relative;
 }
 
-.cards-list .btn-experience:before {
+.btn-experience:before {
   content: "";
   width: 90%;
   height: 1px;
@@ -8683,4 +8683,53 @@ header .countdown-header i img {
 .workshop-wrapper .btn-wrapper {
   margin: 8rem 0 2.4rem;
   padding: 0;
+}
+
+.home-carousel .cards-experiencias .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.home-carousel h2,
+.home-carousel h3 {
+  text-align: left;
+}
+
+.home-carousel .cards-swiper {
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.home-carousel .cards-swiper .swiper-wrapper {
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+.home-carousel .cards-swiper .swiper-slide {
+  width: 100%;
+  margin-top: 0;
+}
+
+.home-carousel .cards-list {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  margin-top: 1.6rem;
+  padding-bottom: 3.2rem;
+  margin-bottom: 4rem;
+  border-top: none;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+.home-carousel .cards-list .cards-list__item {
+  margin-top: 0;
 }
