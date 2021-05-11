@@ -2,6 +2,12 @@
   .row {
     @include flex(column, center, center, center);
   }
+
+  h2 {
+    b {
+      font-weight: 600;
+    }
+  }
 }
 
 .cards-list {

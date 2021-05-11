@@ -6128,6 +6128,10 @@ header .countdown-header i img {
   align-content: center;
 }
 
+.cards-experiencias h2 b {
+  font-weight: 600;
+}
+
 .cards-list {
   width: 100%;
   position: relative;
