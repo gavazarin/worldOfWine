@@ -258,7 +258,6 @@
             li {
                 min-height: 5.3rem;
                 @include flex(column, center, flex-start, flex-start);
-                border-right: 1px solid $black;
 
                 h4 {
                     @include font(1.4rem, 300, 1.2em);
@@ -369,5 +368,9 @@
             margin: 8rem 0 2.4rem;
             padding: 0;
         }
+    }
+
+    .seltimehelp {
+        text-transform: none;
     }
 }

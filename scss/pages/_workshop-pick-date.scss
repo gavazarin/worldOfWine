@@ -286,6 +286,8 @@
                             }
 
                             &.not-over {
+                                pointer-events: none;
+
                                 &:hover {
                                     background-color: $white;
                                     color: $black;
