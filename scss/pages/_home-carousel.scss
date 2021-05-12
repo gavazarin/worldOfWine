@@ -90,6 +90,18 @@
             .swiper-pagination-bullet-active {
                 background-color: $primary;
             }
+
+            @include xs {
+                span {
+                    width: 4rem;
+                }
+            }
+
+            @include xxs {
+                span {
+                    width: 3rem;
+                }
+            }
         }
 
     }
