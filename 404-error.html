@@ -15,127 +15,157 @@
 
 <body>
   <header>
-    <div class="top-header">
-      <div class="container">
-        <div class="row">
-          <input id="language-dropdown" type="checkbox">
-          <label for="language-dropdown" class="language-dropdown">
-            <span>Português</span> <i><img src="images/svg/dropdown-icon.svg" alt="ícone de dropdown"></i>
-          </label>
-          <ul class="language-dropdown-list">
-            <li><a href="#">Deutsch</a></li>
-            <li><a href="#">English</a></li>
-            <li><a href="#">Español</a></li>
-            <li><a href="#">Français</a></li>
-            <li><a href="#">Português</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
     <nav class="navMenu col-lg-12">
       <div class="container">
         <div class="row">
           <ul class="navMenu__list">
-            <li class="header-morada col-lg-4">
-              <a href="https://g.page/world-of-wine-porto?share" target="_blanck">
-                <i><img src="images/svg/map-pin.svg" alt="ícone Pin - Endereço"></i>
-                <p>Rua do Choupelo, 4400-088 <br>Vila Nova de Gaia</p>
-              </a>
+            <li class="header-marca col-lg-6 col-md-6 col-sm-4 col-xs-12">
+              <a href="index.html" class="marca"><img src="images/svg/wow-header.svg" alt="Logo do World of Wine"></a>
             </li>
 
-            <li class="header-marca col-lg-4">
-              <a href="index.html" class="marca col-lg-2"><img src="images/svg/wow-porto.svg" alt="Logo do World of Wine"></a>
-            </li>
+            <li class="header-carrinho col-lg-6 col-md-6 col-sm-8 col-xs-8">
+              <div smv-type="widgetcontainer" smv-widget="popcart" smv-param="">
+                <div smv-type="widgetpage" id="smv_wp_popcart">
+                  <i class="shopping-cart-icon">
+                    <img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart.svg"
+                      alt="carrinho de compras">
 
-            <li class="header-carrinho col-lg-4">
-              <i class="shopping-cart-icon"><img src="images/svg/shopping-cart.svg" alt="ícone carrinho de compras"></i>
-              <input id="carrinho-dropdown" type="checkbox">
-              <label for="carrinho-dropdown" class="header-carrinho__infos">
-                <span>Carrinho de Compras</span>
-                <span class="carrinho-valor">0,00€</span>
-                <i class="dropdown-icon"><img src="images/svg/dropdown-icon.svg" alt="ícone de dropdown"></i>
-              </label>
+                    <div class="badge-shopping">
+                      <span>1</span>
+                    </div>
+                  </i>
+                  <input type="checkbox" id="carrinho-dropdown">
+                  <label for="carrinho-dropdown" class="header-carrinho__infos" id="dropdownCarrinho"
+                    aria-haspopup="true" aria-expanded="false">
 
-              <!-- CARRINHO DE COMPRAS VAZIO! -->
-              <!-- <div class="carrinho-compras carrinho-compras-empty">
-                <i><img src="images/svg/shopping-cart-secondary.svg" alt=""></i>
-                <h3>O seu carrinho está vazio</h3>
-                <p>Escolha já as suas experiências!</p>
-              </div> -->
+                    <!-- <span>Carrinho de Compras</span> -->
+                    <span class="carrinho-valor">80,00€</span>
+                    <i class="dropdown-icon"><img
+                        src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/dropdown-icon.svg"></i>
+                  </label>
 
-              <div class="carrinho-compras carrinho-compras-itens">
-                <!-- <p class="info-data">
-                  <i><img src="images/svg/calendar-secondary.svg" alt=""></i> <span>10/06/2020</span>
-                </p> -->
 
-                <ul class="info-compra">
-                  <li class="info-compra-item">
-                    <ul class="info-compra-detalhes">
-                      <li class="info-compra-detalhes-bilhete"><span>3 Experiences</span> <span>Adulto</span></li>
-                      <li class="info-compra-detalhes-quantidade">
-                        <select>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
+                  <!-- CARRINHO DE COMPRAS VAZIO! -->
+                  <div class="carrinho-compras carrinho-compras-empty dropdown-menu" aria-labelledby="dropdownCarrinho"
+                    style="display: none;">
+                    <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/shopping-cart-secondary.svg"
+                        alt=""></i>
+                    <h3>O seu carrinho está vazio</h3>
+                    <p>Escolha já as suas experiências!</p>
+                  </div>
+
+                  <div class="carrinho-compras carrinho-compras-itens dropdown-menu" aria-labelledby="dropdownCarrinho">
+                    <a href="#" class="btn-link">esvaziar carrinho</a>
+
+                    <div class="shop-timer">
+                      <i><img src="images/svg/timer.svg" alt=""></i>
+                      <p>Tempo limite para pagamento: <span class="time">00:00</span></p>
+                    </div>
+
+                    <ul class="info-compra">
+                      <li class="info-compra-item">
+                        <ul class="info-compra-detalhes">
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span>
+                            <span>4 EXPERIENCES</span>
+                            <span></span>
+                            <span smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          </li>
+                          <li class="info-compra-detalhes-quantidade">
+                            <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
+                              onchange="javascript:smv_cart_TTypeChange(0)">
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                          </li>
+                          <li class="info-compra-detalhes-valor">
+                            <span>80,00</span>€
+                          </li>
+                          <li class="info-compra-detalhes-delete">
+                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
+                          </li>
+                        </ul>
                       </li>
-                      <li class="info-compra-detalhes-valor">
-                        <span>102,00</span>€
+
+                      <li class="info-compra-item">
+                        <ul class="info-compra-detalhes">
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span>
+                            <span>4 EXPERIENCES</span> <span></span> <span
+                              smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          </li>
+                          <li class="info-compra-detalhes-quantidade">
+                            <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
+                              onchange="javascript:smv_cart_TTypeChange(0)">
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                          </li>
+                          <li class="info-compra-detalhes-valor">
+                            <span>80,00</span>€
+                          </li>
+                          <li class="info-compra-detalhes-delete">
+                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
+                          </li>
+                        </ul>
                       </li>
-                      <li class="info-compra-detalhes-delete">
-                        <i><img src="images/svg/trash.svg" alt=""></i>
+
+                      <li class="info-compra-item">
+                        <ul class="info-compra-detalhes">
+                          <li class="info-compra-detalhes-bilhete">
+                            <span class="label-gift">Bilhete Gift</span>
+                            <span>4 EXPERIENCES</span> <span></span> <span
+                              smv-langtext="xtickettypeEspecial de Corrida">Especial de Corrida</span>
+                          </li>
+                          <li class="info-compra-detalhes-quantidade">
+                            <select id="smv_cart_ttype0" name="smv_cart_ttype0" value="4"
+                              onchange="javascript:smv_cart_TTypeChange(0)">
+                              <option value="4" selected="selected">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                          </li>
+                          <li class="info-compra-detalhes-valor">
+                            <span>80,00</span>€
+                          </li>
+                          <li class="info-compra-detalhes-delete">
+                            <i><img src="http://lisboa.smartmove.pt:8088/WOW/Resources/images/svg/trash.svg" alt=""></i>
+                          </li>
+                        </ul>
                       </li>
                     </ul>
-                  </li>
 
-                  <li class="info-compra-item">
-                    <ul class="info-compra-detalhes">
-                      <li class="info-compra-detalhes-bilhete"><span>1 Experiences</span> <span>Criança</span></li>
-                      <li class="info-compra-detalhes-quantidade">
-                        <select>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
-                      </li>
-                      <li class="info-compra-detalhes-valor">
-                        <span>21,00</span>€
-                      </li>
-                      <li class="info-compra-detalhes-delete">
-                        <i><img src="images/svg/trash.svg" alt=""></i>
+                    <ul class="info-total">
+                      <li class="info-total-total">
+                        <span>Total:</span> <span>80,00€</span>
                       </li>
                     </ul>
-                  </li>
-                </ul>
 
-                <ul class="info-total">
-                  <li class="info-total-subtotal">
-                    <span>Subtotal:</span> <span><strong>123,00€</strong></span>
-                  </li>
-                  <li class="info-total-total">
-                    <span>Total:</span> <span>123,00€</span>
-                  </li>
-                </ul>
+                    <div class="container-btn">
+                      <button type="button" class="btn btn-outline-secondary fechar-carrinho">
+                        <span>keep shopping</span>
+                      </button>
 
-                <div class="container-btn">
-                  <button type="button" class="btn btn-outline-secondary"><span>Continuar a comprar</span></button>
-                  <a href="checkout-dados-pagamento.html" class="btn btn-secondary"><span>Proceder ao pagamento</span></a>
+                      <button type="button" class="btn btn-secondary"><span>pay</span></button>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              <div class="header-idioma">
+                <label class="language-dropdown col-lg-12" id="dropdownMenuButton" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i><img src="images/svg/flag-pt.svg" alt=""></i> <span class="site-language">PT</span>
+                </label>
+                <ul class="language-dropdown-list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a onclick=""><i><img src="images/svg/flag-de.svg" alt=""></i> de</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-en.svg" alt=""></i> EN</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-es.svg" alt=""></i> ES</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-fr.svg" alt=""></i> FR</a></li>
+                  <li><a onclick=""><i><img src="images/svg/flag-pt.svg" alt=""></i> PT</a></li>
+                </ul>
               </div>
             </li>
           </ul>
@@ -180,7 +210,8 @@
             </li>
             <li>
               <div class="logoSmartmove">
-                <a href="http://www.smartmove.pt/pt/" target="_blank"><img src="images/svg/smartmove_rodape.svg" alt="Smartmove"></a>
+                <a href="http://www.smartmove.pt/pt/" target="_blank"><img src="images/svg/smartmove_rodape.svg"
+                    alt="Smartmove"></a>
               </div>
             </li>
           </ul>

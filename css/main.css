@@ -5832,7 +5832,7 @@ header .carrinho-compras-itens .container-btn .btn span {
 header .marca {
   display: block;
   height: 40px;
-  text-align: center;
+  text-align: left;
 }
 
 header .marca img {
@@ -5842,6 +5842,9 @@ header .marca img {
 }
 
 @media (max-width: 575px) {
+  header .marca {
+    text-align: center;
+  }
   header .marca img {
     height: 4rem;
   }
