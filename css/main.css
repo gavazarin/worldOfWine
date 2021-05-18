@@ -5289,7 +5289,7 @@ header .navMenu__list .header-morada p {
 }
 
 header .navMenu__list .header-marca {
-  text-align: left;
+  text-align: center;
 }
 
 header .navMenu__list .header-carrinho {
@@ -5832,8 +5832,7 @@ header .carrinho-compras-itens .container-btn .btn span {
 header .marca {
   display: block;
   height: 40px;
-  text-align: left;
-  float: left;
+  text-align: center;
 }
 
 header .marca img {

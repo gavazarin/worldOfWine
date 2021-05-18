@@ -61,7 +61,7 @@ header {
       }
 
       .header-marca {
-        text-align: left;
+        text-align: center;
       }
 
       .header-carrinho {
@@ -513,8 +513,8 @@ header {
   .marca {
     display: block;
     height: 40px;
-    text-align: left;
-    float: left;
+    text-align: center;
+    // float: left;
 
     img {
       padding: 5px 0;
