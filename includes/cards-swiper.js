@@ -5,6 +5,8 @@ const swiper = new Swiper('.cards-swiper', {
   direction: 'horizontal',
   loop: false,
 
+  centerInsufficientSlides:true,
+
     // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
