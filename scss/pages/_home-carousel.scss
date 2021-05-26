@@ -1,7 +1,7 @@
 .home-carousel {
     .cards-experiencias {
         .row {
-            @include flex(column, flex-start, flex-start, flex-start);
+            @include flex(column, flex-start, center, center);
         }
     }
 
