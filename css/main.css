@@ -6514,6 +6514,72 @@ header .countdown-header i img {
   border-top: 8px solid;
 }
 
+@media (max-width: 575px) {
+  header .navMenu__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    max-height: 40px;
+  }
+  header .navMenu__list .header-marca {
+    text-align: left;
+    width: 100%;
+    max-width: 108px;
+    padding: 0;
+    padding-left: 0px;
+    position: relative;
+  }
+  header .navMenu__list .header-marca .marca {
+    text-align: left;
+    display: block;
+    height: auto;
+    width: 100%;
+    text-align: left;
+  }
+  header .navMenu__list .header-marca .marca img {
+    height: auto;
+    width: 100%;
+    padding: 0px;
+    padding-top: 10px;
+  }
+  header .navMenu__list .header-carrinho {
+    margin-top: 0px;
+    justify-content: flex-end;
+    padding-top: 15px;
+    padding-right: 0px;
+  }
+  header .carrinho-compras-itens {
+    right: -12px;
+    margin: 0;
+    width: 100vw;
+    position: absolute;
+  }
+  header .navMenu__list .header-carrinho .language-dropdown:hover {
+    padding-right: 0px;
+  }
+  header .navMenu__list .header-carrinho .language-dropdown {
+    font-size: 1rem;
+    line-height: 1.1em;
+  }
+  header .navMenu__list .header-carrinho .shopping-cart-icon .badge-shopping {
+    min-width: 20px;
+    min-height: 20px;
+    font-size: 1rem;
+  }
+  header .navMenu__list .header-carrinho .shopping-cart-icon img {
+    height: 100%;
+    width: auto;
+    max-width: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  header .navMenu__list .header-carrinho .shopping-cart-icon {
+    display: block !important;
+  }
+}
+
 .div-wait,
 .div-error {
   width: 100%;
